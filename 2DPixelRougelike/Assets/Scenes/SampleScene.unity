@@ -752,7 +752,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: <rainb>new,</rainb> <pend><bounce><color=red><rainb>a</rainb>Text</color></bounce></pend>
+  m_text: <rainb>new,</rainb> <pend><bounce><color=red><rainb>a</rainb>Text</color></bounce></pend><wait=1>a</wait>
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -924,7 +924,7 @@ MonoBehaviour:
   startTypewriterMode: 3
   canSkipTypewriter: 1
   hideAppearancesOnSkip: 0
-  triggerEventsOnSkip: 0
+  triggerEventsOnSkip: 1
   resetTypingSpeedAtStartup: 1
   disappearanceOrientation: 0
   onTextShowed:
