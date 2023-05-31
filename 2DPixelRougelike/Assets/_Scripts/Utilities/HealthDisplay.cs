@@ -9,6 +9,8 @@ public class HealthDisplay : MonoBehaviour
     [SerializeField] private Health health;
     [SerializeField] private CanvasGroup healthCanvas;
     [SerializeField] private Image healthImage;
+    [SerializeField] private GameObject healthBarRoot;
+
     private void Awake()
     {
         healthImage.fillAmount = 1f;

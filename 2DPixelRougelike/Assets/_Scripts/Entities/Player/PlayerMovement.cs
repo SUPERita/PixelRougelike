@@ -94,7 +94,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     {
         if (!animator.GetCurrentAnimatorStateInfo(0).IsName(_animName))
         {
-            Debug.Log("names dont match");
+            //Debug.Log("names dont match");
             animator.CrossFadeInFixedTime(_animName, 0);
         }
     }
