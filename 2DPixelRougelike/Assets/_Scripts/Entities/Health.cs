@@ -38,7 +38,7 @@ public class Health : MonoBehaviour
             SharedCanvas s = FindObjectOfType<SharedCanvas>();
             //change color with css html styling thing <color>
             tmpTextObject = Instantiate(DmgText, s.transform);
-            tmpTextObject.transform.position = s._mainCameraRef.WorldToScreenPoint(transform.position) + Vector3.up*20;
+            tmpTextObject.transform.position = s._mainCameraRef.WorldToScreenPoint(transform.position) + Vector3.up*50;
 
             //WASSS ISSS DASSS?!?!?!?! IT WAS THiS EASY>?>?>>?> 
             tmpTextObject.GetComponent<TextMeshProUGUI>().SetText(""+_amt);
