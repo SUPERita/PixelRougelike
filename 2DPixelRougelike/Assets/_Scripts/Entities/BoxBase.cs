@@ -18,7 +18,10 @@ public class BoxBase : MonoBehaviour, IDamageable
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Material regularMat;
     [SerializeField] private Material hitMat;
+    [SerializeField] private float dieKnockSpeed = 10f;
 
+
+    private bool alive = true;
     public void TakeDamage(int _val)
     {
         AudioSystem.Instance.PlaySound("s3");
@@ -48,16 +51,19 @@ public class BoxBase : MonoBehaviour, IDamageable
 
     private void Health_OnDie()
     {
-        sr.enabled = false;
+        //sr.enabled = false;
+        alive = false;
         Instantiate(particleSystem, transform.position, Quaternion.identity);
         GetComponent<Collider2D>().enabled = false;
-        rb.velocity = Vector3.zero;
+        rb.velocity = dieKnockSpeed * (transform.position - follow.position);
         //Destroy(gameObject);
-        transform.DOScale(0f, 1f).SetEase(Ease.InOutBounce).OnComplete(() => Destroy(gameObject));
+        transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject));
     }
 
     private void FixedUpdate()
     {
+        if (!alive) { return; }
+
         rb.velocity = -(transform.position - follow.position).normalized * 5f;
     }
 }

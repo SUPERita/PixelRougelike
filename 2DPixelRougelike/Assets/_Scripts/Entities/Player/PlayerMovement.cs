@@ -14,9 +14,12 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     Rigidbody2D rb;
     [SerializeField] private Animator animator;
     [SerializeField] private AttackTriggerCollider attackTriggerCollider;
-    [SerializeField] private ParticleSystem rollParticle = null;
+    [SerializeField] private ParticleSystem rollParticle = null; 
     float speedMult = 1f;
     float speedMultRemainingTime = 0f;
+
+    [SerializeField] private PlayerStats playerStats;
+
     private void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -25,6 +28,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     IDamageable[] enemiesInArea = null;
     private void DamageArea()
     {
+        strength = playerStats.GetStat("strength");
         enemiesInArea = attackTriggerCollider.GetDamageablesInArea();
         foreach(IDamageable _i in enemiesInArea)
         {

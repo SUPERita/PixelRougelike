@@ -1,0 +1,2798 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4539a81a8e6dd014f88b046e436c6c6e, type: 3}
+  m_Name: PlayerStats
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes:
+    - Name: stats
+      Entry: 7
+      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[PlayerStat,
+        Assembly-CSharp]], mscorlib
+    - Name: comparer
+      Entry: 7
+      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
+        mscorlib]], mscorlib
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 12
+      Data: 102
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: speed
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: speed
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 76855
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: strength
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: strength
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 68134
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp114838
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp343538
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp217058
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp459021
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp14534
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp650219
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp77288
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp702150
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp667856
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp621797
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp830752
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp287044
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp465169
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp357546
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp629613
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp693244
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp68053
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp724978
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp184040
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp658305
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp275882
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp503893
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp601069
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp563219
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp399067
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp445176
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp527265
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp327585
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp830210
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp652899
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp729103
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp724430
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp136159
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp999108
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp615048
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp388075
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp951565
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp165130
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp834344
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp241538
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp202344
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp369385
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp69811
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp685671
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp415710
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp153535
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp740105
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp392920
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp390321
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp730304
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp251949
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp202346
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp486811
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp1410
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp986211
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp258202
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp237496
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp381478
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp669557
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp196729
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp531043
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp690425
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp281111
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp542078
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp942252
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp161294
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp732101
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp763018
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp546820
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp78607
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp657971
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp817581
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp646373
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp686467
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp661871
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp516686
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp810434
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp973822
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp705813
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp770375
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp523515
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp549150
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp874235
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp361283
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp183613
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp124885
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp211149
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp187331
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp80572
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp488774
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp300351
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp132814
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp923974
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp662894
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp595907
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp895765
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp765494
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp730789
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp230124
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: tmp174147
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 13
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+  basePlayerStats: {fileID: 11400000, guid: c65c075ec3bb7a242a1de585df09cae6, type: 2}

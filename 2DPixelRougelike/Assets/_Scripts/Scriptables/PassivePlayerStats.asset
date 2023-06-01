@@ -1,0 +1,2222 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14605e0020ced344d9f94082dc7636dc, type: 3}
+  m_Name: PassivePlayerStats
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  samples:
+  - <number>k__BackingField: 812
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 101
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 81
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 81
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 34
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 63
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 30
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 39
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 34
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 78
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 3
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 24
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 34
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 81
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 3
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 66
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 66
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 74
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 63
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 24
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 30
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 74
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 66
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 81
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 3
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 47
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 68
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 34
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 68
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 63
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 47
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 94
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 3
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 37
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 68
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 92
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 68
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 57
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 93
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 34
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 92
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 78
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 73
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 3
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 47
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 93
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 57
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 39
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 57
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 78
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 94
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 74
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 74
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 74
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 93
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 66
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 30
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 47
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 73
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 37
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 93
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 66
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 37
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 92
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 24
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 30
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 68
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 92
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 92
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 47
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 68
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 57
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 93
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 37
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 94
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 81
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 21
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 45
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 74
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 73
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 92
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 34
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 37
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 58
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 93
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 68
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 94
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 94
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 26
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 24
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 39
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 63
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 30
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 81
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 39
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 87
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 37
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 30
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 94
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 83
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 37
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 73
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 45
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 63
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 9
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 15
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 74
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 22
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 44
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 92
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 23
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 43
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 13
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 67
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 3
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 84
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 37
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 95
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 98
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 39
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 4
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 56
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 40
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 63
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 70
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 6
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 65
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 57
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 68
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 93
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 27
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 29
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 39
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 24
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 88
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 3
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 39
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 75
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 90
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 54
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 32
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 52
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 7
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 80
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 91
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 47
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 53
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 97
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 31
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 35
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 17
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 71
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 86
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 28
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 11
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 33
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 34
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 41
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 50
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 92
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 18
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 69
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 38
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 74
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 55
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 48
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 46
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 93
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 57
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 42
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 89
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 77
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 8
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 62
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 47
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 96
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 82
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 16
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 14
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 59
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 49
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 79
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 25
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 12
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 61
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 76
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 85
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 81
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 60
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 51
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 64
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 36
+    <statName>k__BackingField: strength
+  - <number>k__BackingField: 72
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 19
+    <statName>k__BackingField: speed

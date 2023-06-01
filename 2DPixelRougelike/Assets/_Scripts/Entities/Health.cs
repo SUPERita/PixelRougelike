@@ -35,23 +35,31 @@ public class Health : MonoBehaviour
 
         if (showDmgText)
         {
-            SharedCanvas s = FindObjectOfType<SharedCanvas>();
-            //change color with css html styling thing <color>
+            SharedCanvas s = SharedCanvas.Instance;// dont override the awake staticInstance awake method without thinking
+            //these two shits take a fuckton of performance
+            //v
             tmpTextObject = Instantiate(DmgText, s.transform);
-            tmpTextObject.transform.position = s._mainCameraRef.WorldToScreenPoint(transform.position) + Vector3.up*50;
+            //^
+            //fixed
 
-            //WASSS ISSS DASSS?!?!?!?! IT WAS THiS EASY>?>?>>?> 
+            tmpTextObject.transform.position = transform.position;//s._mainCameraRef.WorldToScreenPoint(transform.position) + Vector3.up*50;
+
             tmpTextObject.GetComponent<TextMeshProUGUI>().SetText(""+_amt);
+            //WASSS ISSS DASSS?!?!?!?! IT WAS THiS EASY>?>?>>?> 
             //tmpTextObject.GetComponent<TextAnimator>().AppendText("" + $"<rainb>{_amt}</rainb>", false); // also need a text animator compounent
 
-            //tmpTextObject.GetComponent<Rigidbody2D>().velocity = Vector2.right *3* UnityEngine.Random.Range(-1f, 1f) + Vector2.up*5;
             tmpTextObject.transform.DOScale(Vector3.one * 1.1f, .5f).SetEase(Ease.OutBounce)
                   .OnStart(()=> tmpTextObject.transform.DOMove(
-                        tmpTextObject.transform.position + Vector3.one*50 * UnityEngine.Random.Range(-1f, 1f),
-                        .5f));
+                        tmpTextObject.transform.position + Vector3.one* UnityEngine.Random.Range(-1f, 1f) *2f,
+                       .5f));
             tmpTextObject.transform.DOScale(Vector3.zero, .4f).SetDelay(.5f);
+
+            //also this one, fuckton of performance
+            //v
             Destroy(tmpTextObject.gameObject, 1f);
-            //tmpTextObject = null;
+            //^
+
+
         }
 
         //invoke die

@@ -2,15 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SharedCanvas : MonoBehaviour
+public class SharedCanvas : StaticInstance<SharedCanvas>
 {
     public Camera _mainCameraRef = null;
 
-
-    private void Awake()
-    {
-        //_mainCameraRef = Camera.main;
-    }
+    //overrides the StaticInstance awake?!
+    //private void Awake()
+    //{
+    //    //_mainCameraRef = Camera.main;
+    //}
 
    
 }
