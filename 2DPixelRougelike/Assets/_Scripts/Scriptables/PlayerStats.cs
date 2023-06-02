@@ -14,9 +14,14 @@ public class PlayerStats : SerializedScriptableObject
     private void GetCompiledStats()
     {
         //copies the dictionary?
-        stats = basePlayerStats.CompileStats().ToDictionary(entry => entry.Key, entry => entry.Value); 
+        stats = basePlayerStats.PlayerStats_GetCompiledStats().ToDictionary(entry => entry.Key, entry => entry.Value); 
     }
     public void TEST_GetCompiledStats()
+    {
+        GetCompiledStats();
+    }
+
+    public void BasePlayerStats_RequestStatsCompile()
     {
         GetCompiledStats();
     }

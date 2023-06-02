@@ -7,9 +7,17 @@ using System;
 [CreateAssetMenu(fileName = "PassivePlayerStats", menuName = "Custom/PassivePlayerStats")]
 public class PassivePlayerStats : SerializedScriptableObject
 {
+    [SerializeField] private BasePlayerStats basePlayerStats = null;
     [SerializeField] private List<PlayerStatInstance> samples = new List<PlayerStatInstance>();
-    public List<PlayerStatInstance> GetStatInstances() { return samples; } 
+    public List<PlayerStatInstance> GetStatInstances() { return samples; }
 
+
+    private void NotifyUpdatePlayerStats()
+    {
+        basePlayerStats.PlayerStatsChanged_RequestCompileStats();
+    }
+
+    //utils
     [Button]
     public void CreateSampleStat(int amount)
     {
@@ -18,7 +26,6 @@ public class PassivePlayerStats : SerializedScriptableObject
             samples.Add(new PlayerStatInstance(UnityEngine.Random.Range(0, 2) == 1? "speed":"strength", UnityEngine.Random.Range(0, 99)));
         }
     }
-
     [Button]
     public void DeleteAllStats()
     {

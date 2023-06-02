@@ -58,6 +58,7 @@ public class BoxBase : MonoBehaviour, IDamageable
         rb.velocity = dieKnockSpeed * (transform.position - follow.position);
         //Destroy(gameObject);
         transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject));
+        MidRunUpgradesManager.Instance.OpenStatChoice();
     }
 
     private void FixedUpdate()

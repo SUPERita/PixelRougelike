@@ -8,23 +8,41 @@ using System.Linq;
 [CreateAssetMenu(fileName = "BasePlayerStats", menuName = "Custom/BasePlayerStats")]
 public class BasePlayerStats : SerializedScriptableObject
 {
+    [SerializeField] private PlayerStats playerStats = null;
     [SerializeField] private PassivePlayerStats passivePlayerStats = null;
+    [SerializeField] private MidRunPlayerStats midRunPlayerStats = null;
 
     [SerializeField] private Dictionary<string, PlayerStat> baseStats = new Dictionary<string, PlayerStat>();
 
     //stats passing
     private Dictionary<string, PlayerStat> compiledStats = new Dictionary<string, PlayerStat>();
-    public Dictionary<string, PlayerStat> CompileStats()
+    public Dictionary<string, PlayerStat> PlayerStats_GetCompiledStats()
     {
         //Debug.Log("reseted");
         //set base stats as the base
         compiledStats = baseStats.ToDictionary(entry => entry.Key, entry => entry.Value); ;
 
         //more passes and calls
-        foreach (PlayerStatInstance _statToAdd in passivePlayerStats.GetStatInstances())
+        UpgradePass(passivePlayerStats.GetStatInstances());
+        UpgradePass(midRunPlayerStats.GetStatInstances());
+
+        //1 x
+        //compiledStats.TryGetValue("speed", out tmpStat);
+        //tmpStat.BaseStats_SetStatValue_USEONLYATBaseStats(-1);
+        //2 x 
+        //compiledStats["speed"].BaseStats_SetStatValue_USEONLYATBaseStats(-1);
+        //3 v
+        //compiledStats["speed"] = _samplePlayerStat
+
+        return compiledStats;
+    }
+
+    private void UpgradePass(List<PlayerStatInstance> _statsForPass)
+    {
+        foreach (PlayerStatInstance _statToAdd in _statsForPass)
         {
             //check if has value
-            if(!compiledStats.TryGetValue(_statToAdd.statName, out tmpStat)) { continue; }
+            if (!compiledStats.TryGetValue(_statToAdd.statName, out tmpStat)) { continue; }
 
 
             tmpStat.BaseStats_SetStatValue_USEONLYATBaseStats(
@@ -52,19 +70,17 @@ public class BasePlayerStats : SerializedScriptableObject
 
             //Debug.Log(_statToAdd.statName + "is actually = " + compiledStats[_statToAdd.statName].num);//it does find it
         }
-        
-        //1 x
-        //compiledStats.TryGetValue("speed", out tmpStat);
-        //tmpStat.BaseStats_SetStatValue_USEONLYATBaseStats(-1);
-        //2 x 
-        //compiledStats["speed"].BaseStats_SetStatValue_USEONLYATBaseStats(-1);
-        //3 v
-        //compiledStats["speed"] = _samplePlayerStat
-
-        return compiledStats;
     }
     private PlayerStat tmpStat;
 
+    public void PlayerStatsChanged_RequestCompileStats()
+    {
+        playerStats.BasePlayerStats_RequestStatsCompile();
+    }
+
+
+
+    //utils
     [Button]
     public void CreateSampleStat(int amount)
     {
@@ -73,7 +89,6 @@ public class BasePlayerStats : SerializedScriptableObject
             baseStats.Add("tmp" + UnityEngine.Random.Range(0, 999999), new PlayerStat());
         }
     }
-
     [Button]
     public void DeleteAllStats()
     {

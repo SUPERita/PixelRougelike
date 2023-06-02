@@ -9,8 +9,8 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 14605e0020ced344d9f94082dc7636dc, type: 3}
-  m_Name: PassivePlayerStats
+  m_Script: {fileID: 11500000, guid: 593b756cb0abc1245b4e505253a393fa, type: 3}
+  m_Name: MidRunPlayerStats
   m_EditorClassIdentifier: 
   serializationData:
     SerializedFormat: 2
@@ -22,6 +22,4 @@ MonoBehaviour:
     PrefabModifications: []
     SerializationNodes: []
   basePlayerStats: {fileID: 11400000, guid: c65c075ec3bb7a242a1de585df09cae6, type: 2}
-  samples:
-  - <number>k__BackingField: 10
-    <statName>k__BackingField: strength
+  midRunStats: []
