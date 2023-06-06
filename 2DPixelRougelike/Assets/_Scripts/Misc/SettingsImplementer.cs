@@ -20,5 +20,10 @@ public class SettingsImplementer : MonoBehaviour
         Time.timeScale = 1;
     }
 
+    private void OnDisable()
+    {
+        ResourceSystem.Instance.ResetResource(ResourceType.Gold);
+    }
+
   
 }

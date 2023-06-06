@@ -19,6 +19,19 @@ public class Tester : MonoBehaviour
 
     private void Update()
     {
+
+
+        if (compileEveryFrame)
+        {
+            for (int i = 0; i < times; i++)
+            {
+                ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 1);
+            }
+            return;
+        }
+        
+        
+
         if (compileEveryFrame)
         {
                 for (int i = 0; i < times; i++)
@@ -27,5 +40,6 @@ public class Tester : MonoBehaviour
                     stats.GetStat("speed");
                 }
         }
+        return;
     }
 }
