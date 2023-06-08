@@ -18,7 +18,7 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     {
         canvasGroup = GetComponent<CanvasGroup>();
         midRunPlayerStats.ResetMidRunStats();
-        canvasGroup.alpha = 0;
+        Helpers.ToggleCanvas(canvasGroup, false);
     }
 
     //enter
@@ -27,7 +27,8 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     {
         //fade in
         Time.timeScale = 0f;
-        canvasGroup.alpha = 1;
+        Helpers.ToggleCanvas(canvasGroup, true);
+        //canvasGroup.alpha = 1;
         TweenInChoices();
 
         //subscribe
@@ -73,7 +74,8 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
 
         //fade out
         Time.timeScale = 1f;
-        canvasGroup.alpha = 0;
+        //canvasGroup.alpha = 0;
+        Helpers.ToggleCanvas(canvasGroup, false);
 
         //unsubscribe
         SubscribeToChildren(false);
@@ -105,7 +107,7 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     [Button]
     public void ToggleCanvasGroup()
     {
-        canvasGroup.alpha = canvasGroup.alpha == 1 ? 0 : 1;
+        Helpers.ToggleCanvas(canvasGroup);
     }
 
 }

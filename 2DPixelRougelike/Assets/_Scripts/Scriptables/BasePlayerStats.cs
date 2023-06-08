@@ -39,11 +39,12 @@ public class BasePlayerStats : SerializedScriptableObject
 
     private void UpgradePass(List<PlayerStatInstance> _statsForPass)
     {
+
         foreach (PlayerStatInstance _statToAdd in _statsForPass)
         {
+            
             //check if has value
             if (!compiledStats.TryGetValue(_statToAdd.statName, out tmpStat)) { continue; }
-
 
             tmpStat.BaseStats_SetStatValue_USEONLYATBaseStats(
                 //CurrentValue + valueToAdd
@@ -52,7 +53,9 @@ public class BasePlayerStats : SerializedScriptableObject
 
             //set the compiled value To
             compiledStats[_statToAdd.statName] = tmpStat;
+            
 
+            
             //old
             /*
             //set the compiled value To

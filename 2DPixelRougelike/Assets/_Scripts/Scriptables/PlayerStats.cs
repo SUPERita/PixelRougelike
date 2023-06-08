@@ -23,6 +23,7 @@ public class PlayerStats : SerializedScriptableObject
 
     public void BasePlayerStats_RequestStatsCompile()
     {
+        Debug.Log("called compile");
         GetCompiledStats();
     }
 

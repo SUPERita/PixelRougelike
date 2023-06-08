@@ -21,14 +21,14 @@ public class Tester : MonoBehaviour
     {
 
 
-        if (compileEveryFrame)
-        {
-            for (int i = 0; i < times; i++)
-            {
-                ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 1);
-            }
-            return;
-        }
+        //if (compileEveryFrame)
+        //{
+        //    for (int i = 0; i < times; i++)
+        //    {
+        //        ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 1);
+        //    }
+        //    return;
+        //}
         
         
 

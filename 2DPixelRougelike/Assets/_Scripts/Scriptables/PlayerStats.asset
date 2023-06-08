@@ -34,7 +34,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 2
+      Data: 3
     - Name: 
       Entry: 7
       Data: 
@@ -76,7 +76,34 @@ MonoBehaviour:
       Data: strength
     - Name: <num>k__BackingField
       Entry: 3
-      Data: 1023
+      Data: 24
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 1
+      Data: attack speed
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: attack speed
+    - Name: <num>k__BackingField
+      Entry: 3
+      Data: 3
     - Name: <description>k__BackingField
       Entry: 6
       Data: 

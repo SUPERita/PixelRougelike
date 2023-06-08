@@ -17,6 +17,13 @@ public class PassivePlayerStats : SerializedScriptableObject
         basePlayerStats.PlayerStatsChanged_RequestCompileStats();
     }
 
+    public void SetPassiveStatsList(List<PlayerStatInstance> list)
+    {
+        samples.Clear();
+        samples.AddRange(list);
+        NotifyUpdatePlayerStats();
+    }
+
     //utils
     [Button]
     public void CreateSampleStat(int amount)

@@ -15,6 +15,9 @@ public class SettingsImplementer : MonoBehaviour
         GraphicsSettings.transparencySortAxis = new Vector3(0.0f, 0.0f, 1.0f);
 
         //start compile
+        PassiveUpgradesManager.Instance.CompileStatsFromChildren();//compile children to a list and push to passiveUpgrades
+        //ERROR: if got here after an error than know that i need a PassiveUpgradesManager withs its children in every single scene for the passives to load proparly
+
         playerStats.BasePlayerStats_RequestStatsCompile();
 
         Time.timeScale = 1;
@@ -22,7 +25,10 @@ public class SettingsImplementer : MonoBehaviour
 
     private void OnDisable()
     {
-        ResourceSystem.Instance.ResetResource(ResourceType.Gold);
+        if(ResourceSystem.Instance != null)
+        {
+            ResourceSystem.Instance.ResetResource(ResourceType.Gold);
+        }
     }
 
   

@@ -23,5 +23,9 @@ MonoBehaviour:
     SerializationNodes: []
   basePlayerStats: {fileID: 11400000, guid: c65c075ec3bb7a242a1de585df09cae6, type: 2}
   samples:
-  - <number>k__BackingField: 100
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: speed
+  - <number>k__BackingField: 11
     <statName>k__BackingField: strength
+  - <number>k__BackingField: 2
+    <statName>k__BackingField: attack speed

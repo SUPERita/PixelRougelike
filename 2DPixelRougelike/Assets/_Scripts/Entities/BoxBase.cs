@@ -41,6 +41,7 @@ public class BoxBase : MonoBehaviour, IDamageable
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        follow = FindAnyObjectByType<PlayerMovement>().transform;
         health.OnDie += Health_OnDie;
     }
     private void OnDisable()

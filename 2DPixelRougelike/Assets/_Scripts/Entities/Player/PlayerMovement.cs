@@ -44,12 +44,12 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
         //speed multiplayer//rolling
         if (speedMultRemainingTime > 0f)
         {
-            rollParticle.Play();
+            rollParticle.enableEmission = true;
             speedMultRemainingTime -= Time.deltaTime;
         }
         else
         {
-            rollParticle.Stop();
+            rollParticle.enableEmission = false;
             speedMult = 1f;
         }
 
@@ -119,8 +119,8 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     }
     public void OnFire(InputValue _value)
     {
-        Debug.Log(_value);
-        speedMult = 3;
+        //Debug.Log(_value);
+        speedMult = 5;
         speedMultRemainingTime = .15f;
         //revert back in a second, but 
     }

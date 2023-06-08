@@ -139,7 +139,7 @@ public class ResourceSystem : StaticInstance<ResourceSystem>
     //visit when add resource
     public void ResourceDisplay_StartCallChangeEvent()
     {
-        Debug.Log("resource update");
+        //Debug.Log("resource update");
         OnResourceChanged?.Invoke(ResourceType.EnergyNugget, TypeToResource(ResourceType.EnergyNugget)._amount);
         OnResourceChanged?.Invoke(ResourceType.Gold, TypeToResource(ResourceType.Gold)._amount);
     }
