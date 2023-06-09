@@ -91,11 +91,16 @@ public class PassiveUpgradeChoice : MonoBehaviour
     }
 
     //utils
-    public int GetStatValue()
+    public int GetCurrentStatValue()
     {
         if (GetCurrentLevel() == 0) return 0;
         return valuePerLevel[GetCurrentLevel()-1].Val;
     }
+    public int GetCurrentCost()
+    {
+        return valuePerLevel[GetCurrentLevel()].cost;
+    }
+
 
     //saving
     private int GetCurrentLevel()
@@ -114,18 +119,11 @@ public class PassiveUpgradeChoice : MonoBehaviour
     [Button]
     public void AddLevel()
     {
-        if (!IsStatMaxed())
-        {
-            SetCurrentLevel(1 + GetCurrentLevel());
-        }
-        else
-        {
-            //Debug.Log("maxed out: " + statname);
-        }
+        SetCurrentLevel(1 + GetCurrentLevel());
         UpdateVisuals();
     }
 
-    private bool IsStatMaxed()
+    public bool IsStatMaxed()
     {
         return (GetCurrentLevel() >= valuePerLevel.Length);
     }

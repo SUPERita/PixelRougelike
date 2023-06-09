@@ -25,8 +25,9 @@ public class BoxBase : MonoBehaviour, IDamageable
     public void TakeDamage(int _val)
     {
         AudioSystem.Instance.PlaySound("s3");
-        hitFeedback?.PlayFeedbacks();
-        health.TakeDamage(_val);
+        if(hitFeedback != null) { hitFeedback?.PlayFeedbacks();}
+        if(health != null) {health.TakeDamage(_val); }
+        
 
         StartCoroutine(SetMat(hitMat));
         StartCoroutine(SetMat(regularMat, hitFlashTime));
@@ -61,7 +62,7 @@ public class BoxBase : MonoBehaviour, IDamageable
         transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject));
         ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
         ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);
-        MidRunUpgradesManager.Instance.OpenStatChoice();
+        //MidRunUpgradesManager.Instance.OpenStatChoice();
     }
 
     private void FixedUpdate()

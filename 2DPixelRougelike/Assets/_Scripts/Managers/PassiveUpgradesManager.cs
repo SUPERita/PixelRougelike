@@ -53,8 +53,17 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
     //on click
     private void _ChoiceButton_OnChoiceClicked(PassiveUpgradeChoice obj)
     {
-        Debug.LogError("CHECK IF CAS EFFORD");
-        obj.AddLevel();
+        //check if isnt maxed
+        if(!obj.IsStatMaxed())
+        {
+            //Debug.LogError("CHECK IF CAS EFFORD");
+            if (ResourceSystem.Instance.HasEnougthResources(ResourceType.EnergyNugget, obj.GetCurrentCost())){
+                ResourceSystem.Instance.TakeResourceAmount(ResourceType.EnergyNugget, obj.GetCurrentCost ());
+                obj.AddLevel();
+            } else { Debug.LogError("too poor"); }
+        } else { Debug.LogError("stat maxed"); }
+        
+
         AfterChoicePressed();
     }
     private void AfterChoicePressed()
@@ -86,8 +95,8 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
         //loop through all passives and create playerstatinstance for each
         foreach (PassiveUpgradeChoice _p in GetComponentsInChildren<PassiveUpgradeChoice>())
         {
-            Debug.Log(_p.name);
-            _passives.Add(new PlayerStatInstance(_p.statname, _p.GetStatValue()));
+            //Debug.Log(_p.name);
+            _passives.Add(new PlayerStatInstance(_p.statname, _p.GetCurrentStatValue()));
         }
         passivePlayerStats.SetPassiveStatsList(_passives);
     }
