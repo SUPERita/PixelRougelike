@@ -50,7 +50,7 @@ public class Health : MonoBehaviour
 
             tmpTextObject.transform.DOScale(Vector3.one * 1.1f, .5f).SetEase(Ease.OutBounce)
                   .OnStart(()=> tmpTextObject.transform.DOMove(
-                        tmpTextObject.transform.position + Vector3.one* UnityEngine.Random.Range(-1f, 1f) *2f,
+                        tmpTextObject.transform.position + ((Vector3.up* UnityEngine.Random.Range(-1f, 1f)) + (Vector3.right * UnityEngine.Random.Range(-1f, 1f))) * 2f,
                        .5f));
             tmpTextObject.transform.DOScale(Vector3.zero, .4f).SetDelay(.5f);
 

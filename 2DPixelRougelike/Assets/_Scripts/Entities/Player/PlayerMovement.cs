@@ -14,7 +14,9 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     Rigidbody2D rb;
     [SerializeField] private Animator animator;
     [SerializeField] private AttackTriggerCollider attackTriggerCollider;
-    [SerializeField] private ParticleSystem rollParticle = null; 
+    [SerializeField] private ParticleSystem rollParticle = null;
+    [SerializeField] private Transform playerVisual = null;
+    
     float speedMult = 1f;
     float speedMultRemainingTime = 0f;
 
@@ -66,7 +68,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     {
 
         //rotation
-        transform.rotation = lastMovement.x > 0.02f ? Quaternion.Euler(0f, 0f, 0f) : Quaternion.Euler(0f, 180f, 0f);
+        playerVisual.rotation = lastMovement.x > 0.02f ? Quaternion.Euler(0f, 0f, 0f) : Quaternion.Euler(0f, 180f, 0f);
 
         //animator variables
         animator.SetFloat("Movement", movement.sqrMagnitude > 0? 1 : 0);

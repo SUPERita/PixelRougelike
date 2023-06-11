@@ -1,18 +1,49 @@
+using Sirenix.OdinInspector;
+using Sirenix.Utilities;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private Weapon[] weapons;
+
+    [Button]
+    private void CacheWeaponSockets()
     {
-        
+        weaponSockets.Clear();
+        foreach (Transform t in transform.GetComponentsInChildren<Transform>())
+        {
+            if(t == transform) { continue; }
+            weaponSockets.Add(t);
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] private List<Transform> weaponSockets;
+    
+    void Start()
     {
+        SpawnWeapons();
+    }
+
+    private void SpawnWeapons()
+    {
+        if(weaponSockets.Count < weapons.Length) { Debug.LogError("too many weapons not enougth sockets"); }
+        ClearWeaponSockets();
+        for (int i = 0; i < weapons.Length; i++)
+        {
+            
+            Instantiate(weapons[i].gameObject, weaponSockets[i]);
+        }
+    }
+
+    private void ClearWeaponSockets()
+    {
+        for (int i = 0; i < weaponSockets.Count; i++)
+        {
+            Helpers.DestroyChildren(weaponSockets[i]);  
+        }
         
     }
 }

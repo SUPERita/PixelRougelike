@@ -12,7 +12,7 @@ public class Projectile : MonoBehaviour
 
     public void InitializeProjectile(int _damage, float velocity, Vector3 direction, LayerMask _collisionLayer, float projLifetime = 3f)
     {
-        Debug.Log("alive");
+        //Debug.Log("alive");
         damage = _damage;
         rb.velocity = direction * velocity;
         RotateSpriteToNormalizedDirection(direction);
@@ -51,7 +51,11 @@ public class Projectile : MonoBehaviour
     private void RotateSpriteToNormalizedDirection(Vector3 direction)
     {
         Vector3 desiredDirection = direction.z * Vector3.forward;
-        Quaternion desiredRotation = Quaternion.LookRotation(desiredDirection);
-        transform.rotation = desiredRotation;
+        if(desiredDirection != Vector3.zero)
+        {
+            Quaternion desiredRotation = Quaternion.LookRotation(desiredDirection);
+            transform.rotation = desiredRotation;
+        }
+        
     }
 }
