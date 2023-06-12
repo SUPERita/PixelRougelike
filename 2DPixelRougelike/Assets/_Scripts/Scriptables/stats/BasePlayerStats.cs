@@ -11,6 +11,7 @@ public class BasePlayerStats : SerializedScriptableObject
     [SerializeField] private PlayerStats playerStats = null;
     [SerializeField] private PassivePlayerStats passivePlayerStats = null;
     [SerializeField] private MidRunPlayerStats midRunPlayerStats = null;
+    [SerializeField] private ItemShopPlayerStats itemShopPlayerStats = null;
 
     [SerializeField] private Dictionary<string, PlayerStat> baseStats = new Dictionary<string, PlayerStat>();
 
@@ -25,6 +26,7 @@ public class BasePlayerStats : SerializedScriptableObject
         //more passes and calls
         UpgradePass(passivePlayerStats.GetStatInstances());
         UpgradePass(midRunPlayerStats.GetStatInstances());
+        UpgradePass(itemShopPlayerStats.GetStatInstances());
 
         //1 x
         //compiledStats.TryGetValue("speed", out tmpStat);
@@ -111,6 +113,11 @@ public struct PlayerStatInstance
         number = _n;
         statName = _s;
     }
+}
+
+public interface PlayerStatsCategory
+{
+    List<PlayerStatInstance> GetStatInstances();
 }
 
 

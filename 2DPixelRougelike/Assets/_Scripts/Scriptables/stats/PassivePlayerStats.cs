@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using System;
 
 [CreateAssetMenu(fileName = "PassivePlayerStats", menuName = "Custom/PassivePlayerStats")]
-public class PassivePlayerStats : SerializedScriptableObject
+public class PassivePlayerStats : SerializedScriptableObject, PlayerStatsCategory
 {
     [SerializeField] private BasePlayerStats basePlayerStats = null;
     [SerializeField] private List<PlayerStatInstance> samples = new List<PlayerStatInstance>();

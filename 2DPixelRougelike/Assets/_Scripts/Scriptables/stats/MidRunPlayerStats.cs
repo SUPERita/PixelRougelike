@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using System;
 
 [CreateAssetMenu(fileName = "MidRunPlayerStats", menuName = "Custom/MidRunPlayerStats")]
-public class MidRunPlayerStats : SerializedScriptableObject
+public class MidRunPlayerStats : SerializedScriptableObject, PlayerStatsCategory
 {
     [SerializeField] private BasePlayerStats basePlayerStats = null;
     [SerializeField] private List<PlayerStatInstance> midRunStats = new List<PlayerStatInstance>();
