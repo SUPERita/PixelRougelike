@@ -16,12 +16,15 @@ public class Shop : StaticInstance<Shop>
     [SerializeField] private ItemCollection itemCollection = null;
     [SerializeField] private ItemShopPlayerStats itemShopPlayerStats = null;
     [SerializeField] private CanvasGroup canvasGroup = null;
+    [SerializeField] private TextMeshProUGUI rerollCostText = null;
+    private int currentRerollcost = 0;
     [Header("item cards")]
     [SerializeField, AssetsOnly] private GameObject itemCardPrefab = null;
     [SerializeField] private RectTransform itemCardRoot = null;
     [Header("item display")]
     [SerializeField, AssetsOnly] private GameObject itemDisplayPrefab = null;
     [SerializeField] private RectTransform itemDisplaysRoot = null;
+
 
 
     private List<Item> playerItems = new List<Item>();
@@ -47,6 +50,8 @@ public class Shop : StaticInstance<Shop>
         RefreshShopCards();
         //Choices SetUp
         //SetUpChoices();
+        currentRerollcost = 0;
+        rerollCostText.SetText("" + currentRerollcost);
     }
 
 
@@ -57,17 +62,35 @@ public class Shop : StaticInstance<Shop>
         CreateShopCard();
         CreateShopCard();
         CreateShopCard();
+
+        rerollCostText.SetText(""+currentRerollcost);
     }
+    public void Buttton_Reroll()
+    {
+        //if has enougth money
+        if (ResourceSystem.Instance.HasEnougthResources(ResourceType.Gold, currentRerollcost))
+        {
+            //take gold
+            ResourceSystem.Instance.TakeResourceAmount(ResourceType.Gold, currentRerollcost);
+
+            //give
+            currentRerollcost += 5;
+            rerollCostText.SetText("" + currentRerollcost);
+            RefreshShopCards();
+        } else { Debug.LogError("too poor"); }
+        
+    }
+
     private void RefreshItemDisplay()
     {
         Helpers.DestroyChildren(itemDisplaysRoot);
 
         foreach (Item _item in playerItems)
         {
-            Instantiate(itemDisplayPrefab, itemDisplaysRoot).GetComponent<Image>().sprite = _item.itemSprite;
+            Instantiate(itemDisplayPrefab, itemDisplaysRoot).GetComponent<ItemDisplay>().InitializeDisplay(_item);
         }
     }
-
+     
     private void CreateShopCard()
     {
         Item tmpItem = itemCollection.GetRandomItem();
@@ -90,6 +113,7 @@ public class Shop : StaticInstance<Shop>
             //give item
             playerItems.Add(_card.item);
             Destroy(_card.gameObject);
+            UpdatePlayerStats();
         }
         else { Debug.LogError("too poor"); }
         RefreshItemDisplay();

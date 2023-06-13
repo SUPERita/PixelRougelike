@@ -9,12 +9,15 @@ using System.Linq;
 public class PlayerStats : SerializedScriptableObject
 {
     public BasePlayerStats basePlayerStats = null;
-
+    public event Action OnPlayerStatsChanged;
     [Button]
     private void GetCompiledStats()
     {
         //copies the dictionary?
-        stats = basePlayerStats.PlayerStats_GetCompiledStats().ToDictionary(entry => entry.Key, entry => entry.Value); 
+        stats = basePlayerStats.PlayerStats_GetCompiledStats().ToDictionary(entry => entry.Key, entry => entry.Value);
+        
+        //tells everyone something changed
+        OnPlayerStatsChanged?.Invoke();
     }
     public void TEST_GetCompiledStats()
     {
@@ -47,10 +50,12 @@ public class PlayerStats : SerializedScriptableObject
     */
 
     [SerializeField] private Dictionary<string, PlayerStat> stats = new Dictionary<string, PlayerStat>();
+    public Dictionary<string, PlayerStat> GetRawStats() { return stats; }
     public int GetStat(string _statName)
     {
         return stats[_statName].num; 
     }
+
 
 }
 
@@ -65,7 +70,8 @@ public struct PlayerStat
     [field: SerializeField] public string description { get; private set; }
     [HorizontalGroup("a")]
     [field: SerializeField] public Sprite icon { get; private set; }
-
+    [HorizontalGroup("a")]
+    [field: SerializeField] public bool showInDisplay { get; private set; }
     public void BaseStats_SetStatValue_USEONLYATBaseStats(int _to)
     {
         //Debug.Log("hello i set my stats to = " + _to);

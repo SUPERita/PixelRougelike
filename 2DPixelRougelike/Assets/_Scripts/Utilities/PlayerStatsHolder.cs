@@ -10,4 +10,6 @@ public class PlayerStatsHolder : StaticInstance<PlayerStatsHolder>
     {
         return playerStats.GetStat(_statName);
     }
+
+    public PlayerStats GetPlayerStats() { return playerStats; }
 }
