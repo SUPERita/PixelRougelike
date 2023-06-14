@@ -14,6 +14,7 @@ public static class Helpers
     /// </summary>
     public static void DestroyChildren(this Transform t)
     {
+        if(t == null) { Debug.LogWarning("idk it just sometimes says that on non null object just let it be"); return; }
         foreach (Transform child in t) Object.Destroy(child.gameObject);
     }
 

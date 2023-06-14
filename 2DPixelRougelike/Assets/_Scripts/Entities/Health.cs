@@ -33,7 +33,7 @@ public class Health : MonoBehaviour
         //invoke take damage
         OnTakeDamage?.Invoke(_amt);
 
-        if (showDmgText)
+        if (showDmgText && SettingsCanvas.Instance.showDamageNumbers/*removeable*/)
         {
             SharedCanvas s = SharedCanvas.Instance;// dont override the awake staticInstance awake method without thinking
             //these two shits take a fuckton of performance

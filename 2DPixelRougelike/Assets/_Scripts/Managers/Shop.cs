@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Drawing.Design;
 using TMPro;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class Shop : StaticInstance<Shop>
@@ -52,6 +53,9 @@ public class Shop : StaticInstance<Shop>
         //SetUpChoices();
         currentRerollcost = 0;
         rerollCostText.SetText("" + currentRerollcost);
+
+        // set selected
+        EventSystem.current.SetSelectedGameObject(rerollCostText.GetComponentInParent<Button>().gameObject);
     }
 
 
@@ -100,20 +104,39 @@ public class Shop : StaticInstance<Shop>
                     .GetComponent<ShopItemCard>().InitializeShopCard(tmpItem, this, choosedItemPrice);
     }
 
-    public void OnClickedCard(ShopItemCard _card)
+    public void OnClickedCard(ShopItemCard _cardClicked)
     {
         // add indicator it is gold being priced
 
         //if has enougth gold
-        if (ResourceSystem.Instance.HasEnougthResources(ResourceType.Gold, _card.price))
+        if (ResourceSystem.Instance.HasEnougthResources(ResourceType.Gold, _cardClicked.price))
         {
             //take gold
-            ResourceSystem.Instance.TakeResourceAmount(ResourceType.Gold, _card.price);
+            ResourceSystem.Instance.TakeResourceAmount(ResourceType.Gold, _cardClicked.price);
 
             //give item
-            playerItems.Add(_card.item);
-            Destroy(_card.gameObject);
+            playerItems.Add(_cardClicked.item);
+            Destroy(_cardClicked.gameObject);
             UpdatePlayerStats();
+
+            // set selected
+            ShopItemCard[] _cards = GetComponentsInChildren<ShopItemCard>();
+            // 1 because there is alwats 1 card in the frame of the click so in this event it needs to be ignored
+            if (_cards.Length > 1) { 
+                foreach(ShopItemCard _c in _cards)
+                {
+                    if (_c != _cardClicked)
+                    {
+                        EventSystem.current.SetSelectedGameObject(_c.GetComponentInChildren<Button>().gameObject); 
+                    }
+                }
+            }
+                
+            else
+            {
+                EventSystem.current.SetSelectedGameObject(rerollCostText.GetComponentInParent<Button>().gameObject);
+            }
+            
         }
         else { Debug.LogError("too poor"); }
         RefreshItemDisplay();

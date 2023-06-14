@@ -7,6 +7,7 @@ using System;
 using UnityEditor;
 using System.Linq;
 using DG.Tweening;
+using UnityEngine.Audio;
 
 /// <summary>
 /// Insanely basic audio system which supports 3D sound.
@@ -22,6 +23,8 @@ public class AudioSystem : StaticInstance<AudioSystem> {
 
     [SerializeField] private AudioSource musicSource = null;
 
+    [SerializeField] private AudioMixerGroup musicMixerGroup = null;
+    [SerializeField] private AudioMixerGroup sfxMixerGroup = null;
     private void Start()
     {
         WriteListToDictionary();
@@ -102,6 +105,7 @@ public class AudioSystem : StaticInstance<AudioSystem> {
         {
             GameObject _g = Instantiate(emptyObject, transform);
             availableSources.Add(_g.AddComponent<AudioSource>());
+            _g.GetComponent<AudioSource>().outputAudioMixerGroup = sfxMixerGroup; 
             _g.GetComponent<AudioSource>().playOnAwake = false;
             _g.name = "sfx";
         }
@@ -110,6 +114,7 @@ public class AudioSystem : StaticInstance<AudioSystem> {
         GameObject _m = Instantiate(emptyObject, transform);
         musicSource = _m.AddComponent<AudioSource>();
         musicSource.loop = true;
+        musicSource.outputAudioMixerGroup = musicMixerGroup;
         //musicSource.playOnAwake = false;
         _m.name = "music";
 

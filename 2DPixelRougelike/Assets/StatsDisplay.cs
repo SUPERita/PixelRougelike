@@ -36,7 +36,7 @@ public class StatsDisplay : MonoBehaviour
     private void PopulateRoot()
     {
         int _counter  = 0;
-        Debug.Log("root populated");
+        //Debug.Log("root populated");
         foreach (KeyValuePair<string, PlayerStat> _stat in PlayerStatsHolder.Instance.GetPlayerStats().GetRawStats())
         {
             if (!_stat.Value.showInDisplay) { continue; }
@@ -50,14 +50,14 @@ public class StatsDisplay : MonoBehaviour
             _g.GetComponentInChildren<Image>().sprite = _stat.Value.icon;
             _counter++;
         }
-        Debug.Log(root.childCount);
+        //Debug.Log(root.childCount);
         root.sizeDelta = Vector2.up * (_counter * 50f +25f);  
     }
 
     private void ClearRoot()
     {
         Helpers.DestroyChildren(root);
-        Debug.Log("root cleared");
+        //Debug.Log("root cleared");
     }
 
     
