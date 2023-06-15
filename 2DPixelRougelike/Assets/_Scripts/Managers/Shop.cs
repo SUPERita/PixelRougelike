@@ -87,6 +87,9 @@ public class Shop : StaticInstance<Shop>
 
     private void RefreshItemDisplay()
     {
+        if (!itemDisplaysRoot) { return; }
+        if (!itemDisplaysRoot.gameObject.activeInHierarchy) { return; }
+
         Helpers.DestroyChildren(itemDisplaysRoot);
 
         foreach (Item _item in playerItems)

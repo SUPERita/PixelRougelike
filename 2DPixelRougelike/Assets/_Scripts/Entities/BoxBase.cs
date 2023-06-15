@@ -25,6 +25,7 @@ public class BoxBase : MonoBehaviour, IDamageable
     public void TakeDamage(int _val)
     {
         if(!alive) return;
+        Debug.Log(AudioSystem.Instance.name);
         AudioSystem.Instance.PlaySound("s3");
         if(hitFeedback != null) { hitFeedback?.PlayFeedbacks();}
         if(health != null) {health.TakeDamage(_val); }

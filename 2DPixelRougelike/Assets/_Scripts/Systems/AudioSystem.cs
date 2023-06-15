@@ -13,12 +13,12 @@ using UnityEngine.Audio;
 /// Insanely basic audio system which supports 3D sound.
 /// Ensure you change the 'Sounds' audio source to use 3D spatial blend if you intend to use 3D sounds.
 /// </summary>
-public class AudioSystem : StaticInstance<AudioSystem> {
+public class AudioSystem : Singleton<AudioSystem> {
     [SerializeField] private string soundFolderPath = "Audio/"; // Path to the folder containing sound clips
     private Dictionary<string, AudioClip> soundDictionary = new Dictionary<string, AudioClip>();
     [HideInInspector] [SerializeField] private List<AudioClip> clips = new List<AudioClip>();
     [SerializeField] private bool muteDebug = false;
-    [HideInInspector] [SerializeField] private List<AudioSource> availableSources = new List<AudioSource>();
+    /*[HideInInspector]*/ [SerializeField] private List<AudioSource> availableSources = new List<AudioSource>();
     //private List<AudioSource> workingSources = new List<AudioSource>();
 
     [SerializeField] private AudioSource musicSource = null;

@@ -51,7 +51,8 @@ public class StatsDisplay : MonoBehaviour
             _counter++;
         }
         //Debug.Log(root.childCount);
-        root.sizeDelta = Vector2.up * (_counter * 50f +25f);  
+        if (root) { root.sizeDelta = Vector2.up * (_counter * 50f +25f); }
+         
     }
 
     private void ClearRoot()
