@@ -167,7 +167,6 @@ MonoBehaviour:
   rb: {fileID: 2444911181205192423}
   hitFeedback: {fileID: 2444911181205192441}
   particleSystem: {fileID: 45616952354432848, guid: cdd73a4c178394c49b87795f40ef70cc, type: 3}
-  hitFlashTime: 0.25
   sr: {fileID: 2444911179368065120}
   regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
@@ -186,7 +185,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 100
   showDmgText: 1
-  DmgText: {fileID: 1257662610765824108, guid: 640713121d6a1664aaa68d335ac839ef, type: 3}
+  DmgTextPrefab: {fileID: 5611360264123127487, guid: 640713121d6a1664aaa68d335ac839ef, type: 3}
 --- !u!114 &2444911181205192441
 MonoBehaviour:
   m_ObjectHideFlags: 0

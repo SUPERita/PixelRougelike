@@ -16,14 +16,14 @@ public class Health : MonoBehaviour
     private int currentHealth = 0;
 
     [SerializeField] private bool showDmgText = false;
-    [SerializeField] private GameObject DmgText = null;
+    [SerializeField] private DamageText DmgTextPrefab = null;
 
     private void Awake()
     {
         currentHealth = baseHealth;
     }
 
-    GameObject tmpTextObject = null;
+    Transform tmpTextObject = null;
     public void TakeDamage(int _amt)
     {
         //take damage
@@ -33,40 +33,66 @@ public class Health : MonoBehaviour
         //invoke take damage
         OnTakeDamage?.Invoke(_amt);
 
-        if (showDmgText && SettingsCanvas.Instance.showDamageNumbers/*removeable*/)
+        //spawn damage numver
+        if (showDmgText && SettingsCanvas.Instance.showDamageNumbers/*future removeable*/)
         {
-            SharedCanvas s = SharedCanvas.Instance;// dont override the awake staticInstance awake method without thinking
-            //these two shits take a fuckton of performance
-            //v
-            tmpTextObject = Instantiate(DmgText, s.transform);
-            //^
-            //fixed
+            SharedCanvas s = SharedCanvas.Instance;
 
-            tmpTextObject.transform.position = transform.position;//s._mainCameraRef.WorldToScreenPoint(transform.position) + Vector3.up*50;
+            //no pooling // build up kinda fast?!// in task manager ram build up around 20-40 times faster than pooling
+            //tmpTextObject = InstantiateDamageNumber(s.transform);
+            //Destroy(tmpTextObject.gameObject, 1f);//also this one, fuckton of performance
+            //yes pooling
+            tmpTextObject = GetPoolObject(s.transform); // in task manager ram build up really slow
+            tmpTextObject.gameObject.GetComponent<DamageText>().CallReleaseToPool(1f);
 
-            tmpTextObject.GetComponent<TextMeshProUGUI>().SetText(""+_amt);
+
+
+
+            tmpTextObject.position = transform.position;//s._mainCameraRef.WorldToScreenPoint(transform.position) + Vector3.up*50;
+
+            tmpTextObject.GetComponent<TextMeshProUGUI>().SetText(_amt.ToString());
             //WASSS ISSS DASSS?!?!?!?! IT WAS THiS EASY>?>?>>?> 
             //tmpTextObject.GetComponent<TextAnimator>().AppendText("" + $"<rainb>{_amt}</rainb>", false); // also need a text animator compounent
-
-            tmpTextObject.transform.DOScale(Vector3.one * 1.1f, .5f).SetEase(Ease.OutBounce)
-                  .OnStart(()=> tmpTextObject.transform.DOMove(
-                        tmpTextObject.transform.position + ((Vector3.up* UnityEngine.Random.Range(-1f, 1f)) + (Vector3.right * UnityEngine.Random.Range(-1f, 1f))) * 2f,
+            tmpTextObject.gameObject.GetComponent<DamageText>().DOStartTween();
+            /*
+            tmpTextObject.DOScale(Vector3.one * 1.1f, .5f).SetEase(Ease.OutBounce)
+                  .OnStart(() => tmpTextObject.DOMove(
+                        tmpTextObject.position + ((Vector3.up * UnityEngine.Random.Range(-1f, 1f)) + (Vector3.right * UnityEngine.Random.Range(-1f, 1f))) * 2f,
                        .5f));
-            tmpTextObject.transform.DOScale(Vector3.zero, .4f).SetDelay(.5f);
-
-            //also this one, fuckton of performance
-            //v
-            Destroy(tmpTextObject.gameObject, 1f);
-            //^
-
+            tmpTextObject.DOScale(Vector3.zero, .4f).SetDelay(.5f);
+            */
 
         }
 
         //invoke die
-        if(currentHealth == 0) { OnDie?.Invoke(); }
-        
+        if (currentHealth == 0) { OnDie?.Invoke(); }
+
     }
 
+    private Transform InstantiateDamageNumber(Transform _parent)
+    {
+        
+
+        // dont override the awake staticInstance awake method without thinking
+        //these two shits take a fuckton of performance
+
+        //v
+        return (Instantiate(DmgTextPrefab, _parent).transform);
+        //^
+        //fixed
+
+
+
+
+    }
+    private Transform GetPoolObject(Transform _parent)
+    {
+        //remmember to set the parent
+        Transform _t = PoolManager.Instance.dmgTextPool.Get().transform;
+        _t.SetParent( _parent );
+        return _t;
+
+    }
 
     public int GetBaseHealth()
     {

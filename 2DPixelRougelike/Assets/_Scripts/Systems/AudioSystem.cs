@@ -36,7 +36,7 @@ public class AudioSystem : Singleton<AudioSystem> {
     {
         //find available source
         AudioSource _a = FindAvailableSource();
-        if(_a == null) { Debug.Log("no Available sources"); return; }
+        if(_a == null) { /*Debug.Log("no Available sources");*//*ye we get it*/ return; }
 
         //get the sound from name
         AudioClip _soundByName = null;

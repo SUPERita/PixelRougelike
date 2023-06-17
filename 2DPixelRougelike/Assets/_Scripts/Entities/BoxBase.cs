@@ -4,6 +4,7 @@ using UnityEngine;
 using MoreMountains;
 using MoreMountains.Feedbacks;
 using DG.Tweening;
+using MoreMountains.Tools;
 
 public class BoxBase : MonoBehaviour, IDamageable
 {
@@ -14,7 +15,7 @@ public class BoxBase : MonoBehaviour, IDamageable
     [Header("FX")]
     [SerializeField] private MMF_Player hitFeedback;
     [SerializeField] private GameObject particleSystem = null;
-    [SerializeField] private float hitFlashTime;
+    private float hitFlashTime = 0.25f;
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Material regularMat;
     [SerializeField] private Material hitMat;
@@ -25,22 +26,42 @@ public class BoxBase : MonoBehaviour, IDamageable
     public void TakeDamage(int _val)
     {
         if(!alive) return;
-        Debug.Log(AudioSystem.Instance.name);
+        //Debug.Log(AudioSystem.Instance.name);
         AudioSystem.Instance.PlaySound("s3");
         if(hitFeedback != null) { hitFeedback?.PlayFeedbacks();}
         if(health != null) {health.TakeDamage(_val); }
         
-
-        StartCoroutine(SetMat(hitMat));
-        StartCoroutine(SetMat(regularMat, hitFlashTime));
+        Invoke(nameof(SetHitMat), 0);
+        Invoke(nameof(SetRegMat), hitFlashTime);
+        //StartCoroutine(SetMat(hitMat));
+        //StartCoroutine(SetMat(regularMat, true));
     }
 
-    private IEnumerator SetMat(Material _m, float _t = 0)
+    //WaitForSeconds _waitCache = new WaitForSeconds(0.25f);
+    //WaitForSeconds _noWaitCache = new WaitForSeconds(0f);
+    //private IEnumerator SetMat(Material _m, bool _waitFlashTime = false)
+    //{
+    //    //yield return new WaitForSeconds(_t);
+    //    if(_waitFlashTime)
+    //    {
+    //        yield return _waitCache;
+    //    } else
+    //    {
+    //        yield return _noWaitCache;
+    //    }
+    //    sr.material = _m;
+    //}
+
+    private void SetHitMat()
     {
-        yield return new WaitForSeconds(_t);
-        sr.material = _m;
+        sr.material = hitMat;
+    }
+    private void SetRegMat()
+    {
+        sr.material = regularMat;
     }
 
+    private MaterialPropertyBlock materialPropertyBlock;
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
