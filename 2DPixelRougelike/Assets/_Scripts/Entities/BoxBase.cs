@@ -30,6 +30,11 @@ public class BoxBase : MonoBehaviour, IDamageable
         AudioSystem.Instance.PlaySound("s3");
         if(hitFeedback != null) { hitFeedback?.PlayFeedbacks();}
         if(health != null) {health.TakeDamage(_val); }
+
+        //particle pool?
+        PoolParticle _p = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnParticle("p1") : PoolManager.Instance.SpawnParticle("p2");
+        _p._particleTransform.position = transform.position;
+        _p.CallReleaseToPool(.3f);
         
         Invoke(nameof(SetHitMat), 0);
         Invoke(nameof(SetRegMat), hitFlashTime);

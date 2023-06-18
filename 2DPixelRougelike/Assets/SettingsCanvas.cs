@@ -8,7 +8,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.UI;
 
-public class SettingsCanvas : StaticInstance<SettingsCanvas>
+public class SettingsCanvas : Singleton<SettingsCanvas>
 {
 
     float lastTimeScale = 1;

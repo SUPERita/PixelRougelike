@@ -9362,7 +9362,7 @@ ParticleSystemRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 2
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -16157,10 +16157,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4614561595282572616, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
-      propertyPath: m_Name
-      value: Audio System44
-      objectReference: {fileID: 0}
     - target: {fileID: 5781450518836905777, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -16208,10 +16204,6 @@ PrefabInstance:
     - target: {fileID: 6017635806574931733, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
       propertyPath: m_Name
       value: Systems1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6017635806574931733, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
-      propertyPath: m_IsActive
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

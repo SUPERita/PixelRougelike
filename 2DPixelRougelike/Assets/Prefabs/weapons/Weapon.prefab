@@ -186,7 +186,7 @@ MonoBehaviour:
   projPrefab: {fileID: 2942680766431967472, guid: b8ed92ac3df4a674aadd3a633ccb637a, type: 3}
   range: 7
   damage: 2
-  reloadSpeed: 1
+  reloadSpeed: 0.24
   projSpeed: 27.5
   gunTip: {fileID: 8239495708049440900}
   scanLayer:

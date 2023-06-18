@@ -11,7 +11,7 @@ public enum ResourceType
    EnergyNugget
 }
 
-public class ResourceSystem : StaticInstance<ResourceSystem>
+public class ResourceSystem : Singleton<ResourceSystem>
 {
     private string resourceLocRoot = "resourcesLoc";
     public event Action<ResourceType, int> OnResourceChanged;// type and change

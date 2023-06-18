@@ -29,6 +29,7 @@ public class StatsDisplay : MonoBehaviour
 
     private void StatsDisplay_OnPlayerStatsChanged()
     {
+        if (!root) { return; }
         ClearRoot();
         PopulateRoot();
     }

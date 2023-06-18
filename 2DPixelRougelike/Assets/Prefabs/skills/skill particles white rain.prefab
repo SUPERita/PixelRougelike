@@ -47,7 +47,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
-  coolDown: 5
+  coolDown: 3
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
