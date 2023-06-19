@@ -15,6 +15,8 @@ MonoBehaviour:
   <enemyPoolsInstance>k__BackingField:
   - <enemyPrefab>k__BackingField: {fileID: 8145351061209647203, guid: 6c60889e192e9a1499b02af7411a2870, type: 3}
     <poolName>k__BackingField: box
+  - <enemyPrefab>k__BackingField: {fileID: 8145351061209647203, guid: 026918c772973a14487a106ee4b20040, type: 3}
+    <poolName>k__BackingField: box2
   <particlePoolsInstance>k__BackingField:
   - <particlePrefab>k__BackingField: {fileID: 6093406311057667709, guid: bac23800d668cb544bf85bc2d224c443, type: 3}
     <poolName>k__BackingField: p1

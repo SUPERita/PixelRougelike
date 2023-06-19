@@ -17,12 +17,13 @@ public class EnemySpawner : MonoBehaviour
         _transform = transform;
         SpawnEnemy();
     }
-
+     
     private void SpawnEnemy()
     {
         if (spawn)
         {
-            PoolEnemy _t = PoolManager.Instance.SpawnEnemy("box");
+
+            PoolEnemy _t = UnityEngine.Random.Range(0,2) == 1? PoolManager.Instance.SpawnEnemy("box2"): PoolManager.Instance.SpawnEnemy("box");
             _t._enemyTransform.SetParent(_transform);
             _t._enemyTransform.SetLocalPositionAndRotation(_transform.position, _transform.rotation);
             //Instantiate(enemyPrefab, _transform.position, _transform.rotation, _transform);
