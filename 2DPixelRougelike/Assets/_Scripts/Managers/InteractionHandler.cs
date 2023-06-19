@@ -112,6 +112,9 @@ public class InteractionHandler : MonoBehaviour
 
     public void OnInteract(InputValue _value)
     {
+        //in another menu
+        if(GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { return; }
+
         if(currentInteractible != null)
         {
             currentInteractible.OnInteract();

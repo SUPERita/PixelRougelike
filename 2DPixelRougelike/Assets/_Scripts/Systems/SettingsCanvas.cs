@@ -42,6 +42,9 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
     [Button]
     private void OpenSettings()
     {
+        //
+        GameStateManager.Instance.SetState(GameState.Paused);
+
         lastTimeScale = Time.timeScale;
         Time.timeScale = 0;
 
@@ -54,6 +57,8 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
     [Button]
     private void CloseSettings()
     {
+        GameStateManager.Instance.ReturnToLastState();
+
         Time.timeScale = lastTimeScale;
 
         Helpers.ToggleCanvas(_c, false);

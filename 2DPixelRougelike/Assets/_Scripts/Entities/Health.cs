@@ -102,4 +102,6 @@ public class Health : MonoBehaviour
     {
         return currentHealth;
     }
+
+    public void ResetHealth() => currentHealth = baseHealth;
 }

@@ -40,6 +40,10 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
 
     private void Update()
     {
+        //in menu
+        if (GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { return; }
+
+
         //attack speed animator value
         animator.SetFloat("AttackSpeed", attackSpeed);
 
@@ -108,6 +112,9 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     //input
     public void OnMove(InputValue _value)
     {
+        //in menu
+        if (GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { return; }
+
         movement = _value.Get<Vector2>();
 
         if (Mathf.Abs(movement.x) > 0.02f)
@@ -121,6 +128,9 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     }
     public void OnFire(InputValue _value)
     {
+        //in menu
+        if (GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { return; }
+
         //Debug.Log(_value);
         speedMult = 5;
         speedMultRemainingTime = .15f;

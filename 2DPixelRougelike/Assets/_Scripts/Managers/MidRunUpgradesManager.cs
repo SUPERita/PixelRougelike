@@ -25,6 +25,7 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     [Button]
     public void OpenStatChoice()
     {
+        GameStateManager.Instance.SetState(GameState.MidRunUpgrades);
         //fade in
         Time.timeScale = 0f;
         Helpers.ToggleCanvas(canvasGroup, true);
@@ -69,6 +70,13 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     //exit
     private void AfterChoicePressed()
     {
+        CloseCanvas();
+    }
+
+    private void CloseCanvas()
+    {
+        GameStateManager.Instance.ReturnToBaseState();
+
         //destroy previous
         foreach (Transform child in statChoicesRoot) Destroy(child.gameObject);
 
@@ -80,7 +88,6 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
         //unsubscribe
         SubscribeToChildren(false);
     }
-
 
     private void TweenInChoices()
     {

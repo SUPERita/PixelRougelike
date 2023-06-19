@@ -15,7 +15,10 @@ MonoBehaviour:
   serializationData:
     SerializedFormat: 2
     SerializedBytes: 
-    ReferencedUnityObjects: []
+    ReferencedUnityObjects:
+    - {fileID: 5524590292671962877, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
+    - {fileID: -3168733581550749585, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
+    - {fileID: 2125737359283935466, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -49,13 +52,16 @@ MonoBehaviour:
       Data: speed
     - Name: <num>k__BackingField
       Entry: 3
-      Data: 10
+      Data: 11
     - Name: <description>k__BackingField
       Entry: 6
       Data: 
     - Name: <icon>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 0
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -76,13 +82,16 @@ MonoBehaviour:
       Data: strength
     - Name: <num>k__BackingField
       Entry: 3
-      Data: 24
+      Data: 1
     - Name: <description>k__BackingField
       Entry: 6
       Data: 
     - Name: <icon>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 1
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
     - Name: 
       Entry: 8
       Data: 
@@ -103,13 +112,16 @@ MonoBehaviour:
       Data: attack speed
     - Name: <num>k__BackingField
       Entry: 3
-      Data: 3
+      Data: 1
     - Name: <description>k__BackingField
       Entry: 6
       Data: 
     - Name: <icon>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 10
+      Data: 2
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
     - Name: 
       Entry: 8
       Data: 

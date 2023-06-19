@@ -99,6 +99,7 @@ GameObject:
   - component: {fileID: 2444911181205192441}
   - component: {fileID: 4419525865821365024}
   - component: {fileID: 5774391771766285502}
+  - component: {fileID: 8145351061209647203}
   m_Layer: 3
   m_Name: box
   m_TagString: Untagged
@@ -366,6 +367,20 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.49
+--- !u!114 &8145351061209647203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444911181205192422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00632701f0b28f8409481d7cba406469, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  <_health>k__BackingField: {fileID: 2444911181205192443}
+  <_enemyTransform>k__BackingField: {fileID: 2444911181205192421}
 --- !u!1001 &2444911179514031439
 PrefabInstance:
   m_ObjectHideFlags: 0

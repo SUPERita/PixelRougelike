@@ -7945,7 +7945,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: eab404e6cd5e5a24186cf6d1d5fd2b9f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 2444911181205192422, guid: 6c60889e192e9a1499b02af7411a2870, type: 3}
   reload: 0.1
   spawn: 1
 --- !u!1 &1536379151
@@ -9639,6 +9638,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3370508753045863713, guid: 0078a610b4fbec14fa95e5bc0e1c83fb, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3828994127941712985, guid: 0078a610b4fbec14fa95e5bc0e1c83fb, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -9669,7 +9672,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8395807978182843817, guid: 0078a610b4fbec14fa95e5bc0e1c83fb, type: 3}
       propertyPath: attackSpeed
-      value: 10
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 8395807978182843817, guid: 0078a610b4fbec14fa95e5bc0e1c83fb, type: 3}
       propertyPath: playerSpeed

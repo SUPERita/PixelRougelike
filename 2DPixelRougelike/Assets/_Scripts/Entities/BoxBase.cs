@@ -6,7 +6,7 @@ using MoreMountains.Feedbacks;
 using DG.Tweening;
 using MoreMountains.Tools;
 
-public class BoxBase : MonoBehaviour, IDamageable
+public class BoxBase : MonoBehaviour, IDamageable, IResetable
 {
     [SerializeField] private Health health;
     [SerializeField] private Transform follow = null;
@@ -73,11 +73,16 @@ public class BoxBase : MonoBehaviour, IDamageable
         follow = FindAnyObjectByType<PlayerMovement>().transform;
         health.OnDie += Health_OnDie;
     }
-    private void OnDisable()
+    private void OnDestory()
     {
         //also goes off if you just disable the game object
         health.OnDie -= Health_OnDie;
     }
+    //private void OnApplicationQuit()
+    //{
+    //    //also goes off if you just disable the game object
+    //    health.OnDie -= Health_OnDie;
+    //}
 
     private void Health_OnDie()
     {
@@ -87,10 +92,26 @@ public class BoxBase : MonoBehaviour, IDamageable
         GetComponent<Collider2D>().enabled = false;
         rb.velocity = dieKnockSpeed * (transform.position - follow.position);
         //Destroy(gameObject);
-        transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject));
+        //transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject));
+        transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => GetComponent<PoolEnemy>().ReleaseToPool());
         ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
         ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);
+
         //MidRunUpgradesManager.Instance.OpenStatChoice();
+        health.OnDie -= Health_OnDie;
+    }
+    public void OnReset()
+    {
+        alive = true;
+        //Instantiate(particleSystem, transform.position, Quaternion.identity);
+        //GetComponent<Collider2D>().enabled = false;
+        GetComponent<Collider2D>().enabled = true;
+        //rb.velocity = dieKnockSpeed * (transform.position - follow.position);
+        //Destroy(gameObject);
+        transform.localScale = Vector3.one;//transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject)); 
+        //ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
+        //ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);\
+        health.OnDie += Health_OnDie;
     }
 
     private void FixedUpdate()
@@ -99,4 +120,6 @@ public class BoxBase : MonoBehaviour, IDamageable
 
         rb.velocity = -(transform.position - follow.position).normalized * 5f;
     }
+
+
 }

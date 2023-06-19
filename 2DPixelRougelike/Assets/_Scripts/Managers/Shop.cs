@@ -43,6 +43,7 @@ public class Shop : StaticInstance<Shop>
     [Button]
     public void OpenShop()
     {
+        GameStateManager.Instance.SetState(GameState.Shop);
         //fade in
         Time.timeScale = 0f;
         Helpers.ToggleCanvas(canvasGroup, true);
@@ -152,7 +153,7 @@ public class Shop : StaticInstance<Shop>
     [Button]
     public void CloseShop() 
     {
-
+        GameStateManager.Instance.ReturnToBaseState();
         UpdatePlayerStats();
         Helpers.DestroyChildren(itemCardRoot);
         Time.timeScale = 1f;

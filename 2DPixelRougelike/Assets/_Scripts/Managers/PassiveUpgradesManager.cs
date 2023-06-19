@@ -27,6 +27,8 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
     [Button]
     public void OpenPassiveCanvas()
     {
+        GameStateManager.Instance.SetState(GameState.PassiveUpgrades);
+
         //fade in
         Time.timeScale = 0f;
         Helpers.ToggleCanvas(canvasGroup, true);
@@ -75,6 +77,8 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
     //exit
     public void ClosePassivesCanvas()
     {
+        GameStateManager.Instance.ReturnToBaseState();
+
         //fade out
         Time.timeScale = 1f;
         //canvasGroup.alpha = 0;
