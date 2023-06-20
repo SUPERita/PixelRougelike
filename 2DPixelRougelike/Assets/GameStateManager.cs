@@ -9,6 +9,7 @@ public enum GameState
     GameLoop,
     Shop,
     MidRunUpgrades,
+    WeaponChoice,
     PassiveUpgrades,
     Paused
 }

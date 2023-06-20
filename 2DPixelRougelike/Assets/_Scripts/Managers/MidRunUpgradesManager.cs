@@ -6,6 +6,7 @@ using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
 {
@@ -37,6 +38,10 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
 
         //Choices SetUp
         SetUpChoices();
+
+        //set selction
+        Helpers.SelectSomethingUnder(transform);
+        //EventSystem.current.SetSelectedGameObject(GetComponentInChildren<Button>().gameObject);
     }
 
 

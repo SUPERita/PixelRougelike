@@ -6,6 +6,7 @@ using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class SettingsCanvas : Singleton<SettingsCanvas>
@@ -34,14 +35,19 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
     #region menu lifecycle
     public void OnPause(InputValue _value)
     {
-        if (isOpen) { CloseSettings(); }
-        else { OpenSettings(); }
-        isOpen = !isOpen;
+        if (isOpen) { 
+            CloseSettings(); 
+        }
+        else if(GameStateManager.Instance.GetCurrentGameState()==GameState.GameLoop){ 
+            OpenSettings();
+        }
     }
 
+    [ButtonGroup]
     [Button]
     private void OpenSettings()
     {
+        isOpen = true;
         //
         GameStateManager.Instance.SetState(GameState.Paused);
 
@@ -54,14 +60,32 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
         EventSystem.current.SetSelectedGameObject(musicSlider.gameObject);
     
     }
+    [ButtonGroup]
     [Button]
-    private void CloseSettings()
+    public void CloseSettings()
     {
+        isOpen = false;
         GameStateManager.Instance.ReturnToLastState();
 
         Time.timeScale = lastTimeScale;
 
         Helpers.ToggleCanvas(_c, false);
+
+        // set selected
+        foreach(Button _b in FindObjectsOfType<Button>())
+        {
+            if (_b.IsInteractable())
+            {
+                EventSystem.current.SetSelectedGameObject(_b.gameObject);
+                break;
+            }
+        }
+            
+    }
+    [Button]
+    private void ToggleCanvas()
+    {
+        Helpers.ToggleCanvas(_c);
     }
 
     #endregion
@@ -70,7 +94,7 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
     void Start()
     {
         //make the canvas not show at start
-        CloseSettings();
+        //CloseSettings(); // just toggle it nigga
 
         //handle resolutions
         HandleResolutions();
@@ -229,6 +253,11 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
 
 
 
+    #region Just happend to be on the pause menu (nonessential)
+
+    
+
+    #endregion
 
     #region utils
 

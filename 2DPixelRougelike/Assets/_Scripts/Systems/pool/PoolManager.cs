@@ -4,28 +4,30 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
+using UnityEngine.SceneManagement;
 
-public class PoolManager : Singleton<PoolManager>
+public class PoolManager : StaticInstance<PoolManager>
 {
 
     [InlineEditor]
     [SerializeField] private PoolCollection _poolCollection;
 
     //particle pools
-    
     private Dictionary<string, ObjectPool<PoolParticle>> particlePoolsDictionary = new Dictionary<string, ObjectPool<PoolParticle>>();
     private Dictionary<string, PoolParticle> particleDictionary = new Dictionary<string, PoolParticle>();
 
     //enemies
-    
     private Dictionary<string, ObjectPool<PoolEnemy>> enemyPoolsDictionary = new Dictionary<string, ObjectPool<PoolEnemy>>();
     private Dictionary<string, PoolEnemy> enemyDictionary = new Dictionary<string, PoolEnemy>();
 
+    
     //dmg txt pool
     public ObjectPool<DamageText> dmgTextPool { get; private set; }
     
-    void Start() 
+    protected override void Awake() 
     {
+        base.Awake();
+
         dmgTextPool = new ObjectPool<DamageText>(CreateDamageTextObject, OnTakeDamageTextFromPool, OnReturnTextDamageToPool);
 
         //-particles
@@ -116,6 +118,7 @@ public class PoolManager : Singleton<PoolManager>
         //Debug.Log(particlePoolName_SneakRefrence + "   " + _particleName);
         if(particlePoolsDictionary.TryGetValue(particlePoolName_SneakRefrence, out ObjectPool<PoolParticle> _pool)){
             //particlePoolName_SneakRefrence = "";
+            _pool.Clear();
             return _pool.Get();
         } else
         {
@@ -168,6 +171,10 @@ public class PoolManager : Singleton<PoolManager>
         _damageTex.gameObject.SetActive(false);
     }
     #endregion
+
+
+
+
 }
 
 [Serializable]

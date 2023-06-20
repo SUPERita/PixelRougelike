@@ -44,7 +44,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a43118b6bce08643a084ce04117c947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DmgTextPrefab: {fileID: 5611360264123127487, guid: 640713121d6a1664aaa68d335ac839ef, type: 3}
-  particlePoolsInstance:
-  - <particlePrefab>k__BackingField: {fileID: 8871450516159756839, guid: bac23800d668cb544bf85bc2d224c443, type: 3}
-    <poolName>k__BackingField: p1
+  _poolCollection: {fileID: 11400000, guid: 2d1dcc8ae4995fa42a16d343c4d846b2, type: 2}

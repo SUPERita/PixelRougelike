@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 001513221234cc048a10be4d27d118c1, type: 3}
+  m_Name: SkillCollection
+  m_EditorClassIdentifier: 
+  <skillNamePairs>k__BackingField:
+  - <_skillName>k__BackingField: blue electric
+    <_skill>k__BackingField: {fileID: 4911472897203337079, guid: dcbb149fbd31fa041ba228337d37d4b3, type: 3}
+    <_skillIcon>k__BackingField: {fileID: -3168733581550749585, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
+  - <_skillName>k__BackingField: blue electric circle
+    <_skill>k__BackingField: {fileID: 8900101513110742676, guid: 583fb015b3a545845b13ffc8353ef180, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 2125737359283935466, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
+  - <_skillName>k__BackingField: white rain
+    <_skill>k__BackingField: {fileID: 9143434274506902867, guid: ee02545e1ca063444b7582605c19000f, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 5524590292671962877, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
+  - <_skillName>k__BackingField: are1
+    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 72767499be6a5784fb63e22cbb7f6aff, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 0}
+  - <_skillName>k__BackingField: area2
+    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 0}

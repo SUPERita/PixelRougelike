@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     {
         _transform = transform;
         SpawnEnemy();
+       // Invoke(nameof(SpawnEnemy), 1); // dont spawn stuff on start 
     }
      
     private void SpawnEnemy()
@@ -23,9 +24,11 @@ public class EnemySpawner : MonoBehaviour
         if (spawn)
         {
 
-            PoolEnemy _t = UnityEngine.Random.Range(0,2) == 1? PoolManager.Instance.SpawnEnemy("box2"): PoolManager.Instance.SpawnEnemy("box");
+            PoolEnemy _t = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnEnemy("box2") : PoolManager.Instance.SpawnEnemy("box");
             _t._enemyTransform.SetParent(_transform);
-            _t._enemyTransform.SetLocalPositionAndRotation(_transform.position, _transform.rotation);
+            _t._enemyTransform.localPosition = Vector3.zero;
+
+            //Instantiate(enemyPrefab).transform.SetParent(_transform);
             //Instantiate(enemyPrefab, _transform.position, _transform.rotation, _transform);
         }
         Invoke(nameof(SpawnEnemy), reload);

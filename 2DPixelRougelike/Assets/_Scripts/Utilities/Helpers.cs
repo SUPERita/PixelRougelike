@@ -1,4 +1,6 @@
 using UnityEngine;
+using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 /// <summary>
 /// A static class for general helpful methods
@@ -31,5 +33,17 @@ public static class Helpers
         _c.alpha = _state? 1:0;
         _c.interactable = _state;
         _c.blocksRaycasts = _state;
+    }
+
+    public static void SelectSomethingUnder(Transform _t)
+    {
+        foreach (Button _b in _t.GetComponentsInChildren<Button>())
+        {
+            if (_b.IsInteractable())
+            {
+                EventSystem.current.SetSelectedGameObject(_b.gameObject);
+                break;
+            }
+        }
     }
 }

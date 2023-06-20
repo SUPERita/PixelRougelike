@@ -5,7 +5,8 @@ using UnityEngine;
 
 public class SkillManager : MonoBehaviour
 {
-    [SerializeField] private Skill[] skills;
+    [SerializeField] private SkillCollection _skillCollection;
+    //[SerializeField] private Skill[] skills;
 
     void Start()
     {
@@ -14,12 +15,16 @@ public class SkillManager : MonoBehaviour
 
     private void SpawnSkills()
     {
-        
+        //clear previous
         ClearSkills();
-        for (int i = 0; i < skills.Length; i++)
+
+        //load selected
+        GameObject[] selectedSkills = SkillSelection.GetSelectedSavedSkills(_skillCollection);
+        if(selectedSkills.Length == 0) { return; }
+        for (int i = 0; i < selectedSkills.Length; i++)
         {
 
-            Instantiate(skills[i].gameObject, transform);
+            Instantiate(selectedSkills[i], transform);
         }
     }
 

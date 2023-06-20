@@ -5,9 +5,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WeaponManager : MonoBehaviour
+public class WeaponManager : StaticInstance<WeaponManager>
 {
-    [SerializeField] private Weapon[] weapons;
+    [SerializeField] private List<Weapon> weapons;
 
     [Button]
     private void CacheWeaponSockets()
@@ -29,13 +29,19 @@ public class WeaponManager : MonoBehaviour
 
     private void SpawnWeapons()
     {
-        if(weaponSockets.Count < weapons.Length) { Debug.LogError("too many weapons not enougth sockets"); }
+        if(weaponSockets.Count < weapons.Count) { Debug.LogError("too many weapons not enougth sockets"); }
         ClearWeaponSockets();
-        for (int i = 0; i < weapons.Length; i++)
+        for (int i = 0; i < weapons.Count; i++)
         {
             
             Instantiate(weapons[i].gameObject, weaponSockets[i]);
         }
+    }
+
+    public void AddWeapon(Weapon weapon)
+    {
+        weapons.Add(weapon);
+        SpawnWeapons();
     }
 
     private void ClearWeaponSockets()

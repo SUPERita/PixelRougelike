@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c8695c3ec1d92544baddcb60c79d3cba, type: 3}
+  m_Name: WeaponCollection
+  m_EditorClassIdentifier: 
+  <weaponNamePairs>k__BackingField:
+  - <_weaponName>k__BackingField: wep1
+    <_weapon>k__BackingField: {fileID: 6059957677849544829, guid: 54a6d7953c5e10f4f86181816caebdeb, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300002, guid: 07103c52b3aaeca4da8a83361edd059f, type: 3}
+  - <_weaponName>k__BackingField: wep2
+    <_weapon>k__BackingField: {fileID: 6059957677849544829, guid: 963bcef6b8ccd04478ea31835f77a192, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 519dafacd208bb64c83d5124be03b09d, type: 3}

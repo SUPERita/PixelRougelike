@@ -35,6 +35,9 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
 
         //subscribe
         SubscribeToChildren(true);
+
+        //set selction
+        Helpers.SelectSomethingUnder(transform);
     }
     private void SubscribeToChildren(bool _state)
     {

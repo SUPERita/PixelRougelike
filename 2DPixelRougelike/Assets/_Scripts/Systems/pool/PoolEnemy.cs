@@ -21,4 +21,9 @@ public class PoolEnemy : MonoBehaviour, IResetable
         GetComponent<IResetable>().OnReset();
         _health.ResetHealth();
     }
+
+    private void Awake()
+    {
+        _enemyTransform = transform;
+    }
 }
