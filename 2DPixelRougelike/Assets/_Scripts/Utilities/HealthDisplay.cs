@@ -10,6 +10,8 @@ public class HealthDisplay : MonoBehaviour
     [SerializeField] private CanvasGroup healthCanvas;
     [SerializeField] private Image healthImage;
     [SerializeField] private GameObject healthBarRoot;
+    [Header("optional")]
+    [SerializeField] private Image afterImage;
 
     private void Awake()
     {
@@ -32,5 +34,15 @@ public class HealthDisplay : MonoBehaviour
     private void Health_OnTakeDamage(int obj)
     {
         healthImage.fillAmount = (float)health.GetCurrrentHealth() / (float)health.GetBaseHealth();
+
+        if(afterImage) LerpAfterImage();
+
+    }
+
+    Tween _t = null;
+    private void LerpAfterImage()
+    {
+        _t.Kill();
+        _t = afterImage.DOFillAmount(healthImage.fillAmount, .25f).SetDelay(.5f);
     }
 }

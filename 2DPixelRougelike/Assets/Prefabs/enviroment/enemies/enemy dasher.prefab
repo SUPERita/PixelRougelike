@@ -73,7 +73,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4035959289877228764, guid: 6db74e05a1552b946b6778928990fce5, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 07103c52b3aaeca4da8a83361edd059f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -94,14 +94,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2444911181205192421}
   - component: {fileID: 2444911181205192423}
-  - component: {fileID: 2444911181205192440}
   - component: {fileID: 2444911181205192443}
   - component: {fileID: 2444911181205192441}
   - component: {fileID: 4419525865821365024}
   - component: {fileID: 5774391771766285502}
   - component: {fileID: 8145351061209647203}
+  - component: {fileID: 3931777351385868109}
   m_Layer: 3
-  m_Name: box 2
+  m_Name: enemy dasher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -151,27 +151,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2444911181205192440
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2444911181205192422}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 365c7f4b08d566a4b94e6d61fd2f9aac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: {fileID: 2444911181205192443}
-  follow: {fileID: 0}
-  rb: {fileID: 2444911181205192423}
-  hitFeedback: {fileID: 2444911181205192441}
-  particleSystem: {fileID: 45616952354432848, guid: cdd73a4c178394c49b87795f40ef70cc, type: 3}
-  sr: {fileID: 2444911179368065120}
-  regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
-  hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
-  dieKnockSpeed: 10
 --- !u!114 &2444911181205192443
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +360,34 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <_health>k__BackingField: {fileID: 2444911181205192443}
   <_enemyTransform>k__BackingField: {fileID: 2444911181205192421}
+  enm: {fileID: 3931777351385868109}
+--- !u!114 &3931777351385868109
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2444911181205192422}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33418c63ee36ba348af261f8fa5656b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: {fileID: 2444911181205192443}
+  follow: {fileID: 0}
+  rb: {fileID: 2444911181205192423}
+  hitFeedback: {fileID: 2444911181205192441}
+  particleSystem: {fileID: 45616952354432848, guid: cdd73a4c178394c49b87795f40ef70cc, type: 3}
+  sr: {fileID: 2444911179368065120}
+  regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
+  hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
+  dieKnockSpeed: 10
+  damage: 5
+  dashDuration: 0.5
+  dashDelay: 0.25
+  dashCooldown: 2
+  dashRange: 10
+  overShot: 5
 --- !u!1001 &2444911179514031439
 PrefabInstance:
   m_ObjectHideFlags: 0

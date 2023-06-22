@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: 365c7f4b08d566a4b94e6d61fd2f9aac
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - health: {instanceID: 0}
+  - follow: {instanceID: 0}
+  - rb: {instanceID: 0}
+  - hitFeedback: {instanceID: 0}
+  - particleSystem: {instanceID: 0}
+  - sr: {instanceID: 0}
+  - regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
+  - hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

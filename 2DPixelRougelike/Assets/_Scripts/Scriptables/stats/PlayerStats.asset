@@ -52,7 +52,7 @@ MonoBehaviour:
       Data: speed
     - Name: <num>k__BackingField
       Entry: 3
-      Data: 11
+      Data: 10
     - Name: <description>k__BackingField
       Entry: 6
       Data: 
@@ -82,7 +82,7 @@ MonoBehaviour:
       Data: strength
     - Name: <num>k__BackingField
       Entry: 3
-      Data: 1
+      Data: 11
     - Name: <description>k__BackingField
       Entry: 6
       Data: 

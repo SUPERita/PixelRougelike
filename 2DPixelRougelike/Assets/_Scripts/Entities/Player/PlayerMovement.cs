@@ -16,7 +16,6 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     [SerializeField] private AttackTriggerCollider attackTriggerCollider;
     [SerializeField] private ParticleSystem rollParticle = null;
     [SerializeField] private Transform playerVisual = null;
-    
     float speedMult = 1f;
     float speedMultRemainingTime = 0f;
 
@@ -113,7 +112,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     public void OnMove(InputValue _value)
     {
         //in menu
-        if (GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { return; }
+        if (GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { movement = Vector2.zero; return; }
 
         movement = _value.Get<Vector2>();
 
@@ -144,6 +143,13 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
         {
             DamageArea();
         }
+    }
+
+
+    public void OnDie()
+    {
+        movement = Vector2.zero;
+        PlayAnim("Idle");
     }
 
 }

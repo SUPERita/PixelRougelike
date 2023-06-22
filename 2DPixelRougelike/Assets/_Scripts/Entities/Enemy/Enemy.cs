@@ -5,12 +5,13 @@ using MoreMountains;
 using MoreMountains.Feedbacks;
 using DG.Tweening;
 using MoreMountains.Tools;
+using Sirenix.OdinInspector;
 
-public class BoxBase : MonoBehaviour, IDamageable, IResetable
+public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
 {
-    [SerializeField] private Health health;
-    [SerializeField] private Transform follow = null;
-    [SerializeField] private Rigidbody2D rb = null;
+    [SerializeField] protected Health health;
+    [SerializeField] protected Transform follow = null;
+    [SerializeField] protected Rigidbody2D rb = null;
 
     [Header("FX")]
     [SerializeField] private MMF_Player hitFeedback;
@@ -20,53 +21,25 @@ public class BoxBase : MonoBehaviour, IDamageable, IResetable
     [SerializeField] private Material regularMat;
     [SerializeField] private Material hitMat;
     [SerializeField] private float dieKnockSpeed = 10f;
-
+    [Header("vals")]
+    [SerializeField] protected int damage = 5;
 
     private bool alive = true;
-    public void TakeDamage(int _val)
-    {
-        if(!alive) return;
-        //Debug.Log(AudioSystem.Instance.name);
-        AudioSystem.Instance.PlaySound("s3");
-        if(hitFeedback != null) { hitFeedback?.PlayFeedbacks();}
-        if(health != null) {health.TakeDamage(_val); }
 
-        //particle pool?
-        PoolParticle _p = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnParticle("p1") : PoolManager.Instance.SpawnParticle("p2");
-        _p._particleTransform.position = transform.position;
-        _p.CallReleaseToPool(.3f);
-        
-        Invoke(nameof(SetHitMat), 0);
-        Invoke(nameof(SetRegMat), hitFlashTime);
-        //StartCoroutine(SetMat(hitMat));
-        //StartCoroutine(SetMat(regularMat, true));
+    private void FixedUpdate()
+    {
+        if (!alive) { return; }
+
+        DoBehaviour();
     }
 
-    //WaitForSeconds _waitCache = new WaitForSeconds(0.25f);
-    //WaitForSeconds _noWaitCache = new WaitForSeconds(0f);
-    //private IEnumerator SetMat(Material _m, bool _waitFlashTime = false)
-    //{
-    //    //yield return new WaitForSeconds(_t);
-    //    if(_waitFlashTime)
-    //    {
-    //        yield return _waitCache;
-    //    } else
-    //    {
-    //        yield return _noWaitCache;
-    //    }
-    //    sr.material = _m;
-    //}
-
-    private void SetHitMat()
+    protected virtual void DoBehaviour()
     {
-        sr.material = hitMat;
-    }
-    private void SetRegMat()
-    {
-        sr.material = regularMat;
+        //debug.log(doing);
     }
 
-    private MaterialPropertyBlock materialPropertyBlock;
+    #region Lifecycle
+
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -100,7 +73,37 @@ public class BoxBase : MonoBehaviour, IDamageable, IResetable
         //MidRunUpgradesManager.Instance.OpenStatChoice();
         health.OnDie -= Health_OnDie;
     }
-    public void OnReset()
+
+    #endregion
+
+    #region Interfaces
+
+    public void TakeDamage(int _val)
+    {
+        if(!alive) return;
+        //Debug.Log(AudioSystem.Instance.name);
+        AudioSystem.Instance.PlaySound("s3");
+        if(hitFeedback != null) { hitFeedback?.PlayFeedbacks();}
+        if(health != null) {health.TakeDamage(_val); }
+
+        //particle pool?
+        PoolParticle _p = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnParticle("p1") : PoolManager.Instance.SpawnParticle("p2");
+        _p._particleTransform.position = transform.position;
+        _p.CallReleaseToPool(.3f);
+        
+        //replaced coroutines because invoke doestn use memory?
+        Invoke(nameof(SetHitMat), 0);
+        Invoke(nameof(SetRegMat), hitFlashTime);
+        //StartCoroutine(SetMat(hitMat));
+        //StartCoroutine(SetMat(regularMat, true));
+    }
+
+    public int GetDamage()
+    {
+        return damage;
+    }
+
+    public virtual void OnReset()
     {
         alive = true;
         //Instantiate(particleSystem, transform.position, Quaternion.identity);
@@ -114,12 +117,20 @@ public class BoxBase : MonoBehaviour, IDamageable, IResetable
         health.OnDie += Health_OnDie;
     }
 
-    private void FixedUpdate()
-    {
-        if (!alive) { return; }
+    #endregion
 
-        rb.velocity = -(transform.position - follow.position).normalized * 5f;
+    #region Utils
+
+    private void SetHitMat()
+    {
+        sr.material = hitMat;
+    }
+    private void SetRegMat()
+    {
+        sr.material = regularMat;
     }
 
+  
 
+    #endregion
 }
