@@ -94,15 +94,14 @@ GameObject:
   m_Component:
   - component: {fileID: 2444911181205192421}
   - component: {fileID: 2444911181205192423}
-  - component: {fileID: 2444911181205192443}
+  - component: {fileID: 5774391771766285502}
   - component: {fileID: 2444911181205192441}
   - component: {fileID: 4419525865821365024}
-  - component: {fileID: 5774391771766285502}
-  - component: {fileID: 8145351061209647203}
+  - component: {fileID: 2444911181205192443}
   - component: {fileID: 4299600021118011763}
   - component: {fileID: 5691298817174194076}
   m_Layer: 3
-  m_Name: enemy follow 1
+  m_Name: follow1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -152,21 +151,41 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &2444911181205192443
-MonoBehaviour:
+--- !u!58 &5774391771766285502
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2444911181205192422}
   m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e78b2e4c67374084094338e011300067, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  baseHealth: 100
-  showDmgText: 1
-  DmgTextPrefab: {fileID: 5611360264123127487, guid: 640713121d6a1664aaa68d335ac839ef, type: 3}
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 1.49
 --- !u!114 &2444911181205192441
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,42 +331,7 @@ MonoBehaviour:
   health: {fileID: 2444911181205192443}
   healthBarRoot: {fileID: 8627378889125882944, guid: 8ee4347a012f30f43a6ee40551807cc3, type: 3}
   offset: {x: 0, y: 50, z: 0}
---- !u!58 &5774391771766285502
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2444911181205192422}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
-  serializedVersion: 2
-  m_Radius: 1.49
---- !u!114 &8145351061209647203
+--- !u!114 &2444911181205192443
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -356,12 +340,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 2444911181205192422}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00632701f0b28f8409481d7cba406469, type: 3}
+  m_Script: {fileID: 11500000, guid: e78b2e4c67374084094338e011300067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <_health>k__BackingField: {fileID: 2444911181205192443}
-  <_enemyTransform>k__BackingField: {fileID: 2444911181205192421}
-  enm: {fileID: 4299600021118011763}
+  baseHealth: 100
+  showDmgText: 1
+  DmgTextPrefab: {fileID: 5611360264123127487, guid: 640713121d6a1664aaa68d335ac839ef, type: 3}
 --- !u!114 &4299600021118011763
 MonoBehaviour:
   m_ObjectHideFlags: 0

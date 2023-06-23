@@ -20,7 +20,7 @@ public class PoolEnemy : MonoBehaviour, IResetable
     public void OnReset()
     {
         //GetComponent<IResetable>().OnReset(); // never do this it may be recursive
-        enm.OnReset();
+        //enm.OnReset();
         _health.ResetHealth();
     }
 

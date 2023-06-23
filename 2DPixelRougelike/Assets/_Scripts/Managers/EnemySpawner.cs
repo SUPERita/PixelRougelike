@@ -31,9 +31,9 @@ public class EnemySpawner : MonoBehaviour, ISpawner
         .OnComplete(() =>
         {
             //spawn enemy
-            PoolEnemy _t = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnEnemy("box2") : PoolManager.Instance.SpawnEnemy("box");
-            _t._enemyTransform.SetParent(_transform);
-            _t._enemyTransform.localPosition = spawnPosition;
+            Transform _t = LeanPoolManager.Instance.SpawnFromPool(UnityEngine.Random.Range(0, 2) == 1 ? "dasher1":"follow1").transform;//PoolEnemy _t = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnEnemy("box2") : PoolManager.Instance.SpawnEnemy("box");
+            _t.SetParent(_transform);
+            _t.localPosition = spawnPosition;
 
             //destory indicator
             Destroy(_indc.gameObject);

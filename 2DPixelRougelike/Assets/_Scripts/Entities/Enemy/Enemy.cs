@@ -6,8 +6,9 @@ using MoreMountains.Feedbacks;
 using DG.Tweening;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
+using Lean.Pool;
 
-public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
+public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
 {
     [SerializeField] protected Health health;
     [SerializeField] protected Transform follow = null;
@@ -62,12 +63,13 @@ public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
     {
         //sr.enabled = false;
         alive = false;
+        Debug.Log("do something about it v instantiating");
         Instantiate(particleSystem, transform.position, Quaternion.identity);
         GetComponent<Collider2D>().enabled = false;
         rb.velocity = dieKnockSpeed * (transform.position - follow.position);
-        //Destroy(gameObject);
+        //Destroy(gameObject);  
         //transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject));
-        transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => GetComponent<PoolEnemy>().ReleaseToPool());
+        transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => LeanPoolManager.Instance.DespawnFromPool(gameObject));//transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => GetComponent<PoolEnemy>().ReleaseToPool());
         lootHandler.SpawnLoot();
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);
@@ -89,9 +91,9 @@ public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
         if(health != null) {health.TakeDamage(_val); }
 
         //particle pool?
-        PoolParticle _p = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnParticle("p1") : PoolManager.Instance.SpawnParticle("p2");
-        _p._particleTransform.position = transform.position;
-        _p.CallReleaseToPool(.3f);
+        GameObject _p = UnityEngine.Random.Range(0, 2) == 1 ? LeanPoolManager.Instance.SpawnFromPool("particleBase") : LeanPoolManager.Instance.SpawnFromPool("pv1");
+        _p.transform.position = transform.position;
+        LeanPoolManager.Instance.DespawnFromPool(_p, .3f);//_p.CallReleaseToPool(.3f);
         
         //replaced coroutines because invoke doestn use memory?
         Invoke(nameof(SetHitMat), 0);
@@ -105,7 +107,12 @@ public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
         return damage;
     }
 
-    public virtual void OnReset()
+    //public virtual void OnReset()
+    //{
+        
+    //}
+
+    public void OnSpawn()
     {
         alive = true;
         //Instantiate(particleSystem, transform.position, Quaternion.identity);
@@ -116,7 +123,13 @@ public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
         transform.localScale = Vector3.one;//transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject)); 
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);\
+        health.ResetHealth();
         //health.OnDie += Health_OnDie;
+    }
+
+    public void OnDespawn()
+    {
+        //throw new System.NotImplementedException();
     }
 
     #endregion
@@ -132,7 +145,7 @@ public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
         sr.material = regularMat;
     }
 
-  
+
 
     #endregion
 }

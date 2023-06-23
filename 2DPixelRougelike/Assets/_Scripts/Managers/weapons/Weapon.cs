@@ -61,12 +61,15 @@ public class Weapon : MonoBehaviour
 
 
 
-
+    GameObject _g;
     public virtual void Shoot()
     {
         //probably gonna need to use pooling in the future
-         Instantiate(projPrefab, gunTip.position, transform.rotation)
-            .GetComponent<Projectile>().InitializeProjectile(
+         _g = LeanPoolManager.Instance.SpawnFromPool("proj1");
+        //Instantiate(projPrefab, gunTip.position, transform.rotation)
+        _g.transform.SetPositionAndRotation(gunTip.position, transform.rotation);
+        _g.transform.localScale = Vector3.right*.4f+Vector3.up*.1f + Vector3.forward;
+           _g.GetComponent<Projectile>().InitializeProjectile(
              damage+PlayerStatsHolder.Instance.TryGetStat("strength"),
              projSpeed,
              (target.position - transform.position).normalized,

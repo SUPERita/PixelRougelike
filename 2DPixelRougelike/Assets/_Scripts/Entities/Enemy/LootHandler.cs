@@ -5,12 +5,13 @@ using UnityEngine;
 
 public class LootHandler : MonoBehaviour
 {
-    [SerializeField] private PickUp[] loot;
+    //[SerializeField] private PickUp[] loot;
     
     public void SpawnLoot()
     {
-        if (loot == null) return;
-        Instantiate(loot[0], transform.position + Random.insideUnitSphere, Quaternion.identity);
+        //if (loot == null) return;
+        LeanPoolManager.Instance.SpawnFromPool("pickup").transform.position = transform.position + Random.insideUnitSphere;
+        //Instantiate(loot[0], , Quaternion.identity);
     }
 
 }

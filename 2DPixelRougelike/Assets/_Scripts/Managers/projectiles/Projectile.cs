@@ -43,9 +43,13 @@ public class Projectile : MonoBehaviour
 
     private void KillProjectile()
     {
+        CancelInvoke(nameof(KillProjectile));
         // probably something with pooling
         if(gameObject == null) { return; }
-        Destroy(gameObject);
+
+        //Lean.Pool.LeanPool.Despawn(gameObject);
+        LeanPoolManager.Instance.DespawnFromPool(gameObject);
+        //Destroy(gameObject);
     }
 
     private void RotateSpriteToNormalizedDirection(Vector3 direction)

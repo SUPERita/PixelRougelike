@@ -20,6 +20,7 @@ public class MidRunPlayerStats : SerializedScriptableObject, PlayerStatsCategory
     public void ResetMidRunStats()
     {
         midRunStats.Clear();
+        NotifyUpdatePlayerStats();
     }
 
     //utils

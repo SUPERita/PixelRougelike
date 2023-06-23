@@ -44,9 +44,9 @@ public class Health : MonoBehaviour
             //tmpTextObject = InstantiateDamageNumber(s.transform);
             //Destroy(tmpTextObject.gameObject, 1f);//also this one, fuckton of performance
             //yes pooling
-            tmpTextObject = GetPoolObject(s.transform); // in task manager ram build up really slow
-            tmpTextObject.gameObject.GetComponent<DamageText>().CallReleaseToPool(1f);
-
+            tmpTextObject = LeanPoolManager.Instance.SpawnFromPool("dmgText").transform; // GetPoolObject(s.transform); // in task manager ram build up really slow
+            LeanPoolManager.Instance.DespawnFromPool(tmpTextObject.gameObject, 1);//tmpTextObject.gameObject.GetComponent<DamageText>().CallReleaseToPool(1f);
+            tmpTextObject.SetParent(s.transform);
 
 
 
@@ -71,6 +71,7 @@ public class Health : MonoBehaviour
 
     }
 
+    /*
     private Transform InstantiateDamageNumber(Transform _parent)
     {
         
@@ -95,6 +96,7 @@ public class Health : MonoBehaviour
         return _t;
 
     }
+    */
 
     public int GetBaseHealth()
     {

@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 5190875715284559279}
   - component: {fileID: 979571529620169076}
   - component: {fileID: 2942680766431967472}
+  - component: {fileID: 6486529458919155977}
   m_Layer: 0
-  m_Name: projectile
+  m_Name: proj1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,3 +163,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   <rb>k__BackingField: {fileID: 5190875715284559279}
+--- !u!114 &6486529458919155977
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7900995665378377899}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a59bf981769e4a4f9230599cab9261a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cachedPool: {fileID: 0}

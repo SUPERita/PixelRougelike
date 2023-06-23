@@ -13,25 +13,26 @@ public class PoolManager : StaticInstance<PoolManager>
     [SerializeField] private PoolCollection _poolCollection;
 
     //particle pools
-    private Dictionary<string, ObjectPool<PoolParticle>> particlePoolsDictionary = new Dictionary<string, ObjectPool<PoolParticle>>();
-    private Dictionary<string, PoolParticle> particleDictionary = new Dictionary<string, PoolParticle>();
+    //private Dictionary<string, ObjectPool<PoolParticle>> particlePoolsDictionary = new Dictionary<string, ObjectPool<PoolParticle>>();
+    //private Dictionary<string, PoolParticle> particleDictionary = new Dictionary<string, PoolParticle>();
 
     //enemies
-    private Dictionary<string, ObjectPool<PoolEnemy>> enemyPoolsDictionary = new Dictionary<string, ObjectPool<PoolEnemy>>();
-    private Dictionary<string, PoolEnemy> enemyDictionary = new Dictionary<string, PoolEnemy>();
+    //private Dictionary<string, ObjectPool<PoolEnemy>> enemyPoolsDictionary = new Dictionary<string, ObjectPool<PoolEnemy>>();
+    //private Dictionary<string, PoolEnemy> enemyDictionary = new Dictionary<string, PoolEnemy>();
 
     
     //dmg txt pool
-    public ObjectPool<DamageText> dmgTextPool { get; private set; }
+    //public ObjectPool<DamageText> dmgTextPool { get; private set; }
     
     protected override void Awake() 
     {
         base.Awake();
 
-        dmgTextPool = new ObjectPool<DamageText>(CreateDamageTextObject, OnTakeDamageTextFromPool, OnReturnTextDamageToPool);
+        //dmgTextPool = new ObjectPool<DamageText>(CreateDamageTextObject, OnTakeDamageTextFromPool, OnReturnTextDamageToPool);
 
         //-particles
         //initialize particle dictionary
+        /*
         particleDictionary.Clear();
         foreach (ParticlePoolInstance pool in _poolCollection.particlePoolsInstance)
         {
@@ -43,9 +44,10 @@ public class PoolManager : StaticInstance<PoolManager>
 
             particlePoolsDictionary.Add(pool.poolName, new ObjectPool<PoolParticle>(CreateParticleForPool, OnTakeParticleFromPool, OnReturnParticleToPool));
         }
-
+        */
         //-enemies
         //initialize enemies dictionary
+        /*
         enemyDictionary.Clear();
         foreach (EnemyPoolInstance pool in _poolCollection.enemyPoolsInstance)
         {
@@ -57,9 +59,10 @@ public class PoolManager : StaticInstance<PoolManager>
         {
             enemyPoolsDictionary.Add(pool.poolName, new ObjectPool<PoolEnemy>(CreateEnemyForPool, OnTakeEnemyFromPool, OnReturnEnemyToPool));
         }
+        */
 
     }
-
+    /*
     #region enemies
 
     //really sneaky treak, honestly.
@@ -106,7 +109,9 @@ public class PoolManager : StaticInstance<PoolManager>
     }
 
     #endregion
+    */
 
+    /*
     #region particles
 
     //really sneaky treak, honestly.
@@ -154,8 +159,11 @@ public class PoolManager : StaticInstance<PoolManager>
     }
 
     #endregion
+    */
 
+    /*
     #region dmg text
+
     DamageText CreateDamageTextObject()
     {
         var damageText = Instantiate(_poolCollection.DmgTextPrefab);
@@ -171,7 +179,7 @@ public class PoolManager : StaticInstance<PoolManager>
         _damageTex.gameObject.SetActive(false);
     }
     #endregion
-
+    */
 
 
 

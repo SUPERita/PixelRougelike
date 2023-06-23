@@ -67,6 +67,7 @@ public class DamageText : MonoBehaviour
         return transform.position + (Vector3.up * UnityEngine.Random.Range(-1f, 1f) + (Vector3.right * UnityEngine.Random.Range(-1f, 1f))) * 2f;
     }
 
+    /*
     //pool
     public void SetPool(ObjectPool<DamageText> _pool) => pool = _pool;
     public void CallReleaseToPool(float _inSeconds)
@@ -78,4 +79,5 @@ public class DamageText : MonoBehaviour
     {
         pool.Release(this);
     }
+    */
 }
