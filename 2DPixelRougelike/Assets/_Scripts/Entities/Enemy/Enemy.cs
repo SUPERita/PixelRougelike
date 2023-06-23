@@ -12,6 +12,7 @@ public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
     [SerializeField] protected Health health;
     [SerializeField] protected Transform follow = null;
     [SerializeField] protected Rigidbody2D rb = null;
+    [SerializeField] protected LootHandler lootHandler = null;
 
     [Header("FX")]
     [SerializeField] private MMF_Player hitFeedback;
@@ -67,11 +68,12 @@ public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
         //Destroy(gameObject);
         //transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject));
         transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => GetComponent<PoolEnemy>().ReleaseToPool());
-        ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
-        ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);
+        lootHandler.SpawnLoot();
+        //ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
+        //ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);
 
         //MidRunUpgradesManager.Instance.OpenStatChoice();
-        health.OnDie -= Health_OnDie;
+        //health.OnDie -= Health_OnDie;
     }
 
     #endregion
@@ -114,7 +116,7 @@ public class Enemy : MonoBehaviour, IDamageable, IResetable, IHurtPlayer
         transform.localScale = Vector3.one;//transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject)); 
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);\
-        health.OnDie += Health_OnDie;
+        //health.OnDie += Health_OnDie;
     }
 
     #endregion

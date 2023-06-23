@@ -26,6 +26,8 @@ public class Health : MonoBehaviour
     Transform tmpTextObject = null;
     public void TakeDamage(int _amt)
     {
+        if(currentHealth == 0) { return; }
+
         //take damage
         currentHealth -= _amt;
         if(currentHealth < 0) { currentHealth = 0; }

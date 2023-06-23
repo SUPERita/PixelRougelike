@@ -28,6 +28,6 @@ public class Skill : MonoBehaviour
 
     public virtual void PerformeSkill()
     {
-        Debug.Log("done skill: " + name);
+        //Debug.Log("done skill: " + name);
     }
 }

@@ -8,14 +8,12 @@ public class DamageText : MonoBehaviour
 {
     ObjectPool<DamageText> pool;
 
-    Sequence sequence;
     TweenParams tweenParams;
     Tweener moveTween;
     Tween scaleUpTween;
     Tween scaleDownTween;
     private void Awake()
     {
-        sequence = DOTween.Sequence();
         tweenParams = new TweenParams().SetAutoKill(false).SetRecyclable(true);
 
         moveTween = transform.DOMove(transform.position + GetRandomRelativePosition(), .5f)
