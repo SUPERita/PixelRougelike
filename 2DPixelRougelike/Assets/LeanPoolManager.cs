@@ -45,7 +45,7 @@ public class LeanPoolManager : StaticInstance<LeanPoolManager>
 
     public void DespawnFromPool(GameObject _g,  float _inSeconds = 0)
     {
-        Debug.Log(_g.name);
+        //Debug.Log(_g.name);
         poolDictionary[_g.name].Despawn(_g, _inSeconds);
     }
 
@@ -56,6 +56,7 @@ public class LeanPoolManager : StaticInstance<LeanPoolManager>
         foreach (LeanGameObjectPool _p in GetComponentsInChildren<LeanGameObjectPool>())
         {
             poolNamePairs.Add(new PoolNamePair(_p, _p.Prefab.name, _p.Prefab));
+            _p.gameObject.name = _p.Prefab.name;
         }
     }
 

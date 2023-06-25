@@ -17,7 +17,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
 
     [Header("FX")]
     [SerializeField] private MMF_Player hitFeedback;
-    [SerializeField] private GameObject particleSystem = null;
+    //[SerializeField] private GameObject dieParticle = null;
     private float hitFlashTime = 0.25f;
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Material regularMat;
@@ -63,8 +63,12 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     {
         //sr.enabled = false;
         alive = false;
-        Debug.Log("do something about it v instantiating");
-        Instantiate(particleSystem, transform.position, Quaternion.identity);
+        //Debug.Log("do something about it v instantiating");
+        GameObject _t = LeanPoolManager.Instance.SpawnFromPool("dieParticle");
+        _t.transform.position = transform.position;
+        LeanPoolManager.Instance.DespawnFromPool(_t, 1f);
+
+        //Instantiate(dieParticle, transform.position, Quaternion.identity);
         GetComponent<Collider2D>().enabled = false;
         rb.velocity = dieKnockSpeed * (transform.position - follow.position);
         //Destroy(gameObject);  
@@ -115,7 +119,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     public void OnSpawn()
     {
         alive = true;
-        //Instantiate(particleSystem, transform.position, Quaternion.identity);
+        //Instantiate(dieParticle, transform.position, Quaternion.identity);
         //GetComponent<Collider2D>().enabled = false;
         GetComponent<Collider2D>().enabled = true;
         //rb.velocity = dieKnockSpeed * (transform.position - follow.position);

@@ -160,7 +160,7 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
         mixer.SetFloat(_mixerName, Mathf.Log10(_v) * 20f);
         if (_v == 0)
         {
-            mixer.SetFloat(_mixerName, -40f);
+            mixer.SetFloat(_mixerName, -80f);
         }
     }
 
