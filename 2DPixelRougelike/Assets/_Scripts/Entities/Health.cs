@@ -16,7 +16,8 @@ public class Health : MonoBehaviour
     private int currentHealth = 0;
 
     [SerializeField] private bool showDmgText = false;
-    [SerializeField] private DamageText DmgTextPrefab = null;
+    //[SerializeField] private DamageText DmgTextPrefab = null;
+    [SerializeField] private Color dmgTextColor = Color.white;
 
     private void Awake()
     {
@@ -52,7 +53,8 @@ public class Health : MonoBehaviour
 
             tmpTextObject.position = transform.position;//s._mainCameraRef.WorldToScreenPoint(transform.position) + Vector3.up*50;
 
-            tmpTextObject.GetComponent<TextMeshProUGUI>().SetText(_amt.ToString());
+            tmpTextObject.GetComponent<TextMeshProUGUI>().SetText(_amt.ToString()); //dmgTextColor
+            tmpTextObject.GetComponent<TextMeshProUGUI>().color = dmgTextColor;
             //WASSS ISSS DASSS?!?!?!?! IT WAS THiS EASY>?>?>>?> 
             //tmpTextObject.GetComponent<TextAnimator>().AppendText("" + $"<rainb>{_amt}</rainb>", false); // also need a text animator compounent
             tmpTextObject.gameObject.GetComponent<DamageText>().DOStartTween();

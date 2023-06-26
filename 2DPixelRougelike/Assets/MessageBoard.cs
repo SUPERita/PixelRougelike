@@ -8,6 +8,13 @@ using UnityEngine;
 
 public class MessageBoard : StaticInstance<MessageBoard>
 {
+    [Header("header")]
+    [SerializeField] private GameObject headerPrefab = null;
+    [SerializeField] private RectTransform headerRoot = null;
+    [SerializeField] private AnimationCurve headerPosCurve = null;
+    [SerializeField] private float headerTime = 2f;
+
+    [Header("messages")]
     [SerializeField] private GameObject msgPrefab = null;
     [SerializeField] private RectTransform msgRoot = null;
     private List<RectTransform> msgList = new List<RectTransform>();
@@ -36,6 +43,7 @@ public class MessageBoard : StaticInstance<MessageBoard>
     {
         await Task.Delay((int)(_InTimeSeconds*1000f));
 
+        Debug.Log("do something about null rect here?");
         _g.DOAnchorPosX(-_g.rect.width, indentSpeed).OnComplete(() => {
             _g.transform.DOKill();
             msgList.Remove(_g);
@@ -43,6 +51,33 @@ public class MessageBoard : StaticInstance<MessageBoard>
         }).SetEase(Ease.InExpo);
     }
 
+    [Button]
+    public void SpawnHeader(string _msg)
+    {
+        RectTransform _g = Instantiate(headerPrefab, headerRoot).GetComponent<RectTransform>();
+        float startPos = 1500;//headerRoot.rect.width + _g.rect.width;
+        float endPos = -1500;//-headerRoot.rect.width - _g.rect.width;
+
+        //tweens
+        _g.anchoredPosition = new Vector2(startPos, 0);  // .ChangeStartValue(-_g.rect.width)
+        Sequence _sequence = DOTween.Sequence();
+       // _sequence.Append(_g.DOAnchorPosX(200, .5f)).SetEase(Ease.InOutSine);
+       // _sequence.Append(_g.DOAnchorPosX(-200, 2f)).SetEase(Ease.InOutCirc);
+        _sequence.Append(_g.DOAnchorPosX(endPos, headerTime).SetEase(headerPosCurve)
+                           //.SetDelay(.5f)
+                           .OnComplete(() => {
+                               _g.DOKill();
+                                Destroy(_g.gameObject);   
+                           }));
+        _sequence.Play();
+
+        //messaging
+        if (_msg == null) _msg = "N/A";
+        _g.GetComponentInChildren<TextMeshProUGUI>().SetText(_msg);
+
+
+
+    }
 
     //utils
     private void IndentMsgs()

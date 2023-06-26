@@ -1,4 +1,5 @@
 using Sirenix.OdinInspector;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -13,6 +14,7 @@ public class WaveManager : StaticInstance<WaveManager>
     [SerializeField] private GameObject[] spawnersGameObject;
     private List<ISpawner> spawners;
     [SerializeField] private EnemySpawner enemySpawner = null;
+    public event Action<int> OnWaveStart;
     private void Start()
     {
         CacheSpawners();
@@ -28,7 +30,8 @@ public class WaveManager : StaticInstance<WaveManager>
         int waveCounter = 1;
         foreach (var wave in waves) {
             Debug.Log("wave - " + waveCounter);
-            MessageBoard.Instance.SpawnMessage($"wave - {waveCounter}");
+            MessageBoard.Instance.SpawnHeader($"wave - {waveCounter}");
+            OnWaveStart?.Invoke(waveCounter);//notify on wave start
 
             enemySpawner.SpawnEnemeis(
                 wave.enemyCollection.GetWaveOfWeight(wave.waveWeight),

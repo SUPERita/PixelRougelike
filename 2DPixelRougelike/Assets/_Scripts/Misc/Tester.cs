@@ -89,4 +89,11 @@ public class Tester : MonoBehaviour
         Gizmos.color = UnityEngine.Color.yellow;
         Gizmos.DrawWireSphere(transform.position, num);
     }
+
+    [Button]
+
+    private void PlayChildSrouce()
+    {
+        GetComponentInChildren<AudioSource>().Play();
+    }
 }

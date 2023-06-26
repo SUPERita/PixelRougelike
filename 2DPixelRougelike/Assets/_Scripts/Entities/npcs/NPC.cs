@@ -8,7 +8,7 @@ public class NPC : MonoBehaviour, IInteractible
 
     [SerializeField] private string interactionPrompt = "";
     Vector2 startScale;
-    private void Start()
+    protected virtual void Start()
     {
         startScale = transform.localScale;
     }

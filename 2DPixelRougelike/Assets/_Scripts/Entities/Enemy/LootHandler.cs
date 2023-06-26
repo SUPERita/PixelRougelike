@@ -10,7 +10,13 @@ public class LootHandler : MonoBehaviour
     public void SpawnLoot()
     {
         //if (loot == null) return;
-        LeanPoolManager.Instance.SpawnFromPool("pickup").transform.position = transform.position + Random.insideUnitSphere;
+        LeanPoolManager.Instance.SpawnFromPool("pickupNugget").transform.position = transform.position + Random.insideUnitSphere;
+
+        if(Random.Range(0, 2) == 1) LeanPoolManager.Instance.SpawnFromPool("pickupNugget").transform.position = transform.position + Random.insideUnitSphere;
+        else LeanPoolManager.Instance.SpawnFromPool("pickupGold").transform.position = transform.position + Random.insideUnitSphere ;
+
+        
+            
         //Instantiate(loot[0], , Quaternion.identity);
     }
 

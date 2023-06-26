@@ -4,9 +4,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public class PickUp : MonoBehaviour, IPoolable
 {
     private Transform target = null;
+    [SerializeField] private ResourceType resourceType = ResourceType.EnergyNugget;
+    [SerializeField] private int amount = 3;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
@@ -37,30 +41,29 @@ public class PickUp : MonoBehaviour, IPoolable
     {
         //Debug.Log("1");
         XPManager.Instance.AddXP(5);
-        ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 3);
+        ResourceSystem.Instance.AddResourceAmount(resourceType, amount);
     }
 
     private void Start()
     {
-        PopOutTween();
+        t = transform.DOScale(1f, .25f).SetAutoKill(false);
+        //PopOutTween();
     }
 
     Tween t = null;
     private void PopOutTween()
     {
-        transform.localScale = Vector3.zero;
-        if (t == null)
-        {
-            t = transform.DOScale(1f, .25f);
-        }
-        else
-        {
-            t.Restart();
-        }
+        transform.localScale = Vector3.one*.5f;
+        //transform.DOKill();
+        t.Rewind();
+        t.Play();   
+        //t = transform.DOScale(1f, .25f);
+        //MessageBoard.Instance.SpawnMessage("restarted");
     }
 
     public void OnSpawn()
     {
+        
         PopOutTween();
     }
 
