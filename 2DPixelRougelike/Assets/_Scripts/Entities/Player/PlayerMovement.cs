@@ -134,6 +134,12 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
         speedMult = 5;
         speedMultRemainingTime = .15f;
         //revert back in a second, but 
+
+        //works
+        //foreach(PickUp _p in FindObjectsOfType<PickUp>())
+        //{
+        //    _p.StartFollowing(transform);
+        //}
     }
 
     //interface stuff

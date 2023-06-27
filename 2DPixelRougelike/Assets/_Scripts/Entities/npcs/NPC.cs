@@ -8,6 +8,9 @@ public class NPC : MonoBehaviour, IInteractible
 
     [SerializeField] private string interactionPrompt = "";
     Vector2 startScale;
+
+    public bool prompRefreshRequest { get; set; } = false;
+
     protected virtual void Start()
     {
         startScale = transform.localScale;
@@ -32,11 +35,24 @@ public class NPC : MonoBehaviour, IInteractible
 
     public virtual void OnEnterRange()
     {
-        GetComponent<SpriteRenderer>().color = Color.red;
+        // Get the current material of the renderer
+        Material material = GetComponent<SpriteRenderer>().material;
+
+        // Set the new value for outbase_on directly on the material
+        material.SetFloat("_OutlineAlpha", 1);
+        //material.EnabledKeyword("OUTBASE_ON");
     }
 
     public virtual void OnExitRange()
     {
-        GetComponent<SpriteRenderer>().color = Color.white;
+        //GetComponent<SpriteRenderer>().color = Color.white;
+        // Get the current material of the renderer
+        Material material = GetComponent<SpriteRenderer>().material;
+        material.SetFloat("_OutlineAlpha", 0);
+        // Set the new value for outbase_on directly on the material
+        //material.SetInt("OUTBASE_ON", 0);
     }
+
+    //public bool prompRefreshRequest { get; private set; } = false;
+
 }

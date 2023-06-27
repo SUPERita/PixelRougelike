@@ -23,6 +23,9 @@ public class ShopNPC : NPC
         state = false;
         UpdateVisual();
         base.OnInteract();
+
+        //show inactive prompt
+        prompRefreshRequest = true;
     }
     public override string GetInteractionPrompt()
     {
@@ -35,14 +38,6 @@ public class ShopNPC : NPC
 
     }
 
-    protected override void Start() {
-        waveManager.OnWaveStart += WaveManager_OnWaveStart;
-        UpdateVisual();
-        base.Start();
-    }
-    private void OnDestroy() => waveManager.OnWaveStart -= WaveManager_OnWaveStart;
-
-
     private void WaveManager_OnWaveStart(int _waveNum)
     {
         int _startAtWave = 2;
@@ -52,7 +47,20 @@ public class ShopNPC : NPC
             state = true;
             UpdateVisual();
             MessageBoard.Instance.SpawnMessage("SHOP OPENED!");
+
+            //show inactive prompt
+            prompRefreshRequest = true;
         }
     }
+
+    protected override void Start() {
+        waveManager.OnWaveStart += WaveManager_OnWaveStart;
+        UpdateVisual();
+        base.Start();
+    }
+    private void OnDestroy() => waveManager.OnWaveStart -= WaveManager_OnWaveStart;
+
+
+   
 
 }

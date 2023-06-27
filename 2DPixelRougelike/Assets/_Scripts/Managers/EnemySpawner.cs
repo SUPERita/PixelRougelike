@@ -31,19 +31,7 @@ public class EnemySpawner : MonoBehaviour, ISpawner
     //spawning
     private void SpawnEnemy(string _enemyName)
     {
-        //if (!working) { return; }
-
-        //choose spawn point
-        Vector2 spawnPosition =
-            (Vector2)player.position +
-            (Vector2)UnityEngine.Random.insideUnitSphere * spawnRangeFromPlayer;
-        //while off the arena, rechoose
-        while((spawnPosition- (Vector2)transform.position).sqrMagnitude > spawnRange* spawnRange)
-        {
-            spawnPosition =
-            (Vector2)player.position +
-            (Vector2)UnityEngine.Random.insideUnitSphere * spawnRangeFromPlayer;
-        }
+        Vector2 spawnPosition = GetPositionNearPlayerInsideTheArena();
 
         //spawn indc
         Transform _indc = Instantiate(spawnIndicator, spawnPosition, Quaternion.identity).transform;
@@ -66,6 +54,28 @@ public class EnemySpawner : MonoBehaviour, ISpawner
         //Instantiate(enemyPrefab, _transform.position, _transform.rotation, _transform);
         //Invoke(nameof(SpawnEnemy), reload);
     }
+    public void SpawnBoss(GameObject _boss)
+    {
+        Vector2 spawnPosition = GetPositionNearPlayerInsideTheArena();
+
+        //spawn indc
+        Transform _indc = Instantiate(spawnIndicator, spawnPosition, Quaternion.identity).transform;
+
+        //on indc death Spawn _boss
+        _indc.localScale = Vector3.zero;
+        _indc.DOScale(3, 2f) 
+        .OnComplete(() =>
+        {
+            //spawn _boss
+            Transform _t = Instantiate(_boss, _transform).transform;//UnityEngine.Random.Range(0, 2) == 1 ? "dasher1":"follow1").transform;//PoolEnemy _t = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnEnemy("box2") : PoolManager.Instance.SpawnEnemy("box");
+            _t.localPosition = spawnPosition;
+
+            //destory indicator
+            Destroy(_indc.gameObject);
+        });
+
+    }
+
     public void SpawnEnemeis(string[] _enemies, float _spawnOverTimeSeconds)
     {
         StartCoroutine(SpawnEnemiesWithDelay(_enemies, _spawnOverTimeSeconds));
@@ -98,6 +108,25 @@ public class EnemySpawner : MonoBehaviour, ISpawner
         //working = true;
         //SpawnEnemy();
     }
+    private Vector2 GetPositionNearPlayerInsideTheArena()
+    {
+        //if (!working) { return; }
+
+        //choose spawn point
+        Vector2 spawnPosition =
+            (Vector2)player.position +
+            (Vector2)UnityEngine.Random.insideUnitSphere * spawnRangeFromPlayer;
+        //while off the arena, rechoose
+        while ((spawnPosition - (Vector2)transform.position).sqrMagnitude > spawnRange * spawnRange)
+        {
+            spawnPosition =
+            (Vector2)player.position +
+            (Vector2)UnityEngine.Random.insideUnitSphere * spawnRangeFromPlayer;
+        }
+
+        return spawnPosition;
+    }
+
 }
 
 public interface ISpawner

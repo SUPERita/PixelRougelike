@@ -5,15 +5,19 @@ using UnityEngine;
 
 public class LootHandler : MonoBehaviour
 {
-    //[SerializeField] private PickUp[] loot;
+    [SerializeField] private int amount = 2;
     
     public void SpawnLoot()
     {
         //if (loot == null) return;
-        LeanPoolManager.Instance.SpawnFromPool("pickupNugget").transform.position = transform.position + Random.insideUnitSphere;
+        //LeanPoolManager.Instance.SpawnFromPool("pickupNugget").transform.position = transform.position + Random.insideUnitSphere;
 
-        if(Random.Range(0, 2) == 1) LeanPoolManager.Instance.SpawnFromPool("pickupNugget").transform.position = transform.position + Random.insideUnitSphere;
-        else LeanPoolManager.Instance.SpawnFromPool("pickupGold").transform.position = transform.position + Random.insideUnitSphere ;
+        for (int i = 0; i < amount; i++)
+        {
+            if(Random.Range(0, 2) == 1) LeanPoolManager.Instance.SpawnFromPool("pickupNugget").transform.position = transform.position + Random.insideUnitSphere;
+            else LeanPoolManager.Instance.SpawnFromPool("pickupGold").transform.position = transform.position + Random.insideUnitSphere ;
+        }
+
 
         
             

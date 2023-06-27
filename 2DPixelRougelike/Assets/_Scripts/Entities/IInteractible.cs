@@ -10,4 +10,7 @@ public interface IInteractible
     void OnStopInteract();
     string GetInteractionPrompt();
 
+    bool prompRefreshRequest { get; set; }
+
+
 }

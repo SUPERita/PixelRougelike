@@ -6,15 +6,31 @@ using UnityEngine;
 
 public class WaveManager : StaticInstance<WaveManager>
 {
+    [Header("Waves")]
     [SerializeField] private float waveDuration = 5f;
     [SerializeField] private float delayBetweenWaves = 5f;
     //[SerializeField] private float waveDuration = 5f;
-
     [SerializeField] private WaveWeightPair[] waves = null;
     [SerializeField] private GameObject[] spawnersGameObject;
     private List<ISpawner> spawners;
     [SerializeField] private EnemySpawner enemySpawner = null;
     public event Action<int> OnWaveStart;
+
+    [Header("Bosses")]
+    [SerializeField] private BossWavePair[] bossWavePairs = null;
+    private bool GetBossAtWave(int _waveIndex, out GameObject _prefab)
+    {
+        foreach (var pair in bossWavePairs) 
+        {
+            if (pair.spawnAtWave == _waveIndex) { 
+                _prefab = pair.bossPrefab; 
+                return true;
+            }
+        }
+        _prefab = null;
+        return false;
+    }
+
     private void Start()
     {
         CacheSpawners();
@@ -29,15 +45,23 @@ public class WaveManager : StaticInstance<WaveManager>
     {
         int waveCounter = 1;
         foreach (var wave in waves) {
-            Debug.Log("wave - " + waveCounter);
+            //wave notifcation
             MessageBoard.Instance.SpawnHeader($"wave - {waveCounter}");
             OnWaveStart?.Invoke(waveCounter);//notify on wave start
 
+            //try spawn boss
+            if(GetBossAtWave(waveCounter, out GameObject _prefab))
+            {
+                enemySpawner.SpawnBoss(_prefab);
+            }
+
+            //spawn enemies
             enemySpawner.SpawnEnemeis(
                 wave.enemyCollection.GetWaveOfWeight(wave.waveWeight),
                 waveDuration);
             yield return new WaitForSeconds(waveDuration+delayBetweenWaves);
 
+            //increment
             waveCounter++;
         }
     }
@@ -78,4 +102,11 @@ public struct WaveWeightPair
 {
     [field: SerializeField, InlineEditor] public EnemyCollection enemyCollection { get; private set; }
     [field: SerializeField] public int waveWeight { get; private set; }
+}
+
+[System.Serializable]
+public struct BossWavePair
+{
+    [field: SerializeField] public GameObject bossPrefab { get; private set; }
+    [field: SerializeField] public int spawnAtWave { get; private set; }
 }

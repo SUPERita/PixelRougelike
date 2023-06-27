@@ -296,6 +296,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   range: 4
+  enemiesToHit: 1
 --- !u!1 &3828994127941712985
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +599,7 @@ MonoBehaviour:
   promptAnimator: {fileID: 256821332044414315}
   canvasGroup: {fileID: 6783224330743181322}
   checkRate: 0.2
-  checkRange: 4
+  checkRange: 2
   fadeSpeed: 0.2
 --- !u!114 &4991420160875594964
 MonoBehaviour:
@@ -614,7 +615,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 100
   showDmgText: 0
-  DmgTextPrefab: {fileID: 0}
+  dmgTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &3764507932367705448
 MonoBehaviour:
   m_ObjectHideFlags: 0

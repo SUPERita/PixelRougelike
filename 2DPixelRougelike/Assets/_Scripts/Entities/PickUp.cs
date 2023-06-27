@@ -15,9 +15,14 @@ public class PickUp : MonoBehaviour, IPoolable
     {
         if (collision.CompareTag("Player"))
         {
-            target = collision.transform;
-            FollowTarget();
+            StartFollowing(collision.transform);
         }
+    }
+
+    public void StartFollowing(Transform _t)
+    {
+        target = _t;
+        FollowTarget();
     }
 
     private void FollowTarget()

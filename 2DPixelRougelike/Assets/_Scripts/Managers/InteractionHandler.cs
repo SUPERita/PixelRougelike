@@ -50,6 +50,14 @@ public class InteractionHandler : MonoBehaviour
         }
         lastInteractible = currentInteractible;
 
+        //hanlde refresh prompt requests
+        if (currentInteractible != null && currentInteractible.prompRefreshRequest)
+        {
+            currentInteractible.prompRefreshRequest = false;
+            currentInteractible.OnEnterRange();
+            promptAnimator.SetText(currentInteractible.GetInteractionPrompt(), false);
+        }
+
         //if no interactibles near hide promp
         if (currentInteractible == null) {
             targetOpacity = 0f;
