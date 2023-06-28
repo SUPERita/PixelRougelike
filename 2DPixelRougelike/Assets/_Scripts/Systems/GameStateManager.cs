@@ -11,7 +11,9 @@ public enum GameState
     MidRunUpgrades,
     WeaponChoice,
     PassiveUpgrades,
-    Paused
+    Paused,
+    Cutscene,
+    Dead
 }
 public class GameStateManager : Singleton<GameStateManager>
 {

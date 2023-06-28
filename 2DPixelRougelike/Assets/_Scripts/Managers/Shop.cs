@@ -135,9 +135,11 @@ public class Shop : StaticInstance<Shop>
                     }
                 }
             }
-                
+            //if no more cards
             else
             {
+                currentRerollcost = 0;
+                rerollCostText.SetText("" + currentRerollcost);
                 EventSystem.current.SetSelectedGameObject(rerollCostText.GetComponentInParent<Button>().gameObject);
             }
             

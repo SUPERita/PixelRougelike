@@ -11,10 +11,16 @@ public class WaveManager : StaticInstance<WaveManager>
     [SerializeField] private float delayBetweenWaves = 5f;
     //[SerializeField] private float waveDuration = 5f;
     [SerializeField] private WaveWeightPair[] waves = null;
+    
     [SerializeField] private GameObject[] spawnersGameObject;
     private List<ISpawner> spawners;
     [SerializeField] private EnemySpawner enemySpawner = null;
     public event Action<int> OnWaveStart;
+
+    [Header("Extra Waves")]
+    [SerializeField] private WaveWeightPair extraWave;
+    [SerializeField] private int extraWaveStartWeight = 100;
+    [SerializeField, Tooltip("extraWaveStartWeight + extraWaveWeightPerLevel * level = wave weight ")] private int extraWaveWeightPerLevel = 10;
 
     [Header("Bosses")]
     [SerializeField] private BossWavePair[] bossWavePairs = null;
@@ -43,8 +49,11 @@ public class WaveManager : StaticInstance<WaveManager>
     }
     private IEnumerator SpawnWaves()
     {
-        int waveCounter = 1;
+        int waveCounter = 0;
         foreach (var wave in waves) {
+            //increment
+            waveCounter++;
+
             //wave notifcation
             MessageBoard.Instance.SpawnHeader($"wave - {waveCounter}");
             OnWaveStart?.Invoke(waveCounter);//notify on wave start
@@ -61,9 +70,28 @@ public class WaveManager : StaticInstance<WaveManager>
                 waveDuration);
             yield return new WaitForSeconds(waveDuration+delayBetweenWaves);
 
-            //increment
-            waveCounter++;
         }
+
+        int _extraWaveCounter = 1;
+        for (int i = 0; i < 100; i++)
+        {
+            //wave notifcation
+            MessageBoard.Instance.SpawnHeader($"wave - {waveCounter}+{_extraWaveCounter}");
+            OnWaveStart?.Invoke(waveCounter+ _extraWaveCounter);//notify on wave start
+
+            //spawn enemies
+            enemySpawner.SpawnEnemeis(
+                extraWave.enemyCollection.GetWaveOfWeight(_extraWaveCounter*10+100),
+                waveDuration);
+            yield return new WaitForSeconds(waveDuration + delayBetweenWaves);
+
+            //increment
+            _extraWaveCounter++;
+        }
+
+        MessageBoard.Instance.SpawnHeader("Fuck It");
+        MessageBoard.Instance.SpawnHeader("Not Coding Anymore",1.5f);
+        MessageBoard.Instance.SpawnHeader("You Won!",3f);
     }
 
     /*

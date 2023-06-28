@@ -39,7 +39,7 @@ Transform:
   - {fileID: 7408900298432621885}
   - {fileID: 7420090723423228714}
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &6288083754945358094
 MonoBehaviour:
@@ -429,6 +429,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5781450518836905777}
     m_Modifications:
+    - target: {fileID: 4598114514295764885, guid: d16760da84299c146be07ec9db970a7a, type: 3}
+      propertyPath: clips
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a9d16b893efa3347bc4fc839fd82e2c, type: 2}
     - target: {fileID: 6680872084915417782, guid: d16760da84299c146be07ec9db970a7a, type: 3}
       propertyPath: m_Name
       value: Audio System44
@@ -733,6 +737,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 5781450518836905777}
     m_Modifications:
+    - target: {fileID: 2894844593129866407, guid: cd9e01bc82c0ead4f9c2594c89a8d015, type: 3}
+      propertyPath: cursorImage
+      value: 
+      objectReference: {fileID: 2800000, guid: a1b7d9ffed68a47128c5622c13ba4752, type: 3}
     - target: {fileID: 3645685403199362569, guid: cd9e01bc82c0ead4f9c2594c89a8d015, type: 3}
       propertyPath: m_RootOrder
       value: 4

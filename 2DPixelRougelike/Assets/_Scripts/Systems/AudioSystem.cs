@@ -16,7 +16,7 @@ using UnityEngine.Audio;
 public class AudioSystem : Singleton<AudioSystem> {
     [SerializeField] private string soundFolderPath = "Audio/"; // Path to the folder containing sound clips
     private Dictionary<string, AudioClip> soundDictionary = new Dictionary<string, AudioClip>();
-    [HideInInspector] [SerializeField] private List<AudioClip> clips = new List<AudioClip>();
+    [SerializeField, InlineEditor] private AudioCollection clips;
     [SerializeField] private bool muteDebug = false;
     /*[HideInInspector]*/ [SerializeField] private List<AudioSource> availableSources = new List<AudioSource>();
     //private List<AudioSource> workingSources = new List<AudioSource>();
@@ -32,16 +32,19 @@ public class AudioSystem : Singleton<AudioSystem> {
 
     [HorizontalGroup("a")]
     [Button]
-    public void PlaySound(string _clipName/*parameters control*/)
+    public void PlaySound(string _clipName, float _vol = .5f/*parameters control*/)
     {
         //find available source
         AudioSource _a = FindAvailableSource();
         if(_a == null) { /*Debug.Log("no Available sources");*//*ye we get it*/ return; }
 
-        //get the sound from name
+        //get the clip from name
         AudioClip _soundByName = null;
         if(!soundDictionary.TryGetValue(_clipName, out _soundByName)) { Debug.LogError("no sound named: " + _clipName + " in the system"); }
         _a.clip = _soundByName;
+
+        //load parameters
+        _a.volume = _vol;
 
         //Play?
         _a.Play();
@@ -126,7 +129,7 @@ public class AudioSystem : Singleton<AudioSystem> {
     [Button(ButtonSizes.Small)]
     private void LoadClips()
     {
-        clips = new List<AudioClip>();
+        clips.clipList = new List<AudioClip>();
         string[] filePaths = Directory.GetFiles(Application.dataPath, soundFolderPath, SearchOption.AllDirectories);
 
         if (filePaths.Length > 0)
@@ -136,7 +139,7 @@ public class AudioSystem : Singleton<AudioSystem> {
                 if (!IsFileMeta(_p))
                 {
                     TryWrite(FileName(_p)+" File found at path: " + _p);
-                    clips.Add(AssetDatabase.LoadAssetAtPath<AudioClip>(PathGlobalToLocal(_p)));
+                    clips.clipList.Add(AssetDatabase.LoadAssetAtPath<AudioClip>(PathGlobalToLocal(_p)));
                 }
                 else {
                     //its a meta file
@@ -176,7 +179,7 @@ public class AudioSystem : Singleton<AudioSystem> {
     }
     private void WriteListToDictionary()
     {
-        soundDictionary = clips.ToDictionary(ac => ac.name, ac => ac);
+        soundDictionary = clips.clipList.ToDictionary(ac => ac.name, ac => ac);
 
         foreach (var kvp in soundDictionary)
         {

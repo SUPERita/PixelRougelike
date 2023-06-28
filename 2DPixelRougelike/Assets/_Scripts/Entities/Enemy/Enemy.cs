@@ -33,6 +33,8 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         if (!alive) { return; }
 
         DoBehaviour();
+
+        sr.flipX = rb.velocity.x < 0;
     }
 
     protected virtual void DoBehaviour()

@@ -6,9 +6,11 @@ using UnityEngine.Rendering;
 public class SettingsImplementer : MonoBehaviour
 {
     [SerializeField] private PlayerStats playerStats;
+    [SerializeField] private Texture2D cursorImage = null;
     // Start is called before the first frame update
     void Start()
     {
+        Cursor.SetCursor(cursorImage, new Vector2(cursorImage.width / 2, cursorImage.height / 2), CursorMode.Auto);
         //makes it draw top to bottom and switch bathc whenever it switches material
         //basicly keep it as it ;
         GraphicsSettings.transparencySortMode = TransparencySortMode.CustomAxis;

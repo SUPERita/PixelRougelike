@@ -1,27 +1,32 @@
+using Cinemachine;
 using DG.Tweening;
 using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.UIElements;
 
 public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
 {
+    [Header("Components")]
     [SerializeField] protected Health health;
     protected Transform follow = null;
     [SerializeField] protected Rigidbody2D rb = null;
     [SerializeField] protected LootHandler lootHandler = null;
+    [SerializeField] protected CinemachineVirtualCamera bossCam = null;
 
-    [Header("FX")]
     //[SerializeField] private MMF_Player hitFeedback;
     //[SerializeField] private GameObject dieParticle = null;
-    private float hitFlashTime = 0.25f;
+    [Header("FX")]
     [SerializeField] private SpriteRenderer sr;
+    private float hitFlashTime = 0.25f;
     [SerializeField] private Material regularMat;
     [SerializeField] private Material hitMat;
     [SerializeField] private float dieKnockSpeed = 10f;
-    [Header("vals")]
+    [SerializeField] private MMF_Player spawnFX;
+    [Header("Vals")]
     [SerializeField] protected int damage = 5;
 
     protected Vector3 startSize = Vector3.one;
@@ -32,6 +37,8 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
         if (!alive) { return; }
 
         DoBehaviour();
+
+        sr.flipX = rb.velocity.x < 0;
     }
 
     protected virtual void DoBehaviour()
@@ -56,7 +63,12 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
         rb = GetComponent<Rigidbody2D>();
         follow = FindAnyObjectByType<PlayerMovement>().transform;
         health.OnDie += Health_OnDie;
+
+        if (SettingsCanvas.Instance.showCutscenes) StartCoroutine(ShowBossCamFor(2f));
+      
+        
     }
+    
     private void OnDestory()
     {
         health.OnDie -= Health_OnDie;
@@ -144,6 +156,25 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
 
     }
 
+    private IEnumerator ShowBossCamFor(float _timeInSeconds)
+    {
+        bossCam.enabled = true;
+        Time.timeScale = 0;
+        GameStateManager.Instance.SetState(GameState.Cutscene);
+
+        spawnFX?.PlayFeedbacks();
+        StartCoroutine(DoInTime(()=>AudioSystem.Instance.PlaySound("A1"), .4f));
+        yield return new WaitForSecondsRealtime(_timeInSeconds);
+
+        bossCam.enabled = false;
+        Time.timeScale = 1;
+        GameStateManager.Instance.ReturnToBaseState();
+    }
+    private IEnumerator DoInTime(UnityAction _A, float time = 0f)
+    {
+        yield return new WaitForSecondsRealtime(time);
+        _A.Invoke();
+    }
 
     #endregion
 }

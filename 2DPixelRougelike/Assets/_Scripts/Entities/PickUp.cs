@@ -45,6 +45,7 @@ public class PickUp : MonoBehaviour, IPoolable
     protected virtual void OnCollect()
     {
         //Debug.Log("1");
+        AudioSystem.Instance.PlaySound("Beep3", .2f);
         XPManager.Instance.AddXP(5);
         ResourceSystem.Instance.AddResourceAmount(resourceType, amount);
     }

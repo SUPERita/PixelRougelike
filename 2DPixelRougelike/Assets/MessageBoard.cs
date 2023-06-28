@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class MessageBoard : StaticInstance<MessageBoard>
 {
@@ -44,6 +45,8 @@ public class MessageBoard : StaticInstance<MessageBoard>
         await Task.Delay((int)(_InTimeSeconds*1000f));
 
         Debug.Log("do something about null rect here?");
+        if(_g == null) { return; }
+
         _g.DOAnchorPosX(-_g.rect.width, indentSpeed).OnComplete(() => {
             _g.transform.DOKill();
             msgList.Remove(_g);
@@ -52,8 +55,11 @@ public class MessageBoard : StaticInstance<MessageBoard>
     }
 
     [Button]
-    public void SpawnHeader(string _msg)
+    public void SpawnHeader(string _msg, float delay = -1)
     {
+        if (delay > 0) { StartCoroutine(DoInTime(() => SpawnHeader(_msg), delay)); return; }
+  
+
         RectTransform _g = Instantiate(headerPrefab, headerRoot).GetComponent<RectTransform>();
         float startPos = 1500;//headerRoot.rect.width + _g.rect.width;
         float endPos = -1500;//-headerRoot.rect.width - _g.rect.width;
@@ -88,5 +94,11 @@ public class MessageBoard : StaticInstance<MessageBoard>
             _g.DOAnchorPosY( - msgMargin*_i, indentSpeed);
             _i--;
         }
+    }
+
+    private IEnumerator DoInTime(UnityAction _A, float time = 0f)
+    {
+        yield return new WaitForSecondsRealtime(time);
+        _A.Invoke();
     }
 }

@@ -1,6 +1,11 @@
+using System.Collections;
 using UnityEngine;
+using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine;
+using UnityEngine.Events;
+using System.Collections;
 
 /// <summary>
 /// A static class for general helpful methods
@@ -45,5 +50,13 @@ public static class Helpers
                 break;
             }
         }
+    }
+
+
+    public static IEnumerator DoInTime(UnityAction _A, float time = 0f)
+    {
+        Debug.Log("triple check this works good");
+        yield return new WaitForSeconds(time);
+        _A.Invoke();
     }
 }

@@ -15009,6 +15009,10 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3655299944025670284, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4401472112836775656, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -15061,6 +15065,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Systems1
       objectReference: {fileID: 0}
+    - target: {fileID: 6057204707596194807, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
+      propertyPath: cursorImage
+      value: 
+      objectReference: {fileID: 2800000, guid: 41edf25d451a744e6ad1172a677603bd, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -15168,6 +15176,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3896407225281381650, guid: b42f8b8f2656aa8439220be7fea3356b, type: 3}
       propertyPath: m_BlocksRaycasts
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4914102998776860031, guid: b42f8b8f2656aa8439220be7fea3356b, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6295448704524936256, guid: b42f8b8f2656aa8439220be7fea3356b, type: 3}

@@ -30,6 +30,8 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
     [Header("---Prefrences")]
     [SerializeField] private Toggle dmgNumbersToggle = null;
     private string _dmgNumbersParameter = "dmgNumbers";
+    [SerializeField] private Toggle showCutScenesToggle = null;
+    private string _showCutScenesParameter = "showCutScenes";
 
 
     #region menu lifecycle
@@ -90,6 +92,7 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
 
     #endregion
 
+    //visit on add
     //saving & loading
     void Start()
     {
@@ -105,9 +108,11 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
         fullScreenToggle.onValueChanged.AddListener(SetFullScreen);
         resolutionDrowdown.onValueChanged.AddListener(SetResolution);
         dmgNumbersToggle.onValueChanged.AddListener(SetDamageNumbers);//dmg numbers
+        showCutScenesToggle.onValueChanged.AddListener(SetCutscenes);//cutscenes numbers
         //---load prefs
         LoadPrefs();
     }
+    //visit on add
     private void LoadPrefs()
     {
         //audio
@@ -122,8 +127,9 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
 
         //prefrences
         SetDamageNumbers(IntToBool(PlayerPrefs.GetInt(_dmgNumbersParameter, 1))); //dmg numbers
-
+        SetCutscenes(IntToBool(PlayerPrefs.GetInt(_showCutScenesParameter, 1)));//cutscenes numbers
     }
+    //visit on add
     private void OnDisable()
     {
         //settingsCog.OnClickEvent -= SettingsCog_OnClickEvent;
@@ -137,6 +143,7 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
         PlayerPrefs.SetInt(_fullScreenParameter, BoolToInt(Screen.fullScreen));
         PlayerPrefs.SetInt(_resolutionParameter, resolutionDrowdown.value);
         PlayerPrefs.SetInt(_dmgNumbersParameter, BoolToInt(showDamageNumbers));//dmg numbers
+        PlayerPrefs.SetInt(_showCutScenesParameter, BoolToInt(showCutscenes));//cutscenes numbers
     }
 
     #region Volume
@@ -249,13 +256,21 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
         dmgNumbersToggle.SetIsOnWithoutNotify(_b);
     }
 
+    public bool showCutscenes{ get; private set; } = true;
+    private void SetCutscenes(bool _b)
+    {
+        showCutscenes = _b;
+
+        showCutScenesToggle.SetIsOnWithoutNotify(_b);
+    }
+
     #endregion
 
 
 
     #region Just happend to be on the pause menu (nonessential)
 
-    
+
 
     #endregion
 

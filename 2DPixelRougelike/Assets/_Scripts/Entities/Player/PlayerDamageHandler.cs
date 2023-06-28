@@ -71,12 +71,11 @@ public class PlayerDamageHandler : MonoBehaviour
             item.enabled = false;
         }
 
-        Invoke(nameof(LoadLobby), 3);
+        StartCoroutine(Helpers.DoInTime(()=> DeathPanel.Instance.OpenDeathPanel(), 1));
+        
+        //Invoke(nameof(LoadLobby), 3);
     }
 
-    private void LoadLobby()
-    {
-        SceneManager.LoadScene("Lobby");
-    }
+    
 
 }

@@ -345,7 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   baseHealth: 100
   showDmgText: 1
-  DmgTextPrefab: {fileID: 5611360264123127487, guid: 640713121d6a1664aaa68d335ac839ef, type: 3}
+  dmgTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &4299600021118011763
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -363,7 +363,6 @@ MonoBehaviour:
   rb: {fileID: 2444911181205192423}
   lootHandler: {fileID: 5691298817174194076}
   hitFeedback: {fileID: 2444911181205192441}
-  particleSystem: {fileID: 45616952354432848, guid: cdd73a4c178394c49b87795f40ef70cc, type: 3}
   sr: {fileID: 2444911179368065120}
   regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
@@ -381,8 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c766074718013d247ad3ac8ce6090f3d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  loot:
-  - {fileID: 9143204482333895629, guid: 7a8085a768261254c881e96074f42c55, type: 3}
+  amount: 2
 --- !u!1001 &2444911179514031439
 PrefabInstance:
   m_ObjectHideFlags: 0
