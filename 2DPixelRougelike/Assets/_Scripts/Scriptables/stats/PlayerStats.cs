@@ -55,6 +55,10 @@ public class PlayerStats : SerializedScriptableObject
     {
         return stats[_statName].num; 
     }
+    public bool StatExists(string _statName)
+    {
+        return basePlayerStats.GetBaseStatsForValidation().ContainsKey(_statName);
+    }
 
 
 }

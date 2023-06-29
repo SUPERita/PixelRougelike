@@ -10,6 +10,10 @@ public class PlayerStatsHolder : StaticInstance<PlayerStatsHolder>
     {
         return playerStats.GetStat(_statName);
     }
+    public bool IsStatExisting(string value)
+    {
+        return playerStats.StatExists(value);
+    }
 
     public PlayerStats GetPlayerStats() { return playerStats; }
 }

@@ -22,8 +22,9 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
         Helpers.ToggleCanvas(canvasGroup, false);
     }
 
-     
+
     //enter
+    [ButtonGroup("q")]
     [Button]
     public void OpenPassiveCanvas()
     {
@@ -73,7 +74,7 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
     }
     private void AfterChoicePressed()
     {
-        ClosePassivesCanvas();
+        //ClosePassivesCanvas();
     }
 
 
@@ -108,10 +109,37 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
         passivePlayerStats.SetPassiveStatsList(_passives);
     }
 
+    [ButtonGroup("q")]
     [Button]
     public void ToggleCanvasGroup()
     {
         Helpers.ToggleCanvas(canvasGroup);
     }
+
+    [Button]
+    public void ResetAllPassives()
+    {
+        foreach(PassiveUpgradeChoice _p in GetComponentsInChildren<PassiveUpgradeChoice>())
+        {
+            _p.SetCurrentLevel(0);
+            _p.UpdateVisuals();
+        }
+    }
+
+    public bool ValidateOnlyOnePassiveNamed(string value)
+    {
+        int _i = 0;
+
+        foreach (PassiveUpgradeChoice _ChoiceButton in GetComponentsInChildren<PassiveUpgradeChoice>())
+        {
+            if(_ChoiceButton.statname == value)
+            {
+                _i++;
+            }
+        }
+
+        return _i == 1;
+    }
+
 
 }

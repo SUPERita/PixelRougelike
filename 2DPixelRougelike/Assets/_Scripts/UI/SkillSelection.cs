@@ -1,6 +1,7 @@
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
@@ -14,6 +15,8 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
 
     [SerializeField] private SkillCollection skillsCollection = null;
     private static string selectedSkillSaveLoc = "selectedSkills";
+
+    private static Stack<string> skillStack = new Stack<string>();
 
     private void Start()
     {
@@ -31,6 +34,7 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
         //fade in
         Time.timeScale = 0f;
         Helpers.ToggleCanvas(canvasGroup, true);
+
         // set selected
         EventSystem.current.SetSelectedGameObject(GetComponentInChildren<Button>().gameObject);
 
@@ -40,8 +44,12 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
         //start highlight
         HighlightSelectedSavedButtons();
 
+        //skillStack initialazation
+        ConvertSkillSaveToStack();
+
     }
 
+    
 
     private void SetUpChoices()
     {
@@ -52,11 +60,14 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
                 .GetComponent<SubButton>().InitializeButton(
                     this, 
                     skill._skillIcon, 
-                    skill._skillName);
+                    skill._skillName)
+                .AddAdditionalData(skill._skillCost);
         }
 
 
     }
+
+
     //exit
     [ButtonGroup("a")]
     [Button]
@@ -77,25 +88,25 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
     //buttons
     public void OnClicked(SubButton _button)
     {
-
         //can extend to 2+ simultanious skills but manipulating the saved array maybe making it into a queue or something
         //save
-        SaveSystem.SaveStringArrayAtLocation(
-            new string[] { _button._string1 },
-            selectedSkillSaveLoc);
+        SaveChoiceClicked(_button._string1);
 
         HighlightSelectedSavedButtons();
-        //SetHighlightedButtons(new SubButton[] {_button});
+        //SetHighlightedButtons(new SubButton[] {_skillName});
     }
     private void HighlightSelectedSavedButtons()
     {
-        List<SubButton> _subButtons = new List<SubButton>(); ;
+        List<SubButton> _subButtons = new List<SubButton>();
         foreach (string _s in GetSavedSelectedSkills())
         {
             _subButtons.Add(GetSubButtonFromSkillName(_s));
+
         }
         SetHighlightedButtons(_subButtons.ToArray());
     }
+
+
 
 
 
@@ -105,7 +116,6 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
     {
         Helpers.ToggleCanvas(canvasGroup);
     }
-
     private void SetHighlightedButtons(SubButton[] _buttons)
     {
         foreach(var _btn in GetComponentsInChildren<SubButton>()) {
@@ -124,9 +134,65 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
         }
         return null;
     }
+    [Button]
+    //"reset skills"
+    public void ResetLockedSubButtons()
+    {
+        foreach(LockedSubButton _b in GetComponentsInChildren<LockedSubButton>())
+        {
+            _b.SetIsUnlocked(false);
+            _b.SetVisual(false);
+        }
+
+        //reset save
+        SaveSystem.SaveStringArrayAtLocation(new string[0], selectedSkillSaveLoc);
+
+        //rehighlight
+        HighlightSelectedSavedButtons();
+    }
+
+
+    //save interaction
+    private static bool IsInCurrentSave(string _skillName)
+    {
+        foreach (var _s in GetSavedSelectedSkills())
+        {
+            if (_s==_skillName)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    private static void ConvertSkillSaveToStack()
+    {
+        skillStack = new Stack<string>();
+        foreach (string _s in GetSavedSelectedSkills())
+        {
+            skillStack.Push(_s);
+        }
+    }
     private static string[] GetSavedSelectedSkills()
     {
         string[] _s = SaveSystem.LoadStringArrayFromLocation(selectedSkillSaveLoc);
+
+        int _numberOfAllowedSkills = PlayerStatsHolder.Instance.TryGetStat("skill limit");
+
+        //if more skills are saved then are alowed
+        if(_s.Length > _numberOfAllowedSkills)
+        {
+            List<string> _cutSavedSkills = new List<string>();
+            //add skills until its the right amount
+            for (int i = 0; i < _numberOfAllowedSkills; i++)
+            {
+                _cutSavedSkills.Add(_s[i]);
+                //Debug.Log(_s[i]);
+            }
+
+            //fix the save
+            SaveSystem.SaveStringArrayAtLocation(_cutSavedSkills.ToArray(), selectedSkillSaveLoc);
+            _s = _cutSavedSkills.ToArray();
+        }
 
         return _s;
     }
@@ -142,4 +208,36 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
 
         return _skills.ToArray();
     }
+    private static void SaveChoiceClicked(string _skillName)
+    {
+        //if already choosen ignore
+        if (IsInCurrentSave(_skillName)) { return; }
+
+
+        //recreate the stack
+        ConvertSkillSaveToStack();
+
+        //copy the stack
+        Stack<string> _skillStackCopy = new Stack<string>(skillStack);
+
+        //add to the stack
+        _skillStackCopy.Push(_skillName);
+
+        //get the last n skills
+        List<string> _result = new List<string>();
+        int _numberOfSkills = PlayerStatsHolder.Instance.TryGetStat("skill limit");
+        for (int i = 0; i < _numberOfSkills; i++)
+        {
+            if(_skillStackCopy.Count == 0) { continue; }
+            _result.Add(_skillStackCopy.Pop());
+            //Debug.Log(_result[_result.Count-1]);
+        }
+        
+
+        //save the last n elements of the stack?!
+        SaveSystem.SaveStringArrayAtLocation(_result.ToArray(), selectedSkillSaveLoc);
+                    
+                   
+    }
+
 }

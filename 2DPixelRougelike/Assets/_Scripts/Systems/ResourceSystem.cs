@@ -59,6 +59,11 @@ public class ResourceSystem : Singleton<ResourceSystem>
     {
         TypeToResource(_t).SetAmount(0);
     }
+    [Button]
+    public void SetResource(ResourceType _t, int amt)
+    {
+        TypeToResource(_t).SetAmount(amt);
+    }
 
     //visit when add resource
     private void SaveResources()

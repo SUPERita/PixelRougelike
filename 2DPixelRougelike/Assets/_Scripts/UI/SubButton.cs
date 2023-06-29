@@ -8,12 +8,13 @@ public class SubButton : MonoBehaviour
 {
 
     [Header("normal")]
-    [SerializeField] private TextMeshProUGUI txtStr1;
-    [SerializeField] private TextMeshProUGUI txtVal1;
-    [SerializeField] private Image image1;
+    [SerializeField] protected TextMeshProUGUI txtStr1;
+    [SerializeField] protected TextMeshProUGUI txtVal1;
+    [SerializeField] protected Image image1;
     [Header("highlight")]
-    [SerializeField] private Image highlightImage;
+    [SerializeField] protected Image highlightImage;
     public int _value1 { get; private set; }
+    public int _value2 { get; private set; }
     public string _string1 { get; private set; }
 
     public ScriptableObject obj1 { get; private set; }
@@ -22,7 +23,7 @@ public class SubButton : MonoBehaviour
     private SubButtonListener buttonListener;
 
 
-    public SubButton InitializeButton(SubButtonListener _listener, Sprite _image1 = null, string _n = "empty", int _v = -1)
+    public virtual SubButton InitializeButton(SubButtonListener _listener, Sprite _image1 = null, string _n = "empty", int _v = -1)
     {
         buttonListener = _listener;
 
@@ -30,7 +31,7 @@ public class SubButton : MonoBehaviour
         if(_image1) { image1.sprite = _image1; }
         //int1
         _value1 = _v;
-        if(_v <0 && txtVal1) { txtVal1.SetText(_v.ToString()); }
+        if(_v > 0 && txtVal1) { txtVal1.SetText(_v.ToString()); }
         //string1
         _string1 = _n;
         if (txtStr1) { txtStr1.SetText(_string1); }
@@ -39,15 +40,21 @@ public class SubButton : MonoBehaviour
 
         return this;
     }
-    public SubButton AddAdditionalData(ScriptableObject _obj)
+    public virtual SubButton AddAdditionalData(ScriptableObject _obj)
     {
         obj1 = _obj;
 
         return this;
     }
-    public SubButton AddAdditionalData(MonoBehaviour _behav)
+    public virtual SubButton AddAdditionalData(MonoBehaviour _behav)
     {
         behav1 = _behav;
+
+        return this;
+    }
+    public virtual SubButton AddAdditionalData(int _v2)
+    {
+       _value2 = _v2;
 
         return this;
     }
@@ -59,8 +66,8 @@ public class SubButton : MonoBehaviour
 
         return this;
     }
-
-    public void Button_OnClick()
+     
+    public virtual void Button_OnClick()
     {
         buttonListener.OnClicked(this);
     }

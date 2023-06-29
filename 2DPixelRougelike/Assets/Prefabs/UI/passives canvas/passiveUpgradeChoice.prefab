@@ -163,7 +163,7 @@ MonoBehaviour:
   m_fontSizeMin: 22.8
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 2
+  m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -475,9 +475,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'speed
-
-'
+  m_text: skill limit
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -504,7 +502,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 29.25
+  m_fontSize: 21.3
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -697,15 +695,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b41ff4ce8e83e9441a0b898986e3320f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  <statname>k__BackingField: speed
+  <statname>k__BackingField: skill limit
   LevelContainerPrefab: {fileID: 7227457695339144284, guid: cb00c6b5efecf6a488be3f2dda39c1a1, type: 3}
   levelContainerRoot: {fileID: 2472457355558569504}
   costText: {fileID: 8826986203676526947}
   valText: {fileID: 1224332174657929148}
   valuePerLevel:
-  - <cost>k__BackingField: 0
+  - <cost>k__BackingField: 100
     <val>k__BackingField: 1
-  - <cost>k__BackingField: 10
-    <val>k__BackingField: 11
-  - <cost>k__BackingField: 19
-    <val>k__BackingField: 20
+  - <cost>k__BackingField: 1000
+    <val>k__BackingField: 2
+  - <cost>k__BackingField: 10000
+    <val>k__BackingField: 3

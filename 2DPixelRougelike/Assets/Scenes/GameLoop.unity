@@ -6360,8 +6360,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a7b0682884f4af84282e5ac99c72ece8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  mysteryBox: {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
-  spawnSpeed: 1
   spawnRange: 60
 --- !u!1 &412925108
 GameObject:
@@ -8732,10 +8730,8 @@ MonoBehaviour:
     <waveWeight>k__BackingField: 5
   - <enemyCollection>k__BackingField: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
     <waveWeight>k__BackingField: 5
-  spawnersGameObject:
-  - {fileID: 1497951771}
-  - {fileID: 378952211}
   enemySpawner: {fileID: 1497951773}
+  objectSpawner: {fileID: 378952213}
   extraWave:
     <enemyCollection>k__BackingField: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
     <waveWeight>k__BackingField: 0
@@ -8744,6 +8740,9 @@ MonoBehaviour:
   bossWavePairs:
   - <bossPrefab>k__BackingField: {fileID: 8930356708505685461, guid: 03e103d78024e3b42997ed2648997438, type: 3}
     <spawnAtWave>k__BackingField: 1
+  objectWavePairs:
+  - <objectPrefab>k__BackingField: {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
+    <spawnAtWave>k__BackingField: 2
 --- !u!1 &1124206825
 GameObject:
   m_ObjectHideFlags: 0
@@ -10021,7 +10020,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnRange: 64
-  spawnRangeFromPlayer: 24.8
+  spawnRangeFromPlayer: 30
   spawnIndicator: {fileID: 4449514593577175531, guid: bcc63639557ca414b986e848c1f512a7, type: 3}
   player: {fileID: 2126267457}
 --- !u!1 &1536379151
@@ -10611,7 +10610,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1822864572
 SpriteRenderer:
   m_ObjectHideFlags: 0

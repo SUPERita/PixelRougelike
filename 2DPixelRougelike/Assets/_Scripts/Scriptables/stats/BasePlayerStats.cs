@@ -4,6 +4,8 @@ using UnityEngine;
 using Sirenix.OdinInspector;
 using System;
 using System.Linq;
+using System.IO;
+using UnityEditor;
 
 [CreateAssetMenu(fileName = "BasePlayerStats", menuName = "Custom/BasePlayerStats")]
 public class BasePlayerStats : SerializedScriptableObject
@@ -100,13 +102,29 @@ public class BasePlayerStats : SerializedScriptableObject
         baseStats = new Dictionary<string, PlayerStat>();
         
     }
+
+    //stat name validation
+    public static bool ValidateStatExistance(string _statName)
+    {
+#if UNITY_EDITOR // uses AssetDatabase
+        return Resources.FindObjectsOfTypeAll<BasePlayerStats>()[0].baseStats.ContainsKey(_statName);
+#endif
+        return true;
+    }
+
+    public Dictionary<string, PlayerStat> GetBaseStatsForValidation()
+    {
+        return baseStats;
+    }
 }
 
 [Serializable]
 public struct PlayerStatInstance
 {
     [field: SerializeField] public int number { get; private set; }
-    [field: SerializeField] public string statName { get; private set; }
+
+    [field: SerializeField, ValidateInput("@BasePlayerStats.ValidateStatExistance(statName)", "stat doesnt exist in dictionary")]
+    public string statName { get; private set; }
 
     public PlayerStatInstance(string _s, int _n)
     {

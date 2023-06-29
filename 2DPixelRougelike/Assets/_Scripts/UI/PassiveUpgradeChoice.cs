@@ -13,7 +13,10 @@ public class PassiveUpgradeChoice : MonoBehaviour
     private readonly string passiveLocBase = "passiveUpgrade";
 
     [field: SerializeField,
-     ValidateInput("ValidateNoTrailingWhitespace", "last char is a whitespace")]
+     ValidateInput("ValidateNoTrailingWhitespace", "last char is a whitespace"),
+     ValidateInput("@FindObjectOfType<PassiveUpgradesManager>().ValidateOnlyOnePassiveNamed(statname)", "multiple copies in the passive upgrade buttons"),
+     ValidateInput("@BasePlayerStats.ValidateStatExistance(statname)",/*"@FindObjectOfType<PlayerStatsHolder>().IsStatExisting(statname)"*/ "stat doesnt exist in dictionary")]
+     //@DoAnyAction(()=>FindObjectOfType<PlayerStatsHolder>().IsStatExisting(value))
     public string statname { get; private set; } = "empty";
     private bool ValidateNoTrailingWhitespace(string value)
     {
@@ -26,6 +29,7 @@ public class PassiveUpgradeChoice : MonoBehaviour
 
         return true;
     }
+    
 
     [SerializeField] private GameObject LevelContainerPrefab;
     [SerializeField] private RectTransform levelContainerRoot;
@@ -43,7 +47,7 @@ public class PassiveUpgradeChoice : MonoBehaviour
     }
 
     //visuals
-    private void UpdateVisuals()
+    public void UpdateVisuals()
     {
         //destory em
         foreach (Transform child in levelContainerRoot)
@@ -108,7 +112,7 @@ public class PassiveUpgradeChoice : MonoBehaviour
         return SaveSystem.LoadIntFromLocation(passiveLocBase + statname, 0);
     }
     [Button]
-    private void SetCurrentLevel(int _val)
+    public void SetCurrentLevel(int _val)
     {
         SaveSystem.SaveIntAtLocation(_val, passiveLocBase + statname);
 
