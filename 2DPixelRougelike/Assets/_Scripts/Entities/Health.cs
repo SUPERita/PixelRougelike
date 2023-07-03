@@ -6,13 +6,14 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.Serialization;
 
 public class Health : MonoBehaviour
 {
     public event Action OnDie;
     public event Action<int> OnTakeDamage;
-
-    [SerializeField] private int baseHealth = 100;
+    public event Action<int> OnHealthChanged;
+    [SerializeField] private int maxHealth = 100;
     private int currentHealth = 0;
 
     [SerializeField] private bool showDmgText = false;
@@ -21,7 +22,7 @@ public class Health : MonoBehaviour
 
     private void Awake()
     {
-        currentHealth = baseHealth;
+        currentHealth = maxHealth;
     }
 
     Transform tmpTextObject = null;
@@ -102,12 +103,19 @@ public class Health : MonoBehaviour
 
     public int GetBaseHealth()
     {
-        return baseHealth;
+        return maxHealth;
     }
     public int GetCurrrentHealth()
     {
         return currentHealth;
     }
 
-    public void ResetHealth() => currentHealth = baseHealth;
+    public void ResetHealth() => currentHealth = maxHealth;
+    public void SetMaxHealth(int _arg, bool _heal = false)
+    {
+        maxHealth = _arg;
+        if(currentHealth > maxHealth) currentHealth = maxHealth;
+        if(_heal) currentHealth = maxHealth;
+        OnHealthChanged?.Invoke(_arg);
+    }
 }

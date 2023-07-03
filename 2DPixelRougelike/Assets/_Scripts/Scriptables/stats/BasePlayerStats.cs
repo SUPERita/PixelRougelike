@@ -52,7 +52,7 @@ public class BasePlayerStats : SerializedScriptableObject
 
             tmpStat.BaseStats_SetStatValue_USEONLYATBaseStats(
                 //CurrentValue + valueToAdd
-                /*compiledStats[_statToAdd.statName]*/tmpStat.num +
+                /*compiledStats[_statToAdd.statName]*/tmpStat.value +
                 _statToAdd.number);
 
             //set the compiled value To
@@ -65,17 +65,17 @@ public class BasePlayerStats : SerializedScriptableObject
             //set the compiled value To
             compiledStats[_statToAdd.statName].BaseStats_SetStatValue_USEONLYATBaseStats(
                 //CurrentValue + valueToAdd
-                compiledStats[_statToAdd.statName].num +
+                compiledStats[_statToAdd.statName].value +
                 _statToAdd.number);
             */
             /*
             Debug.Log(_statToAdd.statName + "   " + _statToAdd.number);//it does find it
 
-            Debug.Log(_statToAdd.statName + " compiled should be =   " + (compiledStats[_statToAdd.statName].num +
+            Debug.Log(_statToAdd.statName + " compiled should be =   " + (compiledStats[_statToAdd.statName].value +
                 _statToAdd.number));//it does find it
             */
 
-            //Debug.Log(_statToAdd.statName + "is actually = " + compiledStats[_statToAdd.statName].num);//it does find it
+            //Debug.Log(_statToAdd.statName + "is actually = " + compiledStats[_statToAdd.statName].value);//it does find it
         }
     }
     private PlayerStat tmpStat;
@@ -96,11 +96,10 @@ public class BasePlayerStats : SerializedScriptableObject
             baseStats.Add("tmp" + UnityEngine.Random.Range(0, 999999), new PlayerStat());
         }
     }
-    [Button]
+    //[Button]
     public void DeleteAllStats()
     {
         baseStats = new Dictionary<string, PlayerStat>();
-        
     }
 
     //stat name validation

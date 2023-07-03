@@ -19,6 +19,7 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     {
         canvasGroup = GetComponent<CanvasGroup>();
         midRunPlayerStats.ResetMidRunStats();
+        midRunPlayerStats.NotifyUpdatePlayerStats();
         Helpers.ToggleCanvas(canvasGroup, false);
     }
 

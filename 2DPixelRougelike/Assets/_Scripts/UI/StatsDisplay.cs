@@ -47,7 +47,7 @@ public class StatsDisplay : MonoBehaviour
 
             //}
             GameObject _g = Instantiate(prefabSingleStat, root);
-            _g.GetComponent<TextMeshProUGUI>().SetText(_stat.Value.statName + ": " + _stat.Value.num);
+            _g.GetComponent<TextMeshProUGUI>().SetText(_stat.Value.statName + ": " + _stat.Value.value);
             _g.GetComponentInChildren<Image>().sprite = _stat.Value.icon;
             _counter++;
         }

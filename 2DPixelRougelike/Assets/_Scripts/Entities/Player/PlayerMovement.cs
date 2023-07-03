@@ -8,7 +8,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     [SerializeField] private float playerSpeed = 10f;
     [SerializeField] private int strength = 10;
     [Tooltip("Attacks Per Second, attack animation time should be 1sec")]
-    [SerializeField] private float attackSpeed = 1f;
+    //[SerializeField] private float attackSpeed = 1f;
     Vector2 movement = new Vector2(0f, 0f);
     Vector2 lastMovement = new Vector2 (0f,0f);
     Rigidbody2D rb;
@@ -16,10 +16,31 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     [SerializeField] private AttackTriggerCollider attackTriggerCollider;
     [SerializeField] private ParticleSystem rollParticle = null;
     [SerializeField] private Transform playerVisual = null;
+    [SerializeField] private Health health = null;
     float speedMult = 1f;
     float speedMultRemainingTime = 0f;
 
-    [SerializeField] private PlayerStats playerStats;
+    private void Start()
+    {
+        PlayerStatsHolder.Instance.GetPlayerStats().Player_RequestStatsCompile();
+        PlayerStatsHolder.Instance.GetPlayerStats().OnPlayerStatsChanged += PlayerMovement_OnPlayerStatsChanged;
+        InvokeRepeating(nameof(PlayerMovement_OnPlayerStatsChanged), .5f, .5f);
+
+        if (health) health.SetMaxHealth(PlayerStatsHolder.Instance.TryGetStat("max health"), true);
+    }
+    private void OnDisable()
+    {
+        if(PlayerStatsHolder.Instance) PlayerStatsHolder.Instance.GetPlayerStats().OnPlayerStatsChanged -= PlayerMovement_OnPlayerStatsChanged;
+    }
+    private void PlayerMovement_OnPlayerStatsChanged()
+    {
+        //if(!gameObject) return;
+        //attack speed animator value
+        if(animator)animator.SetFloat("AttackSpeed", PlayerStatsHolder.Instance.TryGetStat("attack speed") / 50f);
+        playerSpeed = PlayerStatsHolder.Instance.TryGetStat("move speed") / 12f;
+        if(health) health.SetMaxHealth(PlayerStatsHolder.Instance.TryGetStat("max health"));
+        
+    }
 
     private void Awake()
     {
@@ -29,7 +50,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     IDamageable[] enemiesInArea = null;
     private void DamageArea()
     {
-        strength = playerStats.GetStat("strength");
+        strength = PlayerStatsHolder.Instance.TryGetStat("strength");
         enemiesInArea = attackTriggerCollider.GetDamageablesInArea();
         foreach(IDamageable _i in enemiesInArea)
         {
@@ -43,8 +64,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
         if (GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { return; }
 
 
-        //attack speed animator value
-        animator.SetFloat("AttackSpeed", attackSpeed);
+        
 
         //speed multiplayer//rolling
         if (speedMultRemainingTime > 0f)
@@ -65,6 +85,8 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     {
         rb.velocity = movement.normalized * playerSpeed * speedMult;
     }
+
+    
 
     //utils
     private void HandleAnimation()

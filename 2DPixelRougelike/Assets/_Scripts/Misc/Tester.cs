@@ -55,8 +55,8 @@ public class Tester : MonoBehaviour
                 //Debug.DrawLine(_out[closestIndex].transform.position, transform.position);
 
                 //Debug.Log(_out.Length + " :-: " + numColliders);//works
-                //Physics2D.OverlapCircle(transform.position, num);//works
-                //Debug.Log(Physics2D.OverlapCircleAll(transform.position, num).Length);//works
+                //Physics2D.OverlapCircle(transform.position, value);//works
+                //Debug.Log(Physics2D.OverlapCircleAll(transform.position, value).Length);//works
             }
         }
         return;

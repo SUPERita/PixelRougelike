@@ -153,6 +153,8 @@ public class AudioSystem : Singleton<AudioSystem> {
 
         WriteListToDictionary();
 
+        EditorUtility.SetDirty(clips);//???!
+
     }
 #endif
     //Utils

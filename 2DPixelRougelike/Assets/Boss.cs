@@ -86,6 +86,9 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
         //disable collision
         GetComponent<Collider2D>().enabled = false;
 
+        //stop any tweens and shit
+        transform.DOKill();
+
         //tween and destroy
         transform.DOScale(0f, 1f).SetEase(Ease.InBounce)
             .OnComplete(() => Destroy(gameObject));

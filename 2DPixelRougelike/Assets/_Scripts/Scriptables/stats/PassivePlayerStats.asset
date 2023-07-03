@@ -25,7 +25,9 @@ MonoBehaviour:
   samples:
   - <number>k__BackingField: 0
     <statName>k__BackingField: speed
-  - <number>k__BackingField: 11
+  - <number>k__BackingField: 0
     <statName>k__BackingField: strength
-  - <number>k__BackingField: 2
+  - <number>k__BackingField: 0
     <statName>k__BackingField: attack speed
+  - <number>k__BackingField: 0
+    <statName>k__BackingField: skill limit

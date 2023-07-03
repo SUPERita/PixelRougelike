@@ -29,6 +29,11 @@ public class PlayerStats : SerializedScriptableObject
         //Debug.Log("called compile");
         GetCompiledStats();
     }
+    public void Player_RequestStatsCompile()
+    {
+        //Debug.Log("called compile");
+        GetCompiledStats();
+    }
 
     //*
     /*
@@ -40,12 +45,12 @@ public class PlayerStats : SerializedScriptableObject
         //refernce
         //myDictionary[key] = newValue;, not myDictionary[key].number = newValue; // you need to change the whole value itself
 
-        Debug.Log(" before "+stats["speed"].num);
+        Debug.Log(" before "+stats["speed"].value);
         stats.TryGetValue("speed", out _p);
         _p.BaseStats_SetStatValue_USEONLYATBaseStats(_a);
         stats["speed"] = _p;
 
-        Debug.Log(" after " + stats["speed"].num);
+        Debug.Log(" after " + stats["speed"].value);
     }
     */
 
@@ -53,7 +58,7 @@ public class PlayerStats : SerializedScriptableObject
     public Dictionary<string, PlayerStat> GetRawStats() { return stats; }
     public int GetStat(string _statName)
     {
-        return stats[_statName].num; 
+        return stats[_statName].value; 
     }
     public bool StatExists(string _statName)
     {
@@ -69,7 +74,7 @@ public struct PlayerStat
     [HorizontalGroup("b")]
     [field:SerializeField] public string statName { get; private set; }
     [HorizontalGroup("b")]
-    [field: SerializeField] public int num { get; private set; }
+    [field: SerializeField] public int value { get; private set; }
     [HorizontalGroup("a")]
     [field: SerializeField] public string description { get; private set; }
     [HorizontalGroup("a")]
@@ -79,7 +84,7 @@ public struct PlayerStat
     public void BaseStats_SetStatValue_USEONLYATBaseStats(int _to)
     {
         //Debug.Log("hello i set my stats to = " + _to);
-        num = _to;
-        //Debug.Log("num = " + num);
+        value = _to;
+        //Debug.Log("value = " + value);
     }
 }

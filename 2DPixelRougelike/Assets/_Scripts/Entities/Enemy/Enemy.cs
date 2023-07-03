@@ -23,10 +23,12 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     [SerializeField] private Material regularMat;
     [SerializeField] private Material hitMat;
     [SerializeField] private float dieKnockSpeed = 10f;
+    [SerializeField] private float walkSpeed = 4f;
     [Header("vals")]
     [SerializeField] protected int damage = 5;
 
     private bool alive = true;
+    private Tween _walkTween = null;
 
     private void FixedUpdate()
     {
@@ -98,7 +100,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
 
         //particle pool?
         GameObject _p = UnityEngine.Random.Range(0, 2) == 1 ? LeanPoolManager.Instance.SpawnFromPool("particleBase") : LeanPoolManager.Instance.SpawnFromPool("pv1");
-        _p.transform.position = transform.position;
+        _p.transform.position = sr.transform.position;
         LeanPoolManager.Instance.DespawnFromPool(_p, .3f);//_p.CallReleaseToPool(.3f);
         
         //replaced coroutines because invoke doestn use memory?
@@ -118,6 +120,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         
     //}
 
+
     public void OnSpawn()
     {
         alive = true;
@@ -131,11 +134,15 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);\
         health.ResetHealth();
         //health.OnDie += Health_OnDie;
+        //walk tween managment
+        //transform.DOKill();
+        if (_walkTween == null) _walkTween = transform.DOScaleY(1.15f, 1f/walkSpeed).SetLoops(-1, LoopType.Yoyo).SetAutoKill(false); 
+        _walkTween?.Restart();
     }
 
     public void OnDespawn()
     {
-        //throw new System.NotImplementedException();
+        if (_walkTween != null) _walkTween.Rewind();
     }
 
     #endregion

@@ -12,7 +12,7 @@ public class MidRunPlayerStats : SerializedScriptableObject, PlayerStatsCategory
     public List<PlayerStatInstance> GetStatInstances() { return midRunStats; }
 
 
-    private void NotifyUpdatePlayerStats()
+    public void NotifyUpdatePlayerStats()
     {
         basePlayerStats.PlayerStatsChanged_RequestCompileStats();
     }

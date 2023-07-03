@@ -17,7 +17,7 @@ MonoBehaviour:
   <itemPriceRange>k__BackingField: {x: 3, y: 7}
   <statInstances>k__BackingField:
   - <number>k__BackingField: 20
-    <statName>k__BackingField: speed
+    <statName>k__BackingField: move speed
   <itemDescription>k__BackingField: 'ite m2 jhfdhsf
 
 '

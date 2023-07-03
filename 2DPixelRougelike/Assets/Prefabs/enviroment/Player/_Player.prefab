@@ -576,12 +576,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerSpeed: 10
   strength: 0
-  attackSpeed: 2
   animator: {fileID: 1858329250542157479}
   attackTriggerCollider: {fileID: 781438269549948797}
   rollParticle: {fileID: 3049069969373094645}
   playerVisual: {fileID: 1514932360532132249}
-  playerStats: {fileID: 11400000, guid: 241a278f7f7ad324aad7a9e526905182, type: 2}
+  health: {fileID: 4991420160875594964}
 --- !u!114 &1565898776922525414
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -613,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78b2e4c67374084094338e011300067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 100
+  maxHealth: 100
   showDmgText: 0
   dmgTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &3764507932367705448
