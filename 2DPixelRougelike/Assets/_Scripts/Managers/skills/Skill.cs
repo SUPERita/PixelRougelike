@@ -5,7 +5,7 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     [Header("base")]
-    [SerializeField] protected int damage = 10;
+    [SerializeField] protected int baseDamage = 10;
     [SerializeField] private float coolDown = 1f;
     private float nextAvailableSkillTime = 0f;
     [SerializeField] protected LayerMask collisionLayer;

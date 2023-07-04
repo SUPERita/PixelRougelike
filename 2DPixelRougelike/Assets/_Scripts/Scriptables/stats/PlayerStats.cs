@@ -88,3 +88,8 @@ public struct PlayerStat
         //Debug.Log("value = " + value);
     }
 }
+
+public enum StatType
+{
+
+}

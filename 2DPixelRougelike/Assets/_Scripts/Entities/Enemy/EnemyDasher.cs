@@ -61,4 +61,10 @@ public class EnemyDasher : Enemy
             
     }
 
+    public override void OnDespawn()
+    {
+        doingSomething = false;
+        base.OnDespawn();
+    }
+
 }

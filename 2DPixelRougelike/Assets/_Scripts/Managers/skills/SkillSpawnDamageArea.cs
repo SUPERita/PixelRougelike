@@ -40,7 +40,7 @@ public class SkillSpawnDamageArea : Skill
             Instantiate(damageArea, (Vector2)transform.position+ _spawnPoint, Quaternion.identity)
                 .GetComponent<DamageArea>()
                     .InitializeArea(
-                        damage,
+                        baseDamage + PlayerStatsHolder.Instance.TryGetStat("skill damage"),
                         _spawnVel,
                         collisionLayer,
                         areaLifetime,

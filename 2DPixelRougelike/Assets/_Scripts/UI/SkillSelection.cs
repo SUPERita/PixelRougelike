@@ -6,6 +6,7 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEditor;
 
 public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
 {
@@ -116,12 +117,13 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
     {
         Helpers.ToggleCanvas(canvasGroup);
     }
-    private void SetHighlightedButtons(SubButton[] _buttons)
+    private void SetHighlightedButtons(SubButton[] _selectedBtns)
     {
         foreach(var _btn in GetComponentsInChildren<SubButton>()) {
+            if(ArrayUtility.Contains(_selectedBtns, _btn)) { continue; }
             _btn.SetHighlight(false);
         }
-        foreach (var _btn in _buttons)
+        foreach (var _btn in _selectedBtns)
         {
             _btn.SetHighlight(true);
         }

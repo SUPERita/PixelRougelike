@@ -177,7 +177,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4576728271145333466
 Transform:
   m_ObjectHideFlags: 0
@@ -211,8 +211,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f34b99373e7ab44d98a86007734765f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weapons:
-  - {fileID: 6059957677849544829, guid: 54a6d7953c5e10f4f86181816caebdeb, type: 3}
+  weapons: []
   weaponSockets:
   - {fileID: 9179071999934164442}
   - {fileID: 6481033612593494525}
@@ -267,7 +266,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &5935253922063389449
 Transform:
   m_ObjectHideFlags: 0
@@ -295,7 +294,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 577473e9a31aff84e960d364f84658b6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  range: 4
+  range: 8
   enemiesToHit: 1
 --- !u!1 &3828994127941712985
 GameObject:
@@ -313,7 +312,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &3248290111696639581
 Transform:
   m_ObjectHideFlags: 0
@@ -575,7 +574,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpeed: 10
-  strength: 0
+  strength: 2
   animator: {fileID: 1858329250542157479}
   attackTriggerCollider: {fileID: 781438269549948797}
   rollParticle: {fileID: 3049069969373094645}
@@ -613,8 +612,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  showDmgText: 0
-  dmgTextColor: {r: 1, g: 1, b: 1, a: 1}
+  showDmgText: 1
+  dmgTextColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!114 &3764507932367705448
 MonoBehaviour:
   m_ObjectHideFlags: 0

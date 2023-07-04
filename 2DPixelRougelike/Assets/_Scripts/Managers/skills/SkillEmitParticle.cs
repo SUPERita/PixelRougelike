@@ -33,7 +33,7 @@ public class SkillEmitParticle : Skill
         //if (collision.gameObject.layer.value != collisionLayer.value) { return; }
         if (other.TryGetComponent(out IDamageable _d))
         {
-            _d.TakeDamage(damage);
+            _d.TakeDamage(baseDamage + PlayerStatsHolder.Instance.TryGetStat("skill damage"));
         }
     }
 }

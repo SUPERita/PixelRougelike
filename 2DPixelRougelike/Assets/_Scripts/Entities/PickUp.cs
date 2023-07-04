@@ -53,6 +53,7 @@ public class PickUp : MonoBehaviour, IPoolable
     private void Start()
     {
         t = transform.DOScale(1f, .25f).SetAutoKill(false);
+        
         //PopOutTween();
     }
 
@@ -71,6 +72,7 @@ public class PickUp : MonoBehaviour, IPoolable
     {
         
         PopOutTween();
+        transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(-90, 90));
     }
 
     public void OnDespawn()

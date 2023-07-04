@@ -40,7 +40,7 @@ public class ShopNPC : NPC
 
     private void WaveManager_OnWaveStart(int _waveNum)
     {
-        int _startAtWave = 2;
+        int _startAtWave = 1;
         int _repeatEveryWave = 5;
         if ((_waveNum - _startAtWave) % _repeatEveryWave == 0)
         {

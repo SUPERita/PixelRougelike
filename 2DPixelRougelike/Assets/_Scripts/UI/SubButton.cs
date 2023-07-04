@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -62,7 +63,17 @@ public class SubButton : MonoBehaviour
 
     public SubButton SetHighlight(bool _state)
     {
-        highlightImage.enabled = _state;
+        if (!_state)
+        {
+            highlightImage.enabled = false;
+        } else
+        {
+            if(!highlightImage.enabled) {
+                highlightImage.enabled = true;
+                highlightImage.GetComponent<RectTransform>().sizeDelta = new Vector2(100f, 0f);
+                highlightImage.GetComponent<RectTransform>().DOSizeDelta(new Vector2(100f, 100f), .15f).SetUpdate(true);
+            }
+        }
 
         return this;
     }

@@ -73,6 +73,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         LeanPoolManager.Instance.DespawnFromPool(_t, 1f);
 
         //Instantiate(dieParticle, transform.position, Quaternion.identity);
+        rb.DOKill();
         GetComponent<Collider2D>().enabled = false;
         rb.velocity = dieKnockSpeed * (transform.position - follow.position);
         //Destroy(gameObject);  
@@ -121,7 +122,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     //}
 
 
-    public void OnSpawn()
+    public virtual void OnSpawn()
     {
         alive = true;
         //Instantiate(dieParticle, transform.position, Quaternion.identity);
@@ -140,7 +141,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         _walkTween?.Restart();
     }
 
-    public void OnDespawn()
+    public virtual void OnDespawn()
     {
         if (_walkTween != null) _walkTween.Rewind();
     }

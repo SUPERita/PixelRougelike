@@ -12,12 +12,9 @@ Material:
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
-  - DISTORT_ON
-  - HOLOGRAM_ON
   - OUTBASEPIXELPERF_ON
   - OUTBASE_ON
   - OUTDIST_ON
-  - ROUNDWAVEUV_ON
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -98,7 +95,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
-        m_Texture: {fileID: 2800000, guid: 40265a896a0f341bb956e90c59025a29, type: 3}
+        m_Texture: {fileID: 2800000, guid: 8d0778a3c68ea174f80f3abfdff0ff2b, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OverlayTex:
@@ -145,21 +142,21 @@ Material:
     - _BlurIntensity: 83.7
     - _Brightness: -1
     - _BumpScale: 1
-    - _ChromAberrAlpha: 0
-    - _ChromAberrAmount: 0
+    - _ChromAberrAlpha: 1
+    - _ChromAberrAmount: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _ClipUvDown: 0
     - _ClipUvLeft: 0.469
     - _ClipUvRight: 0
     - _ClipUvUp: 0
-    - _ColorChangeLuminosity: 0
-    - _ColorChangeTolerance: 0.25
+    - _ColorChangeLuminosity: 1
+    - _ColorChangeTolerance: 0.393
     - _ColorChangeTolerance2: 0.25
     - _ColorChangeTolerance3: 0.25
     - _ColorMask: 15
     - _ColorRampBlend: 1
-    - _ColorRampLuminosity: 0
+    - _ColorRampLuminosity: 0.22
     - _ColorRampOutline: 0
     - _ColorSwapBlend: 1
     - _ColorSwapBlueLuminosity: 0.5
@@ -171,9 +168,9 @@ Material:
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
     - _DetailNormalMapScale: 1
-    - _DistortAmount: 0.82
-    - _DistortTexXSpeed: 0
-    - _DistortTexYSpeed: 50
+    - _DistortAmount: 0.09
+    - _DistortTexXSpeed: 0.1
+    - _DistortTexYSpeed: 0.1
     - _DstBlend: 0
     - _EditorDrawers: 6
     - _EnvironmentReflections: 1
@@ -182,9 +179,9 @@ Material:
     - _FadeBurnTransition: 0.075
     - _FadeBurnWidth: 0.025
     - _FishEyeUvAmount: 0.35
-    - _FlickerAlpha: 0
-    - _FlickerFreq: 0.2
-    - _FlickerPercent: 0.05
+    - _FlickerAlpha: 0.897
+    - _FlickerFreq: 0.58
+    - _FlickerPercent: 0.11
     - _GhostBlend: 1
     - _GhostColorBoost: 1
     - _GhostTransparency: 0
@@ -193,7 +190,7 @@ Material:
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
-    - _Glow: 0.9
+    - _Glow: 67.9
     - _GlowGlobal: 1
     - _GradBlend: 1
     - _GradBoostX: 1.2
@@ -214,7 +211,7 @@ Material:
     - _HologramBlend: 1
     - _HologramMaxAlpha: 100
     - _HologramMinAlpha: 0.638
-    - _HologramStripesAmount: 0.072
+    - _HologramStripesAmount: 0.152
     - _HologramStripesSpeed: -8.6
     - _HologramUnmodAmount: 1
     - _HsvBright: 1
@@ -239,19 +236,19 @@ Material:
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
     - _OutlineAlpha: 1
-    - _OutlineDistortAmount: 2
+    - _OutlineDistortAmount: 0.87
     - _OutlineDistortTexXSpeed: 5.7
     - _OutlineDistortTexYSpeed: 5
-    - _OutlineGlow: 26.7
-    - _OutlinePixelWidth: 56.2
+    - _OutlineGlow: 16.6
+    - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 16.8
     - _OutlineTexYSpeed: 8.7
-    - _OutlineWidth: 0.12
+    - _OutlineWidth: 0.009
     - _OverlayBlend: 1
     - _OverlayGlow: 1
     - _Parallax: 0.005
     - _PinchUvAmount: 0.35
-    - _PixelateSize: 4
+    - _PixelateSize: 26
     - _PosterizeGamma: 0.75
     - _PosterizeNumColors: 8
     - _PosterizeOutline: 0
@@ -262,15 +259,15 @@ Material:
     - _RotateUvAmount: 5.78
     - _RoundWaveSpeed: 3.87
     - _RoundWaveStrength: 0.394
-    - _ShadowAlpha: 0.5
-    - _ShadowX: 0.1
-    - _ShadowY: -0.05
+    - _ShadowAlpha: 0.524
+    - _ShadowX: -0.046
+    - _ShadowY: 0.083
     - _ShakeUvSpeed: 20
     - _ShakeUvX: 1
     - _ShakeUvY: 2
-    - _ShineGlow: 52.9
-    - _ShineLocation: 0.665
-    - _ShineRotate: 6.12
+    - _ShineGlow: 1
+    - _ShineLocation: 0.612
+    - _ShineRotate: 5.86
     - _ShineWidth: 0.05
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
@@ -288,8 +285,8 @@ Material:
     - _TwistUvPosX: 0.5
     - _TwistUvPosY: 0.5
     - _TwistUvRadius: 0.75
-    - _WaveAmount: 25
-    - _WaveSpeed: 24.7
+    - _WaveAmount: 0
+    - _WaveSpeed: 3.2
     - _WaveStrength: 25
     - _WaveX: 0.164
     - _WaveY: 1
@@ -300,11 +297,11 @@ Material:
     m_Colors:
     - _AlphaOutlineColor: {r: 1, g: 1, b: 1, a: 1}
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
-    - _Color: {r: 0.7075472, g: 0.45290163, b: 0.063889, a: 1}
-    - _ColorChangeNewCol: {r: 1, g: 1, b: 0, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _ColorChangeNewCol: {r: 238.85646, g: 238.85646, b: 0, a: 1}
     - _ColorChangeNewCol2: {r: 1, g: 1, b: 0, a: 1}
     - _ColorChangeNewCol3: {r: 1, g: 1, b: 0, a: 1}
-    - _ColorChangeTarget: {r: 1, g: 0, b: 0, a: 1}
+    - _ColorChangeTarget: {r: 0.5803922, g: 0.5254902, b: 0.48235297, a: 1}
     - _ColorChangeTarget2: {r: 1, g: 0, b: 0, a: 1}
     - _ColorChangeTarget3: {r: 1, g: 0, b: 0, a: 1}
     - _ColorSwapBlue: {r: 1, g: 1, b: 1, a: 1}
@@ -312,7 +309,7 @@ Material:
     - _ColorSwapRed: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _FadeBurnColor: {r: 1, g: 1, b: 0, a: 1}
-    - _GlowColor: {r: 0, g: 1, b: 0.0171659, a: 1}
+    - _GlowColor: {r: 1, g: 0.9013742, b: 0, a: 1}
     - _GradBotLeftCol: {r: 0, g: 0, b: 1, a: 1}
     - _GradBotRightCol: {r: 0, g: 1, b: 0, a: 1}
     - _GradTopLeftCol: {r: 1, g: 0, b: 0, a: 1}
@@ -321,7 +318,7 @@ Material:
     - _HitEffectColor: {r: 1, g: 1, b: 1, a: 1}
     - _HologramStripeColor: {r: 1, g: 0.8207252, b: 0, a: 1}
     - _InnerOutlineColor: {r: 1, g: 0, b: 0, a: 1}
-    - _OutlineColor: {r: 1, g: 0.8843992, b: 0.17520213, a: 1}
+    - _OutlineColor: {r: 1, g: 0.81948584, b: 0.22237194, a: 1}
     - _OverlayColor: {r: 1, g: 1, b: 1, a: 1}
     - _ShadowColor: {r: 0, g: 0, b: 0, a: 1}
     - _ShineColor: {r: 1, g: 0.94376504, b: 0, a: 1}

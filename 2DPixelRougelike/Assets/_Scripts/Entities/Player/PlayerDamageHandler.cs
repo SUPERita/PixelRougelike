@@ -38,7 +38,7 @@ public class PlayerDamageHandler : MonoBehaviour
         //timer stuff
         if (!IsHitable() || !isAlive) { return; }
         timeUntilHitable = Time.time + invincibilityTime;
-        //take damage
+        //take baseDamage
         health.TakeDamage(_hurter.GetDamage());
         hitFeedback?.PlayFeedbacks();
         AudioSystem.Instance.PlaySound("s2");

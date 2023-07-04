@@ -30,14 +30,14 @@ public class Health : MonoBehaviour
     {
         if(currentHealth == 0) { return; }
 
-        //take damage
+        //take baseDamage
         currentHealth -= _amt;
         if(currentHealth < 0) { currentHealth = 0; }
 
-        //invoke take damage
+        //invoke take baseDamage
         OnTakeDamage?.Invoke(_amt);
 
-        //spawn damage numver
+        //spawn baseDamage numver
         if (showDmgText && SettingsCanvas.Instance.showDamageNumbers/*future removeable*/)
         {
             SharedCanvas s = SharedCanvas.Instance;
