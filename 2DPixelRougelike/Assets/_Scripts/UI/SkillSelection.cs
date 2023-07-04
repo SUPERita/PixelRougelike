@@ -119,8 +119,9 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
     }
     private void SetHighlightedButtons(SubButton[] _selectedBtns)
     {
+        
         foreach(var _btn in GetComponentsInChildren<SubButton>()) {
-            if(ArrayUtility.Contains(_selectedBtns, _btn)) { continue; }
+            if(Contains(_selectedBtns, _btn)) { continue; }
             _btn.SetHighlight(false);
         }
         foreach (var _btn in _selectedBtns)
@@ -153,6 +154,15 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
         HighlightSelectedSavedButtons();
     }
 
+    public bool Contains(SubButton[] _arr, SubButton _btn)
+    {
+        foreach(SubButton _b in _arr)
+        {
+            if(_b ==  _btn) return true;
+        }
+        return false;
+    }
+
 
     //save interaction
     private static bool IsInCurrentSave(string _skillName)
@@ -178,7 +188,7 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
     {
         string[] _s = SaveSystem.LoadStringArrayFromLocation(selectedSkillSaveLoc);
 
-        int _numberOfAllowedSkills = PlayerStatsHolder.Instance.TryGetStat("skill limit");
+        int _numberOfAllowedSkills = PlayerStatsHolder.Instance.TryGetStat(StatType.SkillCap);
 
         //if more skills are saved then are alowed
         if(_s.Length > _numberOfAllowedSkills)
@@ -227,7 +237,7 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
 
         //get the last n skills
         List<string> _result = new List<string>();
-        int _numberOfSkills = PlayerStatsHolder.Instance.TryGetStat("skill limit");
+        int _numberOfSkills = PlayerStatsHolder.Instance.TryGetStat(StatType.SkillCap);
         for (int i = 0; i < _numberOfSkills; i++)
         {
             if(_skillStackCopy.Count == 0) { continue; }

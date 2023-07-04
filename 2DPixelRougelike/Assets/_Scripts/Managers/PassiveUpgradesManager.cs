@@ -126,7 +126,7 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
         }
     }
 
-    public bool ValidateOnlyOnePassiveNamed(string value)
+    public bool ValidateOnlyOnePassiveNamed(StatType value)
     {
         int _i = 0;
 

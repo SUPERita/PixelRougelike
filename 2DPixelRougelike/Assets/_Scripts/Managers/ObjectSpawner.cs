@@ -12,7 +12,8 @@ public class ObjectSpawner : MonoBehaviour
     {
 
         Vector2 foundPosition = Random.insideUnitSphere*spawnRange;
-        Instantiate(_obj, foundPosition, Quaternion.identity, transform);
+        GameObject _g = Instantiate(_obj, foundPosition, Quaternion.identity, transform);
+        Debug.Log(foundPosition, _g);
 
         //Invoke(nameof(SpawnObject), spawnSpeed);
     }

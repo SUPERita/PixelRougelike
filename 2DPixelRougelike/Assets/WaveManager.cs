@@ -41,17 +41,17 @@ public class WaveManager : StaticInstance<WaveManager>
         _prefab = null;
         return false;
     }
-    private bool GetObjectAtWave(int _waveIndex, out GameObject _prefab)
+    private bool GetObjectAtWave(int _waveIndex, out GameObject[] _prefabs)
     {
         foreach (var pair in objectWavePairs)
         {
             if (pair.spawnAtWave == _waveIndex)
             {
-                _prefab = pair.objectPrefab;
+                _prefabs = pair.objectPrefabs;
                 return true;
             }
         }
-        _prefab = null;
+        _prefabs = null;
         return false;
     }
 
@@ -83,9 +83,13 @@ public class WaveManager : StaticInstance<WaveManager>
             }
 
             //try spawn object
-            if (GetObjectAtWave(waveCounter, out GameObject _objectPrefab))
+            if (GetObjectAtWave(waveCounter, out GameObject[] _objectPrefab))
             {
-                objectSpawner.SpawnObject(_objectPrefab);
+                foreach(GameObject _g in _objectPrefab)
+                {
+                    objectSpawner.SpawnObject(_g);
+                    //Debug.Log("broken, not spawning");
+                }
             }
 
             //spawn enemies
@@ -166,6 +170,6 @@ public struct BossWavePair
 [System.Serializable]
 public struct ObjectWavePair
 {
-    [field: SerializeField] public GameObject objectPrefab { get; private set; }
+    [field: SerializeField] public GameObject[] objectPrefabs { get; private set; }
     [field: SerializeField] public int spawnAtWave { get; private set; }
 }

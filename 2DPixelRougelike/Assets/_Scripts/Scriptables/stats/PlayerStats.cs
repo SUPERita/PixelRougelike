@@ -14,7 +14,7 @@ public class PlayerStats : SerializedScriptableObject
     private void GetCompiledStats()
     {
         //copies the dictionary?
-        stats = basePlayerStats.PlayerStats_GetCompiledStats().ToDictionary(entry => entry.Key, entry => entry.Value);
+        stats2 = basePlayerStats.PlayerStats_GetCompiledStats().ToDictionary(entry => entry.Key, entry => entry.Value);
         
         //tells everyone something changed
         OnPlayerStatsChanged?.Invoke();
@@ -53,7 +53,7 @@ public class PlayerStats : SerializedScriptableObject
         Debug.Log(" after " + stats["speed"].value);
     }
     */
-
+    /*
     [SerializeField] private Dictionary<string, PlayerStat> stats = new Dictionary<string, PlayerStat>();
     public Dictionary<string, PlayerStat> GetRawStats() { return stats; }
     public int GetStat(string _statName)
@@ -61,6 +61,18 @@ public class PlayerStats : SerializedScriptableObject
         return stats[_statName].value; 
     }
     public bool StatExists(string _statName)
+    {
+        return basePlayerStats.GetBaseStatsForValidation().ContainsKey(_statName);
+    }
+    */
+    //[SerializeField] private Dictionary<string, PlayerStat> stats = new Dictionary<string, PlayerStat>();
+    [SerializeField] private Dictionary<StatType, PlayerStat> stats2 = new Dictionary<StatType, PlayerStat>();
+    public Dictionary<StatType, PlayerStat> GetRawStats() { return stats2; }
+    public int GetStat(StatType _statName)
+    {
+        return stats2[_statName].value;
+    }
+    public bool StatExists(StatType _statName)
     {
         return basePlayerStats.GetBaseStatsForValidation().ContainsKey(_statName);
     }
@@ -91,5 +103,11 @@ public struct PlayerStat
 
 public enum StatType
 {
-
+    MaxHealth,
+    AttackSpeed,
+    MoveSpeed,
+    Strength,
+    SkillCap,
+    SkillDamage,
+    WeaponDamage
 }

@@ -25,7 +25,7 @@ public class MidRunPlayerStats : SerializedScriptableObject, PlayerStatsCategory
 
     //utils
     [Button]
-    public void CreateMidRunStat(string _statName, int _val)
+    public void CreateMidRunStat(StatType _statName, int _val)
     {
 
         midRunStats.Add(new PlayerStatInstance(_statName, _val));

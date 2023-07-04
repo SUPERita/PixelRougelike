@@ -17,7 +17,7 @@ public class PassiveUpgradeChoice : MonoBehaviour
      ValidateInput("@FindObjectOfType<PassiveUpgradesManager>().ValidateOnlyOnePassiveNamed(statname)", "multiple copies in the passive upgrade buttons"),
      ValidateInput("@BasePlayerStats.ValidateStatExistance(statname)",/*"@FindObjectOfType<PlayerStatsHolder>().IsStatExisting(statname)"*/ "stat doesnt exist in dictionary")]
      //@DoAnyAction(()=>FindObjectOfType<PlayerStatsHolder>().IsStatExisting(value))
-    public string statname { get; private set; } = "empty";
+    public StatType statname { get; private set; }
     private bool ValidateNoTrailingWhitespace(string value)
     {
         if (string.IsNullOrEmpty(value))
@@ -39,7 +39,7 @@ public class PassiveUpgradeChoice : MonoBehaviour
     [SerializeField] private CostValueCompounent[] valuePerLevel;
     private void Start()
     {
-        if(statname == "empty") { Debug.LogError("wee woo wee woo no statName on " + gameObject.name); }
+        //if(statname == "empty") { Debug.LogError("wee woo wee woo no statName on " + gameObject.name); }
 
         
 

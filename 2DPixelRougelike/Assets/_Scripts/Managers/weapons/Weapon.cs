@@ -70,7 +70,7 @@ public class Weapon : MonoBehaviour
         _g.transform.SetPositionAndRotation(gunTip.position, transform.rotation);
         _g.transform.localScale = Vector3.right*.4f+Vector3.up*.1f + Vector3.forward;
            _g.GetComponent<Projectile>().InitializeProjectile(
-             damage+PlayerStatsHolder.Instance.TryGetStat("strength"),
+             damage+PlayerStatsHolder.Instance.TryGetStat(StatType.Strength) + PlayerStatsHolder.Instance.TryGetStat(StatType.WeaponDamage),
              projSpeed,
              (target.position - transform.position).normalized,
              scanLayer);

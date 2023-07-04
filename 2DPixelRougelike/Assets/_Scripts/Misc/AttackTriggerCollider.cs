@@ -9,6 +9,7 @@ public class AttackTriggerCollider : MonoBehaviour
     private List<IDamageable> damageables = new List<IDamageable>();
     [SerializeField] private float range = 4f;
     [SerializeField] private int enemiesToHit = 1;
+    [SerializeField] private LayerMask scanLayer;
     //public 
     /*
     private void OnTriggerEnter2D(Collider2D collision)
@@ -46,7 +47,7 @@ public class AttackTriggerCollider : MonoBehaviour
         _enemyColliders.Clear();
         //works
         //gets all the colliders
-        int numColliders = Physics2D.OverlapCircleNonAlloc(transform.position, range, _enemiesInRange); // the int is important // works
+        int numColliders = Physics2D.OverlapCircleNonAlloc(transform.position, range, _enemiesInRange, scanLayer); // the int is important // works
 
         //create a list of all the enemy Colliders
         for (int i = 0; i < numColliders; i++)

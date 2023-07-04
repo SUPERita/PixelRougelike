@@ -23,7 +23,7 @@ public abstract class Singleton<T> : StaticInstance<T> where T : MonoBehaviour {
     protected override void Awake() {
         if (Instance != null) { 
             Destroy(gameObject);
-            Debug.Log("disposed of: " + gameObject.name);
+            //Debug.Log("disposed of: " + gameObject.name);
         } else
         {
             base.Awake();

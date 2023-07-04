@@ -17,5 +17,5 @@ MonoBehaviour:
   <itemPriceRange>k__BackingField: {x: 10, y: 20}
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
-    <statName>k__BackingField: strength
+    <statName>k__BackingField: 1
   <itemDescription>k__BackingField: item ! flsjflj

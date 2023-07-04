@@ -6,8 +6,8 @@ using UnityEngine;
 public class MidRunUpgradeChoice : MonoBehaviour
 {
     public int _value { get; private set; }
-    public string _upgradeName { get; private set; }
-    public void InitializeUpgrade(string _n, int _v)
+    public StatType _upgradeName { get; private set; }
+    public void InitializeUpgrade(StatType _n, int _v)
     {
         _value = _v;
         _upgradeName = _n;

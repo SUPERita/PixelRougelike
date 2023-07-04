@@ -15,11 +15,12 @@ public class BasePlayerStats : SerializedScriptableObject
     [SerializeField] private MidRunPlayerStats midRunPlayerStats = null;
     [SerializeField] private ItemShopPlayerStats itemShopPlayerStats = null;
 
-    [SerializeField] private Dictionary<string, PlayerStat> baseStats = new Dictionary<string, PlayerStat>();
+    [SerializeField] private Dictionary<StatType, PlayerStat> baseStats = new Dictionary<StatType, PlayerStat>();
+    //[SerializeField] private Dictionary<string, PlayerStat> baseStats = new Dictionary<string, PlayerStat>();
 
     //stats passing
-    private Dictionary<string, PlayerStat> compiledStats = new Dictionary<string, PlayerStat>();
-    public Dictionary<string, PlayerStat> PlayerStats_GetCompiledStats()
+    private Dictionary<StatType, PlayerStat> compiledStats = new Dictionary<StatType, PlayerStat>();
+    public Dictionary<StatType, PlayerStat> PlayerStats_GetCompiledStats()
     {
         //Debug.Log("reseted");
         //set base stats as the base
@@ -93,17 +94,17 @@ public class BasePlayerStats : SerializedScriptableObject
     {
         for (int i = 0; i < amount; i++)
         {
-            baseStats.Add("tmp" + UnityEngine.Random.Range(0, 999999), new PlayerStat());
+            baseStats.Add(StatType.Strength, new PlayerStat());
         }
     }
     //[Button]
     public void DeleteAllStats()
     {
-        baseStats = new Dictionary<string, PlayerStat>();
+        baseStats = new Dictionary<StatType, PlayerStat>();
     }
 
     //stat name validation
-    public static bool ValidateStatExistance(string _statName)
+    public static bool ValidateStatExistance(StatType _statName)
     {
 #if UNITY_EDITOR // uses AssetDatabase
         return Resources.FindObjectsOfTypeAll<BasePlayerStats>()[0].baseStats.ContainsKey(_statName);
@@ -111,7 +112,7 @@ public class BasePlayerStats : SerializedScriptableObject
         return true;
     }
 
-    public Dictionary<string, PlayerStat> GetBaseStatsForValidation()
+    public Dictionary<StatType, PlayerStat> GetBaseStatsForValidation()
     {
         return baseStats;
     }
@@ -123,9 +124,9 @@ public struct PlayerStatInstance
     [field: SerializeField] public int number { get; private set; }
 
     [field: SerializeField, ValidateInput("@BasePlayerStats.ValidateStatExistance(statName)", "stat doesnt exist in dictionary")]
-    public string statName { get; private set; }
+    public StatType statName { get; private set; }
 
-    public PlayerStatInstance(string _s, int _n)
+    public PlayerStatInstance(StatType _s, int _n)
     {
         number = _n;
         statName = _s;

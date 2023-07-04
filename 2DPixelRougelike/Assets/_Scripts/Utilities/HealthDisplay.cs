@@ -59,7 +59,7 @@ public class HealthDisplay : MonoBehaviour
     {
         if (!afterImage) return;
 
-        Debug.Log("lerping");
+        //Debug.Log("lerping");
         _t.Kill();
         _t = afterImage.DOFillAmount(healthImage.fillAmount, .25f).SetDelay(.5f)
             .OnComplete(()=> _t = null);

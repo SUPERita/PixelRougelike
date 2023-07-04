@@ -16,12 +16,13 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 5524590292671962877, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
-    - {fileID: -3168733581550749585, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
-    - {fileID: 2125737359283935466, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
-    - {fileID: -1128652821404161721, guid: 8a1f96c93a153e34a98b5f6dd6bbfebd, type: 3}
-    - {fileID: 1161443714384828998, guid: fe42c8b526e77e54ab91d0590272d9e8, type: 3}
-    - {fileID: 21300000, guid: 2cb657768423e8d4faeaf7a49fe4fa04, type: 3}
+    - {fileID: 21300000, guid: fb61fb676dd1f93489863305f120b593, type: 3}
+    - {fileID: 21300000, guid: 4404383d6c9e36c4ba378ddfe6e6ab00, type: 3}
+    - {fileID: 21300000, guid: 8f01bb35d1744fb49a99e97c73c7f125, type: 3}
+    - {fileID: 21300000, guid: c03bdd81736eafc40a1cc247b4c0b8bd, type: 3}
+    - {fileID: 21300000, guid: 4d6e84f4238bf5b48abe659e2fe290e1, type: 3}
+    - {fileID: 21300000, guid: 4c16309dcc453ec4f8b171ff94c2ba2b, type: 3}
+    - {fileID: 21300000, guid: 4a056285fa44e834bbd9e5b86cb9c9fe, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -29,36 +30,42 @@ MonoBehaviour:
     SerializationNodes:
     - Name: baseStats
       Entry: 7
-      Data: 0|System.Collections.Generic.Dictionary`2[[System.String, mscorlib],[PlayerStat,
+      Data: 0|System.Collections.Generic.Dictionary`2[[StatType, Assembly-CSharp],[PlayerStat,
         Assembly-CSharp]], mscorlib
     - Name: comparer
       Entry: 7
-      Data: 1|System.Collections.Generic.GenericEqualityComparer`1[[System.String,
-        mscorlib]], mscorlib
+      Data: 1|System.Collections.Generic.EnumEqualityComparer`1[[StatType, Assembly-CSharp]],
+        mscorlib
+    - Name: 
+      Entry: 12
+      Data: 0
+    - Name: 
+      Entry: 13
+      Data: 
     - Name: 
       Entry: 8
       Data: 
     - Name: 
       Entry: 12
-      Data: 6
+      Data: 7
     - Name: 
       Entry: 7
       Data: 
     - Name: $k
-      Entry: 1
-      Data: move speed
+      Entry: 3
+      Data: 0
     - Name: $v
       Entry: 7
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: move speed
+      Data: max health
     - Name: <value>k__BackingField
       Entry: 3
       Data: 100
     - Name: <description>k__BackingField
-      Entry: 1
-      Data: movement speed
+      Entry: 6
+      Data: 
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 0
@@ -75,20 +82,20 @@ MonoBehaviour:
       Entry: 7
       Data: 
     - Name: $k
-      Entry: 1
-      Data: strength
+      Entry: 3
+      Data: 1
     - Name: $v
       Entry: 7
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: strength
+      Data: atk speed
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 1
+      Data: 100
     - Name: <description>k__BackingField
-      Entry: 1
-      Data: damage
+      Entry: 6
+      Data: 
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 1
@@ -105,20 +112,20 @@ MonoBehaviour:
       Entry: 7
       Data: 
     - Name: $k
-      Entry: 1
-      Data: attack speed
+      Entry: 3
+      Data: 2
     - Name: $v
       Entry: 7
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: attack speed
+      Data: move speed
     - Name: <value>k__BackingField
       Entry: 3
       Data: 100
     - Name: <description>k__BackingField
       Entry: 1
-      Data: speed of attacks
+      Data: 212
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 2
@@ -135,20 +142,20 @@ MonoBehaviour:
       Entry: 7
       Data: 
     - Name: $k
-      Entry: 1
-      Data: skill limit
+      Entry: 3
+      Data: 3
     - Name: $v
       Entry: 7
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: skill limit
+      Data: strength
     - Name: <value>k__BackingField
       Entry: 3
       Data: 1
     - Name: <description>k__BackingField
-      Entry: 1
-      Data: number of skills you can hold
+      Entry: 6
+      Data: 
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 3
@@ -165,20 +172,20 @@ MonoBehaviour:
       Entry: 7
       Data: 
     - Name: $k
-      Entry: 1
-      Data: max health
+      Entry: 3
+      Data: 4
     - Name: $v
       Entry: 7
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: max health
+      Data: skillcap
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 100
+      Data: 1
     - Name: <description>k__BackingField
       Entry: 1
-      Data: how much damage the player can take
+      Data: sdf
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 4
@@ -195,23 +202,53 @@ MonoBehaviour:
       Entry: 7
       Data: 
     - Name: $k
-      Entry: 1
-      Data: skill damage
+      Entry: 3
+      Data: 5
     - Name: $v
       Entry: 7
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: skill damage
+      Data: skill dmg
     - Name: <value>k__BackingField
       Entry: 3
       Data: 1
     - Name: <description>k__BackingField
       Entry: 1
-      Data: the damage of you abilities
+      Data: sdf
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 5
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 6
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: wpn damage
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 1
+      Data: 1
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 6
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true

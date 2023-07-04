@@ -30,7 +30,7 @@ public class PassivePlayerStats : SerializedScriptableObject, PlayerStatsCategor
     {
         for (int i = 0; i < amount; i++)
         {
-            samples.Add(new PlayerStatInstance(UnityEngine.Random.Range(0, 2) == 1? "speed":"strength", UnityEngine.Random.Range(0, 99)));
+            //samples.Add(new PlayerStatInstance(UnityEngine.Random.Range(0, 2) == 1? "speed":"strength", UnityEngine.Random.Range(0, 99)));
         }
     }
     [Button]

@@ -25,6 +25,7 @@ public class ItemShopPlayerStats : SerializedScriptableObject, PlayerStatsCatego
     }
 
     //utils
+    /*
     [Button]
     public void CreateSampleStat(int amount)
     {
@@ -39,4 +40,5 @@ public class ItemShopPlayerStats : SerializedScriptableObject, PlayerStatsCatego
         itemStats.Clear();
 
     }
+    */
 }

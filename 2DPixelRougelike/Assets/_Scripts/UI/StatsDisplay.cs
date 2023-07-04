@@ -38,7 +38,7 @@ public class StatsDisplay : MonoBehaviour
     {
         int _counter  = 0;
         //Debug.Log("root populated");
-        foreach (KeyValuePair<string, PlayerStat> _stat in PlayerStatsHolder.Instance.GetPlayerStats().GetRawStats())
+        foreach (KeyValuePair<StatType, PlayerStat> _stat in PlayerStatsHolder.Instance.GetPlayerStats().GetRawStats())
         {
             if (!_stat.Value.showInDisplay) { continue; }
 

@@ -26,7 +26,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
         PlayerStatsHolder.Instance.GetPlayerStats().OnPlayerStatsChanged += PlayerMovement_OnPlayerStatsChanged;
         InvokeRepeating(nameof(PlayerMovement_OnPlayerStatsChanged), .5f, .5f);
 
-        if (health) health.SetMaxHealth(PlayerStatsHolder.Instance.TryGetStat("max health"), true);
+        if (health) health.SetMaxHealth(PlayerStatsHolder.Instance.TryGetStat(StatType.MaxHealth), true);
     }
     private void OnDisable()
     {
@@ -36,9 +36,9 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     {
         //if(!gameObject) return;
         //attack speed animator value
-        if(animator)animator.SetFloat("AttackSpeed", PlayerStatsHolder.Instance.TryGetStat("attack speed") / 50f);
-        playerSpeed = PlayerStatsHolder.Instance.TryGetStat("move speed") / 12f;
-        if(health) health.SetMaxHealth(PlayerStatsHolder.Instance.TryGetStat("max health"));
+        if(animator)animator.SetFloat("AttackSpeed", PlayerStatsHolder.Instance.TryGetStat(StatType.AttackSpeed) / 50f);
+        playerSpeed = PlayerStatsHolder.Instance.TryGetStat(StatType.MoveSpeed) / 12f;
+        if(health) health.SetMaxHealth(PlayerStatsHolder.Instance.TryGetStat(StatType.MaxHealth));
         
     }
 
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     IDamageable[] enemiesInArea = null;
     private void DamageArea()
     {
-        strength = PlayerStatsHolder.Instance.TryGetStat("strength");
+        strength = PlayerStatsHolder.Instance.TryGetStat(StatType.Strength);
         enemiesInArea = attackTriggerCollider.GetDamageablesInArea();
         foreach(IDamageable _i in enemiesInArea)
         {

@@ -28,10 +28,10 @@ public class WeaponChoice : StaticInstance<WeaponChoice>, SubButtonListener
         //fade in
         Time.timeScale = 0f;
         Helpers.ToggleCanvas(canvasGroup, true);
-
+        Debug.Log("s1");
         //Choices SetUp
         SetUpChoices();
-
+        Debug.Log("s2");
         //set selction
         Helpers.SelectSomethingUnder(transform);
         

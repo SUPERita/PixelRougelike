@@ -20,7 +20,7 @@ public class SkillManager : MonoBehaviour
 
         //load selected
         GameObject[] selectedSkills = SkillSelection.GetSelectedSavedSkills(_skillCollection);
-        int _numberOfSkills = PlayerStatsHolder.Instance.TryGetStat("skill limit");//second layer of defence
+        int _numberOfSkills = PlayerStatsHolder.Instance.TryGetStat(StatType.SkillCap);//second layer of defence
         if (selectedSkills.Length == 0) { return; }
         for (int i = 0; i < _numberOfSkills; i++)
         {
