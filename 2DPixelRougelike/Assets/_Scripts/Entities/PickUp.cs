@@ -46,7 +46,8 @@ public class PickUp : MonoBehaviour, IPoolable
     {
         //Debug.Log("1");
         AudioSystem.Instance.PlaySound("Beep3", .2f);
-        XPManager.Instance.AddXP(5);
+        if(resourceType == ResourceType.EnergyNugget) XPManager.Instance.AddXP(5);
+
         ResourceSystem.Instance.AddResourceAmount(resourceType, amount);
     }
 

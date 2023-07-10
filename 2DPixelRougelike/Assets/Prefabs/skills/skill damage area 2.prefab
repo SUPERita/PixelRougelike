@@ -44,12 +44,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ac7a94d2df7e14792520265406a68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 90
+  baseDamage: 10
   coolDown: 1
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
-  damageArea: {fileID: 245409237358349679, guid: fbd27910baddce24f8c103e89ecb93df, type: 3}
+  damageArea: {fileID: 443692859550575915, guid: fbd27910baddce24f8c103e89ecb93df, type: 3}
   size: 1
   dieOnHit: 0
   areaLifetime: 3

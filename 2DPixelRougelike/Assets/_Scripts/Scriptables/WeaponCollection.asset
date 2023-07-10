@@ -14,8 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <weaponNamePairs>k__BackingField:
   - <_weaponName>k__BackingField: wep1
-    <_weapon>k__BackingField: {fileID: 6059957677849544829, guid: 54a6d7953c5e10f4f86181816caebdeb, type: 3}
-    <_weaponIcon>k__BackingField: {fileID: 21300002, guid: 07103c52b3aaeca4da8a83361edd059f, type: 3}
+    <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 54a6d7953c5e10f4f86181816caebdeb, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 3aa1bb51964da104b94ab84d9c8b1da5, type: 3}
   - <_weaponName>k__BackingField: wep2
-    <_weapon>k__BackingField: {fileID: 6059957677849544829, guid: 963bcef6b8ccd04478ea31835f77a192, type: 3}
-    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 519dafacd208bb64c83d5124be03b09d, type: 3}
+    <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: a09c1d284a3ace34bbd4a91c9bb6b6e4, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 65e8281d85b7d7b489371569087a1554, type: 3}
+  - <_weaponName>k__BackingField: wep3
+    <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: efaddca4821fd494e957a60b32527f21, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 4edd276336e1b0847a32a227d2bf16d1, type: 3}
+  - <_weaponName>k__BackingField: wep4
+    <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 8317f4b2a64318e4b88c618c291ed12e, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: ecc8f14756019e44281bf5d1542b41da, type: 3}

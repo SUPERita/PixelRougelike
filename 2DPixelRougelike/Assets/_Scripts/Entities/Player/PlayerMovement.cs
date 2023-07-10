@@ -158,7 +158,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
         //revert back in a second, but 
 
         //works
-        //foreach(PickUp _p in FindObjectsOfType<PickUp>())
+        //foreach (PickUp _p in FindObjectsOfType<PickUp>())
         //{
         //    _p.StartFollowing(transform);
         //}

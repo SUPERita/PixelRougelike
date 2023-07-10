@@ -72,6 +72,10 @@ public class PlayerStats : SerializedScriptableObject
     {
         return stats2[_statName].value;
     }
+    public PlayerStat GetPlayerStatRaw(StatType _statName)
+    {
+        return stats2[_statName];
+    }
     public bool StatExists(StatType _statName)
     {
         return basePlayerStats.GetBaseStatsForValidation().ContainsKey(_statName);
@@ -103,11 +107,25 @@ public struct PlayerStat
 
 public enum StatType
 {
+    //fully implemented
     MaxHealth,
     AttackSpeed,
     MoveSpeed,
     Strength,
     SkillCap,
     SkillDamage,
-    WeaponDamage
+    WeaponDamage,
+
+    //half implemented
+    Dodge,
+    Armor,
+    XPGain,
+    MoneyGain,
+    WeaponAttackSpeed,
+    SkillAttackSpeed,
+    MeleeDamage,
+    PickUpRange
+
+    //not implemented
+
 }

@@ -10,6 +10,10 @@ public class PlayerStatsHolder : StaticInstance<PlayerStatsHolder>
     {
         return playerStats.GetStat(_statName);
     }
+    public Sprite TryGetStatIcon(StatType _statName)
+    {
+        return playerStats.GetPlayerStatRaw(_statName).icon;
+    }
     public bool IsStatExisting(StatType value)
     {
         return playerStats.StatExists(value);

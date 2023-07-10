@@ -35,7 +35,7 @@ public class PassiveUpgradeChoice : MonoBehaviour
     [SerializeField] private RectTransform levelContainerRoot;
     [SerializeField] private TextMeshProUGUI costText;
     [SerializeField] private TextMeshProUGUI valText;
-
+    [SerializeField] private Image iconImage;
     [SerializeField] private CostValueCompounent[] valuePerLevel;
     private void Start()
     {
@@ -89,6 +89,9 @@ public class PassiveUpgradeChoice : MonoBehaviour
         {
             valText.SetText("+" + valuePerLevel[GetCurrentLevel()-1].val+"%");
         }
+
+        //update icon image
+        iconImage.sprite = PlayerStatsHolder.Instance.TryGetStatIcon(statname);
         
             
 

@@ -25,7 +25,7 @@ public class NPC : MonoBehaviour, IInteractible
         //Debug.Log("hello im " + name);
         //Vector2 startScale = transform.localScale;
         AudioSystem.Instance.PlaySound("s2");
-        transform.DOShakeScale(.3f,1,15).SetUpdate(true).OnComplete(()=>transform.localScale = startScale);
+        transform.DOShakeScale(.2f,.25f,1).SetUpdate(true).OnComplete(()=>transform.localScale = startScale);
     }
 
     public virtual void OnStopInteract()

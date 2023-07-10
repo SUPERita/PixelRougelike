@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 
 public class ShopNPC : NPC
@@ -10,6 +11,7 @@ public class ShopNPC : NPC
     [SerializeField] private SpriteRenderer sr;
     [SerializeField] private Sprite OnSprite;
     [SerializeField] private Sprite OffSprite;
+    //[SerializeField] private TextMeshPro testtext;
     private bool state = false;
     public override void OnInteract()
     {
@@ -40,6 +42,7 @@ public class ShopNPC : NPC
 
     private void WaveManager_OnWaveStart(int _waveNum)
     {
+        //testtext.SetText("wave1");
         int _startAtWave = 1;
         int _repeatEveryWave = 5;
         if ((_waveNum - _startAtWave) % _repeatEveryWave == 0)
@@ -51,12 +54,18 @@ public class ShopNPC : NPC
             //show inactive prompt
             prompRefreshRequest = true;
         }
+
+        //testtext.SetText("_startAtWave= " + _startAtWave + " - _repeatEveryWave= " + _repeatEveryWave);
     }
 
     protected override void Start() {
-        waveManager.OnWaveStart += WaveManager_OnWaveStart;
         UpdateVisual();
         base.Start();
+        //testtext.SetText("started");
+    }
+    protected void Awake()
+    {
+        waveManager.OnWaveStart += WaveManager_OnWaveStart;
     }
     private void OnDestroy() => waveManager.OnWaveStart -= WaveManager_OnWaveStart;
 

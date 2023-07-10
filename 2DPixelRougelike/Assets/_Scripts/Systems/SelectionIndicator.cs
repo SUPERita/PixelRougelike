@@ -23,7 +23,7 @@ public class SelectionIndicator : StaticInstance<SelectionIndicator>
 
         if (selectedObject != null && selectedObject.GetComponent<Selectable>().IsInteractable())
         {
-            indicator.enabled = true;
+            indicator.gameObject.SetActive(true);
             // Get the RectTransform component of the selected GameObject
             selectedRectTransform = selectedObject.GetComponent<RectTransform>();
 
@@ -39,7 +39,7 @@ public class SelectionIndicator : StaticInstance<SelectionIndicator>
             }
         } else
         {
-            indicator.enabled = false;
+            indicator.gameObject.SetActive(false);
         }
     }
 

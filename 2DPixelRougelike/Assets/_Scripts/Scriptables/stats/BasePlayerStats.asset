@@ -16,13 +16,21 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: fb61fb676dd1f93489863305f120b593, type: 3}
-    - {fileID: 21300000, guid: 4404383d6c9e36c4ba378ddfe6e6ab00, type: 3}
-    - {fileID: 21300000, guid: 8f01bb35d1744fb49a99e97c73c7f125, type: 3}
-    - {fileID: 21300000, guid: c03bdd81736eafc40a1cc247b4c0b8bd, type: 3}
-    - {fileID: 21300000, guid: 4d6e84f4238bf5b48abe659e2fe290e1, type: 3}
-    - {fileID: 21300000, guid: 4c16309dcc453ec4f8b171ff94c2ba2b, type: 3}
-    - {fileID: 21300000, guid: 4a056285fa44e834bbd9e5b86cb9c9fe, type: 3}
+    - {fileID: 21300000, guid: 2c32b80e8e0fe414084c99e43c1a33b3, type: 3}
+    - {fileID: 21300000, guid: 8827231417378f840ac1f5aab46db5d7, type: 3}
+    - {fileID: 21300000, guid: 3686dad34e73cf042a835ef7f78114d1, type: 3}
+    - {fileID: 21300000, guid: 05232db98d9bdf7458f527a1e6bd4404, type: 3}
+    - {fileID: 21300000, guid: 005d467dd4eb7584d9f6738aa4564cb7, type: 3}
+    - {fileID: 21300000, guid: e541939e544110e4bb7aeaa1634b1430, type: 3}
+    - {fileID: 21300000, guid: 8b720b5bccb6f9949855c0a99eb481a9, type: 3}
+    - {fileID: 21300000, guid: 95e166699cf9646408a54cd46096cad5, type: 3}
+    - {fileID: 21300000, guid: 7bd71c44ea9cf604980586a16b62b059, type: 3}
+    - {fileID: 21300000, guid: 8ed3439cb0a5bb947b02e373893eed1d, type: 3}
+    - {fileID: 21300000, guid: bc4d2ca115dd532418725bd9df2fa386, type: 3}
+    - {fileID: 21300000, guid: 61774ac3ce8742b4c9a85952d3c793d1, type: 3}
+    - {fileID: 21300000, guid: 18efaa5661b618b47a35a8ee6cc8c73f, type: 3}
+    - {fileID: 21300000, guid: 2fd12e24f71b6a7458cdb2d0b88c88e1, type: 3}
+    - {fileID: 21300000, guid: 5c83f2d66bc1dd644bd17ee9da1be170, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -47,7 +55,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 7
+      Data: 15
     - Name: 
       Entry: 7
       Data: 
@@ -212,7 +220,7 @@ MonoBehaviour:
       Data: skill dmg
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 1
+      Data: 0
     - Name: <description>k__BackingField
       Entry: 1
       Data: sdf
@@ -249,6 +257,246 @@ MonoBehaviour:
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 6
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 7
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: dodge
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 1
+      Data: sdfsdf
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 7
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 8
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: armor
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 1
+      Data: reduce the amount of damage you take
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 8
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 9
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: XP gain
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 100
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 9
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 10
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: money gain
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 100
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 10
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 11
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: weapon attack speed
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 100
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 11
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 12
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: skill attack speed
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 100
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 12
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 13
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: melee damage
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 100
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 13
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 14
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: pickuprange
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 100
+    - Name: <description>k__BackingField
+      Entry: 6
+      Data: 
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 14
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
