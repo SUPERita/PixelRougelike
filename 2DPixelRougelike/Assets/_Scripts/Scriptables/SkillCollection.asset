@@ -25,36 +25,36 @@ MonoBehaviour:
     <_skill>k__BackingField: {fileID: 9143434274506902867, guid: ee02545e1ca063444b7582605c19000f, type: 3}
     <_skillCost>k__BackingField: 9878
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 9f3365b9cd43ae245856587a9c6dc5b0, type: 3}
-  - <_skillName>k__BackingField: minefield
+  - <_skillName>k__BackingField: da1
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 72767499be6a5784fb63e22cbb7f6aff, type: 3}
     <_skillCost>k__BackingField: 67
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 4404383d6c9e36c4ba378ddfe6e6ab00, type: 3}
-  - <_skillName>k__BackingField: axes
+  - <_skillName>k__BackingField: da2
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
     <_skillCost>k__BackingField: 3
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: fb61fb676dd1f93489863305f120b593, type: 3}
-  - <_skillName>k__BackingField: lightning feet
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+  - <_skillName>k__BackingField: machine gun
+    <_skill>k__BackingField: {fileID: 9143434274506902867, guid: 7ca94f5641a908c48861bd69afb9df54, type: 3}
     <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: edab7439bd3ef4d48af16f6ac3af0688, type: 3}
-  - <_skillName>k__BackingField: shovel
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 3d3704dde327fbb47825e857b1578277, type: 3}
+  - <_skillName>k__BackingField: green whisper
+    <_skill>k__BackingField: {fileID: 2883579342310960643, guid: 71cc17da882774e45b1ae0f503419a7b, type: 3}
     <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 6baf8ebfe8e64b74bb3e57297cbfb64e, type: 3}
-  - <_skillName>k__BackingField: council
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 811dac397f0aa164da59f1fdbab7fce2, type: 3}
+  - <_skillName>k__BackingField: blood shield
+    <_skill>k__BackingField: {fileID: 9143434274506902867, guid: 186525ba7a25aeb46be32b6a1357db34, type: 3}
+    <_skillCost>k__BackingField: 543
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 890a495c6b4f49045b58249075bfb83c, type: 3}
-  - <_skillName>k__BackingField: anhilation
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+  - <_skillName>k__BackingField: electric cloud
+    <_skill>k__BackingField: {fileID: 9143434274506902867, guid: 3799236cde264d24cae11ba2b104a040, type: 3}
     <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: e75c88705c16d024b8facaaac4d7dbc6, type: 3}
-  - <_skillName>k__BackingField: dead book
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 4561e16c33475bd42ab1bb4919c07f3e, type: 3}
-  - <_skillName>k__BackingField: clones
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 7d820acab2dd19b42a070277883a7e19, type: 3}
+  - <_skillName>k__BackingField: perfect circle
+    <_skill>k__BackingField: {fileID: 9143434274506902867, guid: b5e7212fe68b58b409169d0b0128c607, type: 3}
+    <_skillCost>k__BackingField: 654
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: fae1e53bf830fbb49af6710d3874f322, type: 3}
+  - <_skillName>k__BackingField: da3
+    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 665e950bc4f67a74da149acddb00f1be, type: 3}
     <_skillCost>k__BackingField: 3
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 5727348f573310543b6105f7371faf1f, type: 3}
   - <_skillName>k__BackingField: weak spots

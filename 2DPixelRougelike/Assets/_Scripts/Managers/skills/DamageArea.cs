@@ -7,19 +7,21 @@ public class DamageArea : MonoBehaviour
 {
     [field: SerializeField] public Rigidbody2D rb { get; private set; }
     [SerializeField] private Collider2D collider;
-    private bool dieOnHit = false;
+    [SerializeField] private bool dieOnHit = false;
+    [SerializeField] private float areaLifetime = 5.0f;
+    //private bool dieOnHit = false;
 
     private int damage = 0;
     private LayerMask collisionLayer;
 
-    public void InitializeArea(int _damage, Vector3 directionAndMagnitude, LayerMask _collisionLayer, float _lifetime = 5f, float size = 1f, bool _dieOnHit = false)
+    public void InitializeArea(int _damage, Vector3 directionAndMagnitude, LayerMask _collisionLayer, /*float _lifetime = 5f*/ float size = 1f /*bool _dieOnHit = false */)
     {
         //Debug.Log("alive");
         damage = _damage;
         rb.velocity = directionAndMagnitude;
         //RotateSpriteToNormalizedDirection(direction);
         transform.localScale = Vector3.one * size;
-        dieOnHit = _dieOnHit;
+        //dieOnHit = _dieOnHit;
         //transform.rotation = Quaternion.LookRotation(direction);
 
         float angle = Mathf.Atan2(directionAndMagnitude.y, directionAndMagnitude.x) * Mathf.Rad2Deg;
@@ -27,7 +29,7 @@ public class DamageArea : MonoBehaviour
         transform.rotation = q;
 
         collisionLayer = _collisionLayer;
-        Invoke(nameof(DestroyArea), _lifetime);
+        Invoke(nameof(DestroyArea), areaLifetime);
 
     }
 
