@@ -18,8 +18,8 @@ public class SkillEmitParticle : Skill
 
     private IEnumerator SpawnParticles()
     {
-        Debug.Log(emmisionBurstCount + "");
-        _particleSystem.Emit(emmisionBurstCount);
+        //Debug.Log(emmisionBurstCount + "");
+        _particleSystem.Emit(GetProjectileAmount());
         yield return null;
         //Debug.Log("should have shop");
         //_particleSystem.Play();
@@ -38,5 +38,10 @@ public class SkillEmitParticle : Skill
         {
             _d.TakeDamage(baseDamage + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillDamage));
         }
+    }
+
+    private int GetProjectileAmount()
+    {
+        return emmisionBurstCount + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillProj);
     }
 }

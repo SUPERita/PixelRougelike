@@ -31,6 +31,7 @@ MonoBehaviour:
     - {fileID: 21300000, guid: 18efaa5661b618b47a35a8ee6cc8c73f, type: 3}
     - {fileID: 21300000, guid: 2fd12e24f71b6a7458cdb2d0b88c88e1, type: 3}
     - {fileID: 21300000, guid: 5c83f2d66bc1dd644bd17ee9da1be170, type: 3}
+    - {fileID: 21300000, guid: 8714f0b9f280e0b42a89f8706ce2728c, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -55,7 +56,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 15
+      Data: 16
     - Name: 
       Entry: 7
       Data: 
@@ -460,7 +461,7 @@ MonoBehaviour:
       Data: melee damage
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 100
+      Data: 1
     - Name: <description>k__BackingField
       Entry: 6
       Data: 
@@ -497,6 +498,36 @@ MonoBehaviour:
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 14
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 15
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: skill proj
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 1
+      Data: extra projectiles for each skill
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 15
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true

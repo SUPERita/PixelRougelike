@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 
 public class DamageArea : MonoBehaviour
@@ -9,6 +10,7 @@ public class DamageArea : MonoBehaviour
     [SerializeField] private Collider2D collider;
     [SerializeField] private bool dieOnHit = false;
     [SerializeField] private float areaLifetime = 5.0f;
+    [SerializeField] private float areaDestroySpeed = .25f;
     //private bool dieOnHit = false;
 
     private int damage = 0;
@@ -24,9 +26,9 @@ public class DamageArea : MonoBehaviour
         //dieOnHit = _dieOnHit;
         //transform.rotation = Quaternion.LookRotation(direction);
 
-        float angle = Mathf.Atan2(directionAndMagnitude.y, directionAndMagnitude.x) * Mathf.Rad2Deg;
-        Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
-        transform.rotation = q;
+        //float angle = Mathf.Atan2(directionAndMagnitude.y, directionAndMagnitude.x) * Mathf.Rad2Deg;
+        //Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
+        //transform.rotation = q;
 
         collisionLayer = _collisionLayer;
         Invoke(nameof(DestroyArea), areaLifetime);
@@ -55,7 +57,7 @@ public class DamageArea : MonoBehaviour
 
         collider.enabled = false;
         rb.velocity = Vector2.zero;
-        transform.DOScale(0, .25f).OnComplete(()=> Destroy(gameObject));
+        transform.DOScale(0, areaDestroySpeed).OnComplete(()=> Destroy(gameObject));
         
     }
 

@@ -22,7 +22,7 @@ public class Skill : MonoBehaviour
         if (nextAvailableSkillTime <= 0f)
         {
             PerformeSkill();
-            nextAvailableSkillTime = coolDown;
+            nextAvailableSkillTime = coolDown / (PlayerStatsHolder.Instance.TryGetStat(StatType.SkillAttackSpeed)/100f)/*skill attack speed*/;
         }
     }
 

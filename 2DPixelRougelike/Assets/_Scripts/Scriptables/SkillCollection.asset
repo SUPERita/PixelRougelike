@@ -57,55 +57,19 @@ MonoBehaviour:
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 665e950bc4f67a74da149acddb00f1be, type: 3}
     <_skillCost>k__BackingField: 3
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 5727348f573310543b6105f7371faf1f, type: 3}
-  - <_skillName>k__BackingField: weak spots
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+  - <_skillName>k__BackingField: explosion
+    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 13dbc118580d27540b70c44524e64735, type: 3}
     <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 201314fd2e5a4c24cbca376a4dbe6621, type: 3}
-  - <_skillName>k__BackingField: broken heart
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 22ff434e484c77c47a933507441b78ca, type: 3}
+  - <_skillName>k__BackingField: fire phantom
+    <_skill>k__BackingField: {fileID: 9143434274506902867, guid: 4b854b514a1d2c645b542aa3bceb4842, type: 3}
     <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 7804c8b54bdde904487ef081b2e6f90a, type: 3}
-  - <_skillName>k__BackingField: raven
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 4c16309dcc453ec4f8b171ff94c2ba2b, type: 3}
+  - <_skillName>k__BackingField: tentacles
+    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: b91a33a6d88a66449a4ac94cedfb06c4, type: 3}
     <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: fcc0ad948d345bd4ba9248cf6c0e5252, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 00bd2478ab5370547ad60c78b1b4b46f, type: 3}
   - <_skillName>k__BackingField: singleton
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
     <_skillCost>k__BackingField: 3
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 7c0916da7eba582419085cc3019b3317, type: 3}
-  - <_skillName>k__BackingField: hipnotize
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 849f268b8f8c24b418b7ad562d2da3c7, type: 3}
-  - <_skillName>k__BackingField: undead
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: b79559541ee76b742b00ed2f6099140d, type: 3}
-  - <_skillName>k__BackingField: mirror
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: dd5f68b89f548f446914399a88067a60, type: 3}
-  - <_skillName>k__BackingField: toxix liqure
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: ba970bfafdb9bbc408a694f5118a409a, type: 3}
-  - <_skillName>k__BackingField: shiv
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: f285040fb96819c49aaf1a7caf2aff4f, type: 3}
-  - <_skillName>k__BackingField: critical shot
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: b8f1c2d3a7c26514c82e9769cb19e18c, type: 3}
-  - <_skillName>k__BackingField: self power
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: a7d3c7dd93b789141b71958c3aecd07e, type: 3}
-  - <_skillName>k__BackingField: spikes
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: e8fd95ab5d3cee34cb0d8b20ca264e1a, type: 3}
-  - <_skillName>k__BackingField: arcane arrows
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    <_skillCost>k__BackingField: 3
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 34c50ac709cb0b74b948244eb4af7a49, type: 3}

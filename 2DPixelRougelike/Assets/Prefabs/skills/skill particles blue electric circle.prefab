@@ -47,12 +47,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 10
-  coolDown: 1
+  coolDown: 3
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
   _particleSystem: {fileID: 6821573306664273462}
-  emmisionDuration: 0.25
   emmisionBurstCount: 10
 --- !u!198 &6821573306664273462
 ParticleSystem:
@@ -830,12 +829,12 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 1
+      mode: 3
       spread: 0
       speed:
         serializedVersion: 2
         minMaxState: 0
-        scalar: 8
+        scalar: 0
         minScalar: 1
         maxCurve:
           serializedVersion: 2

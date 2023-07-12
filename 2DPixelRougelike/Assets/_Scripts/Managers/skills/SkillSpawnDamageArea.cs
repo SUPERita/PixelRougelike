@@ -15,13 +15,14 @@ public class SkillSpawnDamageArea : Skill
     //[SerializeField] private bool randomSpawn = true;
     [SerializeField] private bool randomVel = false;
     [SerializeField] private Vector2 spawnVel = Vector2.zero;
+    [SerializeField] private bool burstRotation = false;
     public override void PerformeSkill()
     {
         base.PerformeSkill();
-        for (int i = 0; i < numberOfAreasToSpawn; i++) SpawnDamageArea();
+        for (int i = 0; i < GetProjectileAmount(); i++) SpawnDamageArea(i);
     }
 
-    private void SpawnDamageArea()
+    private void SpawnDamageArea(int _spawnIndex)
     {
         //if (randomSpawn)
         //{
@@ -41,7 +42,13 @@ public class SkillSpawnDamageArea : Skill
             }
 
 
-            Instantiate(damageArea, (Vector2)transform.position+ _spawnPoint, Quaternion.identity)
+            Vector3 _spawnRot = new Vector3(0f,0f,0f);
+            if(burstRotation)
+            {
+                _spawnRot.z = _spawnIndex*360f/GetProjectileAmount() ; 
+            }
+
+            Instantiate(damageArea, (Vector2)transform.position+ _spawnPoint, Quaternion.Euler(_spawnRot))
                 .GetComponent<DamageArea>()
                     .InitializeArea(
                         baseDamage + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillDamage),
@@ -50,5 +57,10 @@ public class SkillSpawnDamageArea : Skill
                         size);
 
         //}
+    }
+
+    private int GetProjectileAmount()
+    {
+        return numberOfAreasToSpawn + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillProj);
     }
 }

@@ -107,25 +107,26 @@ public struct PlayerStat
 
 public enum StatType
 {
-    //fully implemented
-    MaxHealth,
-    AttackSpeed,
-    MoveSpeed,
-    Strength,
-    SkillCap,
-    SkillDamage,
-    WeaponDamage,
+    //DONOT CHANGE THEIR ORDER
+    
+    MaxHealth,//implemented
+    AttackSpeed,//implemented
+    MoveSpeed,//implemented
+    Strength,//implemented
+    SkillCap,//implemented
+    SkillDamage,//implemented
+    WeaponDamage,//implemented
 
-    //half implemented
-    Dodge,
-    Armor,
-    XPGain,
-    MoneyGain,
-    WeaponAttackSpeed,
-    SkillAttackSpeed,
-    MeleeDamage,
-    PickUpRange
+    
+    Dodge,//half implemented //can either make it have a complex deminishing returns or just cap it at like 40
+    Armor,//half implemented //can either make it have a complex deminishing returns or just cap it at like 40
+    XPGain,//half implemented
+    MoneyGain,//half implemented
+    WeaponAttackSpeed,//implemented
+    SkillAttackSpeed,//implemented
+    MeleeDamage,//implemented
+    PickUpRange,//half implemented
+    SkillProj//implemented
 
-    //not implemented
 
 }

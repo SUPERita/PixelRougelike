@@ -49,7 +49,7 @@ public class Weapon : MonoBehaviour
         //try shoot
         if (reloadTimer < 0)
         {
-            reloadTimer = reloadSpeed;
+            reloadTimer = reloadSpeed / (PlayerStatsHolder.Instance.TryGetStat(StatType.WeaponAttackSpeed) / 100f);
             Shoot();
         }
 

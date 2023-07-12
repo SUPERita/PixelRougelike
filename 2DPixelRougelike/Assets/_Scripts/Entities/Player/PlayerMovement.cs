@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
 {
     [SerializeField] private float playerSpeed = 10f;
-    [SerializeField] private int strength = 10;
+    private int strength = 0;
     [Tooltip("Attacks Per Second, attack animation time should be 1sec")]
     //[SerializeField] private float attackSpeed = 1f;
     Vector2 movement = new Vector2(0f, 0f);
@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     IDamageable[] enemiesInArea = null;
     private void DamageArea()
     {
-        strength = PlayerStatsHolder.Instance.TryGetStat(StatType.Strength);
+        strength = PlayerStatsHolder.Instance.TryGetStat(StatType.Strength)+ PlayerStatsHolder.Instance.TryGetStat(StatType.MeleeDamage);
         enemiesInArea = attackTriggerCollider.GetDamageablesInArea();
         foreach(IDamageable _i in enemiesInArea)
         {

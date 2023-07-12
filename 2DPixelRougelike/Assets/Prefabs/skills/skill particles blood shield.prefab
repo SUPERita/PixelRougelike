@@ -47,12 +47,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseDamage: 100
-  coolDown: 0.2
+  coolDown: 0.3
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
   _particleSystem: {fileID: 2081911448125677841}
-  emmisionBurstCount: 1
+  emmisionBurstCount: 2
 --- !u!198 &2081911448125677841
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -829,7 +829,7 @@ ParticleSystem:
           m_RotationOrder: 4
     arc:
       value: 360
-      mode: 1
+      mode: 3
       spread: 0
       speed:
         serializedVersion: 2
