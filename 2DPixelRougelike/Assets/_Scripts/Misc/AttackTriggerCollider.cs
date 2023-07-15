@@ -46,7 +46,7 @@ public class AttackTriggerCollider : MonoBehaviour
         damageables.Clear();
         _enemyColliders.Clear();
         //works
-        //gets all the colliders
+        //gets all the collider
         int numColliders = Physics2D.OverlapCircleNonAlloc(transform.position, range, _enemiesInRange, scanLayer); // the int is important // works
 
         //create a list of all the enemy Colliders

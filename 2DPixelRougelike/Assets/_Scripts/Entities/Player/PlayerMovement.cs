@@ -149,6 +149,9 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     }
     public void OnFire(InputValue _value)
     {
+        //fuck it if we ever port to mobile we dont want this shit
+        return;
+
         //in menu
         if (GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { return; }
 

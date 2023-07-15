@@ -2,6 +2,7 @@ using Febucci.UI;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using System.Resources;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
@@ -62,6 +63,7 @@ public class DeathPanel : StaticInstance<DeathPanel>
 
     public void LoadLobby()
     {
+        ResourceSystem.Instance.SetResource(ResourceType.Gold, 0);
         CloseCanvas();
         SceneManager.LoadScene("Lobby");
     }

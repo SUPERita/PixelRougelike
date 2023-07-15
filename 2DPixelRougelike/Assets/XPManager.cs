@@ -8,7 +8,7 @@ public class XPManager : StaticInstance<XPManager>
 {
     
     [SerializeField] private Image xpimage;
-    private int currentXP = 0;
+    private float currentXP = 0;
     private int currentXPLevel = 0;
 
     private void Start()
@@ -18,11 +18,12 @@ public class XPManager : StaticInstance<XPManager>
 
     private void UpdateXPVisual()
     {
-        xpimage.fillAmount = (float)currentXP / GetCurrentXPLevelRequierment();
+        xpimage.fillAmount = currentXP / (float)GetCurrentXPLevelRequierment();
     }
     public void AddXP(int _v)
     {
-        currentXP += _v;
+        currentXP += (_v*(PlayerStatsHolder.Instance.TryGetStat(StatType.XPGain)/100f));
+        //Debug.Log((_v * (PlayerStatsHolder.Instance.TryGetStat(StatType.XPGain) / 100f)));
         UpdateXPVisual();
 
         if(currentXP >= GetCurrentXPLevelRequierment()) { LevelUp(); }
@@ -42,6 +43,6 @@ public class XPManager : StaticInstance<XPManager>
 
     private int GetCurrentXPLevelRequierment()
     {
-        return 100 + (25* currentXPLevel* currentXPLevel);
+        return (100 + (25* currentXPLevel* currentXPLevel))*10;
     }
 }

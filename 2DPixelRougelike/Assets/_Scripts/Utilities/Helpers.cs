@@ -52,6 +52,19 @@ public static class Helpers
         }
     }
 
+    /// <summary>
+    /// % out of 100
+    /// </summary>
+    /// <param name="_f"></param>
+    /// <returns></returns>
+    public static bool RollChance(float _f)
+    {
+        //Debug.Log(_f);
+        if (_f == 0) return false;
+
+        return _f >= Random.Range(0f, 100f);
+    }
+
 
     public static IEnumerator DoInTime(UnityAction _A, float time = 0f)
     {
@@ -60,5 +73,28 @@ public static class Helpers
         _A.Invoke();
     }
 
+    public static int FilterLetters(string input)
+    {
+        string digitsOnly = string.Empty;
+
+        for (int i = 0; i < input.Length; i++)
+        {
+            if (char.IsDigit(input[i]))
+            {
+                digitsOnly += input[i];
+            }
+        }
+
+        int result;
+        if (int.TryParse(digitsOnly, out result))
+        {
+            return result;
+        }
+        else
+        {
+            Debug.LogWarning("Failed to convert the filtered string to an integer.");
+            return 0;
+        }
+    }
 
 }

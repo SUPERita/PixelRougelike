@@ -10,6 +10,7 @@ public class PickUp : MonoBehaviour, IPoolable
     private Transform target = null;
     [SerializeField] private ResourceType resourceType = ResourceType.EnergyNugget;
     [SerializeField] private int amount = 3;
+    [SerializeField] private CircleCollider2D collider = null;
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -46,7 +47,7 @@ public class PickUp : MonoBehaviour, IPoolable
     {
         //Debug.Log("1");
         AudioSystem.Instance.PlaySound("Beep3", .2f);
-        if(resourceType == ResourceType.EnergyNugget) XPManager.Instance.AddXP(5);
+        if(resourceType == ResourceType.EnergyNugget) XPManager.Instance.AddXP(50);
 
         ResourceSystem.Instance.AddResourceAmount(resourceType, amount);
     }
@@ -74,6 +75,7 @@ public class PickUp : MonoBehaviour, IPoolable
         
         PopOutTween();
         transform.rotation = Quaternion.Euler(0f, 0f, Random.Range(-90, 90));
+        collider.radius = 2.5f * (1+PlayerStatsHolder.Instance.TryGetStat(StatType.PickUpRange)/100f);
     }
 
     public void OnDespawn()

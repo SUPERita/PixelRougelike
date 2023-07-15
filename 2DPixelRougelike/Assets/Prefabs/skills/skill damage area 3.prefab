@@ -51,8 +51,9 @@ MonoBehaviour:
     m_Bits: 8
   damageArea: {fileID: 245409237358349679, guid: 15cd74efcc11047458d0b4b707bb4c9b, type: 3}
   size: 1
-  numberOfAreasToSpawn: 3
+  numberOfAreasToSpawn: 1
   randomSpawn: 1
   spawnArea: {x: 1, y: 1}
   randomVel: 0
   spawnVel: {x: 0, y: 0}
+  burstRotation: 0

@@ -284,7 +284,7 @@ MonoBehaviour:
       Data: 0
     - Name: <description>k__BackingField
       Entry: 1
-      Data: sdfsdf
+      Data: chance to evade damage, 40% max
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 7
@@ -314,7 +314,7 @@ MonoBehaviour:
       Data: 0
     - Name: <description>k__BackingField
       Entry: 1
-      Data: reduce the amount of damage you take
+      Data: reduce the amount of damage you take, 40% max
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 8
@@ -371,10 +371,10 @@ MonoBehaviour:
       Data: money gain
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 100
+      Data: 0
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: 100
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 10
@@ -491,7 +491,7 @@ MonoBehaviour:
       Data: pickuprange
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 100
+      Data: 0
     - Name: <description>k__BackingField
       Entry: 6
       Data: 

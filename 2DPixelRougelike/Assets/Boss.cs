@@ -141,7 +141,7 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
         if (_t == null)
         {
             //DOPunchScale is additive to the current scale
-            //colliders with the dash scale
+            //collider with the dash scale
             //_t = transform.DOPunchScale(new Vector3(.5f, -.5f, transform.localScale.z), .15f, 0, 0f)
             //    .SetAutoKill(false);
             _t = transform.DOPunchRotation(new Vector3(0, 0, 10f), .1f, 5, .2f)

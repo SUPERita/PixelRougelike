@@ -41,8 +41,13 @@ public class ResourceSystem : Singleton<ResourceSystem>
     }
     public void AddResourceAmount(ResourceType _t, int _add)
     {
-        
-        TypeToResource(_t).SetAmount(TypeToResource(_t)._amount + _add);
+        int _tmp = _add;
+        if (_t == ResourceType.Gold) { 
+            _tmp = (int)(_add * (1f+PlayerStatsHolder.Instance.TryGetStat(StatType.MoneyGain)/100f));
+            Debug.Log(_tmp);
+        }
+
+        TypeToResource(_t).SetAmount(TypeToResource(_t)._amount + _tmp);
         OnResourceChanged?.Invoke(_t, _add);
     }
     public void TakeResourceAmount(ResourceType _t, int _take)

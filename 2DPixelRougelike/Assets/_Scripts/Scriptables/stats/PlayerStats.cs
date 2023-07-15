@@ -109,24 +109,24 @@ public enum StatType
 {
     //DONOT CHANGE THEIR ORDER
     
-    MaxHealth,//implemented
-    AttackSpeed,//implemented
-    MoveSpeed,//implemented
-    Strength,//implemented
-    SkillCap,//implemented
-    SkillDamage,//implemented
-    WeaponDamage,//implemented
+    MaxHealth = 0,
+    AttackSpeed = 1,
+    MoveSpeed = 2,
+    Strength = 3,
+    SkillCap = 4,
+    SkillDamage = 5,
+    WeaponDamage = 6,
 
     
-    Dodge,//half implemented //can either make it have a complex deminishing returns or just cap it at like 40
-    Armor,//half implemented //can either make it have a complex deminishing returns or just cap it at like 40
-    XPGain,//half implemented
-    MoneyGain,//half implemented
-    WeaponAttackSpeed,//implemented
-    SkillAttackSpeed,//implemented
-    MeleeDamage,//implemented
-    PickUpRange,//half implemented
-    SkillProj//implemented
+    Dodge = 7,//cap at 40
+    Armor = 8,//cap at 40
+    XPGain = 9,
+    MoneyGain = 10,//half implemented
+    WeaponAttackSpeed = 11,
+    SkillAttackSpeed = 12,
+    MeleeDamage = 13,
+    PickUpRange = 14,
+    SkillProj = 15
 
 
 }

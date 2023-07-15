@@ -14,7 +14,7 @@ public class LootHandler : MonoBehaviour
 
         for (int i = 0; i < amount; i++)
         {
-            if(Random.Range(0, 2) == 1) LeanPoolManager.Instance.SpawnFromPool("pickupNugget").transform.position = transform.position + Random.insideUnitSphere;
+            if(Helpers.RollChance(90f)/*Random.Range(0, 2) == 1*/) LeanPoolManager.Instance.SpawnFromPool("pickupNugget").transform.position = transform.position + Random.insideUnitSphere;
             else LeanPoolManager.Instance.SpawnFromPool("pickupGold").transform.position = transform.position + Random.insideUnitSphere ;
         }
 

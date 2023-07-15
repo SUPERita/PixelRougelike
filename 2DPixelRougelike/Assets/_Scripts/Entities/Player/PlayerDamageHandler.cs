@@ -37,11 +37,26 @@ public class PlayerDamageHandler : MonoBehaviour
     {
         //timer stuff
         if (!IsHitable() || !isAlive) { return; }
-        timeUntilHitable = Time.time + invincibilityTime;
+
+        //try dodge
+        if (Helpers.RollChance(
+            Mathf.Min(PlayerStatsHolder.Instance.TryGetStat(StatType.Dodge),
+            40f)))
+        {
+            MessageBoard.Instance.SpawnMessage("dodged");
+        } 
         //take baseDamage
-        health.TakeDamage(_hurter.GetDamage());
-        hitFeedback?.PlayFeedbacks();
-        AudioSystem.Instance.PlaySound("s2");
+        else
+        {
+            health.TakeDamage((int)
+                (_hurter.GetDamage() * 
+                (100f-Mathf.Min(PlayerStatsHolder.Instance.TryGetStat(StatType.Armor),40f))/100f
+                ));
+            hitFeedback?.PlayFeedbacks();
+            AudioSystem.Instance.PlaySound("s2");
+        }
+
+        timeUntilHitable = Time.time + invincibilityTime;
     }
 
     private bool IsHitable()
