@@ -31,11 +31,13 @@ public class SelectionIndicator : StaticInstance<SelectionIndicator>
             if (selectedRectTransform != null)
             {
 
-                indicator.rectTransform.position = 
+                indicator.rectTransform.position =
                     (Vector2)selectedRectTransform.position + //target pos
-                    Vector2.right * selectedRectTransform.sizeDelta.x + //target width
-                    offset; //offset
-                    
+                    Vector2.right * selectedRectTransform.rect.width * Helpers.CurrentScreenSizeRelativeTo1920() / 2//target width
+                    + offset //offset
+                    + (Vector2.right * indicator.GetComponent<RectTransform>().rect.width * Helpers.CurrentScreenSizeRelativeTo1920() / 2); //self width; 
+
+
             }
         } else
         {

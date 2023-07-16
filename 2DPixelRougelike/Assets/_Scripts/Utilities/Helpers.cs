@@ -96,5 +96,9 @@ public static class Helpers
             return 0;
         }
     }
+    public static float CurrentScreenSizeRelativeTo1920()
+    {
+        return Screen.width / 1920f;
+    }
 
 }

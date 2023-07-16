@@ -73,8 +73,8 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: how much damage can you take
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 0
@@ -103,8 +103,8 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: speed of attacks
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 1
@@ -134,7 +134,7 @@ MonoBehaviour:
       Data: 100
     - Name: <description>k__BackingField
       Entry: 1
-      Data: 212
+      Data: how fast you move
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 2
@@ -163,8 +163,8 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: how strong you are
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 3
@@ -194,7 +194,7 @@ MonoBehaviour:
       Data: 1
     - Name: <description>k__BackingField
       Entry: 1
-      Data: sdf
+      Data: how many skills can you use
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 4
@@ -224,7 +224,7 @@ MonoBehaviour:
       Data: 0
     - Name: <description>k__BackingField
       Entry: 1
-      Data: sdf
+      Data: extra damage for skills
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 5
@@ -254,7 +254,7 @@ MonoBehaviour:
       Data: 0
     - Name: <description>k__BackingField
       Entry: 1
-      Data: 1
+      Data: extra damage for weapons
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 6
@@ -343,8 +343,8 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: bost xp gain by a precentage
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 9
@@ -374,7 +374,7 @@ MonoBehaviour:
       Data: 0
     - Name: <description>k__BackingField
       Entry: 1
-      Data: 100
+      Data: bost money gain by a precentage
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 10
@@ -398,13 +398,13 @@ MonoBehaviour:
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: weapon attack speed
+      Data: reload speed
     - Name: <value>k__BackingField
       Entry: 3
       Data: 100
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: faster attack speed with weapons
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 11
@@ -433,8 +433,8 @@ MonoBehaviour:
       Entry: 3
       Data: 100
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: faster reload time of skills
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 12
@@ -463,8 +463,8 @@ MonoBehaviour:
       Entry: 3
       Data: 1
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: stronger melee attacks
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 13
@@ -493,8 +493,11 @@ MonoBehaviour:
       Entry: 3
       Data: 0
     - Name: <description>k__BackingField
-      Entry: 6
-      Data: 
+      Entry: 1
+      Data: pick up from further away pick up from further awaypick up from further
+        awaypick up from further awaypick up from further awaypick up from further
+        awaypick up from further awaypick up from further awaypick up from further
+        awaypick up from further away
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 14

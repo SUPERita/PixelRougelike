@@ -679,8 +679,9 @@ GameObject:
   - component: {fileID: 1448994711399404792}
   - component: {fileID: 4839123968997671623}
   - component: {fileID: 8560806754874761225}
-  - component: {fileID: 8100987979319361888}
   - component: {fileID: 8905400348193756134}
+  - component: {fileID: 8100987979319361888}
+  - component: {fileID: 5465408553506054200}
   m_Layer: 5
   m_Name: skillChoice
   m_TagString: Untagged
@@ -750,24 +751,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &8100987979319361888
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6248816241337456514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0eef9e8b891e20f458d9005b6a691265, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  txtStr1: {fileID: 257796736687209764}
-  txtVal1: {fileID: 0}
-  image1: {fileID: 1500404607744447709}
-  highlightImage: {fileID: 8402314418084952283}
-  priceText: {fileID: 8825388730843084164}
-  lockImage: {fileID: 7230200675977860937}
 --- !u!114 &8905400348193756134
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -824,6 +807,38 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &8100987979319361888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248816241337456514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0eef9e8b891e20f458d9005b6a691265, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  txtStr1: {fileID: 257796736687209764}
+  txtVal1: {fileID: 0}
+  image1: {fileID: 1500404607744447709}
+  highlightImage: {fileID: 8402314418084952283}
+  priceText: {fileID: 8825388730843084164}
+  lockImage: {fileID: 7230200675977860937}
+--- !u!114 &5465408553506054200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6248816241337456514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6865a287bf3746c4bb231e0de9516bfe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _source: {fileID: 8100987979319361888}
+  skillCollection: {fileID: 11400000, guid: 420ab0b834a42854da48f8413b2f2fcd, type: 2}
 --- !u!1 &7387649786731834423
 GameObject:
   m_ObjectHideFlags: 0

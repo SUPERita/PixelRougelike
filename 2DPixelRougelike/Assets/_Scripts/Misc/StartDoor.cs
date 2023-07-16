@@ -10,9 +10,16 @@ public class StartDoor : MonoBehaviour, IInteractible
     [SerializeField] private string doorName = "door";
     [SerializeField] private Sprite open;
     [SerializeField] private Sprite close;
+    [SerializeField] private SpriteRenderer lockSR;
     private SpriteRenderer sr;
     [SerializeField] private ParticleSystem openParticles;
-    public bool working = true;
+    private bool working = true;
+
+    public void SetIsWorking(bool _b)
+    {
+        working = _b;
+        lockSR.gameObject.SetActive(!_b);
+    }
 
     private void Start()
     {

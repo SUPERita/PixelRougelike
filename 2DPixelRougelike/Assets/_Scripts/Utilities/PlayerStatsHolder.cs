@@ -14,6 +14,10 @@ public class PlayerStatsHolder : StaticInstance<PlayerStatsHolder>
     {
         return playerStats.GetPlayerStatRaw(_statName).icon;
     }
+    public string TryGetStatDesc(StatType _statName)
+    {
+        return playerStats.GetPlayerStatRaw(_statName).description;
+    }
     public bool IsStatExisting(StatType value)
     {
         return playerStats.StatExists(value);

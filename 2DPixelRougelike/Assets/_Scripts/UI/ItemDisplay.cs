@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-public class ItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHandler, ISelectHandler
+public class ItemDisplay : MonoBehaviour
 {
     public Item item { get; private set; }
     [SerializeField] private Image ItemImage = null;
@@ -14,18 +14,4 @@ public class ItemDisplay : MonoBehaviour, IPointerEnterHandler, IPointerExitHand
         ItemImage.sprite = item.itemSprite;
     }
 
-    public void OnPointerEnter(PointerEventData eventData)
-    {
-        FindObjectOfType<ItemDisplayDesctiption>().Display_Enter(item);
-    }
-
-    public void OnPointerExit(PointerEventData eventData)
-    {
-        FindObjectOfType<ItemDisplayDesctiption>().Display_Exit(item);
-    }
-
-    public void OnSelect(BaseEventData eventData)
-    {
-        FindObjectOfType<ItemDisplayDesctiption>().Display_Enter(item);
-    }
 }

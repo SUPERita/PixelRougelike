@@ -724,6 +724,7 @@ GameObject:
   - component: {fileID: 5189819215713011671}
   - component: {fileID: 3474403265327737248}
   - component: {fileID: 3689762090456391134}
+  - component: {fileID: 3041915671751340080}
   m_Layer: 5
   m_Name: passiveUpgradeChoice
   m_TagString: Untagged
@@ -876,3 +877,16 @@ MonoBehaviour:
     <val>k__BackingField: 2
   - <cost>k__BackingField: 12
     <val>k__BackingField: 3
+--- !u!114 &3041915671751340080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7538982277764231946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dd75a0a89f6b064d97c20ac2ce790d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  choice: {fileID: 3689762090456391134}
