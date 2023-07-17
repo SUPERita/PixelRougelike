@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6199441990710129385
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4901368845124669801}
+  - component: {fileID: 5077983151157814100}
+  m_Layer: 0
+  m_Name: WaveManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4901368845124669801
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6199441990710129385}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5077983151157814100
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6199441990710129385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 33987c7fc626ea647bf41c393668e688, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveDuration: 1
+  delayBetweenWaves: 1
+  waves:
+  - <enemyCollection>k__BackingField: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
+    <waveWeight>k__BackingField: 10
+  - <enemyCollection>k__BackingField: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
+    <waveWeight>k__BackingField: 10
+  enemySpawner: {fileID: 0}
+  objectSpawner: {fileID: 0}
+  extraWave:
+    <enemyCollection>k__BackingField: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
+    <waveWeight>k__BackingField: 0
+  extraWaveStartWeight: 10
+  extraWaveWeightPerLevel: 10
+  bossWavePairs:
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 38dda991d17d6b8448be3da1bb1bef29, type: 3}
+    <spawnAtWave>k__BackingField: 5
+  objectWavePairs:
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
+    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
+    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
+    <spawnAtWave>k__BackingField: 1
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
+    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
+    <spawnAtWave>k__BackingField: 2
