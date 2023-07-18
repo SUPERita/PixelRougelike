@@ -23,12 +23,15 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     [SerializeField] private Material regularMat;
     [SerializeField] private Material hitMat;
     [SerializeField] private float dieKnockSpeed = 10f;
-    [SerializeField] private float walkSpeed = 4f;
+    [SerializeField] private float walkAnimSpeed = 4f;
+    [SerializeField] protected float walkSpeed = 4f;
     [Header("vals")]
     [SerializeField] protected int damage = 5;
 
     private bool alive = true;
     private Tween _walkTween = null;
+    private Tween _hitTween = null;
+    //[SerializeField] protected float startScale = 1f;
 
     private void FixedUpdate()
     {
@@ -51,6 +54,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         rb = GetComponent<Rigidbody2D>();
         follow = FindAnyObjectByType<PlayerMovement>().transform;
         health.OnDie += Health_OnDie;
+        
     }
     private void OnDestory()
     {
@@ -94,10 +98,17 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     public void TakeDamage(int _val)
     {
         if(!alive) return;
-        //Debug.Log(AudioSystem.Instance.name);
+
+        //sfx
         AudioSystem.Instance.PlaySound("s3");
+
+        //squach and stretch
         if(hitFeedback != null) { hitFeedback?.PlayFeedbacks();}
-        if(health != null) {health.TakeDamage(_val); }
+        //if(_hitTween == null) _hitTween = sr.transform.DOPunchScale(Vector3.one + Vector3.up*.75f, .2f, 5).SetAutoKill(false);
+        //_hitTween?.Restart();
+
+        //health
+        if (health != null) {health.TakeDamage(_val); }
 
         //particle pool?
         GameObject _p = UnityEngine.Random.Range(0, 2) == 1 ? LeanPoolManager.Instance.SpawnFromPool("particleBase") : LeanPoolManager.Instance.SpawnFromPool("pv1");
@@ -130,14 +141,16 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         GetComponent<Collider2D>().enabled = true;
         //rb.velocity = dieKnockSpeed * (transform.position - follow.position);
         //Destroy(gameObject);
-        transform.localScale = Vector3.one;//transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject)); 
+        //if(startScale == null) { startScale = transform.localScale; };
+        transform.localScale = Vector2.one; //transform.DOScale(0f, 1f).SetEase(Ease.InOutCirc).OnComplete(() => Destroy(gameObject)); 
+
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.Gold, 7);
         //ResourceSystem.Instance.AddResourceAmount(ResourceType.EnergyNugget, 2);\
         health.ResetHealth();
         //health.OnDie += Health_OnDie;
         //walk tween managment
         //transform.DOKill();
-        if (_walkTween == null) _walkTween = transform.DOScaleY(1.15f, 1f/walkSpeed).SetLoops(-1, LoopType.Yoyo).SetAutoKill(false); 
+        if (_walkTween == null) _walkTween = transform.DOScaleY(1.15f, 1f/walkAnimSpeed).SetLoops(-1, LoopType.Yoyo).SetAutoKill(false); 
         _walkTween?.Restart();
     }
 

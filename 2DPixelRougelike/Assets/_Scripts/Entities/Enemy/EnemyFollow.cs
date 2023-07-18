@@ -7,6 +7,6 @@ public class EnemyFollow : Enemy
     protected override void DoBehaviour()
     {
         base.DoBehaviour();
-        rb.velocity = -(transform.position - follow.position).normalized * 5f;
+        rb.velocity = -(transform.position - follow.position).normalized * walkSpeed;
     }
 }

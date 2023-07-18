@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Security.Permissions;
 using UnityEngine;
 
 public interface IInteractible 
@@ -10,6 +11,7 @@ public interface IInteractible
     void OnStopInteract();
     string GetInteractionPrompt();
 
+    [field: SerializeField] public KeyCode InteractionKey { get; set; }
     bool prompRefreshRequest { get; set; }
 
 

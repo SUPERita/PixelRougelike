@@ -10,7 +10,7 @@ public class NPC : MonoBehaviour, IInteractible
     Vector2 startScale;
 
     public bool prompRefreshRequest { get; set; } = false;
-
+    [field: SerializeField] public KeyCode InteractionKey { get; set; } = KeyCode.E;
     protected virtual void Start()
     {
         startScale = transform.localScale;

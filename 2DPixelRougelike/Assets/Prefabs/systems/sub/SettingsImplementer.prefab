@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerStats: {fileID: 11400000, guid: 241a278f7f7ad324aad7a9e526905182, type: 2}
+  cursorImage: {fileID: 2800000, guid: 1a6c21a664faf15499c9c712c16a66ba, type: 3}

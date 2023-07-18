@@ -64,18 +64,17 @@ public class InteractionHandler : MonoBehaviour
             return; 
         }
 
+        keyPrompt.enabled = currentInteractible.InteractionKey != KeyCode.None;
+
         //if should show promp show,
         if(currentInteractible.GetInteractionPrompt() != "-1")
         {
-            //if one is near show key prompt
-            keyPrompt.enabled = true;
             //promptText.text = currentInteractible.GetInteractionPrompt();
             targetOpacity = .85f;
         }
         //else 
         else
         {
-            keyPrompt.enabled = false;
             targetOpacity = 0f;
         }
 

@@ -76,7 +76,7 @@ public class WaveManager : StaticInstance<WaveManager>
             waveCounter++;
 
             //wave notifcation
-            MessageBoard.Instance.SpawnHeader($"wave - {waveCounter}");
+            MessageBoard.Instance.SpawnWaveHeader($"wave - {waveCounter}");
             OnWaveStart?.Invoke(waveCounter);//notify on wave start
 
             //spawn stuff
@@ -89,8 +89,14 @@ public class WaveManager : StaticInstance<WaveManager>
 
         //finish level
         MessageBoard.Instance.SpawnHeader("Room ANNIHILATED!!!");
-        MessageBoard.Instance.SpawnMessage("NEW ROOM UNLOCKED",2);
-        DoorManager.CompleatedLevel(int.Parse(SceneManager.GetActiveScene().name));
+
+        //if level isnt already unlocked, unlock new level
+        if (!DoorManager.GetIsLevelUnlocked(int.Parse(SceneManager.GetActiveScene().name)+1))
+        {
+            MessageBoard.Instance.SpawnMessage("NEW ROOM UNLOCKED",2);
+            DoorManager.CompleatedLevel(int.Parse(SceneManager.GetActiveScene().name));
+        }
+
         yield return new WaitForSeconds(8);
 
         //extra waves
@@ -98,7 +104,7 @@ public class WaveManager : StaticInstance<WaveManager>
         for (int i = 0; i < 100; i++)
         {
             //wave notifcation
-            MessageBoard.Instance.SpawnHeader($"wave - {waveCounter}+{_extraWaveCounter}");
+            MessageBoard.Instance.SpawnWaveHeader($"wave - {waveCounter}+{_extraWaveCounter}");
             OnWaveStart?.Invoke(waveCounter+ _extraWaveCounter);//notify on wave start
 
             //spawn enemies

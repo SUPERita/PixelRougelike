@@ -80,4 +80,8 @@ public class DoorManager : MonoBehaviour
 
         SaveSystem.SaveArrayBoolAtLocation(bools, progressSaveLoc);
     }
+
+    public static bool GetIsLevelUnlocked(int _index) {
+        return GetDoorProgress()[_index];
+    }
 }

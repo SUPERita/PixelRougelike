@@ -35,6 +35,10 @@ public class SettingsCanvas : Singleton<SettingsCanvas>
 
 
     #region menu lifecycle
+    public void Button_settingsButton()
+    {
+        OnPause(null);
+    }
     public void OnPause(InputValue _value)
     {
         if (isOpen) { 

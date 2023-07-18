@@ -20,6 +20,12 @@ public class MessageBoard : StaticInstance<MessageBoard>
     [SerializeField] private GameObject msgPrefab = null;
     [SerializeField] private RectTransform msgRoot = null;
     private List<RectTransform> msgList = new List<RectTransform>();
+    [Header("waves")]
+    [SerializeField] private GameObject waveHeaderPrefab = null;
+    [SerializeField] private RectTransform waveRoot = null;
+    [SerializeField] private RectTransform waveEndPoint = null;
+    [SerializeField] private AnimationCurve waveHeaderPosCurve = null;
+    private GameObject currentWaveHeader = null;
 
     [Header("design")]
     [SerializeField] private int msgMargin = 50;
@@ -78,6 +84,38 @@ public class MessageBoard : StaticInstance<MessageBoard>
                                _g.DOKill();
                                 Destroy(_g.gameObject);   
                            }));
+        _sequence.Play();
+
+        //messaging
+        if (_msg == null) _msg = "N/A";
+        _g.GetComponentInChildren<TextMeshProUGUI>().SetText(_msg);
+
+
+
+    }
+
+    [Button]
+    public void SpawnWaveHeader(string _msg, float delay = -1)
+    {
+        if (delay > 0) { StartCoroutine(DoInTime(() => SpawnWaveHeader(_msg), delay)); return; }
+
+
+        RectTransform _g = Instantiate(waveHeaderPrefab, waveRoot).GetComponent<RectTransform>();
+        float startPos = 1500;//headerRoot.rect.width + _g.rect.width;
+
+        //tweens
+        _g.anchoredPosition = new Vector2(startPos, 0);
+        Sequence _sequence = DOTween.Sequence();
+        //go to middle
+        _sequence.Append(_g.DOAnchorPosX(waveEndPoint.anchoredPosition.x, 2f).SetEase(waveHeaderPosCurve).OnComplete(() => {
+            _g.DOScale(.3f, .5f);
+        }));
+        //go to end
+        _sequence.Append(_g.DOAnchorPos3D(waveEndPoint.anchoredPosition, .5f).OnComplete(() => {
+            Destroy(currentWaveHeader);
+            currentWaveHeader = _g.gameObject;
+        }));
+        //commit
         _sequence.Play();
 
         //messaging

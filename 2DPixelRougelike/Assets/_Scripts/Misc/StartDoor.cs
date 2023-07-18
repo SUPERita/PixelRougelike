@@ -38,10 +38,11 @@ public class StartDoor : MonoBehaviour, IInteractible
 
     #region interface
     public bool prompRefreshRequest { get; set; }
+    [field: SerializeField] public KeyCode InteractionKey { get; set; } = KeyCode.None;
 
     public string GetInteractionPrompt()
     {
-        return "-1";
+        return "<wiggle>" +"Room " + sceneNumber + "</>";
     }
 
     public void OnEnterRange()

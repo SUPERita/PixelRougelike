@@ -54,7 +54,7 @@ public class EnemyDasher : Enemy
         doingSomething = true;
 
         Vector3 playerPosPlus = follow.position + (follow.position - transform.position).normalized * overShot;
-        transform.DOScaleY(0.5f, dashDelay).OnComplete(()=> transform.DOScaleY(1f, dashDelay/10f));
+        transform.DOScaleY(.5f, dashDelay).OnComplete(()=> transform.DOScaleY(1, dashDelay/10f));
         rb.DOMove(playerPosPlus, dashDuration)
             .SetDelay(dashDelay)
             .OnComplete(() =>doingSomething = false);
