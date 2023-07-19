@@ -21,7 +21,7 @@ public class Item : ScriptableObject
         {
             string _statNumber = _stat.number.ToString();
             _statNumber = _stat.number > 0 ?
-                "<color=green>" + _statNumber + "</color>" :
+                "<color=green>" +"+"+ _statNumber + "</color>" :
                 "<color=red>" + _statNumber + "</color>";
             string _statImage = $"<sprite name={_p.GetPlayerStatRaw(_stat.statName).statName}>";
 
