@@ -44,6 +44,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 1.9
       objectReference: {fileID: 0}
+    - target: {fileID: 7062679113067196933, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7165432857041552112, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -131,7 +135,7 @@ MonoBehaviour:
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
   dieKnockSpeed: 10
   walkAnimSpeed: 4
-  walkSpeed: 2
+  walkSpeed: 4
   damage: 5
 --- !u!212 &2039940240597586629 stripped
 SpriteRenderer:

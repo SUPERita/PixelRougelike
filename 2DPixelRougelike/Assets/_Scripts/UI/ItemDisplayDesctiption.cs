@@ -12,7 +12,7 @@ public class ItemDisplayDesctiption : MonoBehaviour
     internal void Display_Enter(Item item)
     {
         if(item == null) { Debug.LogError("wee woo we wo for some reason no item?"); return; }
-        desctiprionText.SetText(""+item.itemDescription);
+        desctiprionText.SetText(""+item.GetItemStatsReadable()/*itemDescription*/);
     }
 
     internal void Display_Exit(Item item)

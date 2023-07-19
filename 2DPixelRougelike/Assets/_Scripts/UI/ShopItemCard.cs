@@ -28,7 +28,7 @@ public class ShopItemCard : MonoBehaviour
     private void UpdateVisual()
     {
         itemNameText.SetText(item.itemName);
-        itemDescriptionText.SetText(item.itemDescription);
+        itemDescriptionText.SetText(item.GetItemStatsReadable()/*itemDescription*/);
         priceText.SetText("" + price);
         if (item.itemSprite != null)
         {

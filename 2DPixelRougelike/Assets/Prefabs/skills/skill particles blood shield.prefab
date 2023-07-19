@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4787d1291c4a5745a486bda398fabea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 100
-  coolDown: 0.3
+  baseDamage: 50
+  coolDown: 2
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
@@ -136,7 +136,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 5
+      scalar: 6
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4031,7 +4031,7 @@ ParticleSystem:
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
-        key1: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 0.9490196}
+        key1: {r: 0.26415092, g: 0.26415092, b: 0.26415092, a: 1}
         key2: {r: 0, g: 0, b: 0, a: 0}
         key3: {r: 0, g: 0, b: 0, a: 0}
         key4: {r: 0, g: 0, b: 0, a: 0}
@@ -4039,7 +4039,7 @@ ParticleSystem:
         key6: {r: 0, g: 0, b: 0, a: 0}
         key7: {r: 0, g: 0, b: 0, a: 0}
         ctime0: 0
-        ctime1: 54548
+        ctime1: 59945
         ctime2: 0
         ctime3: 0
         ctime4: 0
@@ -4047,7 +4047,7 @@ ParticleSystem:
         ctime6: 0
         ctime7: 0
         atime0: 0
-        atime1: 55319
+        atime1: 60138
         atime2: 65535
         atime3: 0
         atime4: 0

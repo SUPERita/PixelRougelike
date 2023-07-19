@@ -12,10 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dee53e57957079c42beb8161285ab4b2, type: 3}
   m_Name: Item1
   m_EditorClassIdentifier: 
-  <itemName>k__BackingField: item1
+  <itemName>k__BackingField: david shield
   <itemSprite>k__BackingField: {fileID: 2125737359283935466, guid: f7043b7291f49844b9671b3d3dedcbb5, type: 3}
   <itemPriceRange>k__BackingField: {x: 10, y: 20}
   <statInstances>k__BackingField:
-  - <number>k__BackingField: 10
+  - <number>k__BackingField: -10
     <statName>k__BackingField: 1
+  - <number>k__BackingField: 20
+    <statName>k__BackingField: 0
   <itemDescription>k__BackingField: item ! flsjflj

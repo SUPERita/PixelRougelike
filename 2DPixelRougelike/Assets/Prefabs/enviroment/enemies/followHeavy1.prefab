@@ -14,7 +14,7 @@ PrefabInstance:
       objectReference: {fileID: -846252581, guid: 147892a70d4887843a8ecc6fb47cdd5b, type: 3}
     - target: {fileID: 3057400245102403167, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Name
-      value: follow2
+      value: followHeavy1
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Radius
@@ -44,9 +44,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.25
       objectReference: {fileID: 0}
+    - target: {fileID: 5094099004121810999, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
+      propertyPath: amount
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7062679113067196933, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: maxHealth
-      value: 200
+      value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 7165432857041552112, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_RootOrder
@@ -126,7 +130,8 @@ MonoBehaviour:
   regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
   dieKnockSpeed: 10
-  walkSpeed: 2
+  walkAnimSpeed: 4
+  walkSpeed: 4
   damage: 5
 --- !u!212 &2039940240597586629 stripped
 SpriteRenderer:

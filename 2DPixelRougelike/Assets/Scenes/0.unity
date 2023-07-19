@@ -11125,6 +11125,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 378952213}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waves.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: delayBetweenWaves
       value: 4
       objectReference: {fileID: 0}
@@ -11133,12 +11137,56 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: objectWavePairs.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[0].<waveWeight>k__BackingField
-      value: 100
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[1].<waveWeight>k__BackingField
-      value: 200
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waves.Array.data[2].<waveWeight>k__BackingField
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waves.Array.data[3].<waveWeight>k__BackingField
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waves.Array.data[4].<waveWeight>k__BackingField
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waves.Array.data[0].<enemyCollection>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waves.Array.data[2].<enemyCollection>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: c67ecc50c80ad1a478a2c361e2cbe273, type: 2}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waves.Array.data[3].<enemyCollection>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: c67ecc50c80ad1a478a2c361e2cbe273, type: 2}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waves.Array.data[4].<enemyCollection>k__BackingField
+      value: 
+      objectReference: {fileID: 11400000, guid: c67ecc50c80ad1a478a2c361e2cbe273, type: 2}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: objectWavePairs.Array.data[0].<spawnAtWave>k__BackingField
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: objectWavePairs.Array.data[0].<objectPrefabs>k__BackingField.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: objectWavePairs.Array.data[1].<objectPrefabs>k__BackingField.Array.size
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6199441990710129385, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: m_Name

@@ -15,6 +15,7 @@ public class Tester : MonoBehaviour
     [Button]
     public void Compilestats()
     {
+        
         for (int i = 0; i < times; i++)
         {
             stats.TEST_GetCompiledStats();

@@ -64,8 +64,8 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     {
         foreach (MidRunUpgradeChoice _ChoiceButton in GetComponentsInChildren<MidRunUpgradeChoice>())
         {
-            _ChoiceButton.InitializeUpgrade(StatType.Strength, 10);
-            _ChoiceButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().SetText("strength, 10");
+            _ChoiceButton.InitializeUpgrade(StatType.Strength, 5);
+            _ChoiceButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().SetText("strength, 5");
         }
     }
     private void _ChoiceButton_OnChoiceClicked(MidRunUpgradeChoice obj)
