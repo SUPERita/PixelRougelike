@@ -16,22 +16,22 @@ MonoBehaviour:
     SerializedFormat: 2
     SerializedBytes: 
     ReferencedUnityObjects:
-    - {fileID: 21300000, guid: 2c32b80e8e0fe414084c99e43c1a33b3, type: 3}
-    - {fileID: 21300000, guid: 8827231417378f840ac1f5aab46db5d7, type: 3}
-    - {fileID: 21300000, guid: 3686dad34e73cf042a835ef7f78114d1, type: 3}
-    - {fileID: 21300000, guid: 05232db98d9bdf7458f527a1e6bd4404, type: 3}
-    - {fileID: 21300000, guid: 005d467dd4eb7584d9f6738aa4564cb7, type: 3}
-    - {fileID: 21300000, guid: e541939e544110e4bb7aeaa1634b1430, type: 3}
-    - {fileID: 21300000, guid: 8b720b5bccb6f9949855c0a99eb481a9, type: 3}
-    - {fileID: 21300000, guid: 95e166699cf9646408a54cd46096cad5, type: 3}
-    - {fileID: 21300000, guid: 7bd71c44ea9cf604980586a16b62b059, type: 3}
-    - {fileID: 21300000, guid: 8ed3439cb0a5bb947b02e373893eed1d, type: 3}
-    - {fileID: 21300000, guid: bc4d2ca115dd532418725bd9df2fa386, type: 3}
-    - {fileID: 21300000, guid: 61774ac3ce8742b4c9a85952d3c793d1, type: 3}
-    - {fileID: 21300000, guid: 18efaa5661b618b47a35a8ee6cc8c73f, type: 3}
-    - {fileID: 21300000, guid: 2fd12e24f71b6a7458cdb2d0b88c88e1, type: 3}
-    - {fileID: 21300000, guid: 5c83f2d66bc1dd644bd17ee9da1be170, type: 3}
-    - {fileID: 21300000, guid: 8714f0b9f280e0b42a89f8706ce2728c, type: 3}
+    - {fileID: 1362952153, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: -324673005, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1234771931, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 632272350, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1733038055, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 700491040, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1086678757, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: -712034545, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 925800071, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1171086229, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1589363659, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 639015794, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1238847981, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1445854573, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1186180666, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 470056115, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -98,7 +98,7 @@ MonoBehaviour:
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: atk speed
+      Data: attack speed
     - Name: <value>k__BackingField
       Entry: 3
       Data: 100
@@ -248,7 +248,7 @@ MonoBehaviour:
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: wpn damage
+      Data: weapon damage
     - Name: <value>k__BackingField
       Entry: 3
       Data: 0
@@ -428,7 +428,7 @@ MonoBehaviour:
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: skill attack speed
+      Data: skill cooldown
     - Name: <value>k__BackingField
       Entry: 3
       Data: 100
@@ -488,7 +488,7 @@ MonoBehaviour:
       Data: PlayerStat, Assembly-CSharp
     - Name: <statName>k__BackingField
       Entry: 1
-      Data: pickuprange
+      Data: pickup range
     - Name: <value>k__BackingField
       Entry: 3
       Data: 0

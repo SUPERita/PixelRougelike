@@ -1,3 +1,4 @@
+using MoreMountains.Feel;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -22,8 +23,9 @@ public class Item : ScriptableObject
             _statNumber = _stat.number > 0 ?
                 "<color=green>" + _statNumber + "</color>" :
                 "<color=red>" + _statNumber + "</color>";
+            string _statImage = $"<sprite name={_p.GetPlayerStatRaw(_stat.statName).statName}>";
 
-            _out += _p.GetPlayerStatRaw(_stat.statName).statName +" "+ _statNumber +"(<sprite=0>) "+ "\n";
+            _out += _p.GetPlayerStatRaw(_stat.statName).statName +" "+ _statNumber + $"({_statImage})" + "\n";
         }
 
         return _out;

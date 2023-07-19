@@ -123,7 +123,7 @@ public enum StatType
     XPGain = 9,
     MoneyGain = 10,//half implemented
     WeaponAttackSpeed = 11,
-    SkillAttackSpeed = 12,
+    SkillCooldown = 12,
     MeleeDamage = 13,
     PickUpRange = 14,
     SkillProj = 15

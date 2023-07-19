@@ -3,65 +3,63 @@ using System.Collections.Generic;
 using UnityEngine;
 using Sirenix.OdinInspector;
 using UnityEditor;
+//using Unity.Burst.Intrinsics;
+//using UnityEditor.SearchService;
+using System.IO;
 
 public class SpriteCompressor : MonoBehaviour
 {
     public List<Sprite> spritesToPack; // Add individual sprites to this list in the Inspector
     public int padding = 2; // Adjust padding between sprites in the packed texture
 
-    private void Start()
-    {
-        PackSprites();
-    }
+    //might not need all that just put it all in one file
 
+#if UNITY_EDITOR
     [Button]
     private void PackSprites()
     {
-        // Create a list of all the individual sprite textures
-        List<Texture2D> texturesToPack = new List<Texture2D>();
+        if (spritesToPack == null || spritesToPack.Count == 0)
+        {
+            Debug.LogWarning("No sprites selected. Please add sprites to the spritesToPack list in the Inspector.");
+            return;
+        }
+
+        int packedWidth = 0;
+        int packedHeight = 0;
+
+        // Calculate the total width and height needed for the packed texture
         foreach (Sprite sprite in spritesToPack)
         {
-            Texture2D spriteTexture = sprite.texture;
-            texturesToPack.Add(spriteTexture);
+            packedWidth += (int)sprite.rect.width + padding;
+            packedHeight = Mathf.Max(packedHeight, (int)sprite.rect.height);
         }
 
-        // Pack the textures into a single texture
-        Texture2D packedTexture = new Texture2D(1, 1); // Create a new texture to hold the packed sprites
-        Rect[] packedUVs = packedTexture.PackTextures(texturesToPack.ToArray(), padding, 2048); // Adjust the size as needed
+        // Create a new texture to hold the packed sprites
+        Texture2D packedTexture = new Texture2D(packedWidth, packedHeight, TextureFormat.RGBA32, false);
 
-        // Assign the packed UVs to each sprite
-        for (int i = 0; i < spritesToPack.Count; i++)
+        // Keep track of the current X position for arranging the sprites side by side
+        int currentX = 0;
+
+        // Pack the sprites into the new texture
+        foreach (Sprite sprite in spritesToPack)
         {
-            Rect uv = packedUVs[i];
-            Sprite sprite = spritesToPack[i];
-            Rect spriteRect = sprite.rect;
-            float spriteWidth = spriteRect.width;
-            float spriteHeight = spriteRect.height;
+            Color[] pixels = sprite.texture.GetPixels((int)sprite.rect.x, (int)sprite.rect.y, (int)sprite.rect.width, (int)sprite.rect.height);
+            packedTexture.SetPixels(currentX, 0, (int)sprite.rect.width, (int)sprite.rect.height, pixels);
 
-            float offsetX = uv.x * packedTexture.width;
-            float offsetY = uv.y * packedTexture.height;
-            float scaleX = uv.width * packedTexture.width / spriteWidth;
-            float scaleY = uv.height * packedTexture.height / spriteHeight;
-
-            Vector2 pivot = sprite.pivot;
-            pivot.x *= scaleX;
-            pivot.y *= scaleY;
-
-            SpriteMetaData metaData = new SpriteMetaData();
-            metaData.rect = new Rect(offsetX, offsetY, spriteWidth, spriteHeight);
-            metaData.pivot = pivot;
-            metaData.name = sprite.name;
-
-            TextureImporter textureImporter = AssetImporter.GetAtPath(AssetDatabase.GetAssetPath(packedTexture)) as TextureImporter;
-            textureImporter.spritesheet = new SpriteMetaData[] { metaData };
-            textureImporter.SaveAndReimport();
+            // Move the currentX position to the next sprite's position, adding padding
+            currentX += (int)sprite.rect.width + padding;
         }
+
+        packedTexture.Apply();
 
         // Save the packed texture as an asset
+        string outputPath = "Assets/Art/stat icons/_PackedTexture.png"; // Adjust the save path as needed
         byte[] bytes = packedTexture.EncodeToPNG();
-        string savePath = "Assets/Art/PackedTexture.png"; // Adjust the save path as needed
-        System.IO.File.WriteAllBytes(savePath, bytes);
+        File.WriteAllBytes(outputPath, bytes);
+        AssetDatabase.Refresh();
 
-        Debug.Log("Texture packing complete. Packed texture saved at: " + savePath);
+        Debug.Log("Sprite packing complete. Packed texture saved at: " + outputPath);
     }
+
+#endif
 }
