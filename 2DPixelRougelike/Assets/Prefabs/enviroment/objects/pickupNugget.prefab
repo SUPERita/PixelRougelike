@@ -134,5 +134,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   resourceType: 1
-  amount: 3
+  amount: 1
   collider: {fileID: 4455702830436987850}

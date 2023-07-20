@@ -125,6 +125,7 @@ public class WaveManager : StaticInstance<WaveManager>
         MessageBoard.Instance.SpawnHeader("You Won!",3f);
     }
 
+    public int currentWaveRefrence { get; private set; } = 0;
     private void SpawnEntitiesOfWave(int waveCounter, EnemyCollection enemyCollection, int waveWeight)
     {
         //try spawn boss
@@ -147,6 +148,8 @@ public class WaveManager : StaticInstance<WaveManager>
         enemySpawner.SpawnEnemeis(
             enemyCollection.GetWaveOfWeight(waveWeight),
             waveDuration);
+
+        currentWaveRefrence = waveCounter;
     }
 
     /*

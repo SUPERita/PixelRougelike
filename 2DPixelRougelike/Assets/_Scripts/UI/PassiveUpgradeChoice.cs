@@ -37,6 +37,7 @@ public class PassiveUpgradeChoice : MonoBehaviour
     [SerializeField] private TextMeshProUGUI valText;
     [SerializeField] private Image iconImage;
     [SerializeField] private CostValueCompounent[] valuePerLevel;
+    [SerializeField] private bool showPrecentage = false;
     private void Start()
     {
         //if(statname == "empty") { Debug.LogError("wee woo wee woo no statName on " + gameObject.name); }
@@ -87,7 +88,8 @@ public class PassiveUpgradeChoice : MonoBehaviour
         }
         else
         {
-            valText.SetText("+" + valuePerLevel[GetCurrentLevel()-1].val+"%");
+            string _precentage = showPrecentage ? "%" : "";
+            valText.SetText("<color=green>"+"+" + valuePerLevel[GetCurrentLevel()-1].val+ _precentage + "</color>");
         }
 
         //update icon image

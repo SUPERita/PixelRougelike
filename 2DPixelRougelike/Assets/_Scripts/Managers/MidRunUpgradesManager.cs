@@ -7,6 +7,7 @@ using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
+using static UnityEngine.Rendering.DebugUI;
 
 public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
 {
@@ -62,10 +63,23 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     }
     private void SetUpChoices()
     {
+        PlayerStats _p = PlayerStatsHolder.Instance.GetPlayerStats();
         foreach (MidRunUpgradeChoice _ChoiceButton in GetComponentsInChildren<MidRunUpgradeChoice>())
         {
-            _ChoiceButton.InitializeUpgrade(StatType.Strength, 5);
-            _ChoiceButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().SetText("strength, 5");
+            int _value = 5;
+            StatType _type = StatType.MeleeDamage;
+            PlayerStat _stat = _p.GetPlayerStatRaw(_type);
+            _ChoiceButton.InitializeUpgrade(_type, _value);
+
+            string _statNumber = _value.ToString();
+            _statNumber = _value > 0 ?
+                "<color=green>" + "+" + _statNumber + "</color>" :
+                "<color=red>" + _statNumber + "</color>";
+
+            _ChoiceButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().SetText(
+                _stat.statName+
+                $"(<sprite name={_stat.statName}>) "+
+                _statNumber);
         }
     }
     private void _ChoiceButton_OnChoiceClicked(MidRunUpgradeChoice obj)
@@ -101,12 +115,12 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
         for (int i = 0; i < 3; i++)
         {
             RectTransform _r = Instantiate(PrefabStatChoice, Vector3.zero, PrefabStatChoice.transform.rotation, statChoicesRoot).GetComponent<RectTransform>();
-            _r.transform.localScale = Vector2.up;
-            _r.localPosition = i * Vector3.down * 125f;
-            _r.DOScale(Vector3.one, .45f)
-                .SetEase(Ease.OutQuint)
-                .SetUpdate(true)
-                .SetDelay(.2f *i);
+            //_r.transform.localScale = Vector2.up;
+            _r.localPosition = i * Vector3.down * 110f;
+            //_r.DOScale(Vector3.one, .45f)
+            //    .SetEase(Ease.OutQuint)
+            //    .SetUpdate(true)
+            //    .SetDelay(.2f *i);
         }
     }
 

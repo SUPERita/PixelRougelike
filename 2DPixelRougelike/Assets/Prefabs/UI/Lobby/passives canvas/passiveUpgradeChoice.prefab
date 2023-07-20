@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3811223623130006224}
   - component: {fileID: 2768549559576315873}
   - component: {fileID: 7246405895207060164}
+  - component: {fileID: 7868922961367431901}
   m_Layer: 5
   m_Name: icon
   m_TagString: Untagged
@@ -76,6 +77,21 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
+--- !u!114 &7868922961367431901
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1787611149317248693}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e19747de3f5aca642ab2be37e372fb86, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_EffectColor: {r: 1, g: 1, b: 1, a: 0.0627451}
+  m_EffectDistance: {x: 8.57, y: 14.6}
+  m_UseGraphicAlpha: 1
 --- !u!1 &2560491401716413991
 GameObject:
   m_ObjectHideFlags: 0
@@ -214,8 +230,8 @@ MonoBehaviour:
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4294953472
-  m_fontColor: {r: 0, g: 0.7904968, b: 1, a: 1}
+    rgba: 4294959994
+  m_fontColor: {r: 0.47708893, g: 0.88926584, b: 1, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -237,8 +253,8 @@ MonoBehaviour:
   m_fontWeight: 400
   m_enableAutoSizing: 1
   m_fontSizeMin: 10
-  m_fontSizeMax: 72
-  m_fontStyle: 3
+  m_fontSizeMax: 24.6
+  m_fontStyle: 1
   m_HorizontalAlignment: 4
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -657,8 +673,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: -14.9}
-  m_SizeDelta: {x: -40, y: -40}
+  m_AnchoredPosition: {x: -0.0000038146973, y: -14.378998}
+  m_SizeDelta: {x: -39.8462, y: -38.1577}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1354623115930088725
 CanvasRenderer:
@@ -889,4 +905,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dd75a0a89f6b064d97c20ac2ce790d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  personalOffset: {x: 0, y: 0, z: 0}
   choice: {fileID: 3689762090456391134}

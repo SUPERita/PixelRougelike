@@ -108,7 +108,7 @@ public class MessageBoard : StaticInstance<MessageBoard>
         Sequence _sequence = DOTween.Sequence();
         //go to middle
         _sequence.Append(_g.DOAnchorPosX(waveEndPoint.anchoredPosition.x, 2f).SetEase(waveHeaderPosCurve).OnComplete(() => {
-            _g.DOScale(.3f, .5f);
+            _g.DOScale(.2f, .5f);
         }));
         //go to end
         _sequence.Append(_g.DOAnchorPos3D(waveEndPoint.anchoredPosition, .5f).OnComplete(() => {

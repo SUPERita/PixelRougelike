@@ -101,11 +101,13 @@ public class Shop : StaticInstance<Shop>
      
     private void CreateShopCard()
     {
-        Item tmpItem = itemCollection.GetRandomItem();
-        int choosedItemPrice = Random.Range((int)tmpItem.itemPriceRange.x, (int)tmpItem.itemPriceRange.y+1);
+        Item tmpItem = itemCollection.GetRandomItemInWave(WaveManager.Instance.currentWaveRefrence);
+        float choosedItemPrice = Random.Range(tmpItem.itemBasePrice * .75f, tmpItem.itemBasePrice * 1.25f); //random number -+25%
+        choosedItemPrice *= .7f + .3f*WaveManager.Instance.currentWaveRefrence; //scale with levels
+
 
         Instantiate(itemCardPrefab, itemCardRoot)
-                    .GetComponent<ShopItemCard>().InitializeShopCard(tmpItem, this, choosedItemPrice);
+                    .GetComponent<ShopItemCard>().InitializeShopCard(tmpItem, this, (int)choosedItemPrice);
     }
 
     public void OnClickedCard(ShopItemCard _cardClicked)

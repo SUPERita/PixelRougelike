@@ -44,7 +44,7 @@ public class ShopNPC : NPC
     {
         //testtext.SetText("wave1");
         int _startAtWave = 1;
-        int _repeatEveryWave = 5;
+        int _repeatEveryWave = 2;
         if ((_waveNum - _startAtWave) % _repeatEveryWave == 0)
         {
             state = true;

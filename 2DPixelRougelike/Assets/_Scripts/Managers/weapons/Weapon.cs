@@ -116,4 +116,13 @@ public class Weapon : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, range);
     }
 
+    public string GetDescription()
+    {
+        string _out = "";
+        _out = "reload: " + reloadSpeed + "\n";
+        _out += "damage: " + damage + "\n";
+        _out += "range: " + range + "\n";
+        return _out;
+    }
+
 }
