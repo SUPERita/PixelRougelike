@@ -7,7 +7,8 @@ using Sirenix.OdinInspector;
 using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
-using static UnityEngine.Rendering.DebugUI;
+using static MidRunUpgradeCollection;
+//using static UnityEngine.Rendering.DebugUI;
 
 public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
 {
@@ -15,6 +16,7 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     [SerializeField] private RectTransform statChoicesRoot;
     [AssetsOnly] [SerializeField] private GameObject PrefabStatChoice;
     [SerializeField] private CanvasGroup canvasGroup = null;
+    [SerializeField] private MidRunUpgradeCollection midRunUpgradeCollection = null;
 
     private void Start()
     {
@@ -66,16 +68,25 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
         PlayerStats _p = PlayerStatsHolder.Instance.GetPlayerStats();
         foreach (MidRunUpgradeChoice _ChoiceButton in GetComponentsInChildren<MidRunUpgradeChoice>())
         {
-            int _value = 5;
-            StatType _type = StatType.MeleeDamage;
-            PlayerStat _stat = _p.GetPlayerStatRaw(_type);
-            _ChoiceButton.InitializeUpgrade(_type, _value);
+            StatTypeValRarityPair _choosenStat = midRunUpgradeCollection.GetRandomStatOfRandomRarity();
+            //extract values
+            int _value = _choosenStat.baseStatValue;
+            StatType _type = _choosenStat.statType;
+            Color _rarityColor = midRunUpgradeCollection.UpgradeRarityToColor(_choosenStat.rarity);
 
+            PlayerStat _stat = _p.GetPlayerStatRaw(_type);
+
+            //dk
+            _ChoiceButton.InitializeUpgrade(_type, _value);
+            _ChoiceButton.GetComponent<Image>().color = _rarityColor;
+
+            //pretify number
             string _statNumber = _value.ToString();
             _statNumber = _value > 0 ?
                 "<color=green>" + "+" + _statNumber + "</color>" :
                 "<color=red>" + _statNumber + "</color>";
 
+            //set text + icon text
             _ChoiceButton.gameObject.GetComponentInChildren<TextMeshProUGUI>().SetText(
                 _stat.statName+
                 $"(<sprite name={_stat.statName}>) "+

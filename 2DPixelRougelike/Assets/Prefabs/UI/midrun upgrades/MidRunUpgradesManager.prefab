@@ -34,7 +34,7 @@ RectTransform:
   m_Children:
   - {fileID: 2654850960269747155}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -107,6 +107,7 @@ MonoBehaviour:
   statChoicesRoot: {fileID: 2654850960269747155}
   PrefabStatChoice: {fileID: 8470420644158198164, guid: 1350cde55f50c064983bbcb94c2c041a, type: 3}
   canvasGroup: {fileID: 1977329238649135540}
+  midRunUpgradeCollection: {fileID: 11400000, guid: 1467842e58cb20d45bc882b01893ea9f, type: 2}
 --- !u!1 &5239009720069588973
 GameObject:
   m_ObjectHideFlags: 0

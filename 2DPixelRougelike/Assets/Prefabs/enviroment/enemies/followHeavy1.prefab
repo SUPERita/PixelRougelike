@@ -133,6 +133,7 @@ MonoBehaviour:
   walkAnimSpeed: 4
   walkSpeed: 4
   damage: 5
+  <enemyWeight>k__BackingField: 2
 --- !u!212 &2039940240597586629 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2791198192069608799, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}

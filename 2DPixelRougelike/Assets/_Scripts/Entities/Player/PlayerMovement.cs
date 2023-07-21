@@ -36,7 +36,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     {
         //if(!gameObject) return;
         //attack speed animator value
-        if(animator)animator.SetFloat("AttackSpeed", Mathf.Max(PlayerStatsHolder.Instance.TryGetStat(StatType.AttackSpeed),1) / 50f);
+        if(animator)animator.SetFloat("AttackSpeed", Mathf.Max(PlayerStatsHolder.Instance.TryGetStat(StatType.AttackSpeed),0) / 50f);
         playerSpeed = PlayerStatsHolder.Instance.TryGetStat(StatType.MoveSpeed) / 12f;
         if(health) health.SetMaxHealth(PlayerStatsHolder.Instance.TryGetStat(StatType.MaxHealth));
         
@@ -105,7 +105,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
             return;
         }
 
-        if(attackTriggerCollider.IsDamageablesInArea())
+        if(attackTriggerCollider.IsDamageablesInArea() && animator.GetFloat("AttackSpeed")>0)
         {
             PlayAnim("Attack1");
             return;

@@ -37,6 +37,10 @@ PrefabInstance:
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7062679113067196933, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 7062679113067196933, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: baseHealth
       value: 50
       objectReference: {fileID: 0}
@@ -134,6 +138,7 @@ MonoBehaviour:
   walkAnimSpeed: 8
   walkSpeed: 8
   damage: 5
+  <enemyWeight>k__BackingField: 1
   dashDuration: 0.5
   dashDelay: 0.5
   dashCooldown: 2

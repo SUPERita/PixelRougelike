@@ -46,13 +46,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d4787d1291c4a5745a486bda398fabea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 50
-  coolDown: 1
+  baseDamage: 2
+  coolDown: 2.5
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
   _particleSystem: {fileID: 2081911448125677841}
-  emmisionBurstCount: 20
+  emmisionBurstCount: 5
 --- !u!198 &2081911448125677841
 ParticleSystem:
   m_ObjectHideFlags: 0

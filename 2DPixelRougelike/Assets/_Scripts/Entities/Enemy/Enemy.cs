@@ -27,6 +27,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     [SerializeField] protected float walkSpeed = 4f;
     [Header("vals")]
     [SerializeField] protected int damage = 5;
+    [field: SerializeField] public int enemyWeight { get; private set; } = 1;
 
     private bool alive = true;
     private Tween _walkTween = null;

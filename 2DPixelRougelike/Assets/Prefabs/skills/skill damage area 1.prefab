@@ -44,14 +44,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ac7a94d2df7e14792520265406a68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coolDown: 0.2
+  baseDamage: 15
+  coolDown: 1
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
   damageArea: {fileID: 245409237358349679, guid: 7d3dac366e36e7e4f94bfa48b06a4067, type: 3}
-  spawnArea: {x: 0, y: 0}
-  randomSpawn: 1
-  damage: 100
-  areaLifetime: 4
   size: 1
-  dieOnHit: 1
+  numberOfAreasToSpawn: 1
+  randomSpawn: 1
+  spawnArea: {x: 0, y: 0}
+  randomVel: 0
+  spawnVel: {x: 0, y: 0}
+  burstRotation: 0

@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: EnemyCollection1_1
   m_EditorClassIdentifier: 
   <enemys>k__BackingField:
-  - <enemy>k__BackingField: {fileID: 1197131159412722117, guid: cf89873d0eeddef489c4691c29ef4de5, type: 3}
-    <enemyWeight>k__BackingField: 1
+  - <enemy>k__BackingField: {fileID: 3614468889203158128, guid: cf89873d0eeddef489c4691c29ef4de5, type: 3}
     <enemyRelativeSpawnRate>k__BackingField: 10

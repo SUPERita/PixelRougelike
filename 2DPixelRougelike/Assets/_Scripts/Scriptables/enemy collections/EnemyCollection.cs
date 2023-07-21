@@ -31,10 +31,10 @@ public class EnemyCollection : ScriptableObject
             _counter++;
             EnemyWeightPair _pair = enemysRateList[Random.Range(0, enemysRateList.Count)];
             //if "can affford" add
-            if(_leftWeight - _pair.enemyWeight >= 0)
+            if(_leftWeight - _pair.enemy.enemyWeight >= 0)
             {
-                list.Add(_pair.enemy.name);
-                _leftWeight -= _pair.enemyWeight;
+                list.Add(_pair.enemy.gameObject.name);
+                _leftWeight -= _pair.enemy.enemyWeight;
             }
 
         }
@@ -48,7 +48,7 @@ public class EnemyCollection : ScriptableObject
 [System.Serializable]
 public struct EnemyWeightPair
 {
-    [field: SerializeField] public GameObject enemy { get; private set; }
-    [field: SerializeField] public int enemyWeight { get; private set; }
+    [field: SerializeField] public Enemy enemy { get; private set; }
+    
     [field: SerializeField] public int enemyRelativeSpawnRate { get; private set; }
 }

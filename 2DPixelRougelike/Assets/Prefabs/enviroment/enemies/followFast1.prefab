@@ -56,6 +56,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 2.41
       objectReference: {fileID: 0}
+    - target: {fileID: 7062679113067196933, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
+      propertyPath: maxHealth
+      value: 30
+      objectReference: {fileID: 0}
     - target: {fileID: 7165432857041552112, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -145,6 +149,7 @@ MonoBehaviour:
   walkAnimSpeed: 8
   walkSpeed: 8
   damage: 5
+  <enemyWeight>k__BackingField: 1
 --- !u!212 &2039940240597586629 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2791198192069608799, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}

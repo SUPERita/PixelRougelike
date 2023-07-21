@@ -1,6 +1,7 @@
 using DG.Tweening;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -12,6 +13,7 @@ public class HealthDisplay : MonoBehaviour
     [SerializeField] private GameObject healthBarRoot;
     [Header("optional")]
     [SerializeField] private Image afterImage;
+    [SerializeField] private TextMeshProUGUI healthText;
 
     private void Awake()
     {
@@ -51,6 +53,9 @@ public class HealthDisplay : MonoBehaviour
         }
         
         afterImageTo = healthImage.fillAmount;
+
+        if(healthText) healthText.SetText(health.GetBaseHealth() + "\n" + health.GetCurrrentHealth());
+       
     }
 
     private float afterImageTo = 1f;

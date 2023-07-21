@@ -10593,6 +10593,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1924054390}
     m_Modifications:
+    - target: {fileID: 115368387076805576, guid: b48cd185870e6924999ef691c85370ad, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -103.990234
+      objectReference: {fileID: 0}
     - target: {fileID: 740073135529964272, guid: b48cd185870e6924999ef691c85370ad, type: 3}
       propertyPath: health
       value: 
@@ -10689,9 +10693,17 @@ PrefabInstance:
       propertyPath: m_Camera
       value: 
       objectReference: {fileID: 1687258584}
+    - target: {fileID: 4667282967796061652, guid: b48cd185870e6924999ef691c85370ad, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 85.71973
+      objectReference: {fileID: 0}
     - target: {fileID: 6684260082519871720, guid: b48cd185870e6924999ef691c85370ad, type: 3}
       propertyPath: m_Name
       value: PPCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 7842316511425528921, guid: b48cd185870e6924999ef691c85370ad, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 82.90039
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -11146,19 +11158,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[0].<waveWeight>k__BackingField
-      value: 25
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[1].<waveWeight>k__BackingField
-      value: 30
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[2].<waveWeight>k__BackingField
-      value: 35
+      value: 150
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[3].<waveWeight>k__BackingField
-      value: 40
+      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[4].<waveWeight>k__BackingField

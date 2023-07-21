@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using UnityEngine;
 using UnityEngine.UIElements;
@@ -37,6 +38,9 @@ public class Weapon : MonoBehaviour
         scanTimer -= Time.deltaTime;
         reloadTimer -= Time.deltaTime;
 
+        //recoil animation
+        transform.localPosition = Vector3.Lerp(transform.localPosition, Vector3.zero, 10f*Time.deltaTime);
+
         //try scan
         if (scanTimer < 0)
         {
@@ -51,6 +55,8 @@ public class Weapon : MonoBehaviour
         {
             reloadTimer = reloadSpeed / (PlayerStatsHolder.Instance.TryGetStat(StatType.WeaponAttackSpeed) / 100f);
             Shoot();
+            //recoil anim
+            transform.localPosition = /*Vector3.left*/-transform.right;
         }
 
         //face target
