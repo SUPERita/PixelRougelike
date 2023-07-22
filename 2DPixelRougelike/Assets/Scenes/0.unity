@@ -9821,6 +9821,18 @@ PrefabInstance:
       propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3682874322723353990, guid: 33cdb6cd360ce5148add8f9159c35963, type: 3}
+      propertyPath: _length
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327630364237204799, guid: 33cdb6cd360ce5148add8f9159c35963, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8327630364237204799, guid: 33cdb6cd360ce5148add8f9159c35963, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -8.965088
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
