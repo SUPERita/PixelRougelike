@@ -21,3 +21,25 @@ MonoBehaviour:
     <_weaponIcon>k__BackingField: {fileID: 21300000, guid: ecc8f14756019e44281bf5d1542b41da, type: 3}
   - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: a09c1d284a3ace34bbd4a91c9bb6b6e4, type: 3}
     <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 65e8281d85b7d7b489371569087a1554, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 5f816a1790cf4374b906e0c4af3a48ca, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: e185cf2b54860b349bb2ee92ccc88183, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 4593766bcf91fa04aaeaa0fcdbf4f077, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 0be48509385b7234eb839a3907e0bfa3, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 1b392e661a4975440a99958c32efd5a1, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 3ec7966ccf9901f418d9859c724d9790, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 4be491b690996c9418a7836ea9e62615, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 558b4dd53c3165049a0a1babe40d54f2, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: cc6c498408231404cac03ae76a9cba5f, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 30782550d190cc74d928bfe76b5dd14a, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: f8a261651768d8744af327e65a5b6fdd, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 7b13256f2f080414a96cd4d4cf516eb6, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: eacb2a98a9df1704a8ccf7ec25753cc8, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: f14da1a4b704e5e4089fe2a390785e40, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: ffa159d3efbd7914daea75dcf69e5d0d, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: a4b44701ee744964bb93c0558bcb9531, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 4c28eb1d8aadc804284568373cde9a8f, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: d3963f401e711f043ab8fd7b13956316, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 302142a91c8418642b09776c1e8c292c, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 191f9c5fd8f66f14390f4297f0c3ae21, type: 3}
+  - <_weapon>k__BackingField: {fileID: 3617154314903137879, guid: 5e9ddafa0cccd4245baf491448c8728c, type: 3}
+    <_weaponIcon>k__BackingField: {fileID: 21300000, guid: 13e773c5514fba64db9b50b911e5d227, type: 3}

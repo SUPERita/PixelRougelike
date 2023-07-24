@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: fiery wing
   <itemSprite>k__BackingField: {fileID: 21300000, guid: f421ad1f28247d34097f686b390a167d, type: 3}
-  <itemBasePrice>k__BackingField: 8
-  <itemMinWave>k__BackingField: 5
+  <itemBasePrice>k__BackingField: 10
+  <itemMinWave>k__BackingField: 2
   <statInstances>k__BackingField:
-  - <number>k__BackingField: 10
+  - <number>k__BackingField: 5
     <statName>k__BackingField: 2
-  - <number>k__BackingField: -10
-    <statName>k__BackingField: 8
+  - <number>k__BackingField: -3
+    <statName>k__BackingField: 7
   <itemDescription>k__BackingField: ahh it hurts, i gotta run faster

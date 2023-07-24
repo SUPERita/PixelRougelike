@@ -1,5 +1,7 @@
 using DG.Tweening;
+using Sirenix.OdinInspector;
 using System;
+using System.Security.Cryptography;
 using UnityEngine;
 using UnityEngine.UIElements;
 
@@ -18,7 +20,15 @@ public class Weapon : MonoBehaviour
     [Header("technical")]
     [SerializeField] private LayerMask scanLayer;
     [SerializeField] private bool showRange = false;
+    [SerializeField] private float extraRotface = 0f;
     //[SerializeField] private int stressTest = 1;
+    [Header("explosives")]
+    [SerializeField] bool isExplosive = false;
+    [ShowIf("@isExplosive"),SerializeField] float explosionSize = 3f;
+    [Header("Pattern")]
+    [SerializeField] int numProjectiles = 1;
+    [SerializeField] float spread = 0;
+    //[SerializeField] float explosionSize = 3f;
 
     private Collider2D[] _enemiesInRange = new Collider2D[100];//possible problem with only 100 slots
     Transform target = null;//closest enemy
@@ -68,18 +78,23 @@ public class Weapon : MonoBehaviour
 
 
     GameObject _g;
+
     public virtual void Shoot()
     {
-        //probably gonna need to use pooling in the future
-         _g = LeanPoolManager.Instance.SpawnFromPool("proj1");
-        //Instantiate(projPrefab, gunTip.position, transform.rotation)
-        _g.transform.SetPositionAndRotation(gunTip.position, transform.rotation);
-        _g.transform.localScale = Vector3.right*.4f+Vector3.up*.1f + Vector3.forward;
-           _g.GetComponent<Projectile>().InitializeProjectile(
-             damage+PlayerStatsHolder.Instance.TryGetStat(StatType.Strength) + PlayerStatsHolder.Instance.TryGetStat(StatType.WeaponDamage),
-             projSpeed,
-             (target.position - transform.position).normalized,
-             scanLayer);
+        for (int i = 0; i < numProjectiles; i++)
+        {
+            //probably gonna need to use pooling in the future
+            _g = LeanPoolManager.Instance.SpawnFromPool("proj1");
+            //Instantiate(projPrefab, gunTip.position, transform.rotation)
+            _g.transform.SetPositionAndRotation(gunTip.position, transform.rotation);
+            _g.transform.localScale = Vector3.right * .4f + Vector3.up * .1f + Vector3.forward;
+            _g.GetComponent<Projectile>().InitializeProjectile(
+              damage + PlayerStatsHolder.Instance.TryGetStat(StatType.WeaponDamage/*+ PlayerStatsHolder.Instance.TryGetStat(StatType.Strength)*/),
+              projSpeed,
+              ((target.position+Vector3.up+(spread * (Vector3) UnityEngine.Random.insideUnitCircle/*insideUnitSphere*/) ) - (transform.position)).normalized,
+              scanLayer);
+
+        }
     }
 
     //utils
@@ -88,7 +103,7 @@ public class Weapon : MonoBehaviour
         //transform.LookAt(target.position, Vector3.forward);
 
         Vector3 vectorToTarget = target.transform.position - transform.position;
-        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - 25f;
+        float angle = Mathf.Atan2(vectorToTarget.y, vectorToTarget.x) * Mathf.Rad2Deg - (extraRotface+45f);
         Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
         transform.rotation = q;
     }

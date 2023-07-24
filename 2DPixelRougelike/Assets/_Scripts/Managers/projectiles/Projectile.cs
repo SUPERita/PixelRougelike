@@ -10,8 +10,9 @@ public class Projectile : MonoBehaviour
     private int damage = 0;
     private LayerMask collisionLayer;
 
-    public void InitializeProjectile(int _damage, float velocity, Vector3 direction, LayerMask _collisionLayer, float projLifetime = 3f)
+    public Projectile InitializeProjectile(int _damage, float velocity, Vector3 direction, LayerMask _collisionLayer, float projLifetime = 3f)
     {
+        //if(direction == Vector3.zero) { direction = Vector3.one; }
         //Debug.Log("alive");
         damage = _damage;
         rb.velocity = direction * velocity;
@@ -24,6 +25,8 @@ public class Projectile : MonoBehaviour
 
         collisionLayer = _collisionLayer;
         Invoke(nameof(KillProjectile), projLifetime);
+
+        return this;
 
     }
 

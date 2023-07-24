@@ -99,6 +99,7 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     public void TakeDamage(int _val)
     {
         if(!alive) return;
+        if(_val < 0) _val = 0; ;
 
         //sfx
         AudioSystem.Instance.PlaySound("s3");

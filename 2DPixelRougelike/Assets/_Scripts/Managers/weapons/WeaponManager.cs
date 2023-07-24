@@ -52,4 +52,9 @@ public class WeaponManager : StaticInstance<WeaponManager>
         }
         
     }
+    public void Test_ClearWeaponSockets()
+    {
+        weapons = new List<Weapon>();
+        SpawnWeapons();
+    }
 }
