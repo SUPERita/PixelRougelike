@@ -102,7 +102,8 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         if(_val < 0) _val = 0; ;
 
         //sfx
-        AudioSystem.Instance.PlaySound("s3");
+        if (Random.value > .5) AudioSystem.Instance.PlaySound("hit_thud1", .2f);
+        else  AudioSystem.Instance.PlaySound("hit_thud2", .2f);
 
         //squach and stretch
         if(hitFeedback != null) { hitFeedback?.PlayFeedbacks();}

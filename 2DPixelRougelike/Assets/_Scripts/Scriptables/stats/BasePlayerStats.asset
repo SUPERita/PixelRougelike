@@ -431,7 +431,7 @@ MonoBehaviour:
       Data: skill cooldown
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 100
+      Data: 200
     - Name: <description>k__BackingField
       Entry: 1
       Data: faster reload time of skills

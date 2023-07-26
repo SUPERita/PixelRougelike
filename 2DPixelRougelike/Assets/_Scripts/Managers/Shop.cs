@@ -75,6 +75,8 @@ public class Shop : StaticInstance<Shop>
         //if has enougth money
         if (ResourceSystem.Instance.HasEnougthResources(ResourceType.Gold, currentRerollcost))
         {
+            AudioSystem.Instance.PlaySound("pickup_gling", .75f);
+
             //take gold
             ResourceSystem.Instance.TakeResourceAmount(ResourceType.Gold, currentRerollcost);
 
@@ -82,7 +84,7 @@ public class Shop : StaticInstance<Shop>
             currentRerollcost += 5;
             rerollCostText.SetText("" + currentRerollcost);
             RefreshShopCards();
-        } else { Debug.LogError("too poor"); }
+        } else { Debug.LogError("too poor"); AudioSystem.Instance.PlaySound("error_buzz", .75f); }
         
     }
 
@@ -117,6 +119,8 @@ public class Shop : StaticInstance<Shop>
         //if has enougth gold
         if (ResourceSystem.Instance.HasEnougthResources(ResourceType.Gold, _cardClicked.price))
         {
+            AudioSystem.Instance.PlaySound("pickup_gling", .75f);
+
             //take gold
             ResourceSystem.Instance.TakeResourceAmount(ResourceType.Gold, _cardClicked.price);
 
@@ -146,7 +150,7 @@ public class Shop : StaticInstance<Shop>
             }
             
         }
-        else { Debug.LogError("too poor"); }
+        else { Debug.LogError("too poor"); AudioSystem.Instance.PlaySound("error_buzz", .75f); }
         RefreshItemDisplay();
 
     }

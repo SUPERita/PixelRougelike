@@ -25,6 +25,7 @@ public class LockedSubButton : SubButton
             ResourceSystem.Instance.TakeResourceAmount(ResourceType.EnergyNugget, _value2);
             SetIsUnlocked(true);
             SetVisual(true);
+            AudioSystem.Instance.PlaySound("reward_vibrato", .75f);
             base.Button_OnClick();
         } else
         {

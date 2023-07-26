@@ -50,6 +50,8 @@ public class StartDoor : MonoBehaviour, IInteractible
         if (!working) { return; }
         sr.sprite = open;
         openParticles.Play();
+
+        AudioSystem.Instance.PlaySound("door_open", .75f);
     }
 
     public void OnExitRange()
@@ -57,6 +59,7 @@ public class StartDoor : MonoBehaviour, IInteractible
         if (!working) { return; }
         sr.sprite = close;
         openParticles.Stop();
+        AudioSystem.Instance.PlaySound("squeak", .75f);
     }
 
     public void OnInteract()

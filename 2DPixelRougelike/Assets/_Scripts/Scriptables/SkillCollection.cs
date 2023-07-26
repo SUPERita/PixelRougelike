@@ -42,6 +42,6 @@ public struct SkillNamePair
     [field:SerializeField] public string _skillName { get; private set; }
     [field: SerializeField] public Skill _skill { get; private set; }
     [field: SerializeField] public int _skillCost { get; private set; }
-    [field: SerializeField, PreviewField] public Sprite _skillIcon { get; private set; }
     [field: SerializeField] public string _skillDesctiption { get; private set; }
+    [field: SerializeField, PreviewField] public Sprite _skillIcon { get; private set; }
 }

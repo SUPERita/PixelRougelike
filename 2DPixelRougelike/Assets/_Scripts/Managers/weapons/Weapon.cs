@@ -16,6 +16,7 @@ public class Weapon : MonoBehaviour
     private float reloadTimer = 0f;  
     [SerializeField] private float projSpeed = 10f;
     [SerializeField] private Transform gunTip = null;
+    [SerializeField] private string shotSFXname = "gun_shot1";
 
     [Header("technical")]
     [SerializeField] private LayerMask scanLayer;
@@ -81,6 +82,7 @@ public class Weapon : MonoBehaviour
 
     public virtual void Shoot()
     {
+        AudioSystem.Instance.PlaySound(shotSFXname, .05f);
         for (int i = 0; i < numProjectiles; i++)
         {
             //probably gonna need to use pooling in the future

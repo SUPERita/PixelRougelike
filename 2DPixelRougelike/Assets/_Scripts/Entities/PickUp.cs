@@ -46,8 +46,17 @@ public class PickUp : MonoBehaviour, IPoolable
     protected virtual void OnCollect()
     {
         //Debug.Log("1");
-        AudioSystem.Instance.PlaySound("Beep3", .2f);
-        if(resourceType == ResourceType.EnergyNugget) XPManager.Instance.AddXP(50);
+        if (resourceType == ResourceType.EnergyNugget) 
+        { 
+            XPManager.Instance.AddXP(50); 
+            if(Random.value > .5f) AudioSystem.Instance.PlaySound("pickup_energy1", .5f);
+            else AudioSystem.Instance.PlaySound("pickup_energy2", .5f);
+
+        }
+        else
+        {
+            AudioSystem.Instance.PlaySound("pickup_gling", .5f);
+        }
 
         ResourceSystem.Instance.AddResourceAmount(resourceType, amount);
     }

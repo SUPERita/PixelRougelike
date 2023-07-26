@@ -32,7 +32,7 @@ public class AudioSystem : Singleton<AudioSystem> {
 
     [HorizontalGroup("a")]
     [Button]
-    public void PlaySound(string _clipName, float _vol = .5f/*parameters control*/)
+    public void PlaySound(string _clipName, float _vol = .5f, float _pitch = 1f/*parameters control*/)
     {
         //find available source
         AudioSource _a = FindAvailableSource();
@@ -45,6 +45,7 @@ public class AudioSystem : Singleton<AudioSystem> {
 
         //load parameters
         _a.volume = _vol;
+        _a.pitch = _pitch;
 
         //Play?
         _a.Play();

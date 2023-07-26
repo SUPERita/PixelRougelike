@@ -30,6 +30,8 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     [Button]
     public void OpenStatChoice()
     {
+        AudioSystem.Instance.PlaySound("levelup_vibrato", .75f);
+        
         GameStateManager.Instance.SetState(GameState.MidRunUpgrades);
         //fade in
         Time.timeScale = 0f;
@@ -65,6 +67,7 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     }
     private void SetUpChoices()
     {
+
         PlayerStats _p = PlayerStatsHolder.Instance.GetPlayerStats();
         foreach (MidRunUpgradeChoice _ChoiceButton in GetComponentsInChildren<MidRunUpgradeChoice>())
         {

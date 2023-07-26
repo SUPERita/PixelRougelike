@@ -18,7 +18,10 @@ public class SelectionIndicator : StaticInstance<SelectionIndicator>
         selectedObject = EventSystem.current.currentSelectedGameObject;
 
         //on switch sfx
-        if(selectedObject != lastSelectedObject) { AudioSystem.Instance.PlaySound("s1"); }
+        if(selectedObject != lastSelectedObject) {
+            if(Random.value > .5f) AudioSystem.Instance.PlaySound("click1", .5f, 1f);
+            else AudioSystem.Instance.PlaySound("click1", .5f, 1.1f);
+        }
         lastSelectedObject = selectedObject;
 
         if (selectedObject != null && selectedObject.GetComponent<Selectable>().IsInteractable())
