@@ -9243,9 +9243,9 @@ Transform:
   - {fileID: 281779924}
   - {fileID: 116296804}
   - {fileID: 1311933805}
+  - {fileID: 390598290}
   - {fileID: 533701718}
   - {fileID: 1124063283}
-  - {fileID: 390598290}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -11753,6 +11753,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4310170904759053980, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4401472112836775656, guid: 14f1a086a92e9d8469b947777301241d, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -12137,20 +12141,36 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: startWave
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: enemySpawner
       value: 
       objectReference: {fileID: 1497951773}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: waveDuration
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: objectSpawner
       value: 
       objectReference: {fileID: 378952213}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: delayBetweenWaves
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
+      propertyPath: useStartWaveIndex
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[0].<waveWeight>k__BackingField
-      value: 500
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: waves.Array.data[1].<waveWeight>k__BackingField
-      value: 600
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 6199441990710129385, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: m_Name

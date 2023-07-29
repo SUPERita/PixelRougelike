@@ -47,6 +47,10 @@ public class NPC : MonoBehaviour, IInteractible
     {
         //GetComponent<SpriteRenderer>().color = Color.white;
         // Get the current material of the renderer
+        if (this == null) {
+            Debug.Log("----here------------");
+            return; 
+        }
         Material material = GetComponent<SpriteRenderer>().material;
         material.SetFloat("_OutlineAlpha", 0);
         // Set the new value for outbase_on directly on the material

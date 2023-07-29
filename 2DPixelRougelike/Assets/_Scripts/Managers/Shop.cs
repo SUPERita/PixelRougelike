@@ -57,6 +57,10 @@ public class Shop : StaticInstance<Shop>
 
         // set selected
         EventSystem.current.SetSelectedGameObject(rerollCostText.GetComponentInParent<Button>().gameObject);
+
+        //statr shop music
+        
+        MusicStarter.Instance.PlayShopMusic();
     }
 
 
@@ -166,6 +170,9 @@ public class Shop : StaticInstance<Shop>
         Helpers.DestroyChildren(itemCardRoot);
         Time.timeScale = 1f;
         Helpers.ToggleCanvas(canvasGroup, false);
+
+        // music
+        MusicStarter.Instance.ReturnToCurrentMusic();
     }
 
 

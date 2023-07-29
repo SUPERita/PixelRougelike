@@ -99,7 +99,7 @@ GameObject:
   - component: {fileID: 3574269035919762620}
   - component: {fileID: 1778177230848727204}
   m_Layer: 3
-  m_Name: boss Dasher_ol
+  m_Name: boss Dasher_old
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

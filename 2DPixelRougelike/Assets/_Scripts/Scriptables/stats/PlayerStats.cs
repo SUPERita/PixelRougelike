@@ -116,17 +116,15 @@ public enum StatType
     SkillCap = 4,
     SkillDamage = 5,
     WeaponDamage = 6,
-
-    
     Dodge = 7,//cap at 40
     Armor = 8,//cap at 40
     XPGain = 9,
-    MoneyGain = 10,//half implemented
+    MoneyGain = 10,//half implemented still need to be added to chest rewards and stuff planned for the future
     WeaponAttackSpeed = 11,
     SkillCooldown = 12,
     MeleeDamage = 13,
     PickUpRange = 14,
-    SkillProj = 15
-
+    SkillProj = 15,
+    HealthRegen = 16//new
 
 }

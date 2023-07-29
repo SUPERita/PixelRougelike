@@ -72,6 +72,12 @@ public static class Helpers
         yield return new WaitForSeconds(time);
         _A.Invoke();
     }
+    public static IEnumerator DoNextFrame(UnityAction _A)
+    {
+        Debug.Log("triple check this works good");
+        yield return new WaitForEndOfFrame();
+        _A.Invoke();
+    }
 
     public static int FilterLetters(string input)
     {

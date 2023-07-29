@@ -139,7 +139,7 @@ MonoBehaviour:
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
   dieKnockSpeed: 10
   walkAnimSpeed: 8
-  walkSpeed: 8
+  walkSpeed: 10
   damage: 5
   <enemyWeight>k__BackingField: 2
 --- !u!212 &2039940240597586629 stripped

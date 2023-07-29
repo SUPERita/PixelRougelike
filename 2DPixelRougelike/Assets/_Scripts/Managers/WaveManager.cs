@@ -30,6 +30,10 @@ public class WaveManager : StaticInstance<WaveManager>
     [Header("Object")]
     [SerializeField] private ObjectWavePair[] objectWavePairs = null;
 
+    [Header("testing (only works in editor)")]
+    [SerializeField] private bool useStartWaveIndex = false;
+    [SerializeField, ShowIf("@useStartWaveIndex"), Tooltip("starts from one"), Range(1,30)] private int startWave = 1;
+
     private bool GetBossAtWave(int _waveIndex, out GameObject _prefab)
     {
         foreach (var pair in bossWavePairs) 
@@ -70,7 +74,10 @@ public class WaveManager : StaticInstance<WaveManager>
     {
         //regular waves
         int waveCounter = 0;
-        foreach (var wave in waves)
+#if UNITY_EDITOR
+        if (useStartWaveIndex) { waveCounter = startWave-1; }
+#endif
+        for (int _index = waveCounter; _index < waves.Length; _index++)
         {
             //increment
             waveCounter++;
@@ -80,12 +87,28 @@ public class WaveManager : StaticInstance<WaveManager>
             OnWaveStart?.Invoke(waveCounter);//notify on wave start
 
             //spawn stuff
-            SpawnEntitiesOfWave(waveCounter, wave.enemyCollection, wave.waveWeight);
+            SpawnEntitiesOfWave(waveCounter, waves[_index].enemyCollection, waves[_index].waveWeight);
 
             //wait for next wave
             yield return new WaitForSeconds(waveDuration + delayBetweenWaves);
-
         }
+
+        //foreach (var wave in waves)
+        //{
+        //    //increment
+        //    waveCounter++;
+
+        //    //wave notifcation
+        //    MessageBoard.Instance.SpawnWaveHeader($"wave - {waveCounter}");
+        //    OnWaveStart?.Invoke(waveCounter);//notify on wave start
+
+        //    //spawn stuff
+        //    SpawnEntitiesOfWave(waveCounter, wave.enemyCollection, wave.waveWeight);
+
+        //    //wait for next wave
+        //    yield return new WaitForSeconds(waveDuration + delayBetweenWaves);
+
+        //}
 
         //finish level
         MessageBoard.Instance.SpawnHeader("Room ANNIHILATED!!!");
@@ -186,20 +209,20 @@ public class WaveManager : StaticInstance<WaveManager>
 [System.Serializable]
 public struct WaveWeightPair
 {
-    [field: SerializeField, InlineEditor] public EnemyCollection enemyCollection { get; private set; }
-    [field: SerializeField] public int waveWeight { get; private set; }
+    [field: SerializeField, InlineEditor, HorizontalGroup("a"),LabelWidth(250)] public EnemyCollection enemyCollection { get; private set; }
+    [field: SerializeField, HorizontalGroup("a"), LabelWidth(50)] public int waveWeight { get; private set; }
 }
 
 [System.Serializable]
 public struct BossWavePair
 {
-    [field: SerializeField] public GameObject bossPrefab { get; private set; }
-    [field: SerializeField] public int spawnAtWave { get; private set; }
+    [field: SerializeField, HorizontalGroup("a"), LabelWidth(75)] public GameObject bossPrefab { get; private set; }
+    [field: SerializeField, HorizontalGroup("a"), LabelWidth(75)] public int spawnAtWave { get; private set; }
 }
 
 [System.Serializable]
 public struct ObjectWavePair
 {
-    [field: SerializeField] public GameObject[] objectPrefabs { get; private set; }
-    [field: SerializeField] public int spawnAtWave { get; private set; }
+    [field: SerializeField,HorizontalGroup("a"), LabelWidth(250)] public GameObject[] objectPrefabs { get; private set; }
+    [field: SerializeField, HorizontalGroup("a"), LabelWidth(75)] public int spawnAtWave { get; private set; }
 }

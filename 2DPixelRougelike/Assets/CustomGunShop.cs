@@ -13,7 +13,7 @@ public class CustomGunShop : MonoBehaviour, SubButtonListener
 
     public void OnClicked(SubButton _button)
     {
-        WeaponManager.Instance.AddWeapon((Weapon)_button.behav1);
+        WeaponManager.Instance.TryAddWeapon((Weapon)_button.behav1);
     }
 
     public void ToggleCanvas()

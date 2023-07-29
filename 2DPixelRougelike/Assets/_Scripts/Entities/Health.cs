@@ -73,7 +73,38 @@ public class Health : MonoBehaviour
         if (currentHealth == 0) { OnDie?.Invoke(); }
 
     }
+    public void HealHealth(int _amt)
+    {
+        if (currentHealth == 0) { return; }
+        if(currentHealth == maxHealth) { return; }
+        if(_amt <= 0) { return; }
 
+        //take baseDamage
+        currentHealth += _amt;
+        if (currentHealth > maxHealth) { currentHealth = maxHealth; }
+
+        //invoke take baseDamage
+        OnHealthChanged?.Invoke(_amt);
+
+
+        //spawn baseDamage numver
+        if (showDmgText && SettingsCanvas.Instance.showDamageNumbers/*future removeable*/)
+        {
+            SharedCanvas s = SharedCanvas.Instance;
+
+            tmpTextObject = LeanPoolManager.Instance.SpawnFromPool("dmgText").transform; // GetPoolObject(s.transform); // in task manager ram build up really slow
+            LeanPoolManager.Instance.DespawnFromPool(tmpTextObject.gameObject, 1);//tmpTextObject.gameObject.GetComponent<DamageText>().CallReleaseToPool(1f);
+            tmpTextObject.SetParent(s.transform);
+
+            tmpTextObject.position = transform.position;
+            tmpTextObject.GetComponent<TextMeshProUGUI>().SetText(_amt.ToString());
+            tmpTextObject.GetComponent<TextMeshProUGUI>().color = Color.green;
+            //?
+            tmpTextObject.gameObject.GetComponent<DamageText>().DOStartTween(false);
+
+
+        }
+    }
     /*
     private Transform InstantiateDamageNumber(Transform _parent)
     {

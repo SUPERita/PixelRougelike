@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1960680898846433662}
   - component: {fileID: 6061889069526506710}
   m_Layer: 0
-  m_Name: skill damage area 3
+  m_Name: skill damage area poisen gas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,7 +53,7 @@ MonoBehaviour:
   size: 1
   numberOfAreasToSpawn: 1
   randomSpawn: 1
-  spawnArea: {x: 1, y: 1}
+  spawnArea: {x: 5, y: 5}
   randomVel: 0
   spawnVel: {x: 0, y: 0}
   burstRotation: 0

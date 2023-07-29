@@ -36,14 +36,19 @@ public class DamageText : MonoBehaviour
 
     }
 
-    public void DOStartTween()
+    public void DOStartTween(bool _moveRandom = true)
     {
         //transform.position = transform.position - Vector3.up;
         transform.localScale = Vector3.one;
         //transform.position = Vector3.one * 50f;
 
         //??!>!?!
-        moveTween.ChangeEndValue(GetRandomRelativePosition(), true);
+        if(_moveRandom) { 
+            moveTween.ChangeEndValue(GetRandomRelativePosition(), true);
+        } else
+        {
+            moveTween.ChangeEndValue(transform.position+Vector3.up*1.5f, true);
+        }
 
         moveTween.Restart();
         scaleDownTween.Restart();

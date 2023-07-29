@@ -57,12 +57,16 @@ public class WeaponChoice : StaticInstance<WeaponChoice>, SubButtonListener
     public void OnClicked(SubButton _button)
     {
         Debug.Log("weird stuff around here");
-        WeaponManager.Instance.AddWeapon((Weapon)_button.behav1);
+        WeaponManager.Instance.TryAddWeapon((Weapon)_button.behav1);
 
         CloseCanvas();
     }
     //exit
 
+    public void DismissChoice()
+    {
+        CloseCanvas();
+    }
     private void CloseCanvas()
     {
         GameStateManager.Instance.ReturnToBaseState();

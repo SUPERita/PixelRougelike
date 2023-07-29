@@ -28,12 +28,12 @@ MonoBehaviour:
     <_skillCost>k__BackingField: 40
     <_skillDesctiption>k__BackingField: 
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 9f3365b9cd43ae245856587a9c6dc5b0, type: 3}
-  - <_skillName>k__BackingField: da1
+  - <_skillName>k__BackingField: mines
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 72767499be6a5784fb63e22cbb7f6aff, type: 3}
     <_skillCost>k__BackingField: 80
     <_skillDesctiption>k__BackingField: 
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 4404383d6c9e36c4ba378ddfe6e6ab00, type: 3}
-  - <_skillName>k__BackingField: da2
+  - <_skillName>k__BackingField: rocks
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
     <_skillCost>k__BackingField: 160
     <_skillDesctiption>k__BackingField: 
@@ -63,11 +63,11 @@ MonoBehaviour:
     <_skillCost>k__BackingField: 5120
     <_skillDesctiption>k__BackingField: 
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: fae1e53bf830fbb49af6710d3874f322, type: 3}
-  - <_skillName>k__BackingField: da3
+  - <_skillName>k__BackingField: poisen gas
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 665e950bc4f67a74da149acddb00f1be, type: 3}
     <_skillCost>k__BackingField: 10240
     <_skillDesctiption>k__BackingField: 
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 5727348f573310543b6105f7371faf1f, type: 3}
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 7a3efdc9e204b4944972a8509c598297, type: 3}
   - <_skillName>k__BackingField: explosion
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 13dbc118580d27540b70c44524e64735, type: 3}
     <_skillCost>k__BackingField: 20480

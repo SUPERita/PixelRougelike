@@ -38,10 +38,22 @@ public class WeaponManager : StaticInstance<WeaponManager>
         }
     }
 
-    public void AddWeapon(Weapon weapon)
+    public bool TryAddWeapon(Weapon weapon)
     {
+        if (HasMaxWeapons())
+        {
+            return false;
+        }
         weapons.Add(weapon);
         SpawnWeapons();
+
+        return true;
+
+    }
+
+    private bool HasMaxWeapons()
+    {
+        return weapons.Count >= weaponSockets.Count;
     }
 
     private void ClearWeaponSockets()

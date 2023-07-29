@@ -13,8 +13,10 @@ GameObject:
   - component: {fileID: 196636386517928491}
   - component: {fileID: 245409237358349679}
   - component: {fileID: 4927671672148718477}
+  - component: {fileID: 2647254600056786956}
+  - component: {fileID: 4831872312522637800}
   m_Layer: 0
-  m_Name: damage area 3
+  m_Name: damage area poisen
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -114,6 +116,7 @@ MonoBehaviour:
   collider: {fileID: 4102959277510097323}
   dieOnHit: 0
   areaLifetime: 3
+  areaDestroySpeed: 0.25
 --- !u!114 &4927671672148718477
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -128,6 +131,35 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   c: {fileID: 4102959277510097323}
   flickerSpeed: 0.3
+--- !u!114 &2647254600056786956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157316171632934052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9daea3b28468064b98eb23fac2de385, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startSize: 0
+  finalSize: 1
+  scalingTime: 0.5
+--- !u!114 &4831872312522637800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2157316171632934052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76e8ddd52ed555f4da0588c76cc4cc6f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  finalRotationEuler: {x: 0, y: 0, z: 360}
+  rotateTime: 5
 --- !u!1 &5706272218314144782
 GameObject:
   m_ObjectHideFlags: 0
@@ -153,8 +185,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5706272218314144782}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.71, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 7311845047033350913}
@@ -201,8 +233,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: bd6f48b4407043345b1a3a07df8c4d61, type: 3}
-  m_Color: {r: 1, g: 0.5470244, b: 0, a: 1}
+  m_Sprite: {fileID: 21300000, guid: a622c6c2a10d84248b50715fd2fd200c, type: 3}
+  m_Color: {r: 0.5, g: 1, b: 0, a: 0.38431373}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

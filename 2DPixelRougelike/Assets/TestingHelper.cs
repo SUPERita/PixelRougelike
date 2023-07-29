@@ -5,6 +5,17 @@ using UnityEngine;
 public class TestingHelper : MonoBehaviour
 {
     [SerializeField] private RectTransform root = null;
+    private void Start()
+    {
+#if !UNITY_EDITOR
+        gameObject.SetActive(false);
+        return;
+#else 
+        gameObject.SetActive(true);
+        return;
+#endif 
+        
+    }
     public void AddLevel()
     {
         XPManager.Instance.AddXP(100000);

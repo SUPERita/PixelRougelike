@@ -62,7 +62,7 @@ public class AudioSystem : Singleton<AudioSystem> {
 
         musicSource.DOKill();
         //fade out, switch, fade in
-        musicSource.DOFade(0f, .5f)
+        musicSource.DOFade(0f, .5f).SetUpdate(true)
             .OnComplete(() =>
             {
                 // Switch to the new audio clip
@@ -70,9 +70,8 @@ public class AudioSystem : Singleton<AudioSystem> {
                 musicSource.Play();
 
                 // Fade in the new audio clip after a delay
-                musicSource.DOFade(1f, .5f);
+                musicSource.DOFade(1f, .5f).SetUpdate(true);
             });
-
         /*
         if (musicSource.isPlaying)
         {

@@ -1455,7 +1455,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
+    enabled: 1
     mode: 1
     timeMode: 0
     fps: 30
@@ -1574,7 +1574,7 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 21300000, guid: 6abdc0c96352cd246a5a718fb8a92c5a, type: 3}
+    - sprite: {fileID: 21300000, guid: 7b2107daf53cca74a8a166fd16807033, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:

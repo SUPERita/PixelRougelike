@@ -116,6 +116,7 @@ public class MessageBoard : StaticInstance<MessageBoard>
             currentWaveHeader = _g.gameObject;
         }));
         //commit
+        //_sequence.SetUpdate(true);
         _sequence.Play();
 
         //messaging

@@ -36,11 +36,15 @@ public class InteractionHandler : MonoBehaviour
     private void SearchLoop()
     {
         currentInteractible = GetClosestInteractible();
-
+        //Debug.Log(currentInteractible == null);
         //handle switches 
         if (lastInteractible != currentInteractible)
         {
-            lastInteractible?.OnExitRange();
+            if (lastInteractible != null)//!
+            {
+                lastInteractible?.OnExitRange();//can be null if not checked, if it throws an error then bad stuff happend
+            }
+            
             if (currentInteractible != null)
             {
                 //promptText.text = "";
