@@ -149,4 +149,9 @@ public class Health : MonoBehaviour
         if(_heal) currentHealth = maxHealth;
         OnHealthChanged?.Invoke(_arg);
     }
+
+    public bool IsFullHealth()
+    {
+        return currentHealth == maxHealth;
+    }
 }

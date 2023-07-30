@@ -37,8 +37,9 @@ public class StatsDisplay : MonoBehaviour
     private void PopulateRoot()
     {
         int _counter  = 0;
+        PlayerStats _p = PlayerStatsHolder.Instance.GetPlayerStats();
         //Debug.Log("root populated");
-        foreach (KeyValuePair<StatType, PlayerStat> _stat in PlayerStatsHolder.Instance.GetPlayerStats().GetRawStats())
+        foreach (KeyValuePair<StatType, PlayerStat> _stat in _p.GetRawStats())
         {
             if (!_stat.Value.showInDisplay) { continue; }
 
@@ -47,7 +48,10 @@ public class StatsDisplay : MonoBehaviour
 
             //}
             GameObject _g = Instantiate(prefabSingleStat, root);
-            _g.GetComponentInChildren<TextMeshProUGUI>().SetText(_stat.Value.statName + ": " + _stat.Value.value);
+            string _coloredValue = _stat.Value.value >= _p.StatDisplay_GetBaseStat(_stat.Key) ?
+                $"<color=green> {_stat.Value.value} </color>" :
+                $"<color=red> {_stat.Value.value} </color>";
+            _g.GetComponentInChildren<TextMeshProUGUI>().SetText(_stat.Value.statName + ": " + _coloredValue);
             _g.GetComponentInChildren<Image>().sprite = _stat.Value.icon;
             _g.GetComponent<StatDisplaySelectionTooltip>().SetTooltip(_stat.Value.description);
             _counter++;

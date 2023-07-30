@@ -81,6 +81,11 @@ public class PlayerStats : SerializedScriptableObject
         return basePlayerStats.GetBaseStatsForValidation().ContainsKey(_statName);
     }
 
+    public int StatDisplay_GetBaseStat(StatType _statname)
+    {
+        return basePlayerStats.GetBaseStat(_statname);
+    }
+
 
 }
 

@@ -116,6 +116,11 @@ public class BasePlayerStats : SerializedScriptableObject
     {
         return baseStats;
     }
+
+    public int GetBaseStat(StatType _statName)
+    {
+        return baseStats[_statName].value;
+    }
 }
 
 [Serializable]

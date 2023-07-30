@@ -9,8 +9,11 @@ public class Food : MonoBehaviour
     {
         if (collision.TryGetComponent(out PlayerMovement _out))
         {
-            _out.gameObject.GetComponent<Health>().HealHealth(healingAmount);
-            Destroy(gameObject);
+            if (!_out.gameObject.GetComponent<Health>().IsFullHealth())
+            {
+                _out.gameObject.GetComponent<Health>().HealHealth(healingAmount);
+                Destroy(gameObject);
+            }
         }
     }
 }

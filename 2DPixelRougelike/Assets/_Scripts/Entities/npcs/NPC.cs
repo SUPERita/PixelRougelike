@@ -1,4 +1,5 @@
 using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -11,6 +12,10 @@ public class NPC : MonoBehaviour, IInteractible
 
     public bool prompRefreshRequest { get; set; } = false;
     [field: SerializeField] public KeyCode InteractionKey { get; set; } = KeyCode.E;
+
+    public event Action OnInteractNotify;
+    public event Action OnExitNotify;
+    public event Action OnEnterNotify;
     protected virtual void Start()
     {
         startScale = transform.localScale;
@@ -26,6 +31,8 @@ public class NPC : MonoBehaviour, IInteractible
         //Vector2 startScale = transform.localScale;
         AudioSystem.Instance.PlaySound("s2");
         transform.DOShakeScale(.2f,.25f,1).SetUpdate(true).OnComplete(()=>transform.localScale = startScale);
+
+        OnInteractNotify?.Invoke();
     }
 
     public virtual void OnStopInteract()
@@ -35,12 +42,14 @@ public class NPC : MonoBehaviour, IInteractible
 
     public virtual void OnEnterRange()
     {
+        OnEnterNotify?.Invoke();
         // Get the current material of the renderer
         Material material = GetComponent<SpriteRenderer>().material;
 
         // Set the new value for outbase_on directly on the material
         material.SetFloat("_OutlineAlpha", 1);
         //material.EnabledKeyword("OUTBASE_ON");
+
     }
 
     public virtual void OnExitRange()
@@ -51,6 +60,8 @@ public class NPC : MonoBehaviour, IInteractible
             Debug.Log("----here------------");
             return; 
         }
+
+        OnExitNotify?.Invoke();
         Material material = GetComponent<SpriteRenderer>().material;
         material.SetFloat("_OutlineAlpha", 0);
         // Set the new value for outbase_on directly on the material
