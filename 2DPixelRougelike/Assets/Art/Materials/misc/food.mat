@@ -235,14 +235,14 @@ Material:
     - _OnlyInnerOutline: 0
     - _OnlyOutline: 0
     - _OutlineAlpha: 1
-    - _OutlineDistortAmount: 0.13
+    - _OutlineDistortAmount: 0.02
     - _OutlineDistortTexXSpeed: 5.7
     - _OutlineDistortTexYSpeed: 5
-    - _OutlineGlow: 1.7
+    - _OutlineGlow: 2.2
     - _OutlinePixelWidth: 1
     - _OutlineTexXSpeed: 16.8
     - _OutlineTexYSpeed: 8.7
-    - _OutlineWidth: 0.005
+    - _OutlineWidth: 0.006
     - _OverlayBlend: 1
     - _OverlayGlow: 1
     - _Parallax: 0.005

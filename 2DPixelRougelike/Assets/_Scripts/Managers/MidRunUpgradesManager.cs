@@ -129,12 +129,6 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
         for (int i = 0; i < 3; i++)
         {
             RectTransform _r = Instantiate(PrefabStatChoice, Vector3.zero, PrefabStatChoice.transform.rotation, statChoicesRoot).GetComponent<RectTransform>();
-            //_r.transform.localScale = Vector2.up;
-            _r.localPosition = i * Vector3.down * 110f;
-            //_r.DOScale(Vector3.one, .45f)
-            //    .SetEase(Ease.OutQuint)
-            //    .SetUpdate(true)
-            //    .SetDelay(.2f *i);
         }
     }
 

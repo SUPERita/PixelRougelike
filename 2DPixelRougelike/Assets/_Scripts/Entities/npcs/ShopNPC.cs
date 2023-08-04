@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 
-public class ShopNPC : NPC
+public class ShopNPC : NPC, WaypointTarget
 {
     //[Header("ShopNPC")]
     //[SerializeField] private string offPrompt = "not working :(";
@@ -74,7 +74,15 @@ public class ShopNPC : NPC
     //}
     //private void OnDestroy() => waveManager.OnWaveStart -= WaveManager_OnWaveStart;
 
+    protected override void Start()
+    {
+        base.Start();
+        WaypointIndicatorManager.Instance.SummonWaypointIndicator(this);
+    }
+    public Transform GetTargetTransform()
+    {
+        return transform;
+    }
 
-   
 
 }

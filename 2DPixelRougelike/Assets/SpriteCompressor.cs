@@ -53,7 +53,7 @@ public class SpriteCompressor : MonoBehaviour
         packedTexture.Apply();
 
         // Save the packed texture as an asset
-        string outputPath = "Assets/Art/stat icons/_PackedTexture.png"; // Adjust the save path as needed
+        string outputPath = $"Assets/Art/icons{Random.Range(0, 10000)}/_PackedMatTexture.png"; // Adjust the save path as needed
         byte[] bytes = packedTexture.EncodeToPNG();
         File.WriteAllBytes(outputPath, bytes);
         AssetDatabase.Refresh();

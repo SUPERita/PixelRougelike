@@ -65,7 +65,7 @@ public class MidRunUpgradeCollection : ScriptableObject
             _u = MidRunUpgradeRarity.Legendary;
         }
 
-        MessageBoard.Instance.SpawnMessage(_f + "%/100");
+        //MessageBoard.Instance.SpawnMessage(_f + "%/100");
         return _u;
     }
 

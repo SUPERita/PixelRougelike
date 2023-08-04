@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MysteryBox : MonoBehaviour
+public class MysteryBox : MonoBehaviour, WaypointTarget
 {
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,5 +11,14 @@ public class MysteryBox : MonoBehaviour
             WeaponChoice.Instance.OpenWeaponChoice();
             Destroy(gameObject);
         }
+    }
+
+    public Transform GetTargetTransform()
+    {
+        return transform;
+    }
+    private void Start()
+    {
+        WaypointIndicatorManager.Instance.SummonWaypointIndicator(this);
     }
 }

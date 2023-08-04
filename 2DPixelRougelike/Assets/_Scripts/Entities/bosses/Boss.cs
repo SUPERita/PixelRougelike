@@ -166,7 +166,7 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
         GameStateManager.Instance.SetState(GameState.Cutscene);
 
         spawnFX?.PlayFeedbacks();
-        StartCoroutine(DoInTime(()=>AudioSystem.Instance.PlaySound("s2"), .4f));
+        StartCoroutine(DoInTime(()=>AudioSystem.Instance.PlaySound("levelup_vibrato"), .4f));
         yield return new WaitForSecondsRealtime(_timeInSeconds);
 
         bossCam.enabled = false;

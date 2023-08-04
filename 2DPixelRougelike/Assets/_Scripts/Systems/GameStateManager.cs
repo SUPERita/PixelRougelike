@@ -28,8 +28,18 @@ public class GameStateManager : Singleton<GameStateManager>
 
         //tell
         OnGameStateChanged?.Invoke(currentGameState);
+
+        Cursor.lockState = currentGameState == GameState.GameLoop ?
+            CursorLockMode.Locked :
+            CursorLockMode.None;
+        Cursor.visible = currentGameState == GameState.GameLoop ?
+            false : true ;
     }
 
+    private void Start()
+    {
+        ReturnToBaseState();
+    }
 
 
     public GameState GetCurrentGameState()

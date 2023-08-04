@@ -34,7 +34,7 @@ public class DeathPanel : StaticInstance<DeathPanel>
         // set selected
         EventSystem.current.SetSelectedGameObject(GetComponentInChildren<Button>().gameObject);
 
-        GetComponentInChildren<TextAnimator>().SetText("<rainb><pend>GAME OVER</pend></rainb>", true);// need to be true for the typewriter
+        GetComponentInChildren<TextAnimator>().SetText("<gold><pend>GAME OVER</pend></gold>", true);// need to be true for the typewriter
         GetComponentInChildren<TextAnimatorPlayer>().StartShowingText();
 
     }

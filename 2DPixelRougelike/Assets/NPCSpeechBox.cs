@@ -48,9 +48,18 @@ public class NPCSpeechBox : MonoBehaviour
         textAnimatorPlayer.StartDisappearingText();
     }
 
+    int _countSpeech = 0;
     public void MakeTalkingSound(char _c)
     {
-        AudioSystem.Instance.PlaySound("wizard_talk1", .5f, 1+Random.value/5);
+        _countSpeech++;
+        if(_countSpeech == 2) {
+            AudioSystem.Instance.PlaySound("wizard_talk1", .7f, 1 + Random.value / 20);
+            _countSpeech = 0;
+        }
+
+       
+
+
     }
     public void MakeSighSound()
     {

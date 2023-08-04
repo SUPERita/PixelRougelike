@@ -51,6 +51,8 @@ public class StatsDisplay : MonoBehaviour
             string _coloredValue = _stat.Value.value >= _p.StatDisplay_GetBaseStat(_stat.Key) ?
                 $"<color=green> {_stat.Value.value} </color>" :
                 $"<color=red> {_stat.Value.value} </color>";
+            if(_stat.Value.value == _p.StatDisplay_GetBaseStat(_stat.Key)) { _coloredValue = $"<color=white> {_stat.Value.value} </color>"; }
+
             _g.GetComponentInChildren<TextMeshProUGUI>().SetText(_stat.Value.statName + ": " + _coloredValue);
             _g.GetComponentInChildren<Image>().sprite = _stat.Value.icon;
             _g.GetComponent<StatDisplaySelectionTooltip>().SetTooltip(_stat.Value.description);

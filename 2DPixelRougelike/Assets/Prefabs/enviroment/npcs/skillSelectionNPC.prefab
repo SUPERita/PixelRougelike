@@ -117,6 +117,7 @@ GameObject:
   - component: {fileID: 3154277748784959262}
   - component: {fileID: 5207854741471349907}
   - component: {fileID: 2218176995501813904}
+  - component: {fileID: 7565024677326930590}
   m_Layer: 0
   m_Name: skillSelectionNPC
   m_TagString: Untagged
@@ -308,6 +309,27 @@ MonoBehaviour:
   - come back again!
   - see ya
   - good luck!
+--- !u!95 &7565024677326930590
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4166347162240828987}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 379f81678847f2d4b86359c5c6bb51c1, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1 &4199029786689181299
 GameObject:
   m_ObjectHideFlags: 0

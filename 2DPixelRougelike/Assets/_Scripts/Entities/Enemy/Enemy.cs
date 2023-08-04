@@ -114,7 +114,8 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         if (health != null) {health.TakeDamage(_val); }
 
         //particle pool?
-        GameObject _p = UnityEngine.Random.Range(0, 2) == 1 ? LeanPoolManager.Instance.SpawnFromPool("particleBase") : LeanPoolManager.Instance.SpawnFromPool("pv1");
+        //GameObject _p = UnityEngine.Random.Range(0, 2) == 1 ? LeanPoolManager.Instance.SpawnFromPool("particleBase") : LeanPoolManager.Instance.SpawnFromPool("pv1");
+        GameObject _p = LeanPoolManager.Instance.SpawnFromPool("enemyHit1");
         _p.transform.position = sr.transform.position;
         LeanPoolManager.Instance.DespawnFromPool(_p, .3f);//_p.CallReleaseToPool(.3f);
         

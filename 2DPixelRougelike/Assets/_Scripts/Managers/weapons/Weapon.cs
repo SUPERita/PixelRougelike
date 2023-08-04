@@ -97,6 +97,10 @@ public class Weapon : MonoBehaviour
               scanLayer);
 
         }
+        GameObject _p = LeanPoolManager.Instance.SpawnFromPool("muzzleFlash");
+        _p.transform.position = gunTip.position;
+        _p.transform.rotation = transform.rotation;
+        LeanPoolManager.Instance.DespawnFromPool(_p, .3f);
     }
 
     //utils

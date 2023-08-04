@@ -43,7 +43,7 @@ public class PlayerDamageHandler : MonoBehaviour
             Mathf.Min(PlayerStatsHolder.Instance.TryGetStat(StatType.Dodge),
             40f)))
         {
-            MessageBoard.Instance.SpawnMessage("dodged");
+            //MessageBoard.Instance.SpawnMessage("dodged");
         } 
         //take baseDamage
         else

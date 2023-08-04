@@ -47,7 +47,7 @@ public class WeaponChoice : StaticInstance<WeaponChoice>, SubButtonListener
                 .InitializeButton(
                 this,
                 _w._weaponIcon,
-                _w._weapon.gameObject.name + "\n" + _w._weapon.GetDescription()
+                "<b>"+_w._weapon.gameObject.name+"</b>" + "\n" + _w._weapon.GetDescription()
                 ).AddAdditionalData(_w._weapon);
                 
         }
