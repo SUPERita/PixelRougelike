@@ -9,6 +9,8 @@ public class SkillEmitParticle : Skill
     [SerializeField] private ParticleSystem _particleSystem;
     //[SerializeField] private float emmisionDuration = .5f;
     [SerializeField] private int emmisionBurstCount = 1;
+    [Header("zetsy variables")]
+    [SerializeField] private bool spawnNextSkillOnCollide = false;
     public override void PerformeSkill()
     {
         base.PerformeSkill();
@@ -37,11 +39,28 @@ public class SkillEmitParticle : Skill
         if (other.TryGetComponent(out IDamageable _d))
         {
             _d.TakeDamage(baseDamage + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillDamage));
+
+            if(spawnNextSkillOnCollide){ TrySpawnNextParticle(other.transform.position);}
         }
     }
 
-    private int GetProjectileAmount()
+    protected override int GetProjectileAmount()
     {
-        return emmisionBurstCount + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillProj);
+        return emmisionBurstCount + base.GetProjectileAmount();
     }
+
+    private ParticleSystem.CollisionModule collisionModule;
+    private void Start()
+    {
+        collisionModule = _particleSystem.collision;
+
+        // Disable collisions initially
+        collisionModule.enabled = false;
+        StartCoroutine(Helpers.DoInTime(() => collisionModule.enabled = true, .2f));
+
+    }
+
+
+
+
 }

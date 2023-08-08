@@ -13,27 +13,35 @@ public class SkillManager : MonoBehaviour
         SpawnSkills();
     }
 
+
+    GameObject[] selectedSkills = null;
     private void SpawnSkills()
     {
         //clear previous
         ClearSkills();
 
         //load selected
-        GameObject[] selectedSkills = SkillSelection.GetSelectedSavedSkills(_skillCollection);
+        selectedSkills = SkillSelection.GetSelectedSavedSkills(_skillCollection);
         int _numberOfSkills = PlayerStatsHolder.Instance.TryGetStat(StatType.SkillCap);//second layer of defence
         if (selectedSkills.Length == 0) { return; }
-        for (int i = 0; i < _numberOfSkills; i++)
-        {
-            //if has more skill capacity than selected skills
-            if (selectedSkills.Length <= i ) { break; }
-            
-            Instantiate(selectedSkills[i], transform);
-            
-        }
+
+
+        //spawn the first skill
+        Instantiate(selectedSkills[0], transform)
+            .GetComponent<Skill>()
+            .SetIsRepeating(true)
+            .InitializeSkill(0, this);
+
     }
 
     private void ClearSkills()
     {
          Helpers.DestroyChildren(transform);
+    }
+
+    public GameObject GetNextSkillFromIndex(int _index)
+    {
+        if(_index+1 >= selectedSkills.Length) { return null; }
+        return selectedSkills[_index+1];
     }
 }

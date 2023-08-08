@@ -25,8 +25,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2751447210580211523}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.06, y: 0.45, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6941383298317973364}
@@ -73,8 +73,8 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 2
-  m_Sprite: {fileID: 21300000, guid: 4fb690da2dd96aa4ba159aa885fc27fb, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 0.5529412}
+  m_Sprite: {fileID: 21300000, guid: 3a5baf170c5236b41aeaebedb2d906c8, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6276297672185773089}
   - component: {fileID: 443692859550575915}
   m_Layer: 0
-  m_Name: damage area falling
+  m_Name: damage area empty deathSpawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -126,7 +126,7 @@ CircleCollider2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8774903713599899654}
-  m_Enabled: 1
+  m_Enabled: 0
   m_Density: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
@@ -153,7 +153,7 @@ CircleCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
-  m_Radius: 0.5
+  m_Radius: 0.3
 --- !u!50 &6276297672185773089
 Rigidbody2D:
   serializedVersion: 4
@@ -169,7 +169,7 @@ Rigidbody2D:
   m_Mass: 0.0001
   m_LinearDrag: 0
   m_AngularDrag: 0
-  m_GravityScale: 2
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -196,5 +196,7 @@ MonoBehaviour:
   <rb>k__BackingField: {fileID: 6276297672185773089}
   collider: {fileID: 3800613312532058272}
   dieOnHit: 0
-  areaLifetime: 5
+  areaLifetime: 1
   areaDestroySpeed: 0.25
+  spawnNextSkillOnDeath: 1
+  spawnNextSkillOnCollide: 0

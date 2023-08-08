@@ -691,7 +691,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &5162011230831796772
 RectTransform:
   m_ObjectHideFlags: 0
@@ -844,7 +844,7 @@ RectTransform:
   - {fileID: 3667461798075298344}
   - {fileID: 5162011230831796772}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -1009,7 +1009,7 @@ MonoBehaviour:
     separated: 0
     mainCurve:
       m_Mode: 1
-      m_CurveMultiplier: 40
+      m_CurveMultiplier: 80
       m_CurveMin:
         serializedVersion: 2
         m_Curve:
@@ -1038,17 +1038,17 @@ MonoBehaviour:
         serializedVersion: 2
         m_Curve:
         - serializedVersion: 3
-          time: -0.006263733
-          value: 0.9992676
-          inSlope: 0
-          outSlope: 0
+          time: 0
+          value: 1
+          inSlope: -2
+          outSlope: -2
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0
         - serializedVersion: 3
-          time: 1.0168457
-          value: 1.0487366
+          time: 1
+          value: 0
           inSlope: 0
           outSlope: 0
           tangentMode: 0
@@ -2894,6 +2894,10 @@ PrefabInstance:
       value: -7.200012
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: <statname>k__BackingField
       value: 15
       objectReference: {fileID: 0}
@@ -3933,11 +3937,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[3].<cost>k__BackingField
-      value: 100000
+      value: 1000
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y

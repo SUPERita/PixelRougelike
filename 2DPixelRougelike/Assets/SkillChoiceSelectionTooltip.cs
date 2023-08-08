@@ -8,7 +8,7 @@ public class SkillChoiceSelectionTooltip : SelectionTooltip
     [SerializeField] private SkillCollection skillCollection;
     public override string GetDescription()
     {
-        return skillCollection.GetSkillDataFromName(_source._string1)._skillDesctiption;
+        return skillCollection.GetSkillDataFromName(_source._string1).GetColoredDescription();
      
     }
 }

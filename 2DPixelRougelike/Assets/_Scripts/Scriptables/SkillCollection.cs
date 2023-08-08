@@ -39,9 +39,16 @@ public class SkillCollection : ScriptableObject
 [Serializable]
 public struct SkillNamePair
 {
-    [field:SerializeField] public string _skillName { get; private set; }
-    [field: SerializeField] public Skill _skill { get; private set; }
-    [field: SerializeField] public int _skillCost { get; private set; }
-    [field: SerializeField] public string _skillDesctiption { get; private set; }
-    [field: SerializeField, PreviewField] public Sprite _skillIcon { get; private set; }
+    [field:SerializeField, HorizontalGroup("b"), LabelWidth(75)] public string _skillName { get; private set; }
+    [field: SerializeField, HorizontalGroup("b"), LabelWidth(75)] public int _skillCost { get; private set; }
+    [field: SerializeField, HorizontalGroup("b"), LabelWidth(40)] public Skill _skill { get; private set; }
+    [field: SerializeField, HorizontalGroup("a"), LabelWidth(75), TextArea(3, 5)] private string _skillDesctiption ;
+    [field: SerializeField, PreviewField, HorizontalGroup("a", 50), LabelWidth(75)] public Sprite _skillIcon { get; private set; }
+
+    public string GetColoredDescription()
+    {
+        string _out = _skillDesctiption;
+        _out = _out.Replace("{stpAbl}", "<color=yellow>stops ability chain</color>");
+        return _out;
+    }
 }

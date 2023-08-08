@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 1960680898846433662}
   - component: {fileID: 6061889069526506710}
   m_Layer: 0
-  m_Name: skill damage area mines
+  m_Name: skill damage area split side
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -44,16 +44,19 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ac7a94d2df7e14792520265406a68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 15
+  baseDamage: 1
   coolDown: 1
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
-  damageArea: {fileID: 245409237358349679, guid: 7d3dac366e36e7e4f94bfa48b06a4067, type: 3}
+  damageArea: {fileID: 443692859550575915, guid: 4de01f2f316c5d1499697c64ea74a9c3, type: 3}
   size: 1
-  numberOfAreasToSpawn: 1
-  randomSpawn: 1
-  spawnArea: {x: 2, y: 2}
+  numberOfAreasToSpawn: 2
+  randomSpawn: 0
+  spawnArea: {x: 0, y: 0}
   randomVel: 0
   spawnVel: {x: 0, y: 0}
   burstRotation: 0
+  spawnVelOptions:
+  - {x: 5, y: 0}
+  - {x: -5, y: 0}

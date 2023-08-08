@@ -52,7 +52,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   _particleSystem: {fileID: 6821573306664273462}
-  emmisionBurstCount: 15
+  emmisionBurstCount: 5
+  spawnNextSkillOnCollide: 0
 --- !u!198 &6821573306664273462
 ParticleSystem:
   m_ObjectHideFlags: 0

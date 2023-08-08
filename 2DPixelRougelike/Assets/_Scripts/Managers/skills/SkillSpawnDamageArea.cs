@@ -16,6 +16,7 @@ public class SkillSpawnDamageArea : Skill
     [SerializeField] private bool randomVel = false;
     [SerializeField] private Vector2 spawnVel = Vector2.zero;
     [SerializeField] private bool burstRotation = false;
+    [SerializeField] private Vector2[] spawnVelOptions = null;
     public override void PerformeSkill()
     {
         base.PerformeSkill();
@@ -26,41 +27,57 @@ public class SkillSpawnDamageArea : Skill
     {
         //if (randomSpawn)
         //{
-            //spawn point
-            Vector2 _spawnPoint = spawnArea;
-            if(randomSpawn)
-            {
-                _spawnPoint.x *= Random.Range(-1f, 1f);
-                _spawnPoint.y *= Random.Range(-1f, 1f);
-            }
-            //spawn vel
-            Vector2 _spawnVel = spawnVel;
-            if(randomVel)
+        //spawn point
+        Vector2 _spawnPoint = spawnArea;
+        if (randomSpawn)
+        {
+            _spawnPoint.x *= Random.Range(-1f, 1f);
+            _spawnPoint.y *= Random.Range(-1f, 1f);
+        }
+        //spawn vel
+        Vector2 _spawnVel = spawnVel;
+        if (randomVel)
+        {
+            _spawnVel.x *= Random.Range(-1f, 1f);
+            //_spawnVel.y *= Random.Range(-1f, 1f); // never really desired
+        }
+        if (spawnVelOptions.Length > 0)
+        {
+            _spawnVel.x = spawnVelOptions[_spawnIndex % spawnVelOptions.Length].x;
+            _spawnVel.y = spawnVelOptions[_spawnIndex % spawnVelOptions.Length].y;
+            if (_spawnIndex >= spawnVelOptions.Length)
             {
                 _spawnVel.x *= Random.Range(-1f, 1f);
-                //_spawnVel.y *= Random.Range(-1f, 1f); // never really desired
+                _spawnVel.y *= Random.Range(-1f, 1f);
             }
+        }
 
 
-            Vector3 _spawnRot = new Vector3(0f,0f,0f);
-            if(burstRotation)
-            {
-                _spawnRot.z = _spawnIndex*360f/GetProjectileAmount() ; 
-            }
+        Vector3 _spawnRot = new Vector3(0f, 0f, 0f);
+        if (burstRotation)
+        {
+            _spawnRot.z = _spawnIndex * 360f / GetProjectileAmount();
+        }
 
-            Instantiate(damageArea, (Vector2)transform.position+ _spawnPoint, Quaternion.Euler(_spawnRot))
-                .GetComponent<DamageArea>()
-                    .InitializeArea(
-                        baseDamage + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillDamage),
-                        _spawnVel,
-                        collisionLayer,
-                        size);
+        Instantiate(damageArea, (Vector2)transform.position + _spawnPoint, Quaternion.Euler(_spawnRot))
+            .GetComponent<DamageArea>()
+                .InitializeArea(
+                    baseDamage + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillDamage),
+                    _spawnVel,
+                    collisionLayer,
+                    size,
+                    this);
 
         //}
     }
 
-    private int GetProjectileAmount()
+    protected override int GetProjectileAmount()
     {
-        return numberOfAreasToSpawn + PlayerStatsHolder.Instance.TryGetStat(StatType.SkillProj);
+        return numberOfAreasToSpawn + base.GetProjectileAmount();
+    }
+
+    public void AreaHitSomething(Vector3 _pos)
+    {
+        TrySpawnNextParticle(_pos);
     }
 }

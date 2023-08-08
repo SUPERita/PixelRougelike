@@ -64,10 +64,10 @@ public class WaypointIndicator : MonoBehaviour
 
         //_direction = _main.WorldToScreenPoint(followTransform.position) - _main.WorldToScreenPoint(relativeTo.position);
         _direction = _main.WorldToScreenPoint(followTransform.position) - transform.parent.position;
-        Debug.Log(_direction);
+        //Debug.Log(_direction);
         _rect.localScale = Mathf.Abs(_direction.x)>960 * Helpers.CurrentScreenSizeRelativeTo1920() || Mathf.Abs(_direction.y)>590 * Helpers.CurrentScreenSizeRelativeTo1920() ?/*_direction.sqrMagnitude > 600 ?*/
             Vector3.one:
-            Vector3.one*.25f;
+            Vector3.one*0f;
     }
 
     private Vector2 GetScreenEdgeFromAngle(float _angle)

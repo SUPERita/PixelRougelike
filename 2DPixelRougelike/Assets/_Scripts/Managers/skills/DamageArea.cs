@@ -12,17 +12,23 @@ public class DamageArea : MonoBehaviour
     [SerializeField] private float areaLifetime = 5.0f;
     [SerializeField] private float areaDestroySpeed = .25f;
     //private bool dieOnHit = false;
+    private SkillSpawnDamageArea _emmiter;
 
     private int damage = 0;
     private LayerMask collisionLayer;
 
-    public void InitializeArea(int _damage, Vector3 directionAndMagnitude, LayerMask _collisionLayer, /*float _lifetime = 5f*/ float size = 1f /*bool _dieOnHit = false */)
+    [Header("zetsy variables")]
+    [SerializeField] private bool spawnNextSkillOnDeath = false;
+    [SerializeField] private bool spawnNextSkillOnCollide = true;
+
+    public DamageArea InitializeArea(int _damage, Vector3 directionAndMagnitude, LayerMask _collisionLayer, float size, SkillSpawnDamageArea _parentEmmiter)
     {
         //Debug.Log("alive");
         damage = _damage;
         rb.velocity = directionAndMagnitude;
         //RotateSpriteToNormalizedDirection(direction);
         transform.localScale = Vector3.one * size;
+        _emmiter = _parentEmmiter;
         //dieOnHit = _dieOnHit;
         //transform.rotation = Quaternion.LookRotation(direction);
 
@@ -33,6 +39,7 @@ public class DamageArea : MonoBehaviour
         collisionLayer = _collisionLayer;
         Invoke(nameof(DestroyArea), areaLifetime);
 
+        return this;
     }
 
 
@@ -44,6 +51,8 @@ public class DamageArea : MonoBehaviour
         if (collision.TryGetComponent(out IDamageable _d))
         {
             _d.TakeDamage(damage);
+            if (_emmiter && spawnNextSkillOnCollide) { _emmiter.AreaHitSomething(collision.transform.position); }
+            else if(spawnNextSkillOnCollide) { Debug.LogError("ayo wft why doesnt he has his parent emmiter he cant spawn projectiles, most likely he spawned directry on an enemy, maybe just call it with a delay of a frame or something"); }
         }
 
 
@@ -55,6 +64,7 @@ public class DamageArea : MonoBehaviour
         // probably something with pooling
         if (gameObject == null) { return; }
 
+        if (spawnNextSkillOnDeath) { _emmiter.AreaHitSomething(transform.position); }
         collider.enabled = false;
         rb.velocity = Vector2.zero;
         transform.DOScale(0, areaDestroySpeed).OnComplete(()=> Destroy(gameObject));

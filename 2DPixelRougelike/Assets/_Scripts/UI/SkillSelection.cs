@@ -123,10 +123,18 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
         foreach(var _btn in GetComponentsInChildren<SubButton>()) {
             if(Contains(_selectedBtns, _btn)) { continue; }
             _btn.SetHighlight(false);
+            _btn.gameObject.GetComponent<NumberTextSetter>().SetText("", "orderNum");
         }
+        int _i = 1;
         foreach (var _btn in _selectedBtns)
         {
             _btn.SetHighlight(true);
+
+            string _orderNumver = "";
+            for (int j = 0; j < _i; j++){ _orderNumver += "I"; }
+            
+            _btn.gameObject.GetComponent<NumberTextSetter>().SetText(_orderNumver, "orderNum");
+            _i++;
         }
     }
     private SubButton GetSubButtonFromSkillName(string _skillName)
