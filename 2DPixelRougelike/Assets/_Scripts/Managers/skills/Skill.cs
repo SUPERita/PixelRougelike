@@ -6,16 +6,25 @@ using UnityEngine;
 public class Skill : MonoBehaviour
 {
     [Header("base")]
-    [SerializeField] protected int baseDamage = 10;
-    [SerializeField] private float coolDown = 1f;
+    [SerializeField] protected int baseDamage = 10; public int BaseDamage => baseDamage;
+    [SerializeField] private float coolDown = 1f; public float Cooldown => coolDown;
+    
     private float nextAvailableSkillTime = 0f;
     [SerializeField] protected LayerMask collisionLayer;
+    [SerializeField] protected int projectilesPerBurst = 1; public int ProjectilesPerBurst => projectilesPerBurst;
     //protected GameObject nextSkill = null;
     protected int skillIndexInNext = 0;
     private bool isRepeating = false;
     private SkillManager manager = null;
 
-    
+    //zetsy
+    [field: SerializeField] public bool benefitsFromExtraProj { get; private set; } = true;
+    public virtual bool SpawnNextSkillOnCollide => false;
+    public virtual bool SpawnNextSkillOnDeath => false;
+    public virtual bool SpawnNextSkillAtStart => false;
+
+
+
     private void Update()
     {
         if (isRepeating) {
@@ -66,6 +75,8 @@ public class Skill : MonoBehaviour
 
     protected virtual int GetProjectileAmount()
     {
+        //need refactoring of the lower layers
+        if(!benefitsFromExtraProj) { return 0; }
         //if is the base skill then add the skillProj stat if not, dont
         return isRepeating ? PlayerStatsHolder.Instance.TryGetStat(StatType.SkillProj) : 0;
     }

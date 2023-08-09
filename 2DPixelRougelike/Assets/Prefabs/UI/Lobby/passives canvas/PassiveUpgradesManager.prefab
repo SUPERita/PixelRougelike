@@ -685,6 +685,7 @@ GameObject:
   - component: {fileID: 5501667161950590242}
   - component: {fileID: 8189187649218048172}
   - component: {fileID: 2838588711735795522}
+  - component: {fileID: 7580050436138095927}
   m_Layer: 5
   m_Name: reset passives button
   m_TagString: Untagged
@@ -807,6 +808,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7580050436138095927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8232883497324816325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 202e438ce03b21e49a6343ad70e622f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8251539245964574017
 GameObject:
   m_ObjectHideFlags: 0
@@ -844,7 +857,7 @@ RectTransform:
   - {fileID: 3667461798075298344}
   - {fileID: 5162011230831796772}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}

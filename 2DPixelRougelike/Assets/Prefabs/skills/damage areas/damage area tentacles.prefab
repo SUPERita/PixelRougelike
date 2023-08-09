@@ -126,6 +126,8 @@ MonoBehaviour:
   dieOnHit: 0
   areaLifetime: 1
   areaDestroySpeed: 0.1
+  spawnNextSkillOnDeath: 1
+  spawnNextSkillOnCollide: 0
 --- !u!114 &2439862651391685314
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -138,6 +140,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c9daea3b28468064b98eb23fac2de385, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startSize: 1
   finalSize: 1
   scalingTime: 0.2
 --- !u!114 &4070178027611912919

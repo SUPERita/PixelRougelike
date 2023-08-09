@@ -97,7 +97,7 @@ GameObject:
   - component: {fileID: 6276297672185773089}
   - component: {fileID: 443692859550575915}
   m_Layer: 0
-  m_Name: damage area falling
+  m_Name: damage area granade
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -196,5 +196,7 @@ MonoBehaviour:
   <rb>k__BackingField: {fileID: 6276297672185773089}
   collider: {fileID: 3800613312532058272}
   dieOnHit: 0
-  areaLifetime: 5
+  areaLifetime: 2
   areaDestroySpeed: 0.25
+  spawnNextSkillOnDeath: 1
+  spawnNextSkillOnCollide: 0

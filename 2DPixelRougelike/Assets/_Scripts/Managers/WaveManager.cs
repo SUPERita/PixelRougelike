@@ -162,6 +162,7 @@ public class WaveManager : StaticInstance<WaveManager>
         {
             foreach (GameObject _g in _objectPrefab)
             {
+                if(_g == null) continue;
                 objectSpawner.SpawnObject(_g);
                 //Debug.Log("broken, not spawning");
             }

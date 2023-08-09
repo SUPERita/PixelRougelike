@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 196636386517928491}
   - component: {fileID: 245409237358349679}
   m_Layer: 0
-  m_Name: damage area
+  m_Name: damage area mine
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -113,6 +113,9 @@ MonoBehaviour:
   collider: {fileID: 4102959277510097323}
   dieOnHit: 1
   areaLifetime: 5
+  areaDestroySpeed: 0.1
+  spawnNextSkillOnDeath: 0
+  spawnNextSkillOnCollide: 1
 --- !u!1 &5706272218314144782
 GameObject:
   m_ObjectHideFlags: 0

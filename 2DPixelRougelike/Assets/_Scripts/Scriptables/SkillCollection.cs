@@ -48,7 +48,15 @@ public struct SkillNamePair
     public string GetColoredDescription()
     {
         string _out = _skillDesctiption;
-        _out = _out.Replace("{stpAbl}", "<color=yellow>stops ability chain</color>");
+        //_out = _out.Replace("{stpAbl}", "<color=red>stops ability chain</color>");
+        if (_skill.SpawnNextSkillAtStart) { _out += "\n<color=green>SpawnNextAtStart</color>,"; }
+        if (_skill.SpawnNextSkillOnCollide) { _out += "\n<color=green>SpawnNextOnHit</color>,"; }
+        if (_skill.SpawnNextSkillOnDeath) { _out += "\n<color=green>SpawnNextOnDeath</color>,"; }
+        if (!_skill.benefitsFromExtraProj) { _out += "\n<color=red>NoExtraProjectiles</color>,"; }
+        _out += "\n";
+        _out += $"<color=yellow>Cooldown:</color> {_skill.Cooldown}s \n";
+        _out += $"<color=yellow>Damage:</color> {_skill.BaseDamage} \n";
+        _out += $"<color=yellow>Burst:</color> {_skill.ProjectilesPerBurst}";
         return _out;
     }
 }

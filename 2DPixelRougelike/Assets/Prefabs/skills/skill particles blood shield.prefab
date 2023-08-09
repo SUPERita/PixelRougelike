@@ -51,8 +51,8 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
+  projectilesPerBurst: 2
   _particleSystem: {fileID: 2081911448125677841}
-  emmisionBurstCount: 2
   spawnNextSkillOnCollide: 1
 --- !u!198 &2081911448125677841
 ParticleSystem:

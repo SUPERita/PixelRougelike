@@ -1,3 +1,4 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -5,9 +6,9 @@ using UnityEngine;
 public class SkillSpawnDamageArea : Skill
 {
     [Header("DamageArea")]
-    [SerializeField] private DamageArea damageArea = null;
+    [SerializeField, InlineEditor] private DamageArea damageArea = null;
     [SerializeField] private float size = 1.0f;
-    [SerializeField] private int numberOfAreasToSpawn = 1;
+    //[SerializeField] private int numberOfAreasToSpawn = 1;
 
     [Header("spawning")]
     [SerializeField] private bool randomSpawn = false;
@@ -17,10 +18,18 @@ public class SkillSpawnDamageArea : Skill
     [SerializeField] private Vector2 spawnVel = Vector2.zero;
     [SerializeField] private bool burstRotation = false;
     [SerializeField] private Vector2[] spawnVelOptions = null;
+    [Header("zetsy variables")]
+    [SerializeField] private bool spawnNextSkillAtStart = false; 
+    public override bool SpawnNextSkillAtStart => spawnNextSkillAtStart;
+    public override bool SpawnNextSkillOnDeath => damageArea.SpawnNextSkillOnDeath;
+    public override bool SpawnNextSkillOnCollide => damageArea.SpawnNextSkillOnCollide;
+
     public override void PerformeSkill()
     {
         base.PerformeSkill();
         for (int i = 0; i < GetProjectileAmount(); i++) SpawnDamageArea(i);
+
+        if (spawnNextSkillAtStart) { AreaHitSomething(transform.position); }
     }
 
     private void SpawnDamageArea(int _spawnIndex)
@@ -73,7 +82,7 @@ public class SkillSpawnDamageArea : Skill
 
     protected override int GetProjectileAmount()
     {
-        return numberOfAreasToSpawn + base.GetProjectileAmount();
+        return projectilesPerBurst + base.GetProjectileAmount();
     }
 
     public void AreaHitSomething(Vector3 _pos)

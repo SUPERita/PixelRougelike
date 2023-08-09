@@ -18,8 +18,9 @@ public class DamageArea : MonoBehaviour
     private LayerMask collisionLayer;
 
     [Header("zetsy variables")]
-    [SerializeField] private bool spawnNextSkillOnDeath = false;
-    [SerializeField] private bool spawnNextSkillOnCollide = true;
+    [SerializeField] private bool spawnNextSkillOnDeath = false; public bool SpawnNextSkillOnDeath => spawnNextSkillOnDeath;
+    [SerializeField] private bool spawnNextSkillOnCollide = true; public bool SpawnNextSkillOnCollide => spawnNextSkillOnCollide;
+    
 
     public DamageArea InitializeArea(int _damage, Vector3 directionAndMagnitude, LayerMask _collisionLayer, float size, SkillSpawnDamageArea _parentEmmiter)
     {
@@ -38,7 +39,7 @@ public class DamageArea : MonoBehaviour
 
         collisionLayer = _collisionLayer;
         Invoke(nameof(DestroyArea), areaLifetime);
-
+        
         return this;
     }
 

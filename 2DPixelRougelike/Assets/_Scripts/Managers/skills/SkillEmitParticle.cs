@@ -8,9 +8,10 @@ public class SkillEmitParticle : Skill
     [Header("particle emmiter")]
     [SerializeField] private ParticleSystem _particleSystem;
     //[SerializeField] private float emmisionDuration = .5f;
-    [SerializeField] private int emmisionBurstCount = 1;
+    //[SerializeField] private int emmisionBurstCount = 1;
     [Header("zetsy variables")]
-    [SerializeField] private bool spawnNextSkillOnCollide = false;
+    [SerializeField] private bool spawnNextSkillOnCollide = false; public override bool SpawnNextSkillOnCollide => spawnNextSkillOnCollide;
+    [SerializeField] private bool spawnNextSkillAtStart = false; public override bool SpawnNextSkillAtStart => spawnNextSkillAtStart;
     public override void PerformeSkill()
     {
         base.PerformeSkill();
@@ -22,6 +23,9 @@ public class SkillEmitParticle : Skill
     {
         //Debug.Log(emmisionBurstCount + "");
         _particleSystem.Emit(GetProjectileAmount());
+        
+        if (spawnNextSkillAtStart) { TrySpawnNextParticle(transform.position); }
+
         yield return null;
         //Debug.Log("should have shop");
         //_particleSystem.Play();
@@ -46,7 +50,7 @@ public class SkillEmitParticle : Skill
 
     protected override int GetProjectileAmount()
     {
-        return emmisionBurstCount + base.GetProjectileAmount();
+        return projectilesPerBurst + base.GetProjectileAmount();
     }
 
     private ParticleSystem.CollisionModule collisionModule;

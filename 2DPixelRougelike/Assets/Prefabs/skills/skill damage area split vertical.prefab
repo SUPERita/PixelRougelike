@@ -44,14 +44,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 83ac7a94d2df7e14792520265406a68f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 1
+  baseDamage: 0
   coolDown: 1
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
-  damageArea: {fileID: 443692859550575915, guid: 4de01f2f316c5d1499697c64ea74a9c3, type: 3}
+  projectilesPerBurst: 2
+  <benefitsFromExtraProj>k__BackingField: 1
+  damageArea: {fileID: 5014328653045261700, guid: 4de01f2f316c5d1499697c64ea74a9c3, type: 3}
   size: 1
-  numberOfAreasToSpawn: 2
   randomSpawn: 0
   spawnArea: {x: 0, y: 0}
   randomVel: 0
@@ -60,3 +61,4 @@ MonoBehaviour:
   spawnVelOptions:
   - {x: 0, y: 5}
   - {x: 0, y: -5}
+  spawnNextSkillAtStart: 0
