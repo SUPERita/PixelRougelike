@@ -19,7 +19,7 @@ PrefabInstance:
     - target: {fileID: 3574269035919762620, guid: 38a114933a4e63640a95fad32ca11601, type: 3}
       propertyPath: objectsToSpawn.Array.data[0]
       value: 
-      objectReference: {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
+      objectReference: {fileID: 6932395733339005434, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
     - target: {fileID: 5630116585937240309, guid: 38a114933a4e63640a95fad32ca11601, type: 3}
       propertyPath: m_LocalScale.x
       value: -2

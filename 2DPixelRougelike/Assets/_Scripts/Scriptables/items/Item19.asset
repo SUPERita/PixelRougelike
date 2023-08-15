@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: full shell
   <itemSprite>k__BackingField: {fileID: 21300000, guid: 6bc4acb11b4e2934585720c28bc26991, type: 3}
-  <itemBasePrice>k__BackingField: 17
+  <itemRarity>k__BackingField: 2
   <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10

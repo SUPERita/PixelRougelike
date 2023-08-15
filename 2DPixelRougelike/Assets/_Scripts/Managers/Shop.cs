@@ -108,7 +108,7 @@ public class Shop : StaticInstance<Shop>
     private void CreateShopCard()
     {
         Item tmpItem = itemCollection.GetRandomItemInWave(WaveManager.Instance.currentWaveRefrence);
-        float choosedItemPrice = Random.Range(tmpItem.itemBasePrice * .75f, tmpItem.itemBasePrice * 1.25f); //random number -+25%
+        float choosedItemPrice = Random.Range(Item.RarityToBasePrice(tmpItem.itemRarity) * .75f, Item.RarityToBasePrice(tmpItem.itemRarity) * 1.25f); //random number -+25%
         choosedItemPrice *= .7f + .3f*WaveManager.Instance.currentWaveRefrence; //scale with levels
 
 

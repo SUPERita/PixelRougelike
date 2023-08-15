@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: water potion
   <itemSprite>k__BackingField: {fileID: 21300000, guid: e55e279c86d882a44af0a24476540ab4, type: 3}
-  <itemBasePrice>k__BackingField: 17
+  <itemRarity>k__BackingField: 2
   <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 15

@@ -49,11 +49,14 @@ MonoBehaviour:
   collisionLayer:
     serializedVersion: 2
     m_Bits: 8
+  projectilesPerBurst: 1
+  <benefitsFromExtraProj>k__BackingField: 1
   damageArea: {fileID: 443692859550575915, guid: fbd27910baddce24f8c103e89ecb93df, type: 3}
   size: 1
-  numberOfAreasToSpawn: 1
   randomSpawn: 0
   spawnArea: {x: 0, y: 0}
   randomVel: 1
-  spawnVel: {x: 3, y: 10}
+  spawnVel: {x: 3, y: 15}
   burstRotation: 0
+  spawnVelOptions: []
+  spawnNextSkillAtStart: 0

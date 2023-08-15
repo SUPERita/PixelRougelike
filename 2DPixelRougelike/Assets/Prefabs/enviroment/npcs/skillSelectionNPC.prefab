@@ -309,6 +309,7 @@ MonoBehaviour:
   - come back again!
   - see ya
   - good luck!
+  endSighSound: 1
 --- !u!95 &7565024677326930590
 Animator:
   serializedVersion: 5

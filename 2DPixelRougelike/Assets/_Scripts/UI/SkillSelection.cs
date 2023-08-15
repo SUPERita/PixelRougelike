@@ -228,6 +228,18 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
 
         return _skills.ToArray();
     }
+    public static SkillNamePair[] GetSelectedSavedSkillsData(SkillCollection _skillCollectionContext)
+    {
+        List<SkillNamePair> _skills = new List<SkillNamePair>();
+
+        string[] _s = GetSavedSelectedSkills();
+        foreach (string _skillname in _s)
+        {
+            _skills.Add(_skillCollectionContext.GetSkillDataFromName(_skillname));
+        }
+
+        return _skills.ToArray();
+    }
     private static void SaveChoiceClicked(string _skillName)
     {
         //if already choosen ignore

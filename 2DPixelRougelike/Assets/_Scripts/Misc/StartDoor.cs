@@ -1,5 +1,8 @@
+using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using TMPro;
+using TMPro.SpriteAssetUtilities;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.SceneManagement;
@@ -14,6 +17,10 @@ public class StartDoor : MonoBehaviour, IInteractible
     private SpriteRenderer sr;
     [SerializeField] private ParticleSystem openParticles;
     private bool working = true;
+    [field: SerializeField] public KeyCode InteractionKey { get; set; } = KeyCode.None;
+    [Header("demo stuff")]
+    [InfoBox("uncheck for real build")]
+    [SerializeField] private bool lockedForDemo = false;
 
     public void SetIsWorking(bool _b)
     {
@@ -26,6 +33,22 @@ public class StartDoor : MonoBehaviour, IInteractible
         sr = GetComponent<SpriteRenderer>();
         sr.sprite = close;
         openParticles.Stop();
+
+        if (lockedForDemo)
+        {
+            GameObject _d = new GameObject();
+            _d.transform.parent = transform;
+            _d.AddComponent<TextMeshPro>();
+            _d.AddComponent<MeshRenderer>();
+            _d.GetComponent<TextMeshPro>().SetText("Demo");
+            _d.GetComponent<TextMeshPro>().color = Color.red;
+            _d.GetComponent<TextMeshPro>().fontSize = 25f;
+            _d.GetComponent<TextMeshPro>().sortingOrder = 100;
+            _d.GetComponent<TextMeshPro>().alignment = TextAlignmentOptions.Center;
+            _d.transform.rotation = Quaternion.Euler(0, 0, -45);
+            _d.transform.position = transform.position;
+            GetComponent<Collider2D>().enabled = false;
+        }
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -38,7 +61,6 @@ public class StartDoor : MonoBehaviour, IInteractible
 
     #region interface
     public bool prompRefreshRequest { get; set; }
-    [field: SerializeField] public KeyCode InteractionKey { get; set; } = KeyCode.None;
 
     public string GetInteractionPrompt()
     {

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: unicorn tail
   <itemSprite>k__BackingField: {fileID: 21300000, guid: f3d7e33c1274203498970380c0afc164, type: 3}
-  <itemBasePrice>k__BackingField: 17
+  <itemRarity>k__BackingField: 1
   <itemMinWave>k__BackingField: 4
   <statInstances>k__BackingField:
   - <number>k__BackingField: 15

@@ -9,6 +9,7 @@ public class NPCSpeechBox : MonoBehaviour
     [SerializeField] private TextAnimatorPlayer textAnimatorPlayer = null;
     [SerializeField] string[] helloSentences = null;
     [SerializeField] string[] byeSentences = null;
+    [SerializeField] private bool endSighSound = false;
     void Start()
     {
 
@@ -30,10 +31,12 @@ public class NPCSpeechBox : MonoBehaviour
     private void _npc_OnExitNotify()
     {
         SetSpeechText(byeSentences[Random.Range(0, byeSentences.Length)]);
+        //SetSpeechText("Good luck!");
     }
     private void _npc_OnEnterNotify()
     {
         SetSpeechText(helloSentences[Random.Range(0, helloSentences.Length)]);
+        //SetSpeechText("They Wishlisted, my king");
     }
 
     private void SetSpeechText(string _text = "")
@@ -56,13 +59,10 @@ public class NPCSpeechBox : MonoBehaviour
             AudioSystem.Instance.PlaySound("wizard_talk1", .7f, 1 + Random.value / 20);
             _countSpeech = 0;
         }
-
-       
-
-
     }
     public void MakeSighSound()
     {
+        if (!endSighSound) { return; }
         AudioSystem.Instance.PlaySound("wizard_sigh", .5f, .85f + Random.value / 5);
     }
 
