@@ -2,6 +2,7 @@ using MoreMountains.Feel;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.Build;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Item", menuName = "Items/Item")]
@@ -14,9 +15,10 @@ public class Item : ScriptableObject
     [field: SerializeField] public List<PlayerStatInstance> statInstances { get; private set; }
     [field: SerializeField, TextArea(5,5)] public string itemDescription { get; private set; }
 
-    public string GetItemStatsReadable()
+    public string GetItemStatsReadable(bool _withDescription = true)
     {
-        string _out = itemDescription + "\n";
+        string _out = "";
+        if (_withDescription) { _out = itemDescription + "\n"; }
         PlayerStats _p = PlayerStatsHolder.Instance.GetPlayerStats();
         foreach (var _stat in statInstances)
         {

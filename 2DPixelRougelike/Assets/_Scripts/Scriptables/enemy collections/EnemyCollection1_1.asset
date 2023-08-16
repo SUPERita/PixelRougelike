@@ -15,3 +15,5 @@ MonoBehaviour:
   <enemys>k__BackingField:
   - <enemy>k__BackingField: {fileID: 3614468889203158128, guid: cf89873d0eeddef489c4691c29ef4de5, type: 3}
     <enemyRelativeSpawnRate>k__BackingField: 10
+  - <enemy>k__BackingField: {fileID: 3614468889203158128, guid: 0eb7fa5a211a21c4ab364e9d6fc85986, type: 3}
+    <enemyRelativeSpawnRate>k__BackingField: 10

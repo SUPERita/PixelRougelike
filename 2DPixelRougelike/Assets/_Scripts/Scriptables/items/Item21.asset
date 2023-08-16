@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee53e57957079c42beb8161285ab4b2, type: 3}
+  m_Name: Item21
+  m_EditorClassIdentifier: 
+  <itemName>k__BackingField: fuzzy bee
+  <itemSprite>k__BackingField: {fileID: -286391491, guid: 7656b37b110bb644bb47c3b22cdbeccc, type: 3}
+  <itemRarity>k__BackingField: 2
+  <itemMinWave>k__BackingField: 5
+  <statInstances>k__BackingField:
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: 7
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: 2
+  - <number>k__BackingField: -5
+    <statName>k__BackingField: 12
+  <itemDescription>k__BackingField: fuzzy fried

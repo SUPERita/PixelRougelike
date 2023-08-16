@@ -128,7 +128,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e78b2e4c67374084094338e011300067, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseHealth: 100
+  maxHealth: 100
   showDmgText: 1
   dmgTextColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &5094099004121810999
@@ -144,6 +144,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   amount: 2
+  objectsToSpawn: []
 --- !u!1 &6500505466922068089
 GameObject:
   m_ObjectHideFlags: 0

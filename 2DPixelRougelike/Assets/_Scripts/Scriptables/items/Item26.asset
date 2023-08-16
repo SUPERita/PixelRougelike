@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee53e57957079c42beb8161285ab4b2, type: 3}
+  m_Name: Item26
+  m_EditorClassIdentifier: 
+  <itemName>k__BackingField: flower hat
+  <itemSprite>k__BackingField: {fileID: -286391491, guid: 51555d38eb05a9f489cc2e89442f91c6, type: 3}
+  <itemRarity>k__BackingField: 3
+  <itemMinWave>k__BackingField: 9
+  <statInstances>k__BackingField:
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: 16
+  - <number>k__BackingField: 10
+    <statName>k__BackingField: 14
+  - <number>k__BackingField: -1
+    <statName>k__BackingField: 6
+  <itemDescription>k__BackingField: obscures your vision a bit

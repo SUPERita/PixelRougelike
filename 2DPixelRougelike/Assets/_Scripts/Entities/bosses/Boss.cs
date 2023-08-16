@@ -4,6 +4,7 @@ using MoreMountains.Feedbacks;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
+using System.Xml.Xsl;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UIElements;
@@ -26,6 +27,7 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
     [SerializeField] private Material hitMat;
     [SerializeField] private float dieKnockSpeed = 10f;
     [SerializeField] private MMF_Player spawnFX;
+    [SerializeField] private float walkAnimSpeed = 1f;
     [Header("Vals")]
     [SerializeField] protected int damage = 5;
 
@@ -65,8 +67,10 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
         health.OnDie += Health_OnDie;
 
         if (SettingsCanvas.Instance.showCutscenes) StartCoroutine(ShowBossCamFor(2f));
-      
-        
+
+        sr.transform.DOScaleY(sr.transform.localScale.y*1.10f, 1f / walkAnimSpeed).SetLoops(-1, LoopType.Yoyo).SetAutoKill(false);
+
+
     }
     
     private void OnDestory()
@@ -102,7 +106,10 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
     {
         if (!alive) return;
         //Debug.Log(AudioSystem.Instance.name);
-        AudioSystem.Instance.PlaySound("s3");
+        //sfx
+        if (Random.value > .5) AudioSystem.Instance.PlaySound("hit_thud1", .2f);
+        else AudioSystem.Instance.PlaySound("hit_thud2", .2f);
+
         HitTween();//if (hitFeedback != null) { hitFeedback?.PlayFeedbacks(); }
         if (health != null) { health.TakeDamage(_val); }
 

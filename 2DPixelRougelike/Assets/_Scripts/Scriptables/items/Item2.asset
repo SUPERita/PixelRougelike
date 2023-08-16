@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: green talon
   <itemSprite>k__BackingField: {fileID: 21300000, guid: aa10703a6c2b69443affdf8e11917158, type: 3}
-  <itemBasePrice>k__BackingField: 10
+  <itemRarity>k__BackingField: 0
   <itemMinWave>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5

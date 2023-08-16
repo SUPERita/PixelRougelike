@@ -114,6 +114,63 @@ MonoBehaviour:
   despawnedClones: []
   delays: []
   deactivatedChild: {fileID: 0}
+--- !u!1 &2263534392314176829
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2444719963797764405}
+  - component: {fileID: 7730353354529150707}
+  m_Layer: 0
+  m_Name: lootEnemy1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2444719963797764405
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263534392314176829}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 3464772217235825369}
+  m_RootOrder: -1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7730353354529150707
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2263534392314176829}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea08375da243a441b88d1e6b0713006, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefab: {fileID: 1197131159412722117, guid: 0eb7fa5a211a21c4ab364e9d6fc85986, type: 3}
+  notification: 3
+  strategy: 0
+  preload: 0
+  capacity: 1000
+  recycle: 1
+  persist: 0
+  stamp: 0
+  warnings: 1
+  spawnedClonesList: []
+  despawnedClones: []
+  delays: []
+  deactivatedChild: {fileID: 0}
 --- !u!1 &2544464515648505957
 GameObject:
   m_ObjectHideFlags: 0
@@ -239,6 +296,9 @@ MonoBehaviour:
   - <pool>k__BackingField: {fileID: 6994382500439680628}
     <poolName>k__BackingField: followFastHeavy1
     <poolGameObject>k__BackingField: {fileID: 1197131159412722117, guid: 3243081dad1ad314bb63134379f1626f, type: 3}
+  - <pool>k__BackingField: {fileID: 7730353354529150707}
+    <poolName>k__BackingField: lootEnemy1
+    <poolGameObject>k__BackingField: {fileID: 1197131159412722117, guid: 0eb7fa5a211a21c4ab364e9d6fc85986, type: 3}
   - <pool>k__BackingField: {fileID: 5311155405653563941}
     <poolName>k__BackingField: particleBase
     <poolGameObject>k__BackingField: {fileID: 3008573736460728868, guid: bac23800d668cb544bf85bc2d224c443, type: 3}
@@ -700,6 +760,7 @@ Transform:
   - {fileID: 1968176032636425396}
   - {fileID: 8108126126911995564}
   - {fileID: 1376950914635818653}
+  - {fileID: 2444719963797764405}
   m_Father: {fileID: 356088799435817978}
   m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

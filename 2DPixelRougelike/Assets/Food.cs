@@ -2,30 +2,25 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Food : MonoBehaviour, WaypointTarget
+public class Food : LootBase
 {
+    [Header("Food")]
     [SerializeField] private int healingAmount = 10;
 
-    public Transform GetTargetTransform()
-    {
-        return transform;
-    }
-    private void Start()
-    {
-        WaypointIndicatorManager.Instance.SummonWaypointIndicator(this);
-    }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTouchPlayer(Collider2D _collision)
     {
-        if (collision.TryGetComponent(out PlayerMovement _out))
+        base.OnTouchPlayer(_collision);
+
+        if (_collision.TryGetComponent(out PlayerMovement _out))
         {
             if (!_out.gameObject.GetComponent<Health>().IsFullHealth())
             {
-                AudioSystem.Instance.PlaySound("pickup_heal");
                 _out.gameObject.GetComponent<Health>().HealHealth(healingAmount);
                 Destroy(gameObject);
             }
         }
     }
+
 
 }

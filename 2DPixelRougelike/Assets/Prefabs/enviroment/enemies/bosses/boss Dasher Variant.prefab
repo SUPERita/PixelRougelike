@@ -146,6 +146,7 @@ MonoBehaviour:
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
   dieKnockSpeed: 3
   spawnFX: {fileID: 6509161730192318278}
+  walkAnimSpeed: 4
   damage: 25
   dashDuration: 0.5
   dashDelay: 1

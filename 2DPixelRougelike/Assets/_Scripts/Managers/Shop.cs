@@ -129,9 +129,8 @@ public class Shop : StaticInstance<Shop>
             ResourceSystem.Instance.TakeResourceAmount(ResourceType.Gold, _cardClicked.price);
 
             //give item
-            playerItems.Add(_cardClicked.item);
+            GiveItem(_cardClicked.item);
             Destroy(_cardClicked.gameObject);
-            UpdatePlayerStats();
 
             // set selected
             ShopItemCard[] _cards = GetComponentsInChildren<ShopItemCard>();
@@ -157,6 +156,11 @@ public class Shop : StaticInstance<Shop>
         else { Debug.LogError("too poor"); AudioSystem.Instance.PlaySound("error_buzz", .75f); }
         RefreshItemDisplay();
 
+    }
+    public void GiveItem(Item _itm)
+    {
+        playerItems.Add(_itm);
+        UpdatePlayerStats();
     }
 
 

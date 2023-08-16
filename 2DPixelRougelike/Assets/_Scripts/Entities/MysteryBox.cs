@@ -2,23 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MysteryBox : MonoBehaviour, WaypointTarget
+public class MysteryBox : LootBase
 {
-    private void OnTriggerEnter2D(Collider2D collision)
+    protected override void OnTouchPlayer(Collider2D _collision)
     {
-        if (collision.GetComponent<PlayerMovement>())
-        {
-            WeaponChoice.Instance.OpenWeaponChoice();
-            Destroy(gameObject);
-        }
-    }
+        base.OnTouchPlayer(_collision);
+        WeaponChoice.Instance.OpenWeaponChoice();
+        Destroy(gameObject);
 
-    public Transform GetTargetTransform()
-    {
-        return transform;
-    }
-    private void Start()
-    {
-        WaypointIndicatorManager.Instance.SummonWaypointIndicator(this);
     }
 }
