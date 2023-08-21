@@ -28,6 +28,7 @@ public class ShopItemCard : MonoBehaviour
     private void UpdateVisual()
     {
         itemNameText.SetText(item.itemName);
+        itemNameText.color = Item.ItemRarityToColor(item.itemRarity);
         itemDescriptionText.SetText(item.GetItemStatsReadable()/*itemDescription*/);
         priceText.SetText("" + price);
         if (item.itemSprite != null)

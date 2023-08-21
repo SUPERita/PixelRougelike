@@ -7,6 +7,7 @@ using UnityEngine.SceneManagement;
 
 public class WaveManager : StaticInstance<WaveManager>
 {
+    
     [Header("Waves")]
     [SerializeField] private float waveDuration = 5f;
     [SerializeField] private float delayBetweenWaves = 5f;
@@ -33,6 +34,17 @@ public class WaveManager : StaticInstance<WaveManager>
     [Header("testing (only works in editor)")]
     [SerializeField] private bool useStartWaveIndex = false;
     [SerializeField, ShowIf("@useStartWaveIndex"), Tooltip("starts from one"), Range(1,30)] private int startWave = 1;
+    [SerializeField] private bool showColleclectionLoader = false;
+    [SerializeField, ShowIf("@showColleclectionLoader")] private EnemyCollection[] collections = null;
+    [Button, ShowIf("@showColleclectionLoader")]
+    private void LoadCollection()
+    {
+        waves = new WaveWeightPair[collections.Length*3];
+        for (int i = 0; i < collections.Length * 3; i++)
+        {
+            waves[i] = new WaveWeightPair(collections[i/3], 40+10*i, i+1);
+        }
+    }
 
     private bool GetBossAtWave(int _waveIndex, out GameObject _prefab)
     {
@@ -168,9 +180,16 @@ public class WaveManager : StaticInstance<WaveManager>
             }
         }
 
+
+        //number of enemis to spawn
+        float EnemyExtraPrecentage = 1 + PlayerStatsHolder.Instance.TryGetStat(StatType.EnemyAmount) / 100f;// 1.1, 1.05, 1.2, 1.5, 0.95! etc...
+        if (EnemyExtraPrecentage < .1f) EnemyExtraPrecentage = .1f;// just a check
+        int _num =(int) (waveWeight * EnemyExtraPrecentage);
+        //Debug.Log(_num + " enemis spawned");
+
         //spawn enemies
         enemySpawner.SpawnEnemeis(
-            enemyCollection.GetWaveOfWeight(waveWeight),
+            enemyCollection.GetWaveOfWeight(_num),
             waveDuration);
 
         currentWaveRefrence = waveCounter;
@@ -210,8 +229,17 @@ public class WaveManager : StaticInstance<WaveManager>
 [System.Serializable]
 public struct WaveWeightPair
 {
-    [field: SerializeField, InlineEditor, HorizontalGroup("a"),LabelWidth(250)] public EnemyCollection enemyCollection { get; private set; }
+    [field: SerializeField, InlineEditor, HorizontalGroup("a"),LabelWidth(130)] public EnemyCollection enemyCollection { get; private set; }
     [field: SerializeField, HorizontalGroup("a"), LabelWidth(50)] public int waveWeight { get; private set; }
+    //just cosmetic for me
+    [field: SerializeField, HorizontalGroup("a"), LabelWidth(25)] public int waveIndex { get; private set; }
+
+    public WaveWeightPair(EnemyCollection _enemyCollection, int _waveWeight, int _waveIndex)
+    {
+        enemyCollection = _enemyCollection;
+        waveWeight = _waveWeight;
+        waveIndex = _waveIndex;
+    }
 }
 
 [System.Serializable]

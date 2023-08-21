@@ -34,11 +34,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Radius
-      value: 1.6721685
+      value: 1.6176455
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Offset.x
-      value: 0
+      value: -0.05452299
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Offset.y
@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3664567211172250234, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -1.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3664567211172250234, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.91
+      value: 2.45
       objectReference: {fileID: 0}
     - target: {fileID: 5094099004121810999, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: amount
@@ -66,7 +66,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7062679113067196933, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: maxHealth
-      value: 60
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7062679113067196933, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: baseHealth
@@ -166,6 +166,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33418c63ee36ba348af261f8fa5656b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHeavy: 1
+  isFast: 0
+  isVeryFast: 0
   health: {fileID: 6840388550793819182}
   follow: {fileID: 0}
   rb: {fileID: 4282599490679360134}
@@ -175,10 +178,6 @@ MonoBehaviour:
   regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
   dieKnockSpeed: 10
-  walkAnimSpeed: 4
-  walkSpeed: 4
-  damage: 5
-  <enemyWeight>k__BackingField: 2
   dashDuration: 0.5
   dashDelay: 0.75
   dashCooldown: 4

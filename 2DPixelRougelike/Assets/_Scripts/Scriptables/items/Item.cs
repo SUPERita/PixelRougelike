@@ -2,7 +2,7 @@ using MoreMountains.Feel;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
-using UnityEditor.Build;
+//using UnityEditor.Build;
 using UnityEngine;
 
 [CreateAssetMenu(fileName = "Item", menuName = "Items/Item")]
@@ -11,14 +11,14 @@ public class Item : ScriptableObject
     [field: SerializeField] public string itemName { get; private set; }
     [field: SerializeField, PreviewField(50, ObjectFieldAlignment.Left)] public Sprite itemSprite { get; private set; }
     [field: SerializeField] public ItemRarity itemRarity { get; private set; }
-    [field: SerializeField] public int itemMinWave { get; private set; }
+    //[field: SerializeField] public int itemMinWave { get; private set; }
     [field: SerializeField] public List<PlayerStatInstance> statInstances { get; private set; }
     [field: SerializeField, TextArea(5,5)] public string itemDescription { get; private set; }
 
     public string GetItemStatsReadable(bool _withDescription = true)
     {
         string _out = "";
-        if (_withDescription) { _out = itemDescription + "\n"; }
+        if (_withDescription) { _out = itemDescription + "\n" + "\n"; }
         PlayerStats _p = PlayerStatsHolder.Instance.GetPlayerStats();
         foreach (var _stat in statInstances)
         {
@@ -53,6 +53,25 @@ public class Item : ScriptableObject
         Debug.LogError("wth nigo");
         return -1;
     }
+
+
+    public static Color ItemRarityToColor(ItemRarity _itemRarity)
+    {
+        switch(_itemRarity) { 
+            case ItemRarity.Common:
+                return Color.white; 
+            case ItemRarity.Uncommon:
+                return Color.green;
+            case ItemRarity.Rare:
+                return Color.blue;
+            case ItemRarity.Epic:
+                return Color.magenta;
+            case ItemRarity.Legendary:
+                return Color.yellow;
+        }
+        return Color.black;
+    }
+
 }
 
 public enum ItemRarity

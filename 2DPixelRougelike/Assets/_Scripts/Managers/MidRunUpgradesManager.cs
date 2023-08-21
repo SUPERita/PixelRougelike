@@ -71,7 +71,7 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
         PlayerStats _p = PlayerStatsHolder.Instance.GetPlayerStats();
         foreach (MidRunUpgradeChoice _ChoiceButton in GetComponentsInChildren<MidRunUpgradeChoice>())
         {
-            StatTypeValRarityPair _choosenStat = midRunUpgradeCollection.GetRandomStatOfRandomRarity();
+            StatTypeValRarityPair _choosenStat = midRunUpgradeCollection.GetRandomStatOfRandomRarity(PlayerStatsHolder.Instance.TryGetStat(StatType.Luck));
             //extract values
             int _value = _choosenStat.baseStatValue;
             StatType _type = _choosenStat.statType;

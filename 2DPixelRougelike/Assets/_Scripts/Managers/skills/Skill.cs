@@ -68,7 +68,7 @@ public class Skill : MonoBehaviour
     public Skill SetIsRepeating(bool _s)
     {
         isRepeating = _s;
-        Debug.Log("set for:" + gameObject.name + ": repeating:" + _s);
+        //Debug.Log("set for:" + gameObject.name + ": repeating:" + _s);
         return this;
         //might be too late start already called
     }

@@ -44,7 +44,7 @@ public class ResourceSystem : Singleton<ResourceSystem>
         int _tmp = _add;
         if (_t == ResourceType.Gold) { 
             _tmp = (int)(_add * (1f+PlayerStatsHolder.Instance.TryGetStat(StatType.MoneyGain)/100f));
-            Debug.Log(_tmp);
+            //Debug.Log(_tmp);
         }
 
         TypeToResource(_t).SetAmount(TypeToResource(_t)._amount + _tmp);
@@ -86,7 +86,7 @@ public class ResourceSystem : Singleton<ResourceSystem>
         //    ResourceType.Gold,
         //    SaveSystem.LoadIntFromLocation(resourceLocRoot + ResourceTypeToString(ResourceType.Gold))
         //    );
-        Debug.Log("resource load");
+        //Debug.Log("resource load");
 
         SetResourceAmount(
             ResourceType.EnergyNugget,

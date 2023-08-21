@@ -31,10 +31,10 @@ public class EnemyCollection : ScriptableObject
             _counter++;
             EnemyWeightPair _pair = enemysRateList[Random.Range(0, enemysRateList.Count)];
             //if "can affford" add
-            if(_leftWeight - _pair.enemy.enemyWeight >= 0)
+            if(_leftWeight - _pair.enemy.GetEnemyWeight() >= 0)
             {
                 list.Add(_pair.enemy.gameObject.name);
-                _leftWeight -= _pair.enemy.enemyWeight;
+                _leftWeight -= _pair.enemy.GetEnemyWeight();
             }
 
         }

@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4901368845124669801}
   - component: {fileID: 5077983151157814100}
+  - component: {fileID: 1463378402316139077}
   m_Layer: 0
   m_Name: WaveManager
   m_TagString: Untagged
@@ -30,7 +31,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5077983151157814100
 MonoBehaviour:
@@ -49,13 +50,16 @@ MonoBehaviour:
   waves:
   - <enemyCollection>k__BackingField: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
     <waveWeight>k__BackingField: 10
+    <waveIndex>k__BackingField: 0
   - <enemyCollection>k__BackingField: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
     <waveWeight>k__BackingField: 10
+    <waveIndex>k__BackingField: 0
   enemySpawner: {fileID: 0}
   objectSpawner: {fileID: 0}
   extraWave:
     <enemyCollection>k__BackingField: {fileID: 11400000, guid: 4f241e57e54220748a249f320ebae811, type: 2}
     <waveWeight>k__BackingField: 0
+    <waveIndex>k__BackingField: 0
   extraWaveStartWeight: 10
   extraWaveWeightPerLevel: 10
   bossWavePairs:
@@ -71,3 +75,19 @@ MonoBehaviour:
     - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
     - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
     <spawnAtWave>k__BackingField: 2
+  useStartWaveIndex: 0
+  startWave: 1
+  collections: []
+--- !u!114 &1463378402316139077
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6199441990710129385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 50d82570fa1608e43af00f810ac6fb5f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waveManager: {fileID: 5077983151157814100}

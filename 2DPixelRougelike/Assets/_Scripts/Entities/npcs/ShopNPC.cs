@@ -84,5 +84,18 @@ public class ShopNPC : NPC, WaypointTarget
         return transform;
     }
 
+    public override void OnEnterRange()
+    {
+        if (this == null) return;
+        GetComponent<Animator>().SetTrigger("Open");
+        base.OnEnterRange();
+    }
+    public override void OnExitRange()
+    {
+        if (this == null) return;
+        GetComponent<Animator>().SetTrigger("Close");
+        base.OnExitRange();
+    }
+
 
 }

@@ -911,6 +911,7 @@ GameObject:
   - component: {fileID: 4991420160875594964}
   - component: {fileID: 3764507932367705448}
   - component: {fileID: 5482375377541177772}
+  - component: {fileID: 3806549911352275347}
   m_Layer: 0
   m_Name: _Player
   m_TagString: Player
@@ -1171,6 +1172,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 4991420160875594964}
+--- !u!114 &3806549911352275347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6478872372731507194}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 76dfe3233510c654d844b042bfe27490, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6543130236241438007
 GameObject:
   m_ObjectHideFlags: 0
@@ -1271,8 +1284,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: bew text
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 122df67fb27ed6c46b81068a0e5bd27e, type: 2}
+  m_sharedMaterial: {fileID: -7951869453627221936, guid: 122df67fb27ed6c46b81068a0e5bd27e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

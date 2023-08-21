@@ -5,7 +5,7 @@ using Sirenix.OdinInspector;
 using System.Drawing;
 using UnityEngine.Rendering;
 
-public class Tester : MonoBehaviour
+public class Tester : StaticInstance<Tester>
 {
     [SerializeField] private PlayerStats stats;
     [SerializeField] private bool compileEveryFrame = false;
@@ -97,4 +97,53 @@ public class Tester : MonoBehaviour
     {
         GetComponentInChildren<AudioSource>().Play();
     }
+
+    [Button]
+    private void AddItemToPlayer(Item _item)
+    {
+        Shop.Instance.GiveItem(_item);
+    }
+
+    [SerializeField] private bool showShopData = true;
+    [ShowInInspector, ShowIf("showShopData")] private int commons = 0;
+    [ShowInInspector, ShowIf("showShopData")] private int uncommons = 0;
+    [ShowInInspector, ShowIf("showShopData")] private int rares = 0;
+    [ShowInInspector, ShowIf("showShopData")] private int epics = 0;
+    [ShowInInspector, ShowIf("showShopData")] private int legendaries = 0;
+    public void OfferedItem(Item _item)
+    {
+        switch (_item.itemRarity) {
+            case ItemRarity.Common:
+                commons++;
+                break;
+            case ItemRarity.Uncommon:
+                uncommons++;
+                break;
+            case ItemRarity.Rare:
+                rares++;
+                break;
+            case ItemRarity.Epic:
+                epics++;
+                break;
+            case ItemRarity.Legendary:
+                legendaries++;
+                break;
+        }
+
+        PrintPrecentages();
+
+    }
+    [SerializeField, TextArea(10, 10), ShowIf("showShopData")] private string _result = "";
+    private void PrintPrecentages()
+    {
+        float sum = commons + uncommons + rares + epics + legendaries;
+        string _out = "";//make them show the right number of I's
+        _out += new string('I', (int)(100f * commons / sum)) + " commons % is: " + 100f * commons / sum + "%\n";
+        _out += new string('I', (int)(100f * uncommons / sum)) + " uncommons % is: " + 100f * uncommons / sum + "%\n";
+        _out += new string('I', (int)(100f * rares / sum)) + " rares % is: " + 100f * rares / sum + "%\n";
+        _out += new string('I', (int)(100f * epics / sum)) + " epics % is: " + 100f * epics / sum + "%\n";
+        _out += new string('I', (int)(100f * legendaries / sum)) + " legendaries % is: " + 100f * legendaries / sum + "%\n";
+        _result = _out;//Debug.Log(_out);
+    }
+
 }

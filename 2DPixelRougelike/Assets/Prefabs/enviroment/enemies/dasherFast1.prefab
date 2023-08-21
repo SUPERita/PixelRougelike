@@ -126,6 +126,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33418c63ee36ba348af261f8fa5656b8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHeavy: 0
+  isFast: 1
+  isVeryFast: 0
   health: {fileID: 6840388550793819182}
   follow: {fileID: 0}
   rb: {fileID: 4282599490679360134}
@@ -135,10 +138,6 @@ MonoBehaviour:
   regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
   dieKnockSpeed: 10
-  walkAnimSpeed: 8
-  walkSpeed: 10
-  damage: 5
-  <enemyWeight>k__BackingField: 1
   dashDuration: 0.5
   dashDelay: 0.5
   dashCooldown: 2

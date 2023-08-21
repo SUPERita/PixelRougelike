@@ -3,9 +3,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
-using UnityEngine;
-using UnityEngine.Events;
-using System.Collections;
+
 
 /// <summary>
 /// A static class for general helpful methods
@@ -23,6 +21,11 @@ public static class Helpers
     {
         if(t == null) { Debug.LogWarning("idk it just sometimes says that on non null object just let it be"); return; }
         foreach (Transform child in t) Object.Destroy(child.gameObject);
+    }
+    public static void DestroyChildrenImmidiate(this Transform t)
+    {
+        if (t == null) { Debug.LogWarning("idk it just sometimes says that on non null object just let it be"); return; }
+        foreach (Transform child in t) Object.DestroyImmediate(child.gameObject);
     }
 
     public static void ToggleCanvas(CanvasGroup _c)
@@ -68,13 +71,13 @@ public static class Helpers
 
     public static IEnumerator DoInTime(UnityAction _A, float time = 0f)
     {
-        Debug.Log("triple check this works good");
+        //Debug.Log("triple check this works good");
         yield return new WaitForSeconds(time);
         _A.Invoke();
     }
     public static IEnumerator DoNextFrame(UnityAction _A)
     {
-        Debug.Log("triple check this works good");
+        //Debug.Log("triple check this works good");
         yield return new WaitForEndOfFrame();
         _A.Invoke();
     }
@@ -105,6 +108,11 @@ public static class Helpers
     public static float CurrentScreenSizeRelativeTo1920()
     {
         return Screen.width / 1920f;
+    }
+
+    public static int BoolToInt(bool _b)
+    {
+        return _b ? 1 : 0;
     }
 
 }

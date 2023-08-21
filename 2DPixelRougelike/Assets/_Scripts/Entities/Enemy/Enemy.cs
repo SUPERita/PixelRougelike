@@ -7,9 +7,17 @@ using DG.Tweening;
 using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using Lean.Pool;
+using System.Security.Policy;
 
 public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
 {
+    [Header("vals")]
+    [SerializeField] private bool isHeavy = false;
+    [SerializeField, ValidateInput("@!(isFast && isVeryFast)", "not both of them at the same time")] private bool isFast = false;
+    [SerializeField, ValidateInput("@!(isFast && isVeryFast)", "not both of them at the same time")] private bool isVeryFast = false;
+    protected int damage = 5;
+
+    [Header("basics")]
     [SerializeField] protected Health health;
     [SerializeField] protected Transform follow = null;
     [SerializeField] protected Rigidbody2D rb = null;
@@ -23,11 +31,20 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     [SerializeField] private Material regularMat;
     [SerializeField] private Material hitMat;
     [SerializeField] private float dieKnockSpeed = 10f;
-    [SerializeField] private float walkAnimSpeed = 4f;
-    [SerializeField] protected float walkSpeed = 4f;
-    [Header("vals")]
-    [SerializeField] protected int damage = 5;
-    [field: SerializeField] public int enemyWeight { get; private set; } = 1;
+    private float walkAnimSpeed = 4f;
+    protected float walkSpeed = 4f;
+    
+    //[field: SerializeField] public int enemyWeight { get; private set; } = 1;
+    public int GetEnemyWeight(){
+        int _i = 1;
+
+        if (isHeavy) _i++;
+
+        if (isVeryFast) _i+=2;
+        else if (isFast) _i++;
+
+        return _i;
+    }
 
     private bool alive = true;
     private Tween _walkTween = null;
@@ -55,7 +72,6 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         rb = GetComponent<Rigidbody2D>();
         follow = FindAnyObjectByType<PlayerMovement>().transform;
         health.OnDie += Health_OnDie;
-        
     }
     private void OnDestory()
     {
@@ -154,8 +170,20 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
         //health.OnDie += Health_OnDie;
         //walk tween managment
         //transform.DOKill();
-        if (_walkTween == null) _walkTween = transform.DOScaleY(1.15f, 1f/walkAnimSpeed).SetLoops(-1, LoopType.Yoyo).SetAutoKill(false); 
+
+        //walk speed
+        walkSpeed = 4;
+        if (isFast) walkSpeed = 8;
+        if (isVeryFast) walkSpeed = 12;
+
+        //walk anim speed
+        walkAnimSpeed = 4;
+        if (isFast) walkAnimSpeed = 8;
+        if (isVeryFast) walkAnimSpeed = 12;
+
+        if (_walkTween == null) _walkTween = transform.DOScaleY(1.15f, 1f / walkAnimSpeed).SetLoops(-1, LoopType.Yoyo).SetAutoKill(false);
         _walkTween?.Restart();
+
     }
 
     public virtual void OnDespawn()
@@ -179,4 +207,11 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
 
 
     #endregion
+
+    public void SetLevelIndex(int _level)
+    {
+        //health
+        health.SetMaxHealth(_level * 30 * (1+Helpers.BoolToInt(isHeavy)), true);
+        health.ResetHealth();
+    }
 }

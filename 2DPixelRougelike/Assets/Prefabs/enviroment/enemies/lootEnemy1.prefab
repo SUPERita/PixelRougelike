@@ -34,15 +34,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Radius
-      value: 1.2118461
+      value: 0.95913213
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Offset.x
-      value: -0.17999983
+      value: -0.0536426
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Offset.y
-      value: 2.1999998
+      value: 0.9546699
       objectReference: {fileID: 0}
     - target: {fileID: 3664567211172250234, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_LocalScale.x
@@ -54,11 +54,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3664567211172250234, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.1
+      value: 0.03
       objectReference: {fileID: 0}
     - target: {fileID: 3664567211172250234, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.25
+      value: 1.02
       objectReference: {fileID: 0}
     - target: {fileID: 5094099004121810999, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: amount
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
     - target: {fileID: 7062679113067196933, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: maxHealth
-      value: 120
+      value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 7165432857041552112, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_RootOrder
@@ -149,6 +149,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4201853bce32e45449cad1c725369cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHeavy: 1
+  isFast: 0
+  isVeryFast: 1
   health: {fileID: 6408811502973576607}
   follow: {fileID: 0}
   rb: {fileID: 4428028774674455351}
@@ -158,10 +161,6 @@ MonoBehaviour:
   regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
   dieKnockSpeed: 10
-  walkAnimSpeed: 8
-  walkSpeed: 12
-  damage: 5
-  <enemyWeight>k__BackingField: 2
 --- !u!212 &2039940240597586629 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2791198192069608799, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}

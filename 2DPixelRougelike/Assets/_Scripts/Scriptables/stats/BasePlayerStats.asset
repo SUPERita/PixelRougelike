@@ -33,6 +33,9 @@ MonoBehaviour:
     - {fileID: 1186180666, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: 470056115, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: -400972621, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: -1141556603, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: -1329800201, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1108563478, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -57,7 +60,7 @@ MonoBehaviour:
       Data: 
     - Name: 
       Entry: 12
-      Data: 17
+      Data: 20
     - Name: 
       Entry: 7
       Data: 
@@ -559,6 +562,96 @@ MonoBehaviour:
     - Name: <icon>k__BackingField
       Entry: 10
       Data: 16
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 17
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: enemy amount
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 1
+      Data: the amount of enemies that spawn
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 17
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: false
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 18
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: investment
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 1
+      Data: amount of gold you earn each wave
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 18
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 19
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: luck
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 1
+      Data: increase the rarity of rewards
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 19
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true

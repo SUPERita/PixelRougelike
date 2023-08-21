@@ -18,15 +18,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Radius
-      value: 1.42
+      value: 1.3462985
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Offset.x
-      value: 0
+      value: 0.28427863
       objectReference: {fileID: 0}
     - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_Offset.y
-      value: 1.07
+      value: 1.0699999
+      objectReference: {fileID: 0}
+    - target: {fileID: 3132896753659494340, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3664567211172250234, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}
       propertyPath: m_LocalScale.x
@@ -129,6 +133,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11da5085f5d32d54782a5109506dde8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isHeavy: 0
+  isFast: 0
+  isVeryFast: 0
   health: {fileID: 6408811502973576607}
   follow: {fileID: 0}
   rb: {fileID: 4428028774674455351}
@@ -138,9 +145,6 @@ MonoBehaviour:
   regularMat: {fileID: 2100000, guid: 920fde4c71add8442b0275591a970367, type: 2}
   hitMat: {fileID: 2100000, guid: 784f5e7dea9cf674f9f12cd3d37a48b4, type: 2}
   dieKnockSpeed: 10
-  walkAnimSpeed: 4
-  walkSpeed: 4
-  damage: 5
 --- !u!212 &2039940240597586629 stripped
 SpriteRenderer:
   m_CorrespondingSourceObject: {fileID: 2791198192069608799, guid: d0345ae4f9fd55745aee2b5f8975bb09, type: 3}

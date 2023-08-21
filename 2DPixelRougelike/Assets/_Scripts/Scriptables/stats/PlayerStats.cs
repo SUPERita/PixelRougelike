@@ -130,6 +130,9 @@ public enum StatType
     MeleeDamage = 13,
     PickUpRange = 14,
     SkillProj = 15,
-    HealthRegen = 16//new
+    HealthRegen = 16,
+    EnemyAmount = 17,
+    Invesment = 18,
+    Luck = 19
 
 }

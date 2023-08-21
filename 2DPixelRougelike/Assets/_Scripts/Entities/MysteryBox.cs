@@ -8,6 +8,7 @@ public class MysteryBox : LootBase
     {
         base.OnTouchPlayer(_collision);
         WeaponChoice.Instance.OpenWeaponChoice();
+        PlayPickupSound();
         Destroy(gameObject);
 
     }

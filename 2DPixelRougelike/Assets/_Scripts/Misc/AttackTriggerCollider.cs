@@ -70,9 +70,9 @@ public class AttackTriggerCollider : MonoBehaviour
             Collider2D _closeCol = null;
             foreach (Collider2D _c in _enemyColliders)
             {
-                if ((_c.transform.position - _transform.position).sqrMagnitude < _minDis)
+                if ((_c.bounds.center/*_c.transform.position*/ - _transform.position).sqrMagnitude < _minDis)
                 {
-                    _minDis = (_c.transform.position - _transform.position).sqrMagnitude;
+                    _minDis = (_c.bounds.center/*_c.transform.position*/ - _transform.position).sqrMagnitude;
                     _closeCol = _c;
                 }
             }

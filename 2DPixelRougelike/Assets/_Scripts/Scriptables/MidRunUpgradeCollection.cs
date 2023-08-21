@@ -45,7 +45,7 @@ public class MidRunUpgradeCollection : ScriptableObject
     {
         float _f = Random.Range(0f, 100f);
         //need to look at that
-        _f += _luckAddition;
+        _f *= 1+(_luckAddition/200f);
         MidRunUpgradeRarity _u = MidRunUpgradeRarity.Common;
 
         if(_f> 100 - (UncommonChance + RareChance + EpicChance + LegendaryChance))

@@ -49,7 +49,7 @@ public class LeanPoolManager : StaticInstance<LeanPoolManager>
         poolDictionary[_g.name].Despawn(_g, _inSeconds);
     }
 
-    [Button]
+    //[Button]
     private void CacheChildPools()
     {
         poolNamePairs = new List<PoolNamePair>();
@@ -58,6 +58,46 @@ public class LeanPoolManager : StaticInstance<LeanPoolManager>
             poolNamePairs.Add(new PoolNamePair(_p, _p.Prefab.name, _p.Prefab));
             _p.gameObject.name = _p.Prefab.name;
         }
+    }
+
+
+    
+    [SerializeField] private CustomPoolObject[] _objectsToPool;
+
+    [InfoBox("up to 1m diffrent pools")]
+    [Button]
+    private void CreatePools()
+    {
+        poolNamePairs.Clear();
+        DestroyStuff();
+        foreach (var _obj in _objectsToPool)
+        {
+            GameObject _g = new GameObject();
+            _g.transform.parent = transform;
+            _g.AddComponent<LeanGameObjectPool>();
+            _g.GetComponent<LeanGameObjectPool>().Capacity = 1000;
+            _g.GetComponent<LeanGameObjectPool>().Prefab = _obj.prefab;
+            _g.GetComponent<LeanGameObjectPool>().Recycle = _obj.recycle;
+            poolNamePairs.Add(new PoolNamePair(
+                _g.GetComponent<LeanGameObjectPool>(),
+                _obj.prefab.name,
+                _obj.prefab));
+            _g.name = _obj.prefab.name;
+        }
+    }
+    [Button]
+    private void DestroyStuff()
+    {
+        for (int j = 0; j < 20; j++)
+        {
+            for (int i = 0; i < transform.childCount-1; i++)
+            {
+                DestroyImmediate(transform.GetChild(i).gameObject);
+            }
+        }
+       
+        if(transform.childCount>0) DestroyImmediate(transform.GetChild(0).gameObject);
+        
     }
 
 }
@@ -75,5 +115,14 @@ public struct PoolNamePair
         this.poolName = _poolName;
         this.poolGameObject = _poolGameObject;
     }
+
+}
+[Serializable]
+public struct CustomPoolObject
+{
+    [field: SerializeField] public GameObject prefab { get; private set; }
+    //[field: SerializeField, Required, InlineEditor(InlineEditorModes.GUIAndHeader)] public GameObject poolGameObject { get; private set; }
+    [field: SerializeField] public bool recycle { get; private set; }
+
 
 }

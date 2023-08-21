@@ -15,7 +15,6 @@ MonoBehaviour:
   <itemName>k__BackingField: prime beef
   <itemSprite>k__BackingField: {fileID: 21300000, guid: 7d869ee38c3836c4c910115c655930fa, type: 3}
   <itemRarity>k__BackingField: 0
-  <itemMinWave>k__BackingField: 3
   <statInstances>k__BackingField:
   - <number>k__BackingField: 2
     <statName>k__BackingField: 6
@@ -23,6 +22,4 @@ MonoBehaviour:
     <statName>k__BackingField: 13
   - <number>k__BackingField: -10
     <statName>k__BackingField: 2
-  <itemDescription>k__BackingField: 'cant move much after all that eating
-
-'
+  <itemDescription>k__BackingField: cant move much after all that eating

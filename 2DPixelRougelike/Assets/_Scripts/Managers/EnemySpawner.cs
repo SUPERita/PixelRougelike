@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour, ISpawner
 {
     //[SerializeField] private GameObject enemyPrefab;
     //[SerializeField] private float reload = 1f;
+    [SerializeField] private int level = 0;
     [SerializeField] private float spawnRange = 64f;
     [SerializeField] private float spawnRangeFromPlayer = 8f;
     [SerializeField] private GameObject spawnIndicator;
@@ -44,6 +45,7 @@ public class EnemySpawner : MonoBehaviour, ISpawner
             Transform _t = LeanPoolManager.Instance.SpawnFromPool(_enemyName).transform;//UnityEngine.Random.Range(0, 2) == 1 ? "dasher1":"follow1").transform;//PoolEnemy _t = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnEnemy("box2") : PoolManager.Instance.SpawnEnemy("box");
             _t.SetParent(_transform);
             _t.localPosition = spawnPosition;
+            _t.GetComponent<Enemy>().SetLevelIndex(level+1);
 
             //destory indicator
             Destroy(_indc.gameObject);

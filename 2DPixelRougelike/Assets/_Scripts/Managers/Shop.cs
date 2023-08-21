@@ -85,9 +85,12 @@ public class Shop : StaticInstance<Shop>
             ResourceSystem.Instance.TakeResourceAmount(ResourceType.Gold, currentRerollcost);
 
             //give
-            currentRerollcost += 5;
+            currentRerollcost += /*0*/5;
             rerollCostText.SetText("" + currentRerollcost);
-            RefreshShopCards();
+            //for(int i = 0; i < 200; i++)
+            //{
+            //}
+                RefreshShopCards();
         } else { Debug.LogError("too poor"); AudioSystem.Instance.PlaySound("error_buzz", .75f); }
         
     }
@@ -102,18 +105,21 @@ public class Shop : StaticInstance<Shop>
         foreach (Item _item in playerItems)
         {
             Instantiate(itemDisplayPrefab, itemDisplaysRoot).GetComponent<ItemDisplay>().InitializeDisplay(_item);
+            
         }
     }
      
     private void CreateShopCard()
     {
-        Item tmpItem = itemCollection.GetRandomItemInWave(WaveManager.Instance.currentWaveRefrence);
-        float choosedItemPrice = Random.Range(Item.RarityToBasePrice(tmpItem.itemRarity) * .75f, Item.RarityToBasePrice(tmpItem.itemRarity) * 1.25f); //random number -+25%
+        Item _tmpItem = itemCollection.GetRandomItemInWave(WaveManager.Instance.currentWaveRefrence);
+        float choosedItemPrice = Random.Range(Item.RarityToBasePrice(_tmpItem.itemRarity) * .75f, Item.RarityToBasePrice(_tmpItem.itemRarity) * 1.25f); //random number -+25%
         choosedItemPrice *= .7f + .3f*WaveManager.Instance.currentWaveRefrence; //scale with levels
 
 
         Instantiate(itemCardPrefab, itemCardRoot)
-                    .GetComponent<ShopItemCard>().InitializeShopCard(tmpItem, this, (int)choosedItemPrice);
+                    .GetComponent<ShopItemCard>().InitializeShopCard(_tmpItem, this, (int)choosedItemPrice);
+
+        //Tester.Instance.OfferedItem(_tmpItem);// testing
     }
 
     public void OnClickedCard(ShopItemCard _cardClicked)

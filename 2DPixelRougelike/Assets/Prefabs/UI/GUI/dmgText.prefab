@@ -71,8 +71,8 @@ MonoBehaviour:
 
 '
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: b6251e42fc4f8234ba498131099712f2, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: b6251e42fc4f8234ba498131099712f2, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 122df67fb27ed6c46b81068a0e5bd27e, type: 2}
+  m_sharedMaterial: {fileID: -7951869453627221936, guid: 122df67fb27ed6c46b81068a0e5bd27e, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

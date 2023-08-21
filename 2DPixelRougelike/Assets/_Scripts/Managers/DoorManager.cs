@@ -13,8 +13,8 @@ public class DoorManager : MonoBehaviour
     private void Start()
     {
         doorAmount = doors.Length;
-        if (GetDoorProgress() == null) { SetStartDoors(); }
-        if (GetDoorProgress().Length != doorAmount) { SetStartDoors(); }
+        if (GetDoorProgress() == null) { ResetDoors(); }
+        if (GetDoorProgress().Length != doorAmount) { ResetDoors(); }
 
         for (int i = 0; i < doors.Length; i++)
         {
@@ -69,7 +69,7 @@ public class DoorManager : MonoBehaviour
         //Debug.Log(_s);
     }
     [Button]
-    private static void SetStartDoors()
+    private static void ResetDoors()
     {
         bool[] bools = new bool[doorAmount];
         for (int i = 0; i < bools.Length; i++)
