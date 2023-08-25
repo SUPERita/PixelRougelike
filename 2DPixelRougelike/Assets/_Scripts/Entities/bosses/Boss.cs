@@ -97,6 +97,8 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
         transform.DOScale(0f, 1f).SetEase(Ease.InBounce)
             .OnComplete(() => Destroy(gameObject));
         lootHandler.SpawnLoot();
+
+        SteamIntegration.UnlockAchievment("ACH_KILL1BOSS");
     }
 
     #endregion

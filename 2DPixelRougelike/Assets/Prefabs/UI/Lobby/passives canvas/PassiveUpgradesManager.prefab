@@ -33,7 +33,6 @@ RectTransform:
   m_Children:
   - {fileID: 2242919444952871858}
   m_Father: {fileID: 2128780779414945465}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -165,7 +164,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4144143312247633923}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -241,10 +239,9 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 308650537560705094}
-  - {fileID: 2665161618064204380}
-  - {fileID: 3940021160416970707}
   - {fileID: 3372127411591132697}
+  - {fileID: 308650537560705094}
+  - {fileID: 3940021160416970707}
   - {fileID: 3852241761295729852}
   - {fileID: 9129746141740486709}
   - {fileID: 7270352286009617173}
@@ -258,7 +255,6 @@ RectTransform:
   - {fileID: 4268623865026535178}
   - {fileID: 7024017385441512595}
   m_Father: {fileID: 2128780779414945465}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -358,7 +354,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 5162011230831796772}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -493,7 +488,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3667461798075298344}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -628,7 +622,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4144143312247633923}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -707,7 +700,6 @@ RectTransform:
   m_Children:
   - {fileID: 5721178264269221356}
   m_Father: {fileID: 2128780779414945465}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -857,7 +849,6 @@ RectTransform:
   - {fileID: 3667461798075298344}
   - {fileID: 5162011230831796772}
   m_Father: {fileID: 0}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -960,7 +951,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 2128780779414945465}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 1, y: 1}
@@ -2391,7 +2381,6 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4144143312247633923}
-  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -2557,8 +2546,16 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1465
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 14687
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 29374
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2735,12 +2732,20 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1365
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 14564
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 165444
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[3].<cost>k__BackingField
-      value: 100000
+      value: 1564654
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -2913,6 +2918,14 @@ PrefabInstance:
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: <statname>k__BackingField
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 12313
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 23211
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
@@ -3094,15 +3107,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
-      value: 100
+      value: 1465
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
-      value: 1000
+      value: 15464
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 30928
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[3].<cost>k__BackingField
@@ -3260,19 +3273,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[0].<val>k__BackingField
-      value: 3
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[1].<val>k__BackingField
-      value: 100
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<val>k__BackingField
-      value: 200
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1546
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 16454
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 156436
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3441,12 +3462,20 @@ PrefabInstance:
       value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1564
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 12444
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 24888
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[3].<cost>k__BackingField
-      value: 100000
+      value: 49776
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3477,202 +3506,6 @@ PrefabInstance:
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
   m_PrefabInstance: {fileID: 3163985852704300040}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3758536233276186974
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 8154593637673406244}
-    m_Modifications:
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_Pivot.x
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_Pivot.y
-      value: 0.5
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_RootOrder
-      value: -1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchorMax.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchorMax.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchorMin.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchorMin.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_SizeDelta.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_SizeDelta.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1916349970786940503, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 2472457355558569504, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -7.200012
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: showPrecentage
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.size
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: <statname>k__BackingField
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[0].val
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[1].val
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[0].cost
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[1].cost
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[0].<val>k__BackingField
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[1].<val>k__BackingField
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[2].<val>k__BackingField
-      value: 200
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[3].<val>k__BackingField
-      value: 201
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
-      value: 100
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
-      value: 1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
-      objectReference: {fileID: 0}
-    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: valuePerLevel.Array.data[3].<cost>k__BackingField
-      value: 40
-      objectReference: {fileID: 0}
-    - target: {fileID: 5901296289571336363, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchoredPosition.y
-      value: -6.9522095
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101120953770235835, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_text
-      value: 'strength
-
-'
-      objectReference: {fileID: 0}
-    - target: {fileID: 7101120953770235835, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_fontSize
-      value: 18.85
-      objectReference: {fileID: 0}
-    - target: {fileID: 7538982277764231946, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_Name
-      value: strength passiveUpgradeChoice_001
-      objectReference: {fileID: 0}
-    - target: {fileID: 8606989237230108744, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-      propertyPath: m_AnchoredPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
---- !u!224 &2665161618064204380 stripped
-RectTransform:
-  m_CorrespondingSourceObject: {fileID: 1213032443542782722, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
-  m_PrefabInstance: {fileID: 3758536233276186974}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3885465805619798627
 PrefabInstance:
@@ -3803,8 +3636,16 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1456
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 12313
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 24626
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -3950,11 +3791,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 1000
+      value: 20000
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[3].<cost>k__BackingField
-      value: 1000
+      value: 50000
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4111,8 +3952,16 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1657
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 14459
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 28918
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4277,8 +4126,16 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1546
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 16666
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 33332
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4443,8 +4300,16 @@ PrefabInstance:
       value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1246
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 17854
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 35708
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4605,8 +4470,16 @@ PrefabInstance:
       value: 60
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1465
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 17985
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 145354
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4779,12 +4652,20 @@ PrefabInstance:
       value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1564
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 16465
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 32930
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[3].<cost>k__BackingField
-      value: 100000
+      value: 65860
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -4945,8 +4826,16 @@ PrefabInstance:
       value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1654
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 14322
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 28644
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -5111,8 +5000,16 @@ PrefabInstance:
       value: 30
       objectReference: {fileID: 0}
     - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[0].<cost>k__BackingField
+      value: 1882
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
+      propertyPath: valuePerLevel.Array.data[1].<cost>k__BackingField
+      value: 15464
+      objectReference: {fileID: 0}
+    - target: {fileID: 3689762090456391134, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: valuePerLevel.Array.data[2].<cost>k__BackingField
-      value: 10000
+      value: 30928
       objectReference: {fileID: 0}
     - target: {fileID: 6711909421045130375, guid: 165d04a9327b17d4da862f79b1da64f4, type: 3}
       propertyPath: m_AnchoredPosition.y

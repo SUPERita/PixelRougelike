@@ -132,6 +132,9 @@ public class WaveManager : StaticInstance<WaveManager>
             DoorManager.CompleatedLevel(int.Parse(SceneManager.GetActiveScene().name));
         }
 
+        //tell steamworks // +1 cause for the user levels start from 1
+        SteamIntegration.UnlockAchievment($"ACH_ROOM{int.Parse(SceneManager.GetActiveScene().name) + 1}");/*should be a number*/
+
         yield return new WaitForSeconds(8);
 
         //extra waves

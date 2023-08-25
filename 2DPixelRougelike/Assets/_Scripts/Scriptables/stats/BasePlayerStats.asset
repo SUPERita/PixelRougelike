@@ -19,7 +19,6 @@ MonoBehaviour:
     - {fileID: 1362952153, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: -324673005, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: 1234771931, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
-    - {fileID: 632272350, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: 1733038055, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: 700491040, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: 1086678757, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
@@ -36,6 +35,7 @@ MonoBehaviour:
     - {fileID: -1141556603, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: -1329800201, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     - {fileID: 1108563478, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
+    - {fileID: 1064325382, guid: d07f84e6dfe1a9a4fbe65d52e2ef0446, type: 3}
     SerializedBytesString: 
     Prefab: {fileID: 0}
     PrefabModificationsReferencedUnityObjects: []
@@ -156,36 +156,6 @@ MonoBehaviour:
       Data: 
     - Name: $k
       Entry: 3
-      Data: 3
-    - Name: $v
-      Entry: 7
-      Data: PlayerStat, Assembly-CSharp
-    - Name: <statName>k__BackingField
-      Entry: 1
-      Data: strength
-    - Name: <value>k__BackingField
-      Entry: 3
-      Data: 0
-    - Name: <description>k__BackingField
-      Entry: 1
-      Data: how strong you are
-    - Name: <icon>k__BackingField
-      Entry: 10
-      Data: 3
-    - Name: <showInDisplay>k__BackingField
-      Entry: 5
-      Data: true
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 8
-      Data: 
-    - Name: 
-      Entry: 7
-      Data: 
-    - Name: $k
-      Entry: 3
       Data: 4
     - Name: $v
       Entry: 7
@@ -201,7 +171,7 @@ MonoBehaviour:
       Data: how many skills can you use
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 4
+      Data: 3
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: false
@@ -231,7 +201,7 @@ MonoBehaviour:
       Data: extra damage for skills
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 5
+      Data: 4
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -261,7 +231,7 @@ MonoBehaviour:
       Data: extra damage for weapons
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 6
+      Data: 5
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -291,7 +261,7 @@ MonoBehaviour:
       Data: chance to evade damage, 40% max
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 7
+      Data: 6
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -321,7 +291,7 @@ MonoBehaviour:
       Data: reduce the amount of damage you take, 40% max
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 8
+      Data: 7
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -351,7 +321,7 @@ MonoBehaviour:
       Data: bost xp gain by a precentage
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 9
+      Data: 8
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: false
@@ -381,7 +351,7 @@ MonoBehaviour:
       Data: bost money gain by a precentage
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 10
+      Data: 9
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: false
@@ -411,7 +381,7 @@ MonoBehaviour:
       Data: faster attack speed with weapons
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 11
+      Data: 10
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -441,7 +411,7 @@ MonoBehaviour:
       Data: faster reload time of skills
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 12
+      Data: 11
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -471,7 +441,7 @@ MonoBehaviour:
       Data: stronger melee attacks
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 13
+      Data: 12
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -501,7 +471,7 @@ MonoBehaviour:
       Data: pick up from further away
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 14
+      Data: 13
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: false
@@ -531,7 +501,7 @@ MonoBehaviour:
       Data: extra projectiles for each skill
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 15
+      Data: 14
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: false
@@ -555,13 +525,13 @@ MonoBehaviour:
       Data: health regen
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 0
+      Data: 10
     - Name: <description>k__BackingField
       Entry: 1
       Data: 'the amount of health you regenerate every 5 seconds '
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 16
+      Data: 15
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -591,7 +561,7 @@ MonoBehaviour:
       Data: the amount of enemies that spawn
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 17
+      Data: 16
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: false
@@ -621,7 +591,7 @@ MonoBehaviour:
       Data: amount of gold you earn each wave
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 18
+      Data: 17
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
@@ -651,10 +621,40 @@ MonoBehaviour:
       Data: increase the rarity of rewards
     - Name: <icon>k__BackingField
       Entry: 10
-      Data: 19
+      Data: 18
     - Name: <showInDisplay>k__BackingField
       Entry: 5
       Data: true
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 8
+      Data: 
+    - Name: 
+      Entry: 7
+      Data: 
+    - Name: $k
+      Entry: 3
+      Data: 20
+    - Name: $v
+      Entry: 7
+      Data: PlayerStat, Assembly-CSharp
+    - Name: <statName>k__BackingField
+      Entry: 1
+      Data: pick up heal
+    - Name: <value>k__BackingField
+      Entry: 3
+      Data: 0
+    - Name: <description>k__BackingField
+      Entry: 1
+      Data: additional healing on food pickup
+    - Name: <icon>k__BackingField
+      Entry: 10
+      Data: 19
+    - Name: <showInDisplay>k__BackingField
+      Entry: 5
+      Data: false
     - Name: 
       Entry: 8
       Data: 

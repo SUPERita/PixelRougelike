@@ -39,6 +39,13 @@ public class XPManager : StaticInstance<XPManager>
 
         UpdateXPVisual();
 
+        if (currentXPLevel == 5 ) SteamIntegration.UnlockAchievment("ACH_XP5");
+        if (currentXPLevel == 10) SteamIntegration.UnlockAchievment("ACH_XP10");
+        if (currentXPLevel == 15) SteamIntegration.UnlockAchievment("ACH_XP15");
+        if (currentXPLevel == 20) SteamIntegration.UnlockAchievment("ACH_XP20");
+        if (currentXPLevel == 25) SteamIntegration.UnlockAchievment("ACH_XP25");
+        if (currentXPLevel == 30) SteamIntegration.UnlockAchievment("ACH_XP30");
+
     }
 
     private int GetCurrentXPLevelRequierment()

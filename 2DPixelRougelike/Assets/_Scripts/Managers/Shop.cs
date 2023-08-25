@@ -1,4 +1,5 @@
 using DG.Tweening;
+using MoreMountains.Tools;
 using Sirenix.OdinInspector;
 using System.Collections;
 using System.Collections.Generic;
@@ -7,6 +8,8 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+//using static UnityEditor.Experimental.AssetDatabaseExperimental.AssetDatabaseCounters;
+//using static UnityEditor.Recorder.OutputPath;
 
 public class Shop : StaticInstance<Shop>
 {
@@ -25,6 +28,8 @@ public class Shop : StaticInstance<Shop>
     [Header("item display")]
     [SerializeField, AssetsOnly] private GameObject itemDisplayPrefab = null;
     [SerializeField] private RectTransform itemDisplaysRoot = null;
+    [SerializeField] private Scrollbar itemDisplayScrollbar = null;
+
 
 
 
@@ -101,20 +106,28 @@ public class Shop : StaticInstance<Shop>
         if (!itemDisplaysRoot.gameObject.activeInHierarchy) { return; }
 
         Helpers.DestroyChildren(itemDisplaysRoot);
-
+        int _numberOfItems = 0;
         foreach (Item _item in playerItems)
         {
-            Instantiate(itemDisplayPrefab, itemDisplaysRoot).GetComponent<ItemDisplay>().InitializeDisplay(_item);
-            
+            Instantiate(itemDisplayPrefab, itemDisplaysRoot).GetComponent<ItemDisplay>().InitializeDisplay(_item, _numberOfItems, this);
+            _numberOfItems++;
         }
+
+        if (itemDisplaysRoot) { itemDisplaysRoot.sizeDelta = Vector2.up * (Mathf.CeilToInt(_numberOfItems / 16f) * 60f/* + 10f*/); }
+        Debug.Log(_numberOfItems / 16);
     }
-     
+    public void SelectedItemDisplay(int _displayIndex)
+    {
+        float height = _displayIndex / 16;
+        itemDisplayScrollbar.value = 1f- (height / (itemDisplaysRoot.childCount/16));
+    }
+
     private void CreateShopCard()
     {
         Item _tmpItem = itemCollection.GetRandomItemInWave(WaveManager.Instance.currentWaveRefrence);
         float choosedItemPrice = Random.Range(Item.RarityToBasePrice(_tmpItem.itemRarity) * .75f, Item.RarityToBasePrice(_tmpItem.itemRarity) * 1.25f); //random number -+25%
         choosedItemPrice *= .7f + .3f*WaveManager.Instance.currentWaveRefrence; //scale with levels
-
+        //choosedItemPrice = 0;//debugging
 
         Instantiate(itemCardPrefab, itemCardRoot)
                     .GetComponent<ShopItemCard>().InitializeShopCard(_tmpItem, this, (int)choosedItemPrice);
@@ -167,6 +180,16 @@ public class Shop : StaticInstance<Shop>
     {
         playerItems.Add(_itm);
         UpdatePlayerStats();
+
+        if(_itm.itemRarity == ItemRarity.Legendary) SteamIntegration.UnlockAchievment("ACH_LEGENDERY1");
+        if (_itm.itemRarity == ItemRarity.Epic) SteamIntegration.UnlockAchievment("ACH_EPIC1");
+        if (_itm.itemRarity == ItemRarity.Rare) SteamIntegration.UnlockAchievment("ACH_RARE1");
+        if (_itm.itemRarity == ItemRarity.Uncommon) SteamIntegration.UnlockAchievment("ACH_UNCOMMON1");
+
+        if (playerItems.Count == 10) SteamIntegration.UnlockAchievment("ACH_ITEM10");
+        if (playerItems.Count == 20) SteamIntegration.UnlockAchievment("ACH_ITEM20");
+        if (playerItems.Count == 40) SteamIntegration.UnlockAchievment("ACH_ITEM40");
+        if (playerItems.Count == 60) SteamIntegration.UnlockAchievment("ACH_ITEM60");
     }
 
 

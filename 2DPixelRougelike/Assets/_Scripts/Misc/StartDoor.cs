@@ -64,7 +64,7 @@ public class StartDoor : MonoBehaviour, IInteractible
 
     public string GetInteractionPrompt()
     {
-        return "<wiggle>" +"Room " + sceneNumber + "</>";
+        return "<wiggle>" +"Room " + (sceneNumber+1) + "</>";
     }
 
     public void OnEnterRange()

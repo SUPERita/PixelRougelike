@@ -16,7 +16,8 @@ public class Food : LootBase
         {
             if (!_out.gameObject.GetComponent<Health>().IsFullHealth())
             {
-                _out.gameObject.GetComponent<Health>().HealHealth(healingAmount);
+                int _healAmount = Mathf.Max( healingAmount + PlayerStatsHolder.Instance.TryGetStat(StatType.PickUpHeal), 1);
+                _out.gameObject.GetComponent<Health>().HealHealth(_healAmount); 
                 PlayPickupSound();
                 Destroy(gameObject);
             }

@@ -94,7 +94,7 @@ public class BasePlayerStats : SerializedScriptableObject
     {
         for (int i = 0; i < amount; i++)
         {
-            baseStats.Add(StatType.Strength, new PlayerStat());
+            baseStats.Add(StatType.XPGain, new PlayerStat());
         }
     }
     //[Button]

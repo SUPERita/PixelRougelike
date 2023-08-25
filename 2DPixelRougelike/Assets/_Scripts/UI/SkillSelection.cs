@@ -268,8 +268,12 @@ public class SkillSelection : StaticInstance<SkillSelection>, SubButtonListener
 
         //save the last n elements of the stack?!
         SaveSystem.SaveStringArrayAtLocation(_result.ToArray(), selectedSkillSaveLoc);
-                    
-                   
+
+        if(_result.Count == 1)  SteamIntegration.UnlockAchievment("ACH_1SKILL");
+        if (_result.Count == 2) SteamIntegration.UnlockAchievment("ACH_2SKILL");
+        if (_result.Count == 3) SteamIntegration.UnlockAchievment("ACH_3SKILL");
+        //if (_result.Count == 4) SteamIntegration.UnlockAchievment("4SKILL");
+        //if (_result.Count == 4) SteamIntegration.UnlockAchievment("5SKILL");
     }
 
 }

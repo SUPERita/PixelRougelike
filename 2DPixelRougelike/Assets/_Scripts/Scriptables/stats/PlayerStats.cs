@@ -117,14 +117,14 @@ public enum StatType
     MaxHealth = 0,
     AttackSpeed = 1,
     MoveSpeed = 2,
-    Strength = 3,
+    //Strength = 3,
     SkillCap = 4,
     SkillDamage = 5,
     WeaponDamage = 6,
     Dodge = 7,//cap at 40
     Armor = 8,//cap at 40
     XPGain = 9,
-    MoneyGain = 10,//half implemented still need to be added to chest rewards and stuff planned for the future
+    MoneyGain = 10,//half implemented// actually its fully implemented
     WeaponAttackSpeed = 11,
     SkillCooldown = 12,
     MeleeDamage = 13,
@@ -133,6 +133,7 @@ public enum StatType
     HealthRegen = 16,
     EnemyAmount = 17,
     Invesment = 18,
-    Luck = 19
+    Luck = 19,
+    PickUpHeal = 20
 
 }

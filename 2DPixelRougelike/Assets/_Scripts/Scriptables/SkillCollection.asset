@@ -13,78 +13,78 @@ MonoBehaviour:
   m_Name: SkillCollection
   m_EditorClassIdentifier: 
   <skillNamePairs>k__BackingField:
+  - <_skillName>k__BackingField: grenade
+    <_skillCost>k__BackingField: 0
+    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
+    _skillDesctiption: throws a grenade
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: fb61fb676dd1f93489863305f120b593, type: 3}
   - <_skillName>k__BackingField: side splitter
-    <_skillCost>k__BackingField: 1
+    <_skillCost>k__BackingField: 0
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 5e34827a5f0e8554dab8bccb34da440f, type: 3}
     _skillDesctiption: splits your ability to the sides
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 7c0916da7eba582419085cc3019b3317, type: 3}
   - <_skillName>k__BackingField: vertical splitter
-    <_skillCost>k__BackingField: 1
+    <_skillCost>k__BackingField: 0
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 59bbaf0e7c07b59489cc6122a68b8f0c, type: 3}
     _skillDesctiption: splits your ability verticaly
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 10acfeb54de1d8541aab40f359ce37ea, type: 3}
+  - <_skillName>k__BackingField: poisen gas
+    <_skillCost>k__BackingField: 100
+    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 665e950bc4f67a74da149acddb00f1be, type: 3}
+    _skillDesctiption: spawns a cloud of poisen
+    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 7a3efdc9e204b4944972a8509c598297, type: 3}
   - <_skillName>k__BackingField: electric head
-    <_skillCost>k__BackingField: 10
+    <_skillCost>k__BackingField: 400
     <_skill>k__BackingField: {fileID: 4911472897203337079, guid: dcbb149fbd31fa041ba228337d37d4b3, type: 3}
     _skillDesctiption: shoots electric charges up
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: aa6710a3ba689fb45b47afd9481a6e3c, type: 3}
   - <_skillName>k__BackingField: electric circle
-    <_skillCost>k__BackingField: 20
+    <_skillCost>k__BackingField: 800
     <_skill>k__BackingField: {fileID: 8900101513110742676, guid: 583fb015b3a545845b13ffc8353ef180, type: 3}
     _skillDesctiption: spawns electric charge in a circle
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: c813a1bfc8871bb458a833114b49d122, type: 3}
   - <_skillName>k__BackingField: white rain
-    <_skillCost>k__BackingField: 40
+    <_skillCost>k__BackingField: 1200
     <_skill>k__BackingField: {fileID: 9143434274506902867, guid: ee02545e1ca063444b7582605c19000f, type: 3}
     _skillDesctiption: shoots a burst of white rain
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 9f3365b9cd43ae245856587a9c6dc5b0, type: 3}
   - <_skillName>k__BackingField: mines
-    <_skillCost>k__BackingField: 80
+    <_skillCost>k__BackingField: 2000
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 72767499be6a5784fb63e22cbb7f6aff, type: 3}
     _skillDesctiption: spawns a mine
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 4404383d6c9e36c4ba378ddfe6e6ab00, type: 3}
-  - <_skillName>k__BackingField: grenade
-    <_skillCost>k__BackingField: 160
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: e7e861e15f4788d44a1cd2668d028d24, type: 3}
-    _skillDesctiption: throws a grenade
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: fb61fb676dd1f93489863305f120b593, type: 3}
   - <_skillName>k__BackingField: machine gun
-    <_skillCost>k__BackingField: 320
+    <_skillCost>k__BackingField: 3000
     <_skill>k__BackingField: {fileID: 9143434274506902867, guid: 7ca94f5641a908c48861bd69afb9df54, type: 3}
     _skillDesctiption: shoots pellets rapidly
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 3d3704dde327fbb47825e857b1578277, type: 3}
   - <_skillName>k__BackingField: green whisper
-    <_skillCost>k__BackingField: 640
+    <_skillCost>k__BackingField: 5000
     <_skill>k__BackingField: {fileID: 2883579342310960643, guid: 71cc17da882774e45b1ae0f503419a7b, type: 3}
     _skillDesctiption: spawns a flock of whispers
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 811dac397f0aa164da59f1fdbab7fce2, type: 3}
   - <_skillName>k__BackingField: blood shield
-    <_skillCost>k__BackingField: 1280
+    <_skillCost>k__BackingField: 10000
     <_skill>k__BackingField: {fileID: 9143434274506902867, guid: 186525ba7a25aeb46be32b6a1357db34, type: 3}
     _skillDesctiption: spawns a blood shied in a circle
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 890a495c6b4f49045b58249075bfb83c, type: 3}
   - <_skillName>k__BackingField: electric cloud
-    <_skillCost>k__BackingField: 2560
+    <_skillCost>k__BackingField: 15000
     <_skill>k__BackingField: {fileID: 9143434274506902867, guid: 3799236cde264d24cae11ba2b104a040, type: 3}
     _skillDesctiption: spawns a cloud of electric charges
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 7d820acab2dd19b42a070277883a7e19, type: 3}
-  - <_skillName>k__BackingField: poisen gas
-    <_skillCost>k__BackingField: 10240
-    <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 665e950bc4f67a74da149acddb00f1be, type: 3}
-    _skillDesctiption: spawns a cloud of poisen
-    <_skillIcon>k__BackingField: {fileID: 21300000, guid: 7a3efdc9e204b4944972a8509c598297, type: 3}
   - <_skillName>k__BackingField: explosion
-    <_skillCost>k__BackingField: 20480
+    <_skillCost>k__BackingField: 30000
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: 13dbc118580d27540b70c44524e64735, type: 3}
     _skillDesctiption: blasts enemies in a large area
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 22ff434e484c77c47a933507441b78ca, type: 3}
   - <_skillName>k__BackingField: fire phantom
-    <_skillCost>k__BackingField: 40960
+    <_skillCost>k__BackingField: 40000
     <_skill>k__BackingField: {fileID: 9143434274506902867, guid: 4b854b514a1d2c645b542aa3bceb4842, type: 3}
     _skillDesctiption: spawns a circle of cinders
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 4c16309dcc453ec4f8b171ff94c2ba2b, type: 3}
   - <_skillName>k__BackingField: tentacles
-    <_skillCost>k__BackingField: 81920
+    <_skillCost>k__BackingField: 80000
     <_skill>k__BackingField: {fileID: 6061889069526506710, guid: b91a33a6d88a66449a4ac94cedfb06c4, type: 3}
     _skillDesctiption: spawn a shadow tentacle
     <_skillIcon>k__BackingField: {fileID: 21300000, guid: 00bd2478ab5370547ad60c78b1b4b46f, type: 3}

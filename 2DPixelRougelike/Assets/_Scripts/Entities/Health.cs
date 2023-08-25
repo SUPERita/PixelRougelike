@@ -144,6 +144,8 @@ public class Health : MonoBehaviour
     public void ResetHealth() => currentHealth = maxHealth;
     public void SetMaxHealth(int _arg, bool _heal = false)
     {
+        if( _arg <= 0) { OnDie?.Invoke(); }
+        
         maxHealth = _arg;
         if(currentHealth > maxHealth) currentHealth = maxHealth;
         if(_heal) currentHealth = maxHealth;

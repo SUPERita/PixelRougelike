@@ -8,6 +8,7 @@ public class MailNPC : NPC
 {
     public override void OnInteract()
     {
+        SteamIntegration.UnlockAchievment("ACH_FEEDBACK");
         SendEmail();
         base.OnInteract();
     }

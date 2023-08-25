@@ -50,7 +50,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     IDamageable[] enemiesInArea = null;
     private void DamageArea()
     {
-        strength = PlayerStatsHolder.Instance.TryGetStat(StatType.Strength)+ PlayerStatsHolder.Instance.TryGetStat(StatType.MeleeDamage);
+        strength = /*PlayerStatsHolder.Instance.TryGetStat(StatType.Strength)+*/ PlayerStatsHolder.Instance.TryGetStat(StatType.MeleeDamage);
         enemiesInArea = attackTriggerCollider.GetDamageablesInArea();
         foreach(IDamageable _i in enemiesInArea)
         {
@@ -181,6 +181,7 @@ public class PlayerMovement : MonoBehaviour, IAnimationEventsReciever
     {
         movement = Vector2.zero;
         PlayAnim("Idle");
+        SteamIntegration.UnlockAchievment("ACH_DIE1");
     }
 
 }
