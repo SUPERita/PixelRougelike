@@ -16,6 +16,6 @@ MonoBehaviour:
   <itemSprite>k__BackingField: {fileID: -286391491, guid: e0b0b9bc01eabbc48adc210bbe4bb522, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
-  - <number>k__BackingField: -5
+  - <number>k__BackingField: 5
     <statName>k__BackingField: 12
   <itemDescription>k__BackingField: warm and preduces a small glow around it

@@ -35,6 +35,9 @@ public class SteamIntegration : MonoBehaviour
     {
         var _ach = new Steamworks.Data.Achievement(_achname);
         _ach.Trigger();
+//#if UNITY_EDITOR
+//        Debug.Log(_ach + ": has been called");
+//#endif
         //Steamworks.Data.Achievement()
     }
     [Button, ShowIf("showUtils")]

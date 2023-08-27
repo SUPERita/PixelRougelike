@@ -181,15 +181,37 @@ public class Shop : StaticInstance<Shop>
         playerItems.Add(_itm);
         UpdatePlayerStats();
 
-        if(_itm.itemRarity == ItemRarity.Legendary) SteamIntegration.UnlockAchievment("ACH_LEGENDERY1");
-        if (_itm.itemRarity == ItemRarity.Epic) SteamIntegration.UnlockAchievment("ACH_EPIC1");
-        if (_itm.itemRarity == ItemRarity.Rare) SteamIntegration.UnlockAchievment("ACH_RARE1");
-        if (_itm.itemRarity == ItemRarity.Uncommon) SteamIntegration.UnlockAchievment("ACH_UNCOMMON1");
+        Nortify_steam(_itm);
+    }
+
+    private void Nortify_steam(Item _newItem)
+    {
+        if (_newItem.itemRarity == ItemRarity.Legendary) SteamIntegration.UnlockAchievment("ACH_LEGENDERY1");
+        if (_newItem.itemRarity == ItemRarity.Epic) SteamIntegration.UnlockAchievment("ACH_EPIC1");
+        if (_newItem.itemRarity == ItemRarity.Rare) SteamIntegration.UnlockAchievment("ACH_RARE1");
+        if (_newItem.itemRarity == ItemRarity.Uncommon) SteamIntegration.UnlockAchievment("ACH_UNCOMMON1");
 
         if (playerItems.Count == 10) SteamIntegration.UnlockAchievment("ACH_ITEM10");
         if (playerItems.Count == 20) SteamIntegration.UnlockAchievment("ACH_ITEM20");
         if (playerItems.Count == 40) SteamIntegration.UnlockAchievment("ACH_ITEM40");
         if (playerItems.Count == 60) SteamIntegration.UnlockAchievment("ACH_ITEM60");
+
+        int _countLege = 0;
+        int _countEpic = 0;
+        foreach(Item _itm in playerItems)
+        {
+            if (_itm.itemRarity == ItemRarity.Legendary) { 
+                _countLege++;
+            }
+            if (_itm.itemRarity == ItemRarity.Epic)
+            {
+                _countEpic++;
+            }
+        }
+
+        if (_countLege == 2) SteamIntegration.UnlockAchievment("ACH_2LEGENDERY");
+        if (_countLege == 8) SteamIntegration.UnlockAchievment("ACH_8EPIC");
+        if (_countLege == 16) SteamIntegration.UnlockAchievment("ACH_16EPIC");
     }
 
 

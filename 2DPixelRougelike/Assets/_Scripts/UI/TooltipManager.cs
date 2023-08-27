@@ -27,6 +27,8 @@ public class TooltipManager : Singleton<TooltipManager>
     private void Update()
     {
         if(currentTarget == null) { return; }
+        if(!currentTarget.GetComponent<Selectable>().IsInteractable()) { currentTarget = null; ReleaseTooltip(); return; }
+
         indicator.position = 
             currentTarget.position + 
             offset * Helpers.CurrentScreenSizeRelativeTo1920() +

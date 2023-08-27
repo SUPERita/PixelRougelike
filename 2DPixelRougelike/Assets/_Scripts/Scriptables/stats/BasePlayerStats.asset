@@ -75,7 +75,7 @@ MonoBehaviour:
       Data: max health
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 100
+      Data: 30
     - Name: <description>k__BackingField
       Entry: 1
       Data: how much damage can you take
@@ -525,7 +525,7 @@ MonoBehaviour:
       Data: health regen
     - Name: <value>k__BackingField
       Entry: 3
-      Data: 10
+      Data: 0
     - Name: <description>k__BackingField
       Entry: 1
       Data: 'the amount of health you regenerate every 5 seconds '

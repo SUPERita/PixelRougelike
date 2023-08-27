@@ -25,13 +25,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6199441990710129385}
+  serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &5077983151157814100
 MonoBehaviour:
@@ -63,20 +63,147 @@ MonoBehaviour:
   extraWaveStartWeight: 10
   extraWaveWeightPerLevel: 10
   bossWavePairs:
-  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 38dda991d17d6b8448be3da1bb1bef29, type: 3}
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 6e7d89ae9b0de6f4e87809ec3664b2a4, type: 3}
     <spawnAtWave>k__BackingField: 5
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 9ef022ab846485448bd4182e52112dab, type: 3}
+    <spawnAtWave>k__BackingField: 10
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 38dda991d17d6b8448be3da1bb1bef29, type: 3}
+    <spawnAtWave>k__BackingField: 15
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 6e7d89ae9b0de6f4e87809ec3664b2a4, type: 3}
+    <spawnAtWave>k__BackingField: 20
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 6e7d89ae9b0de6f4e87809ec3664b2a4, type: 3}
+    <spawnAtWave>k__BackingField: 25
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 9ef022ab846485448bd4182e52112dab, type: 3}
+    <spawnAtWave>k__BackingField: 30
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 9ef022ab846485448bd4182e52112dab, type: 3}
+    <spawnAtWave>k__BackingField: 40
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 6e7d89ae9b0de6f4e87809ec3664b2a4, type: 3}
+    <spawnAtWave>k__BackingField: 50
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 6e7d89ae9b0de6f4e87809ec3664b2a4, type: 3}
+    <spawnAtWave>k__BackingField: 60
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 9ef022ab846485448bd4182e52112dab, type: 3}
+    <spawnAtWave>k__BackingField: 70
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 6e7d89ae9b0de6f4e87809ec3664b2a4, type: 3}
+    <spawnAtWave>k__BackingField: 80
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 9ef022ab846485448bd4182e52112dab, type: 3}
+    <spawnAtWave>k__BackingField: 90
+  - <bossPrefab>k__BackingField: {fileID: 1758710879184297609, guid: 9ef022ab846485448bd4182e52112dab, type: 3}
+    <spawnAtWave>k__BackingField: 100
   objectWavePairs:
   - <objectPrefabs>k__BackingField:
-    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
-    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
-    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
-    <spawnAtWave>k__BackingField: 1
-  - <objectPrefabs>k__BackingField:
-    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
-    - {fileID: 3906033671347933169, guid: 2d3704a5c96a70843a5cfb25f5f665db, type: 3}
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
     <spawnAtWave>k__BackingField: 2
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 4
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 6
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 8
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 6932395733339005434, guid: d1a0e8c01be336141b3462809b5892a2, type: 3}
+    <spawnAtWave>k__BackingField: 10
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 12
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 14
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 16
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 18
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 6932395733339005434, guid: d1a0e8c01be336141b3462809b5892a2, type: 3}
+    <spawnAtWave>k__BackingField: 20
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 22
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 24
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 26
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 6932395733339005434, guid: d1a0e8c01be336141b3462809b5892a2, type: 3}
+    <spawnAtWave>k__BackingField: 28
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 30
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 35
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 40
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 45
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 50
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 55
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 60
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 65
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 70
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 75
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 80
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    <spawnAtWave>k__BackingField: 85
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 90
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 95
+  - <objectPrefabs>k__BackingField:
+    - {fileID: 2206837217777837823, guid: 76998e9544e2a7944b31baea8c352fc3, type: 3}
+    - {fileID: 8375922549933500987, guid: 0f9be40d56c801d49ad99618124dc551, type: 3}
+    <spawnAtWave>k__BackingField: 100
   useStartWaveIndex: 0
-  startWave: 1
+  startWave: 6
+  showColleclectionLoader: 0
   collections: []
 --- !u!114 &1463378402316139077
 MonoBehaviour:

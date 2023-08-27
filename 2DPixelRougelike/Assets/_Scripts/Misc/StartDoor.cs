@@ -14,6 +14,8 @@ public class StartDoor : MonoBehaviour, IInteractible
     [SerializeField] private Sprite open;
     [SerializeField] private Sprite close;
     [SerializeField] private SpriteRenderer lockSR;
+    [SerializeField] private Canvas highscoreCanvas;
+    [SerializeField] private GameObject crownSR;
     private SpriteRenderer sr;
     [SerializeField] private ParticleSystem openParticles;
     private bool working = true;
@@ -22,10 +24,26 @@ public class StartDoor : MonoBehaviour, IInteractible
     [InfoBox("uncheck for real build")]
     [SerializeField] private bool lockedForDemo = false;
 
+    public readonly static string roomProgressSaveLocBase = "roomProgress";
+    public readonly static string roomFinishedSavedLoc = "roomFinished";
     public void SetIsWorking(bool _b)
     {
         working = _b;
-        lockSR.gameObject.SetActive(!_b);
+        RefreshDoorVisuals();
+    }
+
+    public void RefreshDoorVisuals()
+    {
+        //lock
+        lockSR.gameObject.SetActive(!working);
+
+        //highscore
+        int _highscore = SaveSystem.LoadIntFromLocation(roomProgressSaveLocBase + sceneNumber);
+        highscoreCanvas.enabled = working;
+        highscoreCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(_highscore.ToString());
+
+        //crown
+        crownSR.gameObject.SetActive(SaveSystem.LoadBoolFromLocation(roomFinishedSavedLoc + sceneNumber));
     }
 
     private void Start()
@@ -95,4 +113,11 @@ public class StartDoor : MonoBehaviour, IInteractible
         if (!working) { return; }
     }
     #endregion
+
+    public void ResetRoomProgress()
+    {
+        SaveSystem.SaveIntAtLocation(0, roomProgressSaveLocBase + sceneNumber);
+        SaveSystem.SaveBoolAtLocation(false, roomFinishedSavedLoc + sceneNumber);
+
+    }
 }

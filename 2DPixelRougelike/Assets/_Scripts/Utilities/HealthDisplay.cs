@@ -41,7 +41,7 @@ public class HealthDisplay : MonoBehaviour
         afterImageTo = healthImage.fillAmount;
 
         LerpAfterImage();
-
+        if (healthText) healthText.SetText(health.GetBaseHealth() + "\n" + health.GetCurrrentHealth());
     }
     private void Health_OnHealthChanged(int obj)
     {

@@ -2,10 +2,8 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using DG.Tweening;
 using Sirenix.OdinInspector;
 using UnityEngine.UI;
-using TMPro;
 
 public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
 {
@@ -66,6 +64,7 @@ public class PassiveUpgradesManager : StaticInstance<PassiveUpgradesManager>
             if (ResourceSystem.Instance.HasEnougthResources(ResourceType.EnergyNugget, obj.GetCurrentCost())){
                 ResourceSystem.Instance.TakeResourceAmount(ResourceType.EnergyNugget, obj.GetCurrentCost ());
                 obj.AddLevel();
+                if (obj.IsStatMaxed()) { SteamIntegration.UnlockAchievment("ACH_STATMAX"); }
                 AudioSystem.Instance.PlaySound("reward_vibrato", .75f); 
             } else { Debug.LogError("too poor"); AudioSystem.Instance.PlaySound("error_buzz", .75f); }
         } else { Debug.LogError("stat maxed"); AudioSystem.Instance.PlaySound("error_buzz", .75f); }

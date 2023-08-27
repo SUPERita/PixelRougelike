@@ -81,6 +81,24 @@ public class DoorManager : MonoBehaviour
         SaveSystem.SaveArrayBoolAtLocation(bools, progressSaveLoc);
     }
 
+    [Button]
+    public void ResetProgress()
+    {
+        foreach(StartDoor _d in doors)
+        {
+            _d.ResetRoomProgress();
+        }
+        RefreshDoors();
+    }
+
+    private void RefreshDoors()
+    {
+        foreach (StartDoor _d in doors)
+        {
+            _d.RefreshDoorVisuals();
+        }
+    }
+
     public static bool GetIsLevelUnlocked(int _index) {
         return GetDoorProgress()[_index];
     }

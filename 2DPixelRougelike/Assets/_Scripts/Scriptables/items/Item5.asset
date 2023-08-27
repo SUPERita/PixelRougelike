@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item5
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: prime beef
-  <itemSprite>k__BackingField: {fileID: 21300000, guid: 7d869ee38c3836c4c910115c655930fa, type: 3}
+  <itemSprite>k__BackingField: {fileID: -286391491, guid: 779bd9382a2beac4a9c985f91d40935b, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: 2

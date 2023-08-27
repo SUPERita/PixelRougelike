@@ -22,8 +22,8 @@ public class WaveManager : StaticInstance<WaveManager>
 
     [Header("Extra Waves")]
     [SerializeField] private WaveWeightPair extraWave;
-    [SerializeField] private int extraWaveStartWeight = 100;
-    [SerializeField, Tooltip("extraWaveStartWeight + extraWaveWeightPerLevel * level = wave weight ")] private int extraWaveWeightPerLevel = 10;
+    [SerializeField] private int extraWaveStartWeight = 400;
+    [SerializeField, Tooltip("extraWaveStartWeight + extraWaveWeightPerLevel * level = wave weight ")] private int extraWaveWeightPerLevel = 30;
 
     [Header("Bosses")]
     [SerializeField] private BossWavePair[] bossWavePairs = null;
@@ -34,6 +34,7 @@ public class WaveManager : StaticInstance<WaveManager>
     [Header("testing (only works in editor)")]
     [SerializeField] private bool useStartWaveIndex = false;
     [SerializeField, ShowIf("@useStartWaveIndex"), Tooltip("starts from one"), Range(1,30)] private int startWave = 1;
+
     [SerializeField] private bool showColleclectionLoader = false;
     [SerializeField, ShowIf("@showColleclectionLoader")] private EnemyCollection[] collections = null;
     [Button, ShowIf("@showColleclectionLoader")]
@@ -45,6 +46,8 @@ public class WaveManager : StaticInstance<WaveManager>
             waves[i] = new WaveWeightPair(collections[i/3], 40+10*i, i+1);
         }
     }
+
+   
 
     private bool GetBossAtWave(int _waveIndex, out GameObject _prefab)
     {
@@ -77,10 +80,14 @@ public class WaveManager : StaticInstance<WaveManager>
         //CacheSpawners();
         //SetSpawnersState(true);
         StartCoroutine(SpawnWaves());
+        OnWaveStart += _notifySteam;
     }
+
+
     private void OnDisable()
     {
         StopCoroutine(SpawnWaves());
+        OnWaveStart -= _notifySteam;
     }
     private IEnumerator SpawnWaves()
     {
@@ -131,6 +138,8 @@ public class WaveManager : StaticInstance<WaveManager>
             MessageBoard.Instance.SpawnMessage("NEW ROOM UNLOCKED",2);
             DoorManager.CompleatedLevel(int.Parse(SceneManager.GetActiveScene().name));
         }
+
+        SaveSystem.SaveBoolAtLocation(true, StartDoor.roomFinishedSavedLoc + SceneManager.GetActiveScene().name);
 
         //tell steamworks // +1 cause for the user levels start from 1
         SteamIntegration.UnlockAchievment($"ACH_ROOM{int.Parse(SceneManager.GetActiveScene().name) + 1}");/*should be a number*/
@@ -196,6 +205,13 @@ public class WaveManager : StaticInstance<WaveManager>
             waveDuration);
 
         currentWaveRefrence = waveCounter;
+
+        string saveloc = StartDoor.roomProgressSaveLocBase + SceneManager.GetActiveScene().name;
+        if (waveCounter > SaveSystem.LoadIntFromLocation(saveloc))
+        {
+            SaveSystem.SaveIntAtLocation(waveCounter, saveloc);
+        }
+            
     }
 
     /*
@@ -227,6 +243,14 @@ public class WaveManager : StaticInstance<WaveManager>
         }
     }
     */
+
+    private void _notifySteam(int _lvl)
+    {
+        if (_lvl == 10) { SteamIntegration.UnlockAchievment("ACH_WAVE10"); }
+        if (_lvl == 20) { SteamIntegration.UnlockAchievment("ACH_WAVE20"); }
+        if (_lvl == 30) { SteamIntegration.UnlockAchievment("ACH_WAVE30"); }
+        if (_lvl == 40) { SteamIntegration.UnlockAchievment("ACH_WAVE40"); }
+    }
 }
 
 [System.Serializable]
