@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Item57
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: demon heart
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 2c232de17cf1b1342a7255a9dcaf9e76, type: 3}
+  <itemSprite>k__BackingField: {fileID: 365248825, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
-  - <number>k__BackingField: -4
+  - <number>k__BackingField: -3
     <statName>k__BackingField: 19
-  - <number>k__BackingField: -6
+  - <number>k__BackingField: -3
     <statName>k__BackingField: 0
   - <number>k__BackingField: 7
     <statName>k__BackingField: 11
   <itemDescription>k__BackingField: much like a human heart, just malicious
+  relativeValue: -8

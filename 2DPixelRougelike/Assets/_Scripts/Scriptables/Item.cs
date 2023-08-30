@@ -39,15 +39,15 @@ public class Item : ScriptableObject
         switch (_itemRarity)
         {
             case ItemRarity.Common:
-                return 10;
-            case ItemRarity.Uncommon:
-                return 15;
-            case ItemRarity.Rare:
                 return 20;
+            case ItemRarity.Uncommon:
+                return 30;
+            case ItemRarity.Rare:
+                return 40;
             case ItemRarity.Epic:
-                return 25;
+                return 50;
             case ItemRarity.Legendary:
-                return 35;
+                return 70;
 
         }
         Debug.LogError("wth nigo");
@@ -70,6 +70,64 @@ public class Item : ScriptableObject
                 return Color.yellow;
         }
         return Color.black;
+    }
+
+
+    public float relativeValue = 0;
+    private void OnValidate()
+    {
+        relativeValue = 0;
+        foreach (PlayerStatInstance _p in statInstances)
+        {
+            relativeValue += GetStatValue(_p.statName) * _p.number;
+        }
+    }
+    private float GetStatValue(StatType _s)
+    {
+        switch (_s)
+        {
+            case StatType.MaxHealth:
+                return 3f;
+            case StatType.AttackSpeed:
+                return 1f;
+            case StatType.MoveSpeed:
+                return .75f;
+            case StatType.SkillCap:
+                return 100;
+            case StatType.SkillDamage:
+                return 1f;
+            case StatType.WeaponDamage:
+                return 3;
+            case StatType.Dodge:
+                return 1;
+            case StatType.Armor:
+                return 1;
+            case StatType.XPGain:
+                return 1;
+            case StatType.MoneyGain:
+                return 2; 
+            case StatType.WeaponAttackSpeed:
+                return 1;
+            case StatType.SkillCooldown:
+                return 1.5f;
+            case StatType.MeleeDamage:
+                return 1;
+            case StatType.PickUpRange:
+                return .5f;
+            case StatType.SkillProj:
+                return 25;
+            case StatType.HealthRegen:
+                return 5;
+            case StatType.EnemyAmount:
+                return -1;
+            case StatType.Invesment:
+                return 1;
+            case StatType.Luck:
+                return 2;
+            case StatType.PickUpHeal:
+                return 1;
+        }
+        return 0;
     }
 
 }

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item88
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: golden pony's tail
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 0ee1045fc2b306143a57e3532dae0299, type: 3}
+  <itemSprite>k__BackingField: {fileID: 702156399, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: -1
@@ -27,3 +27,4 @@ MonoBehaviour:
   - <number>k__BackingField: 2
     <statName>k__BackingField: 20
   <itemDescription>k__BackingField: the tail of the golden pony, teh pacifist
+  relativeValue: 12

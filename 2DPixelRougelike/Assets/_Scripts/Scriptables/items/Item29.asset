@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item29
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: rose
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: a662c0f04a2a57f4aa374f6c5dbb94ba, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1082784204, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
-  <itemMinWave>k__BackingField: 9
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
     <statName>k__BackingField: 0
@@ -24,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -10
     <statName>k__BackingField: 8
   <itemDescription>k__BackingField: odorless
+  relativeValue: 45

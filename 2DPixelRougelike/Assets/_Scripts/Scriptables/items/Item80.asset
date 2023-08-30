@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Item80
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: fairy puzzel
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 44f55cf2c874d9e4f8b16a4a6f728f2c, type: 3}
+  <itemSprite>k__BackingField: {fileID: -274482203, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 3
     <statName>k__BackingField: 12
   <itemDescription>k__BackingField: the solution makes you a tad bit smarter
+  relativeValue: 4.5

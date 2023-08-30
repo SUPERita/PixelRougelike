@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item73
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: shadow orb
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: ee455dcb1a907684685531975bc8cb1d, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1363218965, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
@@ -23,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -10
     <statName>k__BackingField: 10
   <itemDescription>k__BackingField: cold and feels like it would shatter any second
+  relativeValue: -8

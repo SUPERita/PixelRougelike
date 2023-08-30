@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item81
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: dream catcher
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 1a710632895968749a03ba34c87d78c9, type: 3}
+  <itemSprite>k__BackingField: {fileID: -676882366, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: 5
     <statName>k__BackingField: 17
   <itemDescription>k__BackingField: not very good at his job
+  relativeValue: 5

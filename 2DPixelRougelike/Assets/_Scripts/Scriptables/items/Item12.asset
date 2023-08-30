@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Item12
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: cursed finder
-  <itemSprite>k__BackingField: {fileID: 21300000, guid: d2dac1e7d18bbf64b9a6ce6c7d001e72, type: 3}
+  <itemSprite>k__BackingField: {fileID: -85500322, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 2
     <statName>k__BackingField: 5
   - <number>k__BackingField: -5
     <statName>k__BackingField: 9
   <itemDescription>k__BackingField: the curse lingers within
+  relativeValue: -3

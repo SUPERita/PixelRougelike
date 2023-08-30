@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item50
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: fairy's wand
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: c7b499e2909030848ab5c7e45aaaa81d, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1219648260, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
@@ -26,3 +26,4 @@ MonoBehaviour:
     <statName>k__BackingField: 10
   <itemDescription>k__BackingField: suprisingly enough these wands do grow on tree
     with the star and all
+  relativeValue: 0

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item89
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: cursed finger
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 2a25311031df20a4a81377a974fc68a7, type: 3}
+  <itemSprite>k__BackingField: {fileID: -296171369, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: -3
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: 10
     <statName>k__BackingField: 12
   <itemDescription>k__BackingField: if you get 20 of them it will... im just kidding
+  relativeValue: 0

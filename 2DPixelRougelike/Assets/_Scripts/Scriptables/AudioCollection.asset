@@ -15,8 +15,11 @@ MonoBehaviour:
   clipList:
   - {fileID: 8300000, guid: 30d45299a20bf4cbfba2a0a27d9e533f, type: 3}
   - {fileID: 8300000, guid: 1f7983984cc9f4f328597df110b29c51, type: 3}
+  - {fileID: 8300000, guid: ffdccbf9e39e2304698fbc3fdee9e40d, type: 3}
+  - {fileID: 8300000, guid: bad4df997cfb4574bbebd801918011f4, type: 3}
   - {fileID: 8300000, guid: 5a84633a767144544b61078c2bbe44eb, type: 3}
   - {fileID: 8300000, guid: 392f08b11ba3fd74f85104909ff2116d, type: 3}
+  - {fileID: 8300000, guid: ca0fe3d2793527d45ad7452dd7969cef, type: 3}
   - {fileID: 8300000, guid: 19f0d6a48b517234584fa4734f1d37e1, type: 3}
   - {fileID: 8300000, guid: adf9b09989fe204439c7d4991c462c3d, type: 3}
   - {fileID: 8300000, guid: 69e1b5b8e0703a44fa0f5543036d7a95, type: 3}

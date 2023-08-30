@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item58
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: demon's bag
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 9cf08f3f4a6d8104198f6a7b0bd9a57c, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1647244562, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 15
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: 7
     <statName>k__BackingField: 17
   <itemDescription>k__BackingField: someone will come looking for it
+  relativeValue: 8

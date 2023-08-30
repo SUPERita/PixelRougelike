@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item32
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: fairy god's journal
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: ed3d350fff6905f499966f88e3ea1361, type: 3}
+  <itemSprite>k__BackingField: {fileID: 458611830, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 4
   <statInstances>k__BackingField:
   - <number>k__BackingField: 20
@@ -24,3 +24,4 @@ MonoBehaviour:
     <statName>k__BackingField: 9
   <itemDescription>k__BackingField: imbued with a knowlage long lost about the nature
     of magic
+  relativeValue: 45

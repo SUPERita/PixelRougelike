@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item62
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: elder demon skull
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 95ff946963199cf4dbd9a96ae14bde4f, type: 3}
+  <itemSprite>k__BackingField: {fileID: 348974004, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
   <statInstances>k__BackingField:
   - <number>k__BackingField: -20
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: 1
     <statName>k__BackingField: 15
   <itemDescription>k__BackingField: has belonged to an absolute monster
+  relativeValue: -15

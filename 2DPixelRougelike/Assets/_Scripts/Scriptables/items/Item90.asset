@@ -13,11 +13,12 @@ MonoBehaviour:
   m_Name: Item90
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: broken arrow
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 52ec68b60684ef149954a06565bb1f05, type: 3}
+  <itemSprite>k__BackingField: {fileID: -957813126, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 1
     <statName>k__BackingField: 6
   - <number>k__BackingField: -5
     <statName>k__BackingField: 11
-  <itemDescription>k__BackingField: if you get 20 of them it will... im just kidding
+  <itemDescription>k__BackingField: break the arrow head and back to buisness
+  relativeValue: -2

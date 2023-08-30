@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item94
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: brawler's leggins
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 8ec15d4fa432ee4468e188ac3b9815eb, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1274116454, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: 7
@@ -23,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -3
     <statName>k__BackingField: 7
   <itemDescription>k__BackingField: relativly nimbel
+  relativeValue: 1

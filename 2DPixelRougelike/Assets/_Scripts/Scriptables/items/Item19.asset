@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Item19
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: full shell
-  <itemSprite>k__BackingField: {fileID: 21300000, guid: 6bc4acb11b4e2934585720c28bc26991, type: 3}
+  <itemSprite>k__BackingField: {fileID: 279413385, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
     <statName>k__BackingField: 8
   - <number>k__BackingField: -10
     <statName>k__BackingField: 2
   <itemDescription>k__BackingField: tougth as nails
+  relativeValue: 2.5

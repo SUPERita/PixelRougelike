@@ -16,12 +16,20 @@ MonoBehaviour:
   - <statType>k__BackingField: 0
     <baseStatValue>k__BackingField: 2
   - <statType>k__BackingField: 1
-    <baseStatValue>k__BackingField: 2
+    <baseStatValue>k__BackingField: 3
   - <statType>k__BackingField: 9
-    <baseStatValue>k__BackingField: 1
+    <baseStatValue>k__BackingField: 4
   - <statType>k__BackingField: 7
-    <baseStatValue>k__BackingField: 1
+    <baseStatValue>k__BackingField: 2
   - <statType>k__BackingField: 8
-    <baseStatValue>k__BackingField: 1
+    <baseStatValue>k__BackingField: 2
   - <statType>k__BackingField: 2
     <baseStatValue>k__BackingField: 2
+  - <statType>k__BackingField: 14
+    <baseStatValue>k__BackingField: 5
+  - <statType>k__BackingField: 18
+    <baseStatValue>k__BackingField: 5
+  - <statType>k__BackingField: 19
+    <baseStatValue>k__BackingField: 5
+  - <statType>k__BackingField: 10
+    <baseStatValue>k__BackingField: 5

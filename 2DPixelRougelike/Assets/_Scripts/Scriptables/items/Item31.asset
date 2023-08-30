@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Item31
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: shiny neckless
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 2dfa3f7b670e5fd4285d1db0afde888a, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1877952487, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
     <statName>k__BackingField: 17
   - <number>k__BackingField: 10
     <statName>k__BackingField: 12
   <itemDescription>k__BackingField: very extravagant
+  relativeValue: 5

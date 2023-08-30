@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Item69
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: treasure map
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 7033a4d8f47567a44b8ebff5dc9bd8c7, type: 3}
+  <itemSprite>k__BackingField: {fileID: -423260470, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
     <statName>k__BackingField: 18
   <itemDescription>k__BackingField: will pay off at the end
+  relativeValue: 10

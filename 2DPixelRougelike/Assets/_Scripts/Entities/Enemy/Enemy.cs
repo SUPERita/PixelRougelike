@@ -211,7 +211,10 @@ public class Enemy : MonoBehaviour, IDamageable, IHurtPlayer, IPoolable
     public void SetLevelIndex(int _level)
     {
         //health
-        health.SetMaxHealth(_level * 30 * (1+Helpers.BoolToInt(isHeavy)), true);
+        health.SetMaxHealth(
+            (50+25*_level)  *
+            (1+Helpers.BoolToInt(isHeavy)),
+            true);
         health.ResetHealth();
     }
 }

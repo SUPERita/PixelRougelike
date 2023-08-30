@@ -146,9 +146,11 @@ public class Weapon : MonoBehaviour
     public string GetDescription()
     {
         string _out = "";
-        _out = "reload: " + reloadSpeed + "\n";
-        _out += "damage: " + damage + "\n";
-        _out += "range: " + range + "\n";
+        _out = $"reload: <color=yellow>{reloadSpeed}s</color> \n";
+        _out += $"damage: <color=yellow>{damage}</color> \n";
+        _out += $"range: <color=yellow>{range}</color> \n";
+        _out += $"projectiles: <color=yellow>{numProjectiles}</color> \n";
+        _out += $"spread: <color=yellow>{spread}</color> \n";
         return _out;
     }
 

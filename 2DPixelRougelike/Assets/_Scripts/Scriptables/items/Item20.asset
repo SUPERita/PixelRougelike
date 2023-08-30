@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item20
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: pink shrimp
-  <itemSprite>k__BackingField: {fileID: 21300000, guid: 7874c3430a6181c48a0c09929f03bb0d, type: 3}
+  <itemSprite>k__BackingField: {fileID: -113427205, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
     <statName>k__BackingField: 7
@@ -26,3 +25,4 @@ MonoBehaviour:
   - <number>k__BackingField: -2
     <statName>k__BackingField: 13
   <itemDescription>k__BackingField: do not, ingest
+  relativeValue: 8

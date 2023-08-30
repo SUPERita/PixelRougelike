@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item66
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: perfect brain
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 9a1fe65a2fbc7774591aa10112bae583, type: 3}
+  <itemSprite>k__BackingField: {fileID: 399708410, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 4
   <statInstances>k__BackingField:
   - <number>k__BackingField: 50
@@ -23,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -10
     <statName>k__BackingField: 14
   <itemDescription>k__BackingField: the brain of the archwizard of the kingdom
+  relativeValue: 37.5

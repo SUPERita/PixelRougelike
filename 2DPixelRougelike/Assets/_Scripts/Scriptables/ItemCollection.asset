@@ -22,7 +22,18 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 97e458587dfd74543937bc1a27baec7f, type: 2}
   - {fileID: 11400000, guid: be35f3daeb9cb494ca0907dd8563b4a7, type: 2}
   - {fileID: 11400000, guid: 3e98ac772e89cc34b95b6910856d21b6, type: 2}
+  - {fileID: 11400000, guid: 3762b0564c35c414d82f5c637ff3f5cd, type: 2}
+  - {fileID: 11400000, guid: e3b42b86d1ce90e4a8ac5064b7f95776, type: 2}
+  - {fileID: 11400000, guid: 112069ae6aeba7b469d84f4177e30b5a, type: 2}
   - {fileID: 11400000, guid: 24c5f02a36ad6ea4c94bf75ed3b1a8c9, type: 2}
+  - {fileID: 11400000, guid: 160bcaefdd63493479c4e7bf33c98cc0, type: 2}
+  - {fileID: 11400000, guid: 3c7925138a273e448b3f85061a47a953, type: 2}
+  - {fileID: 11400000, guid: 3bb1b59ff1c205149805a0ad3829e5ac, type: 2}
+  - {fileID: 11400000, guid: cfc6297dda3dccf46ac1604d8494622b, type: 2}
+  - {fileID: 11400000, guid: e2fa7321df6ae0644ac44a27987c39d3, type: 2}
+  - {fileID: 11400000, guid: c8c79318ea8a2334db54373e8f569191, type: 2}
+  - {fileID: 11400000, guid: d4bc1ad38cf175e42afd1cbc95a6e453, type: 2}
+  - {fileID: 11400000, guid: 5f4b4da5f34128648870305d3ee1bacb, type: 2}
   - {fileID: 11400000, guid: 4677a0a87c2724a46b257d09cada760f, type: 2}
   - {fileID: 11400000, guid: e01ecb6f7db14214db9ea24938e9627a, type: 2}
   - {fileID: 11400000, guid: 353ec6f6dc147a14ca16b8824701fdc2, type: 2}
@@ -121,7 +132,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 079836e0b74696f40bc6192e724f7d6a, type: 2}
   ItemsPath: _Scripts/Scriptables/items/
   ShowHiddenData: 1
-  ItemOfRarity: 'commons: 24
+  ItemOfRarity: 'commons: 35
 
     uncommons: 25
 
@@ -131,9 +142,12 @@ MonoBehaviour:
 
     legenderies:
     8'
-  StatsPlayedWith: "MaxHealth: +10, -5 \nAttackSpeed: +7, -5 \nMoveSpeed: +11, -12
-    \nSkillCap: +0, -0 \nSkillDamage: +10, -5 \nWeaponDamage: +7, -8 \nDodge: +8,
-    -13 \nArmor: +11, -18 \nXPGain: +14, -6 \nMoneyGain: +11, -6 \nWeaponAttackSpeed:
-    +5, -7 \nSkillCooldown: +15, -7 \nMeleeDamage: +10, -8 \nPickUpRange: +6, -1
-    \nSkillProj: +1, -0 \nHealthRegen: +8, -5 \nEnemyAmount: +5, -4 \nInvesment:
-    +9, -6 \nLuck: +12, -6 \nPickUpHeal: +5, -2 \n"
+  StatsPlayedWith: "MaxHealth: +11, -6 \nAttackSpeed: +8, -6 \nMoveSpeed: +12, -14
+    \nSkillCap: +0, -0 \nSkillDamage: +11, -6 \nWeaponDamage: +7, -8 \nDodge: +10,
+    -13 \nArmor: +15, -17 \nXPGain: +14, -6 \nMoneyGain: +11, -6 \nWeaponAttackSpeed:
+    +5, -7 \nSkillCooldown: +16, -6 \nMeleeDamage: +10, -8 \nPickUpRange: +7, -1
+    \nSkillProj: +1, -0 \nHealthRegen: +9, -5 \nEnemyAmount: +7, -3 \nInvesment:
+    +10, -6 \nLuck: +14, -8 \nPickUpHeal: +5, -2 \n"
+  showSurveyor: 0
+  quary: pink butterfly
+  _Output: {fileID: 11400000, guid: cfc6297dda3dccf46ac1604d8494622b, type: 2}

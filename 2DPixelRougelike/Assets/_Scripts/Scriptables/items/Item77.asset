@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Item77
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: candle
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 48a5be3343e287d4ba01ba14b6f60d90, type: 3}
+  <itemSprite>k__BackingField: {fileID: -64821426, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 17
   - <number>k__BackingField: -10
     <statName>k__BackingField: 2
-  <itemDescription>k__BackingField: a group of adventurers found this mask, one turned
-    into a vampire and there were no survivors
+  <itemDescription>k__BackingField: makes the darkness more bearable
+  relativeValue: -2.5

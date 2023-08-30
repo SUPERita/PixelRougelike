@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item64
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: voodoo doll
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 170623f791f5e9f40bace36963dab9f1, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1995028048, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 4
   <statInstances>k__BackingField:
   - <number>k__BackingField: 50
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: -10
     <statName>k__BackingField: 16
   <itemDescription>k__BackingField: oozing malicious energy
+  relativeValue: 50

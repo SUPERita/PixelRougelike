@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item100
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: orn's staff
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 177b517a1d3b84644a58b65bca204e35, type: 3}
+  <itemSprite>k__BackingField: {fileID: -942061807, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: 3
@@ -26,3 +26,4 @@ MonoBehaviour:
     <statName>k__BackingField: 11
   <itemDescription>k__BackingField: 'once belonged to orn, king of the forest, before
     his forest was burnt '
+  relativeValue: 6

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item44
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: burnt drumstick
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 0d3edb1f29c163d428973f336f6e4fbf, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1032754452, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: 1
@@ -23,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -1
     <statName>k__BackingField: 5
   <itemDescription>k__BackingField: overly crispy
+  relativeValue: 3

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Item92
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: medicinal herb
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 1cb879fa6b29c454db1e6d5d1d0da10a, type: 3}
+  <itemSprite>k__BackingField: {fileID: -362187861, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: 2
     <statName>k__BackingField: 20
   <itemDescription>k__BackingField: great for cooking
+  relativeValue: 2

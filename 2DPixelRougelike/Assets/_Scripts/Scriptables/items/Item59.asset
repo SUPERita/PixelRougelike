@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item59
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: coin pouch
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: c6295cbb800dee0468733c5729877dfe, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1246084138, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
   <statInstances>k__BackingField:
   - <number>k__BackingField: 20
@@ -25,3 +25,4 @@ MonoBehaviour:
   - <number>k__BackingField: -7
     <statName>k__BackingField: 9
   <itemDescription>k__BackingField: bad karma, but awesome reward
+  relativeValue: 19

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item60
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: scary spider
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: e9e08512aea63d64ba17d6e29b3e1efd, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1089141313, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: -7
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: 7
     <statName>k__BackingField: 17
   <itemDescription>k__BackingField: scary, for everyone
+  relativeValue: -28

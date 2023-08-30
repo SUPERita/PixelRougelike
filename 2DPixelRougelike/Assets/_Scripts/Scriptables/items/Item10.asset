@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item10
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: unicorn tail
-  <itemSprite>k__BackingField: {fileID: 21300000, guid: f3d7e33c1274203498970380c0afc164, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1392330776, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
-  <itemMinWave>k__BackingField: 4
   <statInstances>k__BackingField:
   - <number>k__BackingField: 15
     <statName>k__BackingField: 12
@@ -28,3 +27,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 7
   <itemDescription>k__BackingField: '*synthetic'
+  relativeValue: 12

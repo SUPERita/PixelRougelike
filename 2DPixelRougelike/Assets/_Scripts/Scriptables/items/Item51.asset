@@ -13,13 +13,14 @@ MonoBehaviour:
   m_Name: Item51
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: demon skull
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: fad3f029002aaf44b91727dbfa6de436, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1878387210, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
     <statName>k__BackingField: 8
-  - <number>k__BackingField: 10
+  - <number>k__BackingField: 5
     <statName>k__BackingField: 11
-  - <number>k__BackingField: -2
+  - <number>k__BackingField: 5
     <statName>k__BackingField: 17
   <itemDescription>k__BackingField: might be thousands of years old
+  relativeValue: 5

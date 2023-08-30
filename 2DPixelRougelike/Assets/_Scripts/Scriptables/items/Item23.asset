@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item23
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: shadow flower
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: bd7a6642f3d0e7544ae8dce73c0006de, type: 3}
+  <itemSprite>k__BackingField: {fileID: 664956824, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
-  <itemMinWave>k__BackingField: 7
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
     <statName>k__BackingField: 16
@@ -24,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: 10
     <statName>k__BackingField: 12
   <itemDescription>k__BackingField: source of energy for all shadow related stuff
+  relativeValue: 35

@@ -15,7 +15,7 @@ public class PlayerDamageHandler : MonoBehaviour
     [SerializeField] private PlayerMovement pm;
     [SerializeField] private MonoBehaviour[] disableOnDie;
     [SerializeField] private GameObject[] deactivateOnDie;
-    private bool isAlive = true;
+    public bool isAlive { get; private set; } = true;
 
 
     private void OnCollisionStay2D(Collision2D collision)
@@ -53,7 +53,7 @@ public class PlayerDamageHandler : MonoBehaviour
                 (100f-Mathf.Min(PlayerStatsHolder.Instance.TryGetStat(StatType.Armor),40f))/100f
                 ));
             hitFeedback?.PlayFeedbacks();
-            AudioSystem.Instance.PlaySound("s2");
+            AudioSystem.Instance.PlaySound("player_hurt", .5f, 1+Random.value/10f);
         }
 
         timeUntilHitable = Time.time + invincibilityTime;
@@ -86,6 +86,8 @@ public class PlayerDamageHandler : MonoBehaviour
             item.enabled = false;
         }
 
+        AudioSystem.Instance.PlaySound("player_die", .5f);
+        GameStateManager.Instance.SetState(GameState.Dead);
         StartCoroutine(Helpers.DoInTime(()=> DeathPanel.Instance.OpenDeathPanel(), 1));
         
         //Invoke(nameof(LoadLobby), 3);

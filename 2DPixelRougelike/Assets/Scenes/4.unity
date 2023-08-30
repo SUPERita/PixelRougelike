@@ -14721,7 +14721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5589691511241075605, guid: 33cdb6cd360ce5148add8f9159c35963, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0.0010032027
+      value: -0.0000035972178
       objectReference: {fileID: 0}
     - target: {fileID: 5639659107368232569, guid: 33cdb6cd360ce5148add8f9159c35963, type: 3}
       propertyPath: m_AnchorMax.y
@@ -19603,7 +19603,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: startWave
-      value: 19
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 5077983151157814100, guid: 1b13664a3080f0f41ae663e727d46731, type: 3}
       propertyPath: enemySpawner

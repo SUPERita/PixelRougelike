@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item86
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: sorcerer's gloves
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 9e85cdb92b254604da7f99cb7d562de1, type: 3}
+  <itemSprite>k__BackingField: {fileID: -920724193, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 2
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: -8
     <statName>k__BackingField: 8
   <itemDescription>k__BackingField: fits like a boot
+  relativeValue: -6

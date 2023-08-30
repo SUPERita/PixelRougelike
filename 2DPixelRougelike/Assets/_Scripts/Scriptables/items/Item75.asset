@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item75
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: holy pyramid
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 56febe7fce4b0a44b8b8d9d0725d13d6, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1921387342, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 4
   <statInstances>k__BackingField:
   - <number>k__BackingField: 100
@@ -22,3 +22,4 @@ MonoBehaviour:
     <statName>k__BackingField: 8
   <itemDescription>k__BackingField: the pyramid activates once every decade and answers
     a question with limitless wisdom
+  relativeValue: 0

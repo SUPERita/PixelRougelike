@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item70
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: ancient coins
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 186e6351f8b9b1f4a950a01069b0297c, type: 3}
+  <itemSprite>k__BackingField: {fileID: 854721050, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: -10
@@ -22,3 +22,4 @@ MonoBehaviour:
     <statName>k__BackingField: 10
   <itemDescription>k__BackingField: current state of the encient coin economy is
     bad
+  relativeValue: 10

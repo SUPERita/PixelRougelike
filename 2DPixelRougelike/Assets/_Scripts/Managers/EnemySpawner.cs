@@ -45,7 +45,7 @@ public class EnemySpawner : MonoBehaviour, ISpawner
             Transform _t = LeanPoolManager.Instance.SpawnFromPool(_enemyName).transform;//UnityEngine.Random.Range(0, 2) == 1 ? "dasher1":"follow1").transform;//PoolEnemy _t = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnEnemy("box2") : PoolManager.Instance.SpawnEnemy("box");
             _t.SetParent(_transform);
             _t.localPosition = spawnPosition;
-            _t.GetComponent<Enemy>().SetLevelIndex(level+1);
+            _t.GetComponent<Enemy>().SetLevelIndex(level);
 
             //destory indicator
             Destroy(_indc.gameObject);
@@ -56,7 +56,7 @@ public class EnemySpawner : MonoBehaviour, ISpawner
         //Instantiate(enemyPrefab, _transform.position, _transform.rotation, _transform);
         //Invoke(nameof(SpawnEnemy), reload);
     }
-    public void SpawnBoss(GameObject _boss)
+    public void SpawnBoss(GameObject _boss, int _waveNumber)
     {
         Vector2 spawnPosition = GetPositionNearPlayerInsideTheArena();
 
@@ -71,6 +71,7 @@ public class EnemySpawner : MonoBehaviour, ISpawner
             //spawn _boss
             Transform _t = Instantiate(_boss, _transform).transform;//UnityEngine.Random.Range(0, 2) == 1 ? "dasher1":"follow1").transform;//PoolEnemy _t = UnityEngine.Random.Range(0, 2) == 1 ? PoolManager.Instance.SpawnEnemy("box2") : PoolManager.Instance.SpawnEnemy("box");
             _t.localPosition = spawnPosition;
+            _t.gameObject.GetComponent<Boss>().SetWaveIndex(_waveNumber, level + 1);
 
             //destory indicator
             Destroy(_indc.gameObject);

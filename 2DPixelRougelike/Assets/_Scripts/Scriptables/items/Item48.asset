@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item48
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: commoner's beer
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: bad607989e780154bb3a23c238d18eec, type: 3}
+  <itemSprite>k__BackingField: {fileID: -659291124, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 7
   <itemDescription>k__BackingField: disgusting but hits the spot
+  relativeValue: 2.5

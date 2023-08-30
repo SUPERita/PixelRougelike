@@ -5,6 +5,7 @@ using System.IO;
 using Unity.Burst.Intrinsics;
 using UnityEditor;
 using UnityEngine;
+//using static UnityEditor.Rendering.CameraUI;
 
 [CreateAssetMenu(fileName = "ItemCollection", menuName = "DataSet/ItemCollection")]
 public class ItemCollection : ScriptableObject
@@ -173,6 +174,18 @@ public class ItemCollection : ScriptableObject
     [SerializeField, TextArea(6,6), ShowIf("ShowHiddenData")] private string ItemOfRarity = "";
     [SerializeField, TextArea(25, 25), ShowIf("ShowHiddenData")] private string StatsPlayedWith = "";
 
+    public List<Item> Test_GetItemsRaw()
+    {
+        return items;
+    }
+    public Item Test_FindItemFromSprite(Sprite _sprite) { 
+        foreach(Item _item in items)
+        {
+            if(_item.itemSprite == _sprite) return _item;
+        }
+
+        return null;
+    }
 
     private bool IsFileMeta(string filePath)
     {
@@ -201,5 +214,22 @@ public class ItemCollection : ScriptableObject
             return string.Empty;
         }
     }
+
+
+    [SerializeField] private bool showSurveyor = true;
+    [ShowIf("showSurveyor")]
+    private void FindItemOfName()
+    {
+        foreach(Item _item in items)
+        {
+            if (_item.itemName == quary)
+            {
+                _Output = _item;
+            }
+        }
+    }
+    [SerializeField, ShowIf("showSurveyor"), OnValueChanged("FindItemOfName")] private string quary = "";
+    [InlineEditor]
+    [SerializeField, ShowIf("showSurveyor")] private Item _Output = null;
 
 }

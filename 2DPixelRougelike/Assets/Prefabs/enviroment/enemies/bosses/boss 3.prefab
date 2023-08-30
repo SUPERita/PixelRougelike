@@ -102,7 +102,7 @@ PrefabInstance:
       objectReference: {fileID: 377467956, guid: 989ae121445dcd14688e2399319ead18, type: 3}
     - target: {fileID: 9196661696342485918, guid: 38a114933a4e63640a95fad32ca11601, type: 3}
       propertyPath: maxHealth
-      value: 3000
+      value: 500
       objectReference: {fileID: 0}
     - target: {fileID: 9196661696342485918, guid: 38a114933a4e63640a95fad32ca11601, type: 3}
       propertyPath: baseHealth
@@ -181,7 +181,7 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: -0.19052982, y: 0.32813323}
-  m_Size: {x: 1.473814, y: 3.349858}
+  m_Size: {x: 1.7205772, y: 3.349858}
   m_Direction: 0
 --- !u!114 &2028353971424884930 stripped
 MonoBehaviour:

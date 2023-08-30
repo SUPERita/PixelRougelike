@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item18
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: lava-water potion
-  <itemSprite>k__BackingField: {fileID: 21300000, guid: 089e07f99ae579340a37d54160e9c4d0, type: 3}
+  <itemSprite>k__BackingField: {fileID: -86456083, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
     <statName>k__BackingField: 9
@@ -26,3 +25,4 @@ MonoBehaviour:
   - <number>k__BackingField: -20
     <statName>k__BackingField: 8
   <itemDescription>k__BackingField: has a sting
+  relativeValue: 5

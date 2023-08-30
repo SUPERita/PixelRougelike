@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item40
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: perfectly seared steak
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: ba33c77524bd6024791a6a8b2544f018, type: 3}
+  <itemSprite>k__BackingField: {fileID: 416610187, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
@@ -24,3 +24,4 @@ MonoBehaviour:
     <statName>k__BackingField: 18
   <itemDescription>k__BackingField: perfectly seared with just the right amount of
     pepper and salt
+  relativeValue: 10.75

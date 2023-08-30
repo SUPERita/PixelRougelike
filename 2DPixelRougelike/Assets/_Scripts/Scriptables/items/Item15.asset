@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item15
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: lava potion
-  <itemSprite>k__BackingField: {fileID: 21300000, guid: f078891f0acfc054fbbc1ca13cdca128, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1468054930, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: -8
     <statName>k__BackingField: 8
@@ -26,3 +25,4 @@ MonoBehaviour:
   - <number>k__BackingField: 2
     <statName>k__BackingField: 6
   <itemDescription>k__BackingField: spicy
+  relativeValue: 2

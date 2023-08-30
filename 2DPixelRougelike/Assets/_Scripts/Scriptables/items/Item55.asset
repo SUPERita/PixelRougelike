@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item55
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: stolen mail
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: e396a7f335c6fa74abe6437e51f9b891, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1284618418, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 19
   <itemDescription>k__BackingField: it will be put to better use in my hands
+  relativeValue: 0

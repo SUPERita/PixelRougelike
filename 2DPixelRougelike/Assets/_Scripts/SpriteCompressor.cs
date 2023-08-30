@@ -6,6 +6,7 @@ using UnityEditor;
 //using Unity.Burst.Intrinsics;
 //using UnityEditor.SearchService;
 using System.IO;
+using System;
 
 public class SpriteCompressor : MonoBehaviour
 {
@@ -15,7 +16,8 @@ public class SpriteCompressor : MonoBehaviour
     //might not need all that just put it all in one file
 
 #if UNITY_EDITOR
-    [Button]
+    [InfoBox("DONT FORGET TO MOVE TEXTURES TO SAFE ZONE AFTER COMPLEATION")]
+    [Button(ButtonSizes.Small), ShowIf("showSpritePacker")]
     private void PackSprites()
     {
         if (spritesToPack == null || spritesToPack.Count == 0)
@@ -49,11 +51,12 @@ public class SpriteCompressor : MonoBehaviour
             // Move the currentX position to the next sprite's position, adding padding
             currentX += (int)sprite.rect.width + padding;
         }
-
+ 
         packedTexture.Apply();
 
         // Save the packed texture as an asset
-        string outputPath = $"Assets/Art/icons{Random.Range(0, 10000)}/_PackedMatTexture.png"; // Adjust the save path as needed
+        string outputPath = $"Assets/Art/icons/_PaackedMatTexture{UnityEngine.Random.Range(0, 9999999)}.png"; // Adjust the save path as needed
+
         byte[] bytes = packedTexture.EncodeToPNG();
         File.WriteAllBytes(outputPath, bytes);
         AssetDatabase.Refresh();
@@ -61,5 +64,19 @@ public class SpriteCompressor : MonoBehaviour
         Debug.Log("Sprite packing complete. Packed texture saved at: " + outputPath);
     }
 
+    [SerializeField] private bool showSpriteFinder = false;
+    [SerializeField, ShowIf("showSpriteFinder")] private ItemCollection itemCollection;
+    [SerializeField, ShowIf("showSpriteFinder")] int _index = 0;
+    [InlineEditor]
+    [SerializeField, LabelWidth(30), ShowIf("showSpriteFinder")] Item _item = null;
+    [Button(ButtonSizes.Medium), ShowIf("showSpriteFinder")]
+    private void PlaceNextItemInPlace()
+    {
+        _item = itemCollection.Test_FindItemFromSprite(spritesToPack[_index]);
+            _index++;
+    }
+
+    [SerializeField] private bool showSpritePacker = false;
+    
 #endif
 }

@@ -13,9 +13,10 @@ MonoBehaviour:
   m_Name: Item84
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: pleantiful harvest
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: aa9b0f2855b6b634b8acf834fd7b868f, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1530702750, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: 4
     <statName>k__BackingField: 18
   <itemDescription>k__BackingField: great smell of the harvest in the morning
+  relativeValue: 4

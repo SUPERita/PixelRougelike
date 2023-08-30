@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dee53e57957079c42beb8161285ab4b2, type: 3}
+  m_Name: Item107
+  m_EditorClassIdentifier: 
+  <itemName>k__BackingField: peasant gloves
+  <itemSprite>k__BackingField: {fileID: -1778591728, guid: 7b62cc9e3cbf3934ca727f5c665e6157, type: 3}
+  <itemRarity>k__BackingField: 0
+  <statInstances>k__BackingField:
+  - <number>k__BackingField: 5
+    <statName>k__BackingField: 1
+  - <number>k__BackingField: 1
+    <statName>k__BackingField: 8
+  <itemDescription>k__BackingField: not very strong but handy for garden work
+  relativeValue: 6

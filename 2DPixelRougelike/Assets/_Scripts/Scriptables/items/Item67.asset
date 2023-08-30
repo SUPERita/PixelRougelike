@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item67
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: demon teeth
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 2be67d9e3d0a7ab4f94aa873e6d8cd71, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1362661180, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: -5
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: 1
     <statName>k__BackingField: 6
   <itemDescription>k__BackingField: sharpens your bullets
+  relativeValue: -2

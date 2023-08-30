@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item96
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: bone collection
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 52557f95a857ca1458573b6e4c0545da, type: 3}
+  <itemSprite>k__BackingField: {fileID: 2121687368, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 4
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 11
   <itemDescription>k__BackingField: extra bones, why not
+  relativeValue: -1

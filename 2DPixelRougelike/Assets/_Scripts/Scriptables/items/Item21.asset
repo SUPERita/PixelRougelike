@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item21
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: fuzzy bee
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 7656b37b110bb644bb47c3b22cdbeccc, type: 3}
+  <itemSprite>k__BackingField: {fileID: 144073567, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
     <statName>k__BackingField: 7
@@ -24,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 12
   <itemDescription>k__BackingField: fuzzy fried
+  relativeValue: 1.25

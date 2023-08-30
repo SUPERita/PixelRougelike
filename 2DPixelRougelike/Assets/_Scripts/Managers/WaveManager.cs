@@ -1,9 +1,14 @@
 using Sirenix.OdinInspector;
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
+using System.Linq.Expressions;
+using UnityEditor;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UIElements;
 
 public class WaveManager : StaticInstance<WaveManager>
 {
@@ -29,7 +34,21 @@ public class WaveManager : StaticInstance<WaveManager>
     [SerializeField] private BossWavePair[] bossWavePairs = null;
 
     [Header("Object")]
+    
+    
     [SerializeField] private ObjectWavePair[] objectWavePairs = null;
+
+    [Button]
+    private void SortObjectWavePairs()
+    {
+        List<ObjectWavePair> _list = new List<ObjectWavePair>();
+
+        var _psSorted = objectWavePairs.OrderBy(_p => _p.spawnAtWave).ToArray();
+
+        objectWavePairs = _psSorted;
+    }
+   
+
 
     [Header("testing (only works in editor)")]
     [SerializeField] private bool useStartWaveIndex = false;
@@ -47,7 +66,7 @@ public class WaveManager : StaticInstance<WaveManager>
         }
     }
 
-   
+    
 
     private bool GetBossAtWave(int _waveIndex, out GameObject _prefab)
     {
@@ -178,7 +197,7 @@ public class WaveManager : StaticInstance<WaveManager>
         //try spawn boss
         if (GetBossAtWave(waveCounter, out GameObject _bossPrefab))
         {
-            enemySpawner.SpawnBoss(_bossPrefab);
+            enemySpawner.SpawnBoss(_bossPrefab, waveCounter);
         }
 
         //try spawn object
@@ -251,6 +270,7 @@ public class WaveManager : StaticInstance<WaveManager>
         if (_lvl == 30) { SteamIntegration.UnlockAchievment("ACH_WAVE30"); }
         if (_lvl == 40) { SteamIntegration.UnlockAchievment("ACH_WAVE40"); }
     }
+
 }
 
 [System.Serializable]
@@ -278,7 +298,8 @@ public struct BossWavePair
 
 [System.Serializable]
 public struct ObjectWavePair
-{
-    [field: SerializeField,HorizontalGroup("a"), LabelWidth(250)] public GameObject[] objectPrefabs { get; private set; }
-    [field: SerializeField, HorizontalGroup("a"), LabelWidth(75)] public int spawnAtWave { get; private set; }
+{ 
+    [field: SerializeField, Space(25), HorizontalGroup("a"), ListDrawerSettings(Expanded = true)] public GameObject[] objectPrefabs { get; private set; }
+    [field: SerializeField, Space(25), HorizontalGroup("a")] public int spawnAtWave { get; private set; }
+
 }

@@ -135,6 +135,7 @@ public class InteractionHandler : MonoBehaviour
     {
         //in another menu
         if(GameStateManager.Instance.GetCurrentGameState() != GameState.GameLoop) { return; }
+        //if (!playerDamageHandler.isAlive) { return; }
 
         if(currentInteractible != null)
         {

@@ -22,6 +22,8 @@ public class XPManager : StaticInstance<XPManager>
     }
     public void AddXP(int _v)
     {
+        if (GameStateManager.Instance.GetCurrentGameState() == GameState.Dead) { return; }
+
         currentXP += (_v*(PlayerStatsHolder.Instance.TryGetStat(StatType.XPGain)/100f));
         //Debug.Log((_v * (PlayerStatsHolder.Instance.TryGetStat(StatType.XPGain) / 100f)));
         UpdateXPVisual();

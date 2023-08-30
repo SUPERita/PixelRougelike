@@ -25,7 +25,7 @@ public class DeathPanel : StaticInstance<DeathPanel>
     public void OpenDeathPanel()
     {
         //game state
-        GameStateManager.Instance.SetState(GameState.Dead);
+        //GameStateManager.Instance.SetState(GameState.Dead);
         Time.timeScale = 0f;
 
         //fade in

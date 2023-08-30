@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item56
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: writing feather
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 520f2989095987e4aad659b7b8f20f54, type: 3}
+  <itemSprite>k__BackingField: {fileID: 866793418, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: 20
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 10
   <itemDescription>k__BackingField: expertly crafted
+  relativeValue: 10

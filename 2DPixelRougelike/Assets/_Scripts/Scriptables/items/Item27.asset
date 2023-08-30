@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item27
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: fancy boots
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 4174f551a8cad934c8402df8dbc53140, type: 3}
+  <itemSprite>k__BackingField: {fileID: 785274496, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
-  <itemMinWave>k__BackingField: 9
   <statInstances>k__BackingField:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 2
@@ -26,3 +25,4 @@ MonoBehaviour:
   - <number>k__BackingField: -10
     <statName>k__BackingField: 7
   <itemDescription>k__BackingField: once worn by a man named slickback?
+  relativeValue: 16.25

@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item74
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: finger neckless
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: ed64360f5c0cd0c42bfd79410409864a, type: 3}
+  <itemSprite>k__BackingField: {fileID: 317492440, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: 3
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 0
   <itemDescription>k__BackingField: made from the fingers of horrofic monsters
+  relativeValue: -12

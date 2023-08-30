@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item26
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: flower hat
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 51555d38eb05a9f489cc2e89442f91c6, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1788762461, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
-  <itemMinWave>k__BackingField: 9
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
     <statName>k__BackingField: 16
@@ -24,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -1
     <statName>k__BackingField: 6
   <itemDescription>k__BackingField: obscures your vision a bit
+  relativeValue: 27

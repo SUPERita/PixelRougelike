@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item105
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: elysar's staff
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: a658a1c6f55e4b7429c44db48f52fe9e, type: 3}
+  <itemSprite>k__BackingField: {fileID: -924942033, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
   <statInstances>k__BackingField:
   - <number>k__BackingField: 3
@@ -22,3 +22,4 @@ MonoBehaviour:
     <statName>k__BackingField: 12
   <itemDescription>k__BackingField: the staff of elysar, king of lightning, taken
     by the king after he killed the king of lighting
+  relativeValue: -1.5

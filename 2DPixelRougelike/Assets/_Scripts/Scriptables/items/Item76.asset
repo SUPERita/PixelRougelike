@@ -13,12 +13,13 @@ MonoBehaviour:
   m_Name: Item76
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: stone mask
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 1cdca6359d750034dbd1093ce20040e2, type: 3}
+  <itemSprite>k__BackingField: {fileID: -982905051, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
-  - <number>k__BackingField: 100
-    <statName>k__BackingField: 9
-  - <number>k__BackingField: -100
+  - <number>k__BackingField: -3
+    <statName>k__BackingField: 19
+  - <number>k__BackingField: 10
     <statName>k__BackingField: 8
   <itemDescription>k__BackingField: a group of adventurers found this mask, one turned
     into a vampire and there were no survivors
+  relativeValue: 4

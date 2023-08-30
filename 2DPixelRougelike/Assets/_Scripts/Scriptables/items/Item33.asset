@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item33
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: salami
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 7936f3e45ea5bb2418a72eb0497762b5, type: 3}
+  <itemSprite>k__BackingField: {fileID: 880559105, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 1
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: 1
     <statName>k__BackingField: 0
   <itemDescription>k__BackingField: just a little is fine for cats
+  relativeValue: 8

@@ -8,6 +8,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using static MidRunUpgradeCollection;
+using AssetKits.ParticleImage;
 //using static UnityEngine.Rendering.DebugUI;
 
 public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
@@ -17,6 +18,7 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
     [AssetsOnly] [SerializeField] private GameObject PrefabStatChoice;
     [SerializeField] private CanvasGroup canvasGroup = null;
     [SerializeField] private MidRunUpgradeCollection midRunUpgradeCollection = null;
+    [SerializeField] private ParticleImage particleImage = null;
 
     private void Start()
     {
@@ -48,6 +50,8 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
         //set selction
         Helpers.SelectSomethingUnder(transform);
         //EventSystem.current.SetSelectedGameObject(GetComponentInChildren<Button>().gameObject);
+
+        particleImage.Play();
     }
 
 
@@ -121,6 +125,10 @@ public class MidRunUpgradesManager : StaticInstance<MidRunUpgradesManager>
 
         //unsubscribe
         SubscribeToChildren(false);
+
+        particleImage.Stop();
+
+
     }
 
     private void TweenInChoices()

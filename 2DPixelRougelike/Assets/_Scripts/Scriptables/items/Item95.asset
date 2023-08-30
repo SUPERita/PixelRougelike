@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item95
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: brawler's boots
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 140174506632d2b4ab878dd434effd5b, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1123235436, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
   <statInstances>k__BackingField:
   - <number>k__BackingField: 7
@@ -23,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 7
   <itemDescription>k__BackingField: relativly nimbel
+  relativeValue: 5

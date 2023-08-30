@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item5
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: prime beef
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 779bd9382a2beac4a9c985f91d40935b, type: 3}
+  <itemSprite>k__BackingField: {fileID: 1055623207, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: 2
@@ -23,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -10
     <statName>k__BackingField: 2
   <itemDescription>k__BackingField: cant move much after all that eating
+  relativeValue: 1.5

@@ -13,10 +13,11 @@ MonoBehaviour:
   m_Name: Item38
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: king's wine
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 00598cadbc1ac9e4e8fc3e1492d0676d, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1109363229, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 4
   <statInstances>k__BackingField:
   - <number>k__BackingField: 20
     <statName>k__BackingField: 19
   <itemDescription>k__BackingField: bottle bestowed from the gods eons ago, each
     king may only take one sip, and the bottle will stay full forever
+  relativeValue: 40

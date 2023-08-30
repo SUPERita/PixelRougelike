@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item99
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: onion ring neckless
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 9f2bf90c1f698724dabb974646421026, type: 3}
+  <itemSprite>k__BackingField: {fileID: -972368454, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
@@ -22,3 +22,4 @@ MonoBehaviour:
     <statName>k__BackingField: 18
   <itemDescription>k__BackingField: every time you worry, you look down a smile upon
     seeing you neckless
+  relativeValue: 12

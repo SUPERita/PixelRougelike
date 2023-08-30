@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item93
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: brawler's chestplate
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: cdf44385233815f4aa001ec4f3490dff, type: 3}
+  <itemSprite>k__BackingField: {fileID: -350654133, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 7
@@ -21,3 +21,4 @@ MonoBehaviour:
   - <number>k__BackingField: -7
     <statName>k__BackingField: 2
   <itemDescription>k__BackingField: rougth as nails
+  relativeValue: 1.75

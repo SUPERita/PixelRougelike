@@ -189,4 +189,11 @@ public class Boss : MonoBehaviour, IDamageable, IHurtPlayer
     }
 
     #endregion
+
+    public void SetWaveIndex(int _wave, int _level)
+    {
+        //health
+        health.SetMaxHealth(_wave * 100 *_level, true);
+        health.ResetHealth();
+    }
 }

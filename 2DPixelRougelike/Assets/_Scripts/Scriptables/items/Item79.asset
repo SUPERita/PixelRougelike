@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item79
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: branch
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 749554ef44e17924e9c9b21d23e541e4, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1569242006, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 4
   <statInstances>k__BackingField:
   - <number>k__BackingField: 50
@@ -22,3 +22,4 @@ MonoBehaviour:
     <statName>k__BackingField: 18
   <itemDescription>k__BackingField: the skull of the immortal demon lord, slayed
     by the king, yet escaped death through reincarnation
+  relativeValue: 0

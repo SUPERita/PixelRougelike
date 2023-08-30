@@ -1000,6 +1000,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6f418dc4fc0497f47b6636455c991d20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerDamageHandler: {fileID: 3764507932367705448}
   keyPrompt: {fileID: 6434010681892430035}
   promptText: {fileID: 4856967648056098314}
   promptAnimator: {fileID: 256821332044414315}

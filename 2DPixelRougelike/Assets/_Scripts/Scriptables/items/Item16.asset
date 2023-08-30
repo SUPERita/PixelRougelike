@@ -13,9 +13,8 @@ MonoBehaviour:
   m_Name: Item16
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: water potion
-  <itemSprite>k__BackingField: {fileID: 21300000, guid: e55e279c86d882a44af0a24476540ab4, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1059326450, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 15
     <statName>k__BackingField: 9
@@ -26,3 +25,4 @@ MonoBehaviour:
   - <number>k__BackingField: -1
     <statName>k__BackingField: 6
   <itemDescription>k__BackingField: 'two drop oh H with one drop of O '
+  relativeValue: 13.75

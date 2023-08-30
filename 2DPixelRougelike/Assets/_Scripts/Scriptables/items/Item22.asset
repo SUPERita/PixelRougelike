@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: Item22
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: beetle pair
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: f8ecb1bfc2bcc9c4d8a7e3a9bd11f849, type: 3}
+  <itemSprite>k__BackingField: {fileID: -245189227, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
-  <itemMinWave>k__BackingField: 5
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
     <statName>k__BackingField: 1
   - <number>k__BackingField: -5
     <statName>k__BackingField: 2
   <itemDescription>k__BackingField: bffs
+  relativeValue: 6.25

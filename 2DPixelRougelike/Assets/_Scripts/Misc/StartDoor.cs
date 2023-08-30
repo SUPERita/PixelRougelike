@@ -38,7 +38,8 @@ public class StartDoor : MonoBehaviour, IInteractible
         lockSR.gameObject.SetActive(!working);
 
         //highscore
-        int _highscore = SaveSystem.LoadIntFromLocation(roomProgressSaveLocBase + sceneNumber);
+        int _highscore = SaveSystem.LoadIntFromLocation(roomProgressSaveLocBase + sceneNumber) -1;
+        if(_highscore < 0) _highscore = 0;
         highscoreCanvas.enabled = working;
         highscoreCanvas.GetComponentInChildren<TextMeshProUGUI>().SetText(_highscore.ToString());
 

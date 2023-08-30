@@ -1,3 +1,4 @@
+using AssetKits.ParticleImage;
 using DG.Tweening;
 using Sirenix.OdinInspector;
 using System.Collections;
@@ -12,6 +13,7 @@ public class WeaponChoice : StaticInstance<WeaponChoice>, SubButtonListener
     [SerializeField] private RectTransform choicesRoot;
     [AssetsOnly][SerializeField] private GameObject PrefabWeapontChoice;
     [SerializeField] private CanvasGroup canvasGroup = null;
+    [SerializeField] private ParticleImage particleImage = null;
 
     private void Start()
     {
@@ -35,6 +37,7 @@ public class WeaponChoice : StaticInstance<WeaponChoice>, SubButtonListener
         //set selction
         Helpers.SelectSomethingUnder(transform);
         
+        particleImage.Play();
     }
 
 
@@ -77,6 +80,8 @@ public class WeaponChoice : StaticInstance<WeaponChoice>, SubButtonListener
         //fade out
         Time.timeScale = 1f;
         Helpers.ToggleCanvas(canvasGroup, false);
+
+        particleImage.Stop();
     }
 
 

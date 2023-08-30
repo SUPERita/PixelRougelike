@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item46
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: croissant
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 2da5bbd975349d74ebbaea8fdf8b5093, type: 3}
+  <itemSprite>k__BackingField: {fileID: -965906599, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 1
   <statInstances>k__BackingField:
   - <number>k__BackingField: 1
@@ -25,3 +25,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 11
   <itemDescription>k__BackingField: meh
+  relativeValue: -1.5

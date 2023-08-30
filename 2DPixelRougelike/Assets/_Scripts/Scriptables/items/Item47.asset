@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item47
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: plain bread
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 196c2ced62b42bd46bafee2433a79e78, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1419240054, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 0
   <statInstances>k__BackingField:
   - <number>k__BackingField: 5
@@ -23,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -5
     <statName>k__BackingField: 1
   <itemDescription>k__BackingField: fresh
+  relativeValue: 13

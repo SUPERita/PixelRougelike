@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item42
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: lizord
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: 73cb02c0ca32d994b8300fb2bde74703, type: 3}
+  <itemSprite>k__BackingField: {fileID: 170166834, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 2
   <statInstances>k__BackingField:
   - <number>k__BackingField: 3
@@ -27,3 +27,4 @@ MonoBehaviour:
   - <number>k__BackingField: 3
     <statName>k__BackingField: 19
   <itemDescription>k__BackingField: a pet, and a friend to the king
+  relativeValue: 19.5

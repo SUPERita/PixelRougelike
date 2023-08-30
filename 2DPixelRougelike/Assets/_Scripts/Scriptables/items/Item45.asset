@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Item45
   m_EditorClassIdentifier: 
   <itemName>k__BackingField: spicy chiken wing
-  <itemSprite>k__BackingField: {fileID: -286391491, guid: c98c58f3581b87446a299ec5de6f3dee, type: 3}
+  <itemSprite>k__BackingField: {fileID: -1517916573, guid: 79b34c2a6d6c20b408c0641869bd364c, type: 3}
   <itemRarity>k__BackingField: 3
   <statInstances>k__BackingField:
   - <number>k__BackingField: 10
@@ -23,3 +23,4 @@ MonoBehaviour:
   - <number>k__BackingField: -10
     <statName>k__BackingField: 12
   <itemDescription>k__BackingField: fat, crunchy, and spicy. phonemenal experience
+  relativeValue: 0
